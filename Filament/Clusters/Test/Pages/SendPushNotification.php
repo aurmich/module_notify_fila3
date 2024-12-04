@@ -79,7 +79,11 @@ class SendPushNotification extends Page implements HasForms
             ->schema(
                 [
                     Forms\Components\Select::make('deviceToken')
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> 7635fd04ecc0e5125a1cd98265217a987186ea9e
                         ->options($to),
 
                     Forms\Components\TextInput::make('type')
