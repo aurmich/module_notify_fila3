@@ -1,0 +1,267 @@
+<?php
+
+namespace Modules\Quaeris\Filament\Pages;
+
+use Filament\Pages\Page;
+use Filament\Tables;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\ExportBulkAction;
+use Filament\Tables\Concerns\InteractsWithTable;
+use Filament\Tables\Contracts\HasTable;
+use Filament\Tables\Enums\FiltersLayout;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use Modules\Limesurvey\Models\LimeQuestion;
+use Modules\Limesurvey\Models\SurveyResponse;
+use Modules\Quaeris\Datas\DashboardFilterData;
+use Modules\Quaeris\Filament\Exports\AnswersCompleteExporter;
+use Modules\UI\Filament\Tables\Columns\GroupColumn;
+use Modules\Xot\Exports\QueryExport;
+use function Safe\mb_convert_encoding;
+use Webmozart\Assert\Assert;
+
+abstract class BasePageExport extends Page implements HasTable
+{
+    use InteractsWithTable;
+
+    public string $survey_id = '1';
+
+    public \Staudenmeir\LaravelAdjacencyList\Eloquent\Collection $questions;
+
+    public DashboardFilterData $filters_data;
+
+    public array $filters;
+
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static string $view = 'quaeris::filament.pages.opt-out';
+
+    protected static ?string $navigationGroup = 'Esportazioni';
+    protected static ?string $navigationLabel = '---';
+
+    // Configura il titolo della pagina
+    protected static ?string $title = '---';
+
+    public function getColumns(): int|string|array
+    {
+        return [
+            'md' => 1,
+            'xl' => 2,
+        ];
+    }
+
+    public function mount(): void
+    {
+        Assert::isArray($data = request()->all());
+        Assert::isArray($filters = Arr::get($data, 'filters', []));
+
+        $this->filters_data = DashboardFilterData::fromArray($filters);
+        $this->filters = $filters;
+        $this->survey_id = $this->filters_data->getSurveyId();
+        $this->form->fill($this->filters);
+    }
+
+    public function getQuestions(): Collection
+    {
+        return LimeQuestion::where('sid', $this->survey_id)
+            //->where('parent_qid', 0)
+            ->isLeaf()
+            ->get()
+            //->take(10) //MariaDB can only use 61 tables in a join
+            //->take(2)
+        ;
+    }
+
+    public function getTableQuery(): Builder
+    {
+        $survey_response = SurveyResponse::getResponsesForSurvey($this->survey_id);
+
+        $query = $survey_response
+            ->withParticipants()
+            ->where('submitdate', '!=', null)
+        ;
+
+        //$query->addSelect($survey_response->getTable().'.*');
+        $query->addSelect('*');
+
+        $questions = $this->getQuestions();
+
+        foreach ($questions as $q) {
+            $main = $q->qid;
+
+            if ($q->parent_qid !== 0) {
+                $main = $q->parent_qid;
+            }
+
+            $query = $query->withAnswersLabel($main, $q->fieldName, $q->fieldName, 'subquery');
+        }
+        $this->questions = $questions;
+        return $query
+            //->requalifyWhereTables('')
+        ;
+    }
+
+    public function getTableRecordKey(Model $record): string
+    {
+        return '_id';
+    }
+
+    public function table(Table $table): Table
+    {
+        return $table
+            ->query($this->getTableQuery())
+            ->deferLoading()
+            ->striped()
+            ->columns($this->getTableColumns())
+            ->filters($this->getTableFilters())
+            ->filtersLayout(FiltersLayout::AboveContent)
+            ->filtersFormColumns(1)
+            ->persistFiltersInSession()
+            ->actions($this->getTableActions())
+            ->headerActions($this->getTableHeaderActions())
+            ->bulkActions($this->getTableBulkActions())
+            // ->contentGrid([
+            //     'md' => 2,
+            //     'xl' => 1,
+            // ])
+        ;
+    }
+
+    public function getHeaderActions(): array
+    {
+        return [
+
+        ];
+    }
+    public function getTableHeaderActions(): array
+    {
+        return [
+            // ExportAction::make()
+            //     ->label('')
+            //     ->icon('fas-file-excel')
+            //     ->exporter(AnswersCompleteExporter::class)
+            //     ->chunkSize(100000),
+            Action::make('export-table-xls')
+                ->label('')
+                ->icon('fas-file-excel')
+                ->action(function () {
+                    $query = $this->getTableQuery();
+                    return (new QueryExport($query, 'quaeris::xls.'))
+                        ->download(class_basename($this).'.xlsx');
+                }),
+        ];
+    }
+
+    protected function getTableColumns(): array
+    {
+        $columns = [
+            Tables\Columns\TextColumn::make('_id')
+                ->label('ID')
+                ->sortable()
+                //->default(fn ($record) => dddx($record))
+                ,
+            //Tables\Columns\TextColumn::make('submitdate')
+                //->description('Your full name here, including any middle names.'),
+            //Tables\Columns\TextColumn::make('completed'),
+            //Tables\Columns\TextColumn::make('sent'),
+            //Stack::make([
+            GroupColumn::make('user')->schema([
+                Tables\Columns\TextColumn::make('submitdate'),
+                Tables\Columns\TextColumn::make('firstname'),
+                Tables\Columns\TextColumn::make('lastname'),
+                Tables\Columns\TextColumn::make('email')->searchable(),
+                Tables\Columns\TextColumn::make('language'),
+                Tables\Columns\TextColumn::make('token'),
+            ]),
+
+                //->label('Data Invio')
+                //->dateTime('d-m-Y')
+                //->sortable(),
+            // Aggiungi altre colonne se necessario
+        ];
+
+        $attrs = [];
+        for ($i = 1;$i <= 6;$i++) {
+            $attrs[] = Tables\Columns\TextColumn::make('attribute_'.$i);
+        }
+
+        $columns[] = GroupColumn::make('attributes')->schema($attrs);
+
+        foreach ($this->questions as $q) {
+            /** @var string */
+            $label = $q->question;
+            $label = mb_convert_encoding($label, mb_detect_encoding($label), 'UTF-8');
+            $label = strip_tags($label);
+            //$label = '['.$q->title.']['.'['.$q->type.']['.$q->fieldname.']'.'['.$q->l10n->question.']';//.$label;
+            /*
+            $subcols = [];
+            $subcols[] = Tables\Columns\TextColumn::make($q->field_name)
+                ->label($label)
+                ->wrapHeader()
+                ->wrap()
+            ;
+
+            $subcols[] = Tables\Columns\TextColumn::make($q->field_name.'answer')
+            ->label($label.'answer')
+            ->wrapHeader()
+            ->wrap()
+            ;
+
+            if ($q->children->count() > 0) {
+                dddx([
+                    'q' => $q,
+                    'children' => $q->children,
+                ]);
+                foreach ($q->children as $child) {
+                    $subcols[] = Tables\Columns\TextColumn::make($child->field_name);
+                    $subcols[] = Tables\Columns\TextColumn::make($child->field_name.'answer');
+                }
+            }
+
+            $columns[] = GroupColumn::make($q->field_name)
+                ->label($label)
+                ->wrapHeader()
+                //->description('Your full name here, including any middle names.')
+                ->wrap()
+                ->schema($subcols);
+            //->default(fn ($record) => dddx($record));
+
+            //$columns[] = Stack::make($subcols);
+            */
+            $columns[] = Tables\Columns\TextColumn::make($q->field_name)
+                ->label($label)
+                ->wrapHeader()
+                ->wrap()
+                ->formatStateUsing(function ($record) use ($q) {
+                    return '['.$record->getAttribute($q->field_name).'] '.$record->getAttribute($q->field_name.'answer');
+                    //$msg = mb_convert_encoding($msg, mb_detect_encoding($msg), 'UTF-8');
+                });
+        }
+
+        return $columns;
+    }
+
+    protected function getTableFilters(): array
+    {
+        return $this->filters_data->getTableFilters();
+    }
+
+    protected function getTableActions(): array
+    {
+        return [
+            // Definisci eventuali azioni aggiuntive, come visualizzare o modificare i record
+        ];
+    }
+
+    protected function getTableBulkActions(): array
+    {
+        return [
+            // Definisci eventuali azioni collettive sui record selezionati
+            ExportBulkAction::make()
+                ->icon('fas-file-excel')
+                ->exporter(AnswersCompleteExporter::class),
+        ];
+    }
+}
