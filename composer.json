@@ -5,7 +5,8 @@
     "license": "MIT",
     "authors": [{
         "name": "Marco Sottana",
-        "email": "marco.sottana@gmail.com"
+        "email": "marco.sottana@gmail.com",
+        "role": "Developer"
     }],
     "extra": {
         "laravel": {
@@ -17,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Quaeris\\": "",
+            "Modules\\Quaeris\\": "app/",
             "Modules\\Quaeris\\Database\\Factories\\": "database/factories/",
             "Modules\\Quaeris\\Database\\Seeders\\": "database/seeders/"
         }
