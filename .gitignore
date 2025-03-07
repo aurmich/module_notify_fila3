@@ -1,6 +1,11 @@
 /vendor/
+vendor/
 node_modules/
 npm-debug.log
+*.cache
+*.phar
+*.lock
+package-lock.json
 yarn-error.log
 
 # Laravel 4 specific
@@ -22,26 +27,44 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
-*.mdb
-*.csv
+
+*.stackdump
+*.cache
+*.lock
+package-lock.json
 *.log
+
+*.lock
+package-lock.json
+
+/docs/package-lock.json
+.git-rewrite
+.git-blame-ignore-revs
+.git-rewrite
+.git-blame-ignore-revs
+/vendor
+*.lock
+.php-cs-fixer.cache
+*.cache
+/build
 *.phar
-laravel/database/migrations/
-laravel/stubs/
-laravel/lang/vendor/
-composer.lock
-public_html/deploy/config.php
-public_html/deploy/*.txt
-laravel/tmp/
-<<<<<<< HEAD
-laravel/venv/
-=======
-laravel/resources/lang/vendor/
->>>>>>> origin/dev
-laravel/composer.lock
+.git-rewrite/
+
+
+
+node_modules
+vendor
+.php-cs-fixer.cache
+.git-blame-ignore-revs
+build/
+vendor/
+build/
+node_modules
+docs/cache/
+cache/
+.git-blame-ignore-revs
+.php-cs-fixer.cache
+.git-blame-ignore-revs
+*.exe
+.php-cs-fixer.cache
+*:Zone.Identifier
