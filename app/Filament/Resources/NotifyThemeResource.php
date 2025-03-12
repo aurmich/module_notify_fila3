@@ -19,17 +19,22 @@ class NotifyThemeResource extends XotBaseResource
 {
     protected static ?string $model = NotifyTheme::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-bell';
 
     public static function getFormSchema(): array
     {
         return [
             'lang' => Select::make('lang')
-                ->options(self::fieldOptions('lang')),
+                ->options(function (): array {
+                    return self::fieldOptions('lang');
+                }),
             'type' => Select::make('type')
-                ->options(self::fieldOptions('type')),
+                ->options(function (): array {
+                    return self::fieldOptions('type');
+                }),
             'post_type' => Select::make('post_type')
-                ->options(self::fieldOptions('post_type')),
+                ->options(function (): array {
+                    return self::fieldOptions('post_type');
+                }),
             'post_id' => TextInput::make('post_id'),
             'subject' => TextInput::make('subject'),
             'from' => TextInput::make('from'),
@@ -59,14 +64,7 @@ class NotifyThemeResource extends XotBaseResource
         ];
     }
 
-    public static function getPages(): array
-    {
-        return [
-            'index' => ListNotifyThemes::route('/'),
-            'create' => CreateNotifyTheme::route('/create'),
-            'edit' => EditNotifyTheme::route('/{record}/edit'),
-        ];
-    }
+   
 
     public static function fieldOptions(string $field): array
     {
