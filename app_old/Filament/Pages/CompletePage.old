@@ -1,0 +1,9 @@
+<?php
+
+namespace Modules\Quaeris\Filament\Pages;
+
+class CompletePage extends BasePageExport
+{
+    protected static ?string $navigationLabel = 'Completa';
+    protected static ?string $title = 'Completa';
+}
