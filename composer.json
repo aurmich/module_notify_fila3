@@ -1,58 +1,58 @@
 {
-    "name": "quaeris-tv/module_quaeris_fila3",
-    "description": "",
-    "homepage": "https://github.com/quaeris-tv/module_quaeris_fila3.git",
+    "name": "laraxot/module_notify_fila3",
+    "description": "notify module dedicated to managing notifications",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_notify",
+        "Laravel",
+        "Notify module",
+        "Notify",
+        "Emails",
+        "Smss",
+        "Whatsapp"
+    ],
+    "homepage": "https://github.com/laraxot/module_notify_fila3.git",
     "license": "MIT",
-    "authors": [{
-        "name": "Marco Sottana",
-        "email": "marco.sottana@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "extra": {
         "laravel": {
             "providers": [
-                "Modules\\Quaeris\\Providers\\QuaerisServiceProvider"
+                "Modules\\Notify\\Providers\\NotifyServiceProvider",
+                "Modules\\Notify\\Providers\\Filament\\AdminPanelProvider"
             ],
             "aliases": {}
         }
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Quaeris\\": "app/",
-            "Modules\\Quaeris\\Database\\Factories\\": "database/factories/",
-            "Modules\\Quaeris\\Database\\Seeders\\": "database/seeders/"
+            "Modules\\Notify\\": "app/",
+            "Modules\\Notify\\Database\\Factories\\": "database/factories/",
+            "Modules\\Notify\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "require": {
-        "genealabs/laravel-model-caching": "^11.0",
-        "spatie/url": "*",
-        "spipu/html2pdf": "*",
-        "weberhofer/jsonrpcphp": "*"
+        "aws/aws-sdk-php": "*",
+        "filament/filament": "*",
+        "illuminate/contracts": "*",
+        "illuminate/support": "*",
+        "irazasyed/telegram-bot-sdk": "*",
+        "kreait/laravel-firebase": "*",
+        "laravel-notification-channels/fcm": "*",
+        "laravel-notification-channels/telegram": "*",
+        "phpdocumentor/type-resolver": "*",
+        "symfony/http-client": "*",
+        "symfony/postmark-mailer": "*"
     },
-    "require_comment": {
-        "laraxot/module_user_fila3": "dev-master",
-        "laraxot/module_xot_fila3": "dev-master",
-        "thecodingmachine/safe": "^2.5"
-    },
-    "require-dev_comment": {
-        "enlightn/enlightn": "^2.5",
-        "laravel/pint": "^1.13",
-        "nunomaduro/collision": "*",
-        "larastan/larastan": "*",
-        "nunomaduro/phpinsights": "^2.9",
-        "orchestra/testbench": "^9.4",
-        "orchestra/testbench-core": "^8.11",
-        "pestphp/pest": "*",
-        "pestphp/pest-plugin-arch": "*",
-        "pestphp/pest-plugin-laravel": "*",
-        "phpstan/phpstan-deprecation-rules": "*",
-        "phpstan/phpstan-phpunit": "*",
-        "psalm/plugin-laravel": "^2.8",
-        "spatie/laravel-ray": "*",
-        "symplify/phpstan-rules": "*",
-        "thecodingmachine/phpstan-safe-rule": "^1.2",
-        "vimeo/psalm": "^5.15"
-    },
-    "repositories_comment": [
+    "require-dev": {},
+    "repositories": [
         {
             "type": "path",
             "url": "../Xot"
@@ -67,6 +67,12 @@
         }
     ],
     "scripts": {
+        "post-autoload-dump1": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
         "test-coverage": "vendor/bin/pest --coverage-html coverage",
@@ -75,14 +81,11 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "phpstan/extension-installer": true,
             "pestphp/pest-plugin": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "nunomaduro/phpinsights": "^2.12"
-    }
+    "prefer-stable": true
 }

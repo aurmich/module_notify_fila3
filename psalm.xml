@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <psalm
-    errorLevel="9"
+    errorLevel="1"
+     cacheDirectory="build/psalm"
+    errorBaseline="psalm-baseline.xml"
     resolveFromConfigFile="true"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
@@ -9,12 +11,11 @@
     findUnusedCode="true"
 >
     <projectFiles>
-        <directory name="."/>
+        <directory name="." />
+
         <ignoreFiles>
-            <directory name="build" />
-            <directory name="vendor" />
-            
-            <directory name="docs" />
+            <directory name="vendor"/>
+            <directory name="docs"/>
         </ignoreFiles>
     </projectFiles>
     <plugins>

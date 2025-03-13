@@ -1,3 +1,2 @@
 providers:
-  - Modules\Quaeris\Providers\QuaerisServiceProvider
-  - Modules\Xot\Providers\Filament\AdminPanelProvider
+  - Modules\Notify\Providers\NotifyServiceProvider

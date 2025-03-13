@@ -1,12 +1,14 @@
 {
-    "name": "Quaeris",
-    "alias": "quaeris",
+    "name": "Notify",
+    "alias": "notify",
     "description": "",
     "keywords": [],
     "priority": 0,
     "providers": [
-        "Modules\\Quaeris\\Providers\\QuaerisServiceProvider",
-        "Modules\\Quaeris\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Notify\\Providers\\NotifyServiceProvider",
+        "Modules\\Notify\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "files": []
+    "aliases": [],
+    "files": [],
+    "requires": []
 }
