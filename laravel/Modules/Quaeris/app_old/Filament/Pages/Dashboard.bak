@@ -1,0 +1,395 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Quaeris\Filament\Pages;
+
+use Filament\Actions\Action;
+use Filament\Facades\Filament;
+use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\Select;
+use Filament\Pages\Concerns\ExposesTableToWidgets;
+use Filament\Resources\Pages\ListRecords;
+use Filament\Tables;
+use Filament\Tables\Columns\Layout\Split;
+use Filament\Tables\Columns\Layout\Stack;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Concerns\HasFilters;
+use Filament\Tables\Concerns\InteractsWithTable;
+use Filament\Tables\Enums\FiltersLayout;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Grouping\Group;
+use Filament\Tables\Table;
+use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
+use Modules\Quaeris\Actions\QuestionChart\Custom\ContactsCompleted;
+use Modules\Quaeris\Actions\QuestionChart\Custom\MailResponseRate;
+use Modules\Quaeris\Actions\QuestionChart\Custom\SmsResponseRate;
+use Modules\Quaeris\Actions\SurveyPdf\ExportTypeAction;
+use Modules\Quaeris\Datas\AnswersFilterData;
+use Modules\Quaeris\Enums\SurveyExportTypesEnum;
+use Modules\Quaeris\Filament\Forms\Components\FilterButton;
+use Modules\Quaeris\Filament\Resources\QuestionChartTmpResource;
+use Modules\Quaeris\Filament\Widgets\ResponseRateWidget;
+use Modules\Quaeris\Filament\Widgets\SurveysSentWidget;
+use Modules\Quaeris\Filament\Widgets\TotAnswersWidget;
+use Modules\Quaeris\Models\Customer;
+use Modules\Quaeris\Models\SurveyPdf;
+use Modules\Quaeris\Tables\Columns\ChartsColumn;
+
+use function Safe\date;
+use function Safe\ini_set;
+
+use Webmozart\Assert\Assert;
+
+class Dashboard extends \Modules\Xot\Filament\Pages\XotBaseListRecords
+{
+    // use HasFilters;
+    // use InteractsWithTable;
+    use ExposesTableToWidgets;
+
+    protected static ?string $navigationIcon = 'heroicon-o-home';
+
+    protected static string $resource = QuestionChartTmpResource::class;
+
+    protected static ?string $label = 'Oneeee';
+
+    protected static string $view = 'quaeris::filament.pages.dashboard.dashboard-one';
+
+    // protected static ?string $navigationLabel = 'One';
+    // protected static ?string $navigationGroup = 'Dashboards';
+    protected static ?int $navigationSort = 1;
+
+    public ?SurveyPdf $surveyPdf = null;
+
+    public function mount(): void
+    {
+        $surveyPdf = $this->getSurveyPdf();
+
+        $user = auth()->user();
+        if (null !== $user) {
+            // --- passare subito ad activity
+            Log::build([
+                'driver' => 'single',
+                'path' => storage_path('logs/survey_dashboard_'.date('Y-m-d').'.log'),
+            ])->info('app.requests', ['user_id' => $user->id, 'user_email' => $user->email]);
+        }
+    }
+
+    /**
+     * @return array<string>
+     */
+    public function getBreadcrumbs(): array
+    {
+        return [];
+    }
+
+    public function getSurveyPdf(): ?SurveyPdf
+    {
+        if (null === $this->tableFilters) {
+            $this->tableFilters = [];
+        }
+
+        $survey_pdf_id = Arr::get($this->tableFilters, 'sondaggio.survey_pdf_id');
+
+        $surveyPdfOpts = $this->getSurveyPdfOpts();
+
+        if (! \in_array($survey_pdf_id, array_keys($surveyPdfOpts), false)) {
+            $this->surveyPdf = null;
+
+            return null;
+        }
+
+        if (! $this->surveyPdf instanceof SurveyPdf || $this->surveyPdf->id !== $survey_pdf_id) {
+            $this->surveyPdf = SurveyPdf::firstWhere('id', $survey_pdf_id);
+        }
+
+        return $this->surveyPdf;
+    }
+
+    public function getHeaderWidgetsColumns(): int|array
+    {
+        return 3;
+    }
+
+    protected function getHeaderWidgets(): array
+    {
+        $surveyPdf = $this->getSurveyPdf();
+        // $surveyPdf = $this->surveyPdf;
+
+        if (! $surveyPdf instanceof SurveyPdf) {
+            return [];
+        }
+
+        if (null === $this->tableFilters) {
+            return [];
+        }
+
+        $questionChart = $surveyPdf->questionCharts->first();
+        Assert::notNull($questionChart, '['.__FILE__.']['.__LINE__.']');
+
+        $filter = AnswersFilterData::from($this->tableFilters['sondaggio']);
+
+        $completed = app(ContactsCompleted::class)->execute($questionChart, '', '', $filter)->answers->toArray();
+        $emails = app(MailResponseRate::class)->execute($questionChart, '', '', $filter)->answers->toArray();
+        $smss = app(SmsResponseRate::class)->execute($questionChart, '', '', $filter)->answers->toArray();
+
+        $stats = [];
+        $stats['surveysSent'] = [
+            'tot' => array_column(array_column($completed, 'value'), 'invited'),
+            'sms' => array_column(array_column($smss, 'value'), 'invited'),
+            'emails' => array_column(array_column($emails, 'value'), 'invited'),
+        ];
+
+        $stats['totAnswers'] = [
+            'tot' => array_column(array_column($completed, 'value'), 'answers'),
+            'sms' => array_column(array_column($smss, 'value'), 'answers'),
+            'emails' => array_column(array_column($emails, 'value'), 'answers'),
+        ];
+
+        $stats['responseRate'] = [
+            'tot' => array_column($completed, 'avg'),
+            'sms' => array_column($smss, 'avg'),
+            'emails' => array_column($emails, 'avg'),
+        ];
+
+        return [
+            // SurveysSentWidget::class,
+            SurveysSentWidget::make(['stats' => $stats['surveysSent']]),
+            TotAnswersWidget::make(['stats' => $stats['totAnswers']]),
+            ResponseRateWidget::make(['stats' => $stats['responseRate']]),
+            // ContactsWidget::class,
+        ];
+    }
+
+    public function refreshPage(): void
+    {
+        if (null === $this->tableFilters) {
+            return;
+        }
+
+        Session::put('tableFilters', $this->tableFilters['sondaggio']);
+        $params = [
+            'tableFilters' => $this->tableFilters,
+        ];
+        redirect(self::getUrl($params));
+    }
+
+    public function getHeading(): string|Htmlable
+    {
+        return $this->surveyPdf->name ?? 'Seleziona un Sondaggio ..';
+    }
+
+    public function getSubheading(): string|Htmlable|null
+    {
+        // return 'Here you will see an overview of your tasks.';
+        return null;
+    }
+
+    public function table(Table $table): Table
+    {
+        return $table
+            ->columns(
+                $this->getTableColumns()
+            )
+            ->filters(
+                $this->getTableFilters(),
+                layout: FiltersLayout::AboveContent
+            )
+            ->filtersFormColumns(1)
+            ->actions([
+                // Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                // Tables\Actions\DeleteBulkAction::make(),
+            ])
+            ->headerActions([
+            ])
+            ->paginated(false)
+            ->contentGrid([
+                'md' => 2,
+                'xl' => 2, // 3
+            ])
+            ->defaultSort('pos', 'asc')
+            ->defaultGroup('group_title');
+        // ->groups([
+        //     Group::make('group_title')
+        //         ->label('Categoria')
+        //         ,
+        // ])
+    }
+
+    protected function getTableFilters(): array
+    {
+        $surveyPdfOpts = $this->getSurveyPdfOpts();
+
+        $filters = [];
+
+        $filters[] = Filter::make('sondaggio')
+            // ->label('Sondaggio')
+            ->form([
+                Select::make('survey_pdf_id')
+                    ->label('Sondaggio')
+                    ->options($surveyPdfOpts)
+                    ->stateBindingModifiers(['defer']),
+                Select::make('question_filter')
+                    ->stateBindingModifiers(['defer'])
+                    ->options(static function (callable $get) {
+                        $survey_pdf_id = $get('survey_pdf_id');
+                        $surveyPdf = SurveyPdf::firstWhere('id', $survey_pdf_id);
+                        Assert::notNull($surveyPdf, '['.__FILE__.']['.__LINE__.']');
+                        if (($limeSurvey = $surveyPdf->info) === null) {
+                            return [];
+                        }
+
+                        if (($limeQuestion = $limeSurvey->questions->firstWhere('qid', $surveyPdf->question_filter)) === null) {
+                            return [];
+                        }
+
+                        $gid = $limeQuestion->gid;
+
+                        return trans('quaeris::contact.'.$surveyPdf->survey_id.'.'.$gid.'.'.$surveyPdf->question_filter) ?? '';
+                    })
+                    ->visible(function (callable $get): bool {
+                        $survey_pdf_id = $get('survey_pdf_id');
+                        if (! $this->surveyPdf instanceof SurveyPdf || $this->surveyPdf->id !== $survey_pdf_id) {
+                            $surveyPdf = SurveyPdf::firstWhere('id', $survey_pdf_id);
+                        } else {
+                            $surveyPdf = $this->surveyPdf;
+                        }
+
+                        if (null === $surveyPdf) {
+                            return false;
+                        }
+
+                        return null !== $surveyPdf->question_filter;
+                    }),
+                DatePicker::make('date_from')
+                    ->stateBindingModifiers(['defer'])
+
+                    ->format('d/m/Y'),
+                DatePicker::make('date_to')
+                    ->stateBindingModifiers(['defer'])
+
+                    ->format('d/m/Y'),
+                FilterButton::make(),
+            ])->columns(4)
+            ->query(static function (Builder $query, array $data) use ($surveyPdfOpts) {
+                // dddx($data);
+                ini_set('memory_limit', '-1');
+                ini_set('max_execution_time', '-1');
+
+                if (null === $data['survey_pdf_id']) {
+                    return $query->where('id', 0);
+                }
+                if (! \in_array($data['survey_pdf_id'], array_keys($surveyPdfOpts), false)) {
+                    abort(403);
+                }
+
+                return $query->where('survey_pdf_id', $data['survey_pdf_id'])->where('show_on_pdf', true);
+            });
+
+        return $filters;
+    }
+
+    public function getSurveyPdfOpts(): array
+    {
+        Assert::notNull($user = Filament::auth()->user(), '['.__FILE__.']['.__LINE__.']');
+        $currentTeam = $user->currentTeam;
+        if (null === $currentTeam) {
+            return [];
+        }
+        Assert::notNull($currentTeam, '['.__FILE__.']['.__LINE__.']');
+        Assert::isInstanceOf($currentTeam, Customer::class);
+
+        return $currentTeam->surveyPdfsActive()->pluck('name', 'id')->toArray();
+    }
+
+    public function resetTableFiltersForm(): void
+    {
+        $this->surveyPdf = null;
+        parent::resetTableFiltersForm();
+    }
+
+    protected function shouldPersistTableFiltersInSession(): bool
+    {
+        return true;
+    }
+
+    // protected function getTableFiltersFormColumns(): int
+    // {
+    //     return 4;
+    // }
+
+    protected function getTableColumns(): array
+    {
+        return [
+            // Tables\Columns\TextColumn::make('group_title'),
+            Split::make([
+                Stack::make([
+                    TextColumn::make('full_question_txt')->wrap()
+                        ->searchable(query: static fn (Builder $query, string $search): Builder => $query
+                            ->where('question_txt', 'like', sprintf('%%%s%%', $search))),
+
+                    ChartsColumn::make('id'),
+                ]),
+            ]),
+        ];
+    }
+
+    protected function getHeaderActions(): array
+    {
+        // dddx($this->tableFilters);
+        // if ($this->tableFilters['sondaggio']['survey_pdf_id'] == null) {
+        //     return [];
+        // }
+
+        /**
+         * @var SurveyPdf
+         */
+        $surveyPdf = $this->surveyPdf;
+
+        return [
+            Action::make('exports')
+
+                ->icon('heroicon-o-document-arrow-down')
+                ->action(function (array $data) use ($surveyPdf) {
+                    if (null !== $data['type']) {
+                        Assert::isArray($this->tableFilters);
+                        $answersFilterData = AnswersFilterData::from($this->tableFilters['sondaggio']);
+
+                        return app(ExportTypeAction::class)->execute($surveyPdf, $data['type'], $answersFilterData);
+                    }
+                })->form([
+                    // Forms\Components\DatePicker::make('date_from')->displayFormat('d/m/Y'),
+                    // Forms\Components\DatePicker::make('date_to')->displayFormat('d/m/Y'),
+                    Radio::make('type')
+                        // ->options(SurveyExportTypesEnum::class)
+                        // *
+                        ->options(static fn (): array =>
+                            // if ('' !== $surveyPdf->question_contact_email) {
+                            //    $options['xls_email'] = 'xls_email';
+                            // }
+                            [
+                                'xls_alert' => 'lista feedback valutazione <6', // lista feedback valutazione <6
+                                // 'xls_alert_user' => 'xls_alert_user', // lista feedback valutazione <6 per riga di domanda
+                                'xls_alert_user2' => 'lista feedback valutazione <6 per riga di domanda', // lista feedback valutazione <6 per riga di domanda
+                                // 'xls_alert_user_all_answers' => 'xls_alert_user_all_answers', // lista feedback per riga di domanda
+                                'xls_answers_complete' => 'lista risposte complete', // select *
+                                'xls_optout' => 'lista disiscritti', // lista disiscritti
+                                'xls_contact_list' => 'lista contatti inseriti', // lista contatti inseriti
+                                'pdf' => 'pdf',
+                            ])
+                        // */
+
+                        ->columns(2),
+                ])
+                ->visible(fn (): bool => $this->surveyPdf instanceof SurveyPdf),
+        ];
+    }
+}
