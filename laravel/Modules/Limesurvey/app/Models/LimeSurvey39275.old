@@ -1,0 +1,227 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Limesurvey\Models;
+
+use GeneaLabs\LaravelModelCaching\CachedBuilder;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
+use Modules\Limesurvey\Contracts\LimeSurveyXXXContract;
+
+/**
+ * Modules\Limesurvey\Models\LimeSurvey39275
+ *
+ * @method static CachedBuilder|LimeSurvey39275 all($columns = [])
+ * @method static CachedBuilder|LimeSurvey39275 avg($column)
+ * @method static CachedBuilder|LimeSurvey39275 cache(array $tags = [])
+ * @method static CachedBuilder|LimeSurvey39275 cachedValue(array $arguments, string $cacheKey)
+ * @method static CachedBuilder|LimeSurvey39275 count($columns = '*')
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|BaseModel disableCache()
+ * @method static CachedBuilder|LimeSurvey39275 disableModelCaching()
+ * @method static CachedBuilder|LimeSurvey39275 exists()
+ * @method static \Modules\Limesurvey\Database\Factories\LimeSurvey39275Factory factory($count = null, $state = [])
+ * @method static CachedBuilder|LimeSurvey39275 flushCache(array $tags = [])
+ * @method static CachedBuilder|LimeSurvey39275 getModelCacheCooldown(\Illuminate\Database\Eloquent\Model $instance)
+ * @method static CachedBuilder|LimeSurvey39275 inRandomOrder($seed = '')
+ * @method static CachedBuilder|LimeSurvey39275 insert(array $values)
+ * @method static CachedBuilder|LimeSurvey39275 isCachable()
+ * @method static CachedBuilder|LimeSurvey39275 max($column)
+ * @method static CachedBuilder|LimeSurvey39275 min($column)
+ * @method static CachedBuilder|LimeSurvey39275 newModelQuery()
+ * @method static CachedBuilder|LimeSurvey39275 newQuery()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|BaseModel ofFilterData(\Modules\Quaeris\Datas\AnswersFilterData $answersFilterData)
+ * @method static CachedBuilder|LimeSurvey39275 query()
+ * @method static CachedBuilder|LimeSurvey39275 sum($column)
+ * @method static CachedBuilder|LimeSurvey39275 truncate()
+ * @method static CachedBuilder|LimeSurvey39275 withAnswersLabel(string $qid, string $field_name)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|BaseModel withCacheCooldownSeconds(?int $seconds = null)
+ * @property int $id
+ * @property string|null $token
+ * @property Carbon|null $submitdate
+ * @property int|null $lastpage
+ * @property string $startlanguage
+ * @property string|null $seed
+ * @property Carbon $startdate
+ * @property Carbon $datestamp
+ * @property string|null $39275X39X465
+ * @property string|null $39275X39X466
+ * @property string|null $39275X40X539
+ * @property string|null $39275X40X467
+ * @property string|null $39275X40X468
+ * @property string|null $39275X40X469
+ * @property string|null $39275X40X470
+ * @property string|null $39275X40X471
+ * @property string|null $39275X40X472
+ * @property string|null $39275X40X473
+ * @property string|null $39275X40X474
+ * @property string|null $39275X40X475SQ001
+ * @property string|null $39275X40X476
+ * @property string|null $39275X41X540
+ * @property string|null $39275X41X479
+ * @property string|null $39275X41X480
+ * @property string|null $39275X41X481
+ * @property string|null $39275X41X482
+ * @property string|null $39275X41X483
+ * @property string|null $39275X41X484
+ * @property string|null $39275X41X487SQ001
+ * @property string|null $39275X41X488
+ * @property string|null $39275X41X490SQ001
+ * @property string|null $39275X41X492
+ * @property string|null $39275X42X541
+ * @property string|null $39275X42X493
+ * @property string|null $39275X42X660SQ001
+ * @property string|null $39275X42X723
+ * @property string|null $39275X42X495
+ * @property string|null $39275X42X505
+ * @property string|null $39275X42X497
+ * @property string|null $39275X42X498
+ * @property string|null $39275X42X506
+ * @property string|null $39275X42X507
+ * @property string|null $39275X42X508
+ * @property string|null $39275X42X509
+ * @property string|null $39275X42X499SQ001
+ * @property string|null $39275X42X500
+ * @property string|null $39275X43X510
+ * @property string|null $39275X43X512
+ * @property string|null $39275X43X512other
+ * @property string|null $39275X43X514
+ * @property string|null $39275X43X516SQ001
+ * @property string|null $39275X43X517
+ * @property string|null $39275X44X534
+ * @property string|null $39275X44X528SQ001
+ * @property string|null $39275X44X529
+ * @property string|null $39275X44X536SQ001
+ * @property string|null $39275X44X538
+ * @property string|null $39275X44X530SQ001
+ * @property string|null $39275X44X531
+ * @property string|null $39275X45X543
+ * @property string|null $39275X45X542
+ * @method static CachedBuilder|LimeSurvey39275 where39275X39X465($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X39X466($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X467($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X468($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X469($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X470($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X471($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X472($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X473($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X474($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X475SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X476($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X40X539($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X479($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X480($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X481($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X482($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X483($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X484($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X487SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X488($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X490SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X492($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X41X540($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X493($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X495($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X497($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X498($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X499SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X500($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X505($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X506($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X507($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X508($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X509($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X541($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X660SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X42X723($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X43X510($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X43X512($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X43X512other($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X43X514($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X43X516SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X43X517($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X44X528SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X44X529($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X44X530SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X44X531($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X44X534($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X44X536SQ001($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X44X538($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X45X542($value)
+ * @method static CachedBuilder|LimeSurvey39275 where39275X45X543($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereDatestamp($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereId($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereLastpage($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereSeed($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereStartdate($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereStartlanguage($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereSubmitdate($value)
+ * @method static CachedBuilder|LimeSurvey39275 whereToken($value)
+ * @mixin \Eloquent
+ */
+class LimeSurvey39275 extends BaseModel implements LimeSurveyXXXContract
+{
+    /** @var bool */
+    public $timestamps = true;
+
+    /**  @var string   */
+    protected $table = 'lime_survey_39275';
+
+    /**  @var string   */
+    protected $primaryKey = 'id';
+
+    /** @var array<int, string>  */
+    protected $fillable = [
+        'token', 'submitdate', 'lastpage', 'startlanguage', 'seed', 'startdate', 'datestamp', '39275X39X465', '39275X39X466', '39275X40X539', '39275X40X467', '39275X40X468', '39275X40X469', '39275X40X470', '39275X40X471', '39275X40X472', '39275X40X473', '39275X40X474', '39275X40X475SQ001', '39275X40X476', '39275X41X540', '39275X41X479', '39275X41X480', '39275X41X481', '39275X41X482', '39275X41X483', '39275X41X484', '39275X41X487SQ001', '39275X41X488', '39275X41X490SQ001', '39275X41X492', '39275X42X541', '39275X42X493', '39275X42X660SQ001', '39275X42X723', '39275X42X495', '39275X42X505', '39275X42X497', '39275X42X498', '39275X42X506', '39275X42X507', '39275X42X508', '39275X42X509', '39275X42X499SQ001', '39275X42X500', '39275X43X510', '39275X43X512', '39275X43X512other', '39275X43X514', '39275X43X516SQ001', '39275X43X517', '39275X44X534', '39275X44X528SQ001', '39275X44X529', '39275X44X536SQ001', '39275X44X538', '39275X44X530SQ001', '39275X44X531', '39275X45X543', '39275X45X542',
+    ];
+
+    /** @var array<int, string>  */
+    protected $hidden = [
+    ];
+
+    /** @return array<string, string>     */
+    protected $casts = [
+        'id' => 'int', 'token' => 'string', 'submitdate' => 'datetime', 'lastpage' => 'int', 'startlanguage' => 'string', 'seed' => 'string', 'startdate' => 'datetime', 'datestamp' => 'datetime', '39275X39X465' => 'string', '39275X39X466' => 'string', '39275X40X539' => 'string', '39275X40X467' => 'string', '39275X40X468' => 'string', '39275X40X469' => 'string', '39275X40X470' => 'string', '39275X40X471' => 'string', '39275X40X472' => 'string', '39275X40X473' => 'string', '39275X40X474' => 'string', '39275X40X475SQ001' => 'string', '39275X40X476' => 'string', '39275X41X540' => 'string', '39275X41X479' => 'string', '39275X41X480' => 'string', '39275X41X481' => 'string', '39275X41X482' => 'string', '39275X41X483' => 'string', '39275X41X484' => 'string', '39275X41X487SQ001' => 'string', '39275X41X488' => 'string', '39275X41X490SQ001' => 'string', '39275X41X492' => 'string', '39275X42X541' => 'string', '39275X42X493' => 'string', '39275X42X660SQ001' => 'string', '39275X42X723' => 'string', '39275X42X505' => 'string', '39275X42X497' => 'string', '39275X42X498' => 'string', '39275X42X506' => 'string', '39275X42X507' => 'string', '39275X42X508' => 'string', '39275X42X509' => 'string', '39275X42X499SQ001' => 'string', '39275X42X500' => 'string', '39275X43X510' => 'string', '39275X43X512' => 'string', '39275X43X512other' => 'string', '39275X43X514' => 'string', '39275X43X516SQ001' => 'string', '39275X43X517' => 'string', '39275X44X534' => 'string', '39275X44X528SQ001' => 'string', '39275X44X529' => 'string', '39275X44X536SQ001' => 'string', '39275X44X538' => 'string', '39275X44X530SQ001' => 'string', '39275X44X531' => 'string', '39275X45X543' => 'string', '39275X45X542' => 'string',
+    ];
+
+    // Mutators
+    /*
+    public function getAttributeValue($value){
+        if(!str_contains($value,'X')){
+            return $value;
+        }
+
+        dddx($value);
+
+    }
+    */
+
+    // Scopes...
+
+    public function scopewithAnswersLabel(Builder $builder, string $qid, string $field_name): Builder
+    {
+        $ask_table = 'lime_answers';
+        $ask_table_lang = 'lime_answer_l10ns';
+
+        return $builder/* ->selectRaw('*,ask_lang.answer as label') */
+            ->join(
+                $ask_table.' as ask',
+                static function ($join) use ($qid, $field_name): void {
+                    $join->on('ask.code', '=', $field_name)
+                        ->whereRaw('ask.qid = "'.$qid.'"');
+                }
+            )->join(
+                $ask_table_lang.' as ask_lang',
+                static function ($join): void {
+                    $join->on('ask.aid', '=', 'ask_lang.aid')
+                        ->whereRaw('ask_lang.language="it"');
+                }
+            );
+    }
+
+    // Functions ...
+
+    // Relations ...
+}
