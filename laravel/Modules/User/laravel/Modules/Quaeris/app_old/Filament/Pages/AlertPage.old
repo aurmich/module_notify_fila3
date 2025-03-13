@@ -1,0 +1,134 @@
+<?php
+
+namespace Modules\Quaeris\Filament\Pages;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
+use Modules\Limesurvey\Models\LimeQuestion;
+
+class AlertPage extends BasePageExport
+{
+    protected static ?string $navigationLabel = 'Alert';
+    protected static ?string $title = 'Alert';
+
+    public function getQuestions(): Collection
+    {
+        return LimeQuestion::where('sid', $this->survey_id)
+            ->where('parent_qid', 0)
+            //->whereNotIn('type', [ 'M', 'F' ])
+            // ->whereIn('type', ['B', '!','F'])
+            // ->whereIn('type', ['B'])
+            ->whereIn('type', ['F'])
+            // ->whereIn('type', ['L','!','R','F','1','H','O'])
+            // ->whereIn('type', ['L','!','R','1','H','O'])
+            // ->whereIn('type', ['!'])
+            ->get()
+            // ->take(5) //MariaDB can only use 61 tables in a join
+        ;
+    }
+
+    public function getTableQuery(): Builder
+    {
+        $query = parent::getTableQuery();
+
+        // dddx($this->questions);
+
+        foreach ($this->questions as $key => $q) {
+            if ($q->children->count() > 0) {
+                foreach ($q->children as $child) {
+                    // $query = $query->where($child->fieldName.'ask_lang.answer', '<=', 6);
+
+                    $query = $query->where(function ($subQuery) use ($child) {
+                        $subQuery->where($child->fieldName.'ask_lang.answer', '<=', 6)
+                            ->orWhereNull($child->fieldName.'ask_lang.answer'); // Controlla se è NULL
+                    });
+
+                    // $query = $query->where(function ($subQuery) use ($child) {
+                    //     $subQuery->whereBetween($child->fieldName.'ask_lang.answer', [0, 10])  // Filtra valori tra 0 e 10
+                    //              ->where($child->fieldName.'ask_lang.answer', '<=', 6);         // Valori <= 6
+                    // });
+                }
+            }
+            // dddx([
+                //     $q,
+                //     $q->fieldName,
+            // ]);
+
+            // $query = $query->where(function ($subQuery) use ($q) {
+                //     $subQuery->where($q->fieldName.'ask_lang.answer', '<=', 6)
+                //         ->orWhereNull($q->fieldName.'ask_lang.answer'); // Controlla se è NULL
+            // });
+
+            // if (! in_array($q->type, ['L','!','R','F','1','H','O'])) { //LISTA non TRADUCIBILI
+            // dddx([
+                    //     $q,
+                    //     $q->fieldName,
+            // ]);
+            // $query = $query->where(function ($subQuery) use ($q) {
+                    //     $subQuery->where($q->fieldName.'ask_lang.answer', '<=', 6)
+                    //         ->orWhereNull($q->fieldName.'ask_lang.answer'); // Controlla se è NULL
+            // });
+            // }
+
+            // $query = $query->where($q->fieldName.'ask_lang.answer', '<=', 6);
+        }
+        return $query;
+    }
+
+    // public function getTableQuery(): Builder
+    // {
+    //     $survey_response = SurveyResponse::getResponsesForSurvey($this->survey_id);
+    //     $query = $survey_response
+    //         ->withParticipants()
+    //         ->where('submitdate', '!=', null)
+    //     ;
+
+    //     $questions = $this->getQuestions();
+    //     // dddx($questions);
+    //     $arr = [];
+    //     foreach ($questions as $key => $q) {
+
+    //         // if($key == 5){
+    //             $arr[] = [
+    //                 'q' => $q,
+    //                 'type' => $q->type,
+    //                 'children' => $q->children
+    //             ];
+
+    //             // if($q->l10n->count() == 0){
+    //             //     dddx([
+    //             //         $q,
+    //             //         $q->l10n
+    //             //     ]);
+    //             // }
+
+    //             if ($q->children->count() > 0) {
+    //                 foreach ($q->children as $child) {
+    //                     // dddx($child->fieldName);
+    //                     //il collegamento con le risposte e' con il padre
+    //                     $query = $query->withAnswersLabel($q->qid, $child->fieldName, $child->fieldName)
+    //                         // ->where($child->fieldName.'ask_lang.answer', '<=', 6)
+    //                         // ->orWhere($child->fieldName.'ask_lang.answer', '<=', 06)
+    //                     ;
+    //                 }
+    //             } else {
+    //                 if (! in_array($q->type, ['M','F'])) { //LISTA non TRADUCIBILI
+    //                     $query = $query->withAnswersLabel($q->qid, $q->fieldName, $q->fieldName)
+    //                         // ->where($q->fieldName.'ask_lang.answer', '<=', 6)
+    //                         // ->orWhere($q->fieldName.'ask_lang.answer', '<=', 06)
+    //                     ;
+    //                 }
+    //             }
+    //         // }
+    //     }
+    //     // dddx($arr);
+    //     dddx($query->toSql());
+
+    //     $this->questions = $questions;
+    //     // dddx($questions);
+    //     return $query
+
+    //         //->requalifyWhereTables('')
+    //     ;
+    // }
+}

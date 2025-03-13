@@ -1,0 +1,58 @@
+<?php
+
+namespace Modules\Quaeris\Filament\Exports;
+
+use Filament\Actions\Exports\ExportColumn;
+use Filament\Actions\Exports\Exporter;
+use Illuminate\Database\Eloquent\Builder;
+
+class AlertExporter extends Exporter
+{
+    public static function getColumns(): array
+    {
+        return [
+            ExportColumn::make('answer'),         // Valore della risposta
+            ExportColumn::make('value'),          // Valore da aggiungere per le risposte
+            // ExportColumn::make('participant_id'), // ID del partecipante
+            ExportColumn::make('submitdate'),     // Data di invio della risposta
+            ExportColumn::make('fieldname'),      // Nome del campo della risposta
+            ExportColumn::make('token'),
+            ExportColumn::make('email'),
+        ];
+    }
+
+    // public static function make(array $properties = []){
+
+    // }
+
+    public static function modifyQuery(Builder $query): Builder
+    {
+        /*
+        return $query->with([
+            'purchasable' => fn (MorphTo $morphTo) => $morphTo->morphWith([
+                ProductPurchase::class => ['product'],
+                ServicePurchase::class => ['service'],
+                Subscription::class => ['plan'],
+            ]),
+        ]);
+        */
+        return $query;
+    }
+
+    public function setSurveyId(string $survey_id): self
+    {
+        $this->survey_id = $survey_id;
+        return $this;
+    }
+
+    public static function getCompletedNotificationBody(\Filament\Actions\Exports\Models\Export $export): string
+    {
+        $body = 'Your product export has completed and ' . number_format($export->successful_rows) . ' ' . str('row')->plural($export->successful_rows) . ' exported.';
+
+        if ($failedRowsCount = $export->getFailedRowsCount()) {
+            $body .= ' ' . number_format($failedRowsCount) . ' ' . str('row')->plural($failedRowsCount) . ' failed to export.';
+        }
+
+        return $body;
+    }
+}
