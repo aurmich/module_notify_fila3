@@ -34,7 +34,8 @@ git commit -m "Mantiene gli ultimi 5 commit della storia"
 git gc --aggressive --prune=now
 
 # Push con cautela - usa -f solo se sei sicuro
-echo "Eseguire il push con: git push -f origin $branch"
+#echo "Eseguire il push con: git push -f origin $branch"
+git push -f origin $branch
 echo "ATTENZIONE: Informare il team di eseguire 'git pull --rebase' dopo questa operazione"
 
 echo "Branch di backup creato: $backup_branch"
