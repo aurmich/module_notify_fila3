@@ -18,10 +18,6 @@ class SmsService
     public ?string $from = null;
 
     public ?string $body = null;
-<<<<<<< HEAD
-=======
-    
->>>>>>> 9165bf1 (.)
     /**
      * Variabili per il template SMS.
      *
@@ -49,8 +45,7 @@ class SmsService
     }
 
     /**
-<<<<<<< HEAD
-     * Factory method to create an instance.
+     * Factory method per creare un'istanza singleton.
      */
     public static function make(): self
     {
@@ -58,8 +53,7 @@ class SmsService
     }
 
     /**
-     * Sets local variables and merges them with the vars array.
-     * 
+     * Imposta variabili locali e le unisce a vars.
      * @param array<string, mixed> $vars
      */
     public function setLocalVars(array $vars): self
@@ -68,22 +62,16 @@ class SmsService
             $this->{$k} = $v;
         }
         $this->vars = array_merge($this->vars, $vars);
-
         return $this;
     }
 
     /**
-=======
->>>>>>> 9165bf1 (.)
-     * Unisce le variabili con quelle esistenti.
-     *
+     * Unisce le variabili con quelle esistenti (alias per compatibilità).
      * @param array<string, mixed> $vars
      */
     public function mergeVars(array $vars): self
     {
-        $this->vars = array_merge($this->vars, $vars);
-
-        return $this;
+        return $this->setLocalVars($vars);
     }
 
     /**
@@ -91,58 +79,54 @@ class SmsService
      */
     public function send(): self
     {
-<<<<<<< HEAD
-        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
-=======
-        $engineClassName = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
->>>>>>> 9165bf1 (.)
-        
+        $engineClassName = '\Modules\Notify\Services\SmsEngines\' . Str::studly($this->driver) . 'Engine';
+
         // Verifichiamo che la classe esista
         if (!class_exists($engineClassName)) {
             throw new \RuntimeException("La classe del motore SMS {$engineClassName} non esiste");
         }
-        
+
         // Verifichiamo che la classe abbia il metodo make
         if (!method_exists($engineClassName, 'make')) {
             throw new \RuntimeException("La classe {$engineClassName} non implementa il metodo make()");
         }
-        
+
         // Creiamo l'istanza in modo sicuro
         $instance = $engineClassName::make();
-        
+
         // Verifichiamo che l'istanza sia un oggetto
         if (!is_object($instance)) {
             throw new \RuntimeException("Il metodo make() di {$engineClassName} non ha restituito un oggetto");
         }
-        
+
         // Verifichiamo che l'istanza abbia i metodi necessari
         foreach (['setLocalVars', 'send', 'getVars'] as $method) {
             if (!method_exists($instance, $method)) {
                 throw new \RuntimeException("L'istanza di {$engineClassName} non implementa il metodo {$method}()");
             }
         }
-        
+
         // Utilizziamo reflection per chiamare i metodi in modo sicuro
         try {
             $reflectionClass = new \ReflectionClass($instance);
-            
+
             // Chiamiamo setLocalVars
             $setLocalVarsMethod = $reflectionClass->getMethod('setLocalVars');
             $setLocalVarsMethod->invoke($instance, $this->vars);
-            
+
             // Chiamiamo send
             $sendMethod = $reflectionClass->getMethod('send');
             $sendMethod->invoke($instance);
-            
+
             // Chiamiamo getVars
             $getVarsMethod = $reflectionClass->getMethod('getVars');
             $result = $getVarsMethod->invoke($instance);
-            
+
             // Verifichiamo che il risultato sia un array
             if (!is_array($result)) {
                 $result = [];
             }
-            
+
             // Convertiamo l'array in array<string, mixed>
             /** @var array<string, mixed> $typedResult */
             $typedResult = [];
@@ -151,7 +135,7 @@ class SmsService
                     $typedResult[$key] = $value;
                 }
             }
-            
+
             $this->mergeVars($typedResult);
         } catch (\ReflectionException $e) {
             throw new \RuntimeException("Errore durante la chiamata dei metodi: " . $e->getMessage());
@@ -159,17 +143,4 @@ class SmsService
 
         return $this;
     }
-<<<<<<< HEAD
-=======
-
-    /**
-     * Ottiene le variabili.
-     *
-     * @return array<string, mixed>
-     */
-    public function getVars(): array
-    {
-        return $this->vars;
-    }
->>>>>>> 9165bf1 (.)
 }

@@ -41,13 +41,10 @@
 <body>
     <div class="container">
         <div class="header">
-<<<<<<< HEAD
             <h1>{{ optional($email_data)->subject }}</h1>
         </div>
         <div class="content">
             {!! optional($email_data)->body_html !!}
-=======
-            <h1>{{ $email_data->subject }}</h1>
         </div>
         <div class="content">
             {!! $email_data->body_html !!}

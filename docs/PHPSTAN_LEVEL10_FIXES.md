@@ -2,13 +2,13 @@
 
 Questo documento traccia gli errori PHPStan di livello 10 identificati nel modulo Notify e le relative soluzioni implementate.
 
-<<<<<<< HEAD
+
 ## Stato Attuale
 
 Abbiamo completato la maggior parte delle correzioni necessarie per portare il modulo Notify a livello 10 di PHPStan. Rimangono solo alcuni errori in pochi file che possono essere facilmente risolti seguendo i pattern già stabiliti.
 
-=======
->>>>>>> 9165bf1 (.)
+
+ 9165bf1 (.)
 ## Errori Principali e Soluzioni
 
 ### 1. Operazioni binarie con mixed
@@ -44,10 +44,10 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 - Utilizzare `method_exists()` per verificare l'esistenza di metodi
 - Implementare gestione degli errori con try/catch o controlli condizionali
 - Utilizzare tipi di ritorno e parametri espliciti nelle firme dei metodi
-<<<<<<< HEAD
+
 - Utilizzare Reflection API per interagire con oggetti di tipo sconosciuto
-=======
->>>>>>> 9165bf1 (.)
+
+ 9165bf1 (.)
 
 ### 3. Parametri di tipo incompatibile
 
@@ -57,20 +57,20 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 - `Filament/Resources/NotifyThemeResource.php`
 - `Filament/Resources/NotifyThemeResource/Pages/ListNotifyThemes.php`
 - `Notifications/FirebaseAndroidNotification.php`
-<<<<<<< HEAD
+
 - `Filament/Clusters/Test/Pages/SendPushNotification.php`
-=======
->>>>>>> 9165bf1 (.)
+
+ 9165bf1 (.)
 
 **Soluzione**:
 - Utilizzare Closure per restituire array tipizzati correttamente
 - Implementare controlli di tipo per garantire la compatibilità
 - Costruire array con la struttura corretta prima di passarli ai metodi
 - Utilizzare annotazioni PHPDoc per specificare i tipi generici
-<<<<<<< HEAD
+
 - Utilizzare factory method invece di costruttori diretti per classi complesse
-=======
->>>>>>> 9165bf1 (.)
+
+ 9165bf1 (.)
 
 ### 4. Proprietà non definite
 
@@ -84,7 +84,7 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 - Aggiungere annotazioni PHPDoc per specificare i tipi delle proprietà
 - Implementare metodi getter/setter per accedere alle proprietà
 
-<<<<<<< HEAD
+
 ## Errori Rimanenti
 
 Rimangono alcuni errori da risolvere nei seguenti file:
@@ -111,8 +111,8 @@ Rimangono alcuni errori da risolvere nei seguenti file:
    ```
    **Soluzione**: Utilizzare l'API Reflection per chiamare i metodi in modo sicuro, o utilizzare `call_user_func` con controlli espliciti.
 
-=======
->>>>>>> 9165bf1 (.)
+
+ 9165bf1 (.)
 ## Principi Applicati nelle Correzioni
 
 1. **Controlli di tipo espliciti**: Verificare sempre il tipo di un valore prima di utilizzarlo in operazioni che richiedono un tipo specifico.
@@ -120,10 +120,10 @@ Rimangono alcuni errori da risolvere nei seguenti file:
 3. **Documentazione migliorata**: Aggiungere annotazioni PHPDoc corrette per aiutare PHPStan a comprendere i tipi.
 4. **Gestione degli errori**: Implementare try/catch o controlli condizionali per gestire potenziali errori.
 5. **Asserzioni**: Utilizzare `Assert::string()`, `Assert::isArray()`, ecc. per garantire che i valori siano del tipo corretto.
-<<<<<<< HEAD
+
 6. **Reflection API**: Utilizzare Reflection per interagire con oggetti di tipo sconosciuto quando necessario.
-=======
->>>>>>> 9165bf1 (.)
+
+ 9165bf1 (.)
 
 ## Esempi di Correzioni
 
@@ -175,7 +175,7 @@ Dopo aver implementato tutte le correzioni, PHPStan al livello 10 non riporta pi
 
 1. Continuare a correggere gli errori rimanenti nel modulo Notify
 2. Eseguire PHPStan al livello 10 per verificare che tutti gli errori siano stati risolti
-<<<<<<< HEAD
+
 3. Documentare pattern comuni per evitare errori simili in futuro 
 ### Esempio 3: Utilizzare Reflection API per chiamate metodo sicure
 
@@ -213,6 +213,6 @@ Fino ad ora, abbiamo risolto la maggior parte degli errori di livello 10 in entr
 4. Estendere le correzioni ad altri moduli utilizzando i pattern stabiliti
 
 5. Aggiornare le linee guida di sviluppo per prevenire errori simili in futuro 
-=======
+
 3. Documentare pattern comuni per evitare errori simili in futuro 
->>>>>>> 9165bf1 (.)
+ 9165bf1 (.)
