@@ -50,5 +50,9 @@ class NotificationResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> 9165bf1 (.)
 }

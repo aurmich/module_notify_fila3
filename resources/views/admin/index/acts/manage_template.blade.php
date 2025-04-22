@@ -4,7 +4,11 @@
     <table class="table table-bordered">
     @foreach ($rows as $row)
         <tr>
+<<<<<<< HEAD
             <td>{{ $row-> }}</td>
+=======
+            <td>{{ $row->id }}</td>
+>>>>>>> 9165bf1 (.)
 
         </tr>
     @endforeach

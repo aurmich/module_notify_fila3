@@ -66,8 +66,13 @@ class Get
 
         $view_params['now'] = now()->format('d/m/Y');
 
+<<<<<<< HEAD
         $body_html = $theme->body_html;
         $subject = $theme->subject;
+=======
+        $body_html = (string) $theme->body_html;
+        $subject = (string) $theme->subject;
+>>>>>>> 9165bf1 (.)
 
         if ($theme->theme !== 'empty') {
             $view_params['logo'] = $theme->logo;
@@ -76,27 +81,49 @@ class Get
             $logoPath = '';
             $logoWidth = '100';
             $logoHeight = '100';
+<<<<<<< HEAD
 
             if (isset($theme->logo['path']) && is_string($theme->logo['path'])) {
                 $logoPath = $theme->logo['path'];
             }
 
+=======
+            
+            if (isset($theme->logo['path']) && is_string($theme->logo['path'])) {
+                $logoPath = $theme->logo['path'];
+            }
+            
+>>>>>>> 9165bf1 (.)
             if (isset($theme->logo['width'])) {
                 if (is_string($theme->logo['width'])) {
                     $logoWidth = $theme->logo['width'];
                 } elseif (is_numeric($theme->logo['width'])) {
+<<<<<<< HEAD
                     $logoWidth = (string) $theme->logo['width'];
                 }
             }
 
+=======
+                    $logoWidth = (string)$theme->logo['width'];
+                }
+            }
+            
+>>>>>>> 9165bf1 (.)
             if (isset($theme->logo['height'])) {
                 if (is_string($theme->logo['height'])) {
                     $logoHeight = $theme->logo['height'];
                 } elseif (is_numeric($theme->logo['height'])) {
+<<<<<<< HEAD
                     $logoHeight = (string) $theme->logo['height'];
                 }
             }
 
+=======
+                    $logoHeight = (string)$theme->logo['height'];
+                }
+            }
+            
+>>>>>>> 9165bf1 (.)
             $view_params['logo'] = '<img src="'.$logoPath.'" width="'.$logoWidth.'" height="'.$logoHeight.'" />';
             // $view_params['logo'] = '<img src="'.\Request::getSchemeAndHttpHost().'/uploads/6/logo_VERITAS_piccolo.png" width="' . $theme->logo['width'] . ' "height="' . $theme->logo['height'] . '" />';
         }
@@ -105,8 +132,13 @@ class Get
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
+<<<<<<< HEAD
                 $body_html = (string) Str::replace('##'.$k.'##', $v, (string) $body_html);
                 $subject = (string) Str::replace('##'.$k.'##', $v, (string) $subject);
+=======
+                $body_html = Str::replace('##'.$k.'##', $v, $body_html);
+                $subject = Str::replace('##'.$k.'##', $v, $subject);
+>>>>>>> 9165bf1 (.)
             }
         }
 

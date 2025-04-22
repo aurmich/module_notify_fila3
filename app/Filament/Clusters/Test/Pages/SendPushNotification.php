@@ -16,7 +16,10 @@ use Filament\Pages\Page;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Stringable;
+<<<<<<< HEAD
 use Kreait\Firebase\Contract\Messaging;
+=======
+>>>>>>> 9165bf1 (.)
 use Kreait\Firebase\Messaging\CloudMessage;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\User\Models\DeviceUser;
@@ -65,18 +68,33 @@ class SendPushNotification extends Page implements HasForms
          */
         $callback = function ($item) {
             // Verifichiamo che $item sia un oggetto
+<<<<<<< HEAD
             if (!$item) {
+=======
+            if (!is_object($item)) {
+>>>>>>> 9165bf1 (.)
                 return [];
             }
             
             // Verifichiamo che $item abbia le proprietà necessarie
+<<<<<<< HEAD
             if (!$item->profile || !property_exists($item->profile, 'full_name')) {
+=======
+            if (!property_exists($item, 'push_notifications_token') || 
+                !property_exists($item, 'profile') || 
+                !is_object($item->profile) || 
+                !property_exists($item->profile, 'full_name')) {
+>>>>>>> 9165bf1 (.)
                 return [];
             }
             
             // Otteniamo il token
             $token = $item->push_notifications_token;
+<<<<<<< HEAD
             if (!$token) {
+=======
+            if (!is_string($token) || $token === '') {
+>>>>>>> 9165bf1 (.)
                 return [];
             }
             
@@ -88,12 +106,20 @@ class SendPushNotification extends Page implements HasForms
             
             // Otteniamo il robot
             $robot = '';
+<<<<<<< HEAD
             if ($item->device && 
                 property_exists($item->device, 'robot') &&
                 is_string($item->device->robot)) {
                 $robot = $item->device->robot;
             } else {
                 $robot = null;
+=======
+            if (property_exists($item, 'device') && 
+                is_object($item->device) && 
+                property_exists($item->device, 'robot') && 
+                is_string($item->device->robot)) {
+                $robot = $item->device->robot;
+>>>>>>> 9165bf1 (.)
             }
             
             // Creiamo la label con gli ultimi 5 caratteri del token
@@ -106,7 +132,13 @@ class SendPushNotification extends Page implements HasForms
          * Callback per filtrare i dispositivi.
          */
         $filterCallback = function ($item): bool {
+<<<<<<< HEAD
             return $item && $item->profile !== null;
+=======
+            return is_object($item) && 
+                   property_exists($item, 'profile') && 
+                   $item->profile !== null;
+>>>>>>> 9165bf1 (.)
         };
 
         $to = $devices
@@ -168,6 +200,7 @@ class SendPushNotification extends Page implements HasForms
         $pushDataTemp = [];
         
         // Aggiungiamo i valori all'array solo se non sono vuoti
+<<<<<<< HEAD
         // PHPStan sa che queste stringhe non possono essere vuote a questo punto
         $pushDataTemp['type'] = $type;
         $pushDataTemp['title'] = $title;
@@ -177,10 +210,28 @@ class SendPushNotification extends Page implements HasForms
         
         // Verifichiamo che l'array contenga almeno un elemento
         if (count($pushDataTemp) === 0) {
+=======
+        if ($type !== '') {
+            $pushDataTemp['type'] = $type;
+        }
+        if ($title !== '') {
+            $pushDataTemp['title'] = $title;
+        }
+        if ($body !== '') {
+            $pushDataTemp['body'] = $body;
+        }
+        if ($jsonData !== '') {
+            $pushDataTemp['data'] = $jsonData;
+        }
+        
+        // Verifichiamo che l'array non sia vuoto
+        if (empty($pushDataTemp)) {
+>>>>>>> 9165bf1 (.)
             $pushDataTemp['type'] = 'notification';
         }
         
         // Creiamo un MessageData object
+<<<<<<< HEAD
         // Convertiamo tutti i valori in stringa come richiesto da MessageData
         $sanitizedData = [];
         foreach ($pushDataTemp as $key => $value) {
@@ -193,6 +244,9 @@ class SendPushNotification extends Page implements HasForms
             }
         }
         $messageData = \Kreait\Firebase\Messaging\MessageData::fromArray($sanitizedData);
+=======
+        $messageData = new \Kreait\Firebase\Messaging\MessageData($pushDataTemp);
+>>>>>>> 9165bf1 (.)
 
         // Verifichiamo che deviceToken sia una stringa non vuota (per soddisfare il tipo non-empty-string)
         Assert::stringNotEmpty($deviceToken, 'Il token del dispositivo non può essere vuoto');
@@ -203,9 +257,16 @@ class SendPushNotification extends Page implements HasForms
             
         try {
             // Otteniamo l'istanza di messaging e verifichiamo che sia valida
+<<<<<<< HEAD
             /** @var Messaging $messaging */
             $messaging = app('firebase.messaging');
             Assert::isInstanceOf($messaging, Messaging::class, 'Invalid messaging instance');
+=======
+            $messaging = app('firebase.messaging');
+            if (!is_object($messaging) || !method_exists($messaging, 'send')) {
+                throw new \RuntimeException('Il servizio firebase.messaging non supporta il metodo send()');
+            }
+>>>>>>> 9165bf1 (.)
             
             $messaging->send($message);
         } catch (\Exception $e) {
