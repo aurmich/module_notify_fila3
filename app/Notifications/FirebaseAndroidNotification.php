@@ -71,57 +71,16 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
             'ttl' => '3600s',
             'priority' => 'high',
         ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> a2dd458 (fix: auto resolve conflict)
-        
-<<<<<<< HEAD
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> 06e3ad9 (fix: auto resolve conflict)
-=======
-=======
-
->>>>>>> ba48b8c (.)
->>>>>>> a2dd458 (fix: auto resolve conflict)
-=======
         
 
->>>>>>> f58c718 (.)
         // Add notification only if data is in a valid format (Aggiungiamo la notifica solo se i dati sono in un formato valido)
         // Verify that $this->data->data is accessible (Verifichiamo che $this->data->data sia accessibile)
         $dataProperty = $this->data->data ?? null;
         if ($dataProperty !== null) {
             // Create a notification array conforming to AndroidConfig expectations (Creiamo un array di notifica conforme alle aspettative di AndroidConfig)
             $notification = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             // Add only supported fields with correct types (Aggiungiamo solo i campi supportati con i tipi corretti)
-<<<<<<< HEAD
-            $allowedKeys = ['title', 'body', 'icon', 'color', 'sound', 'click_action'];
-
-=======
-            
-=======
-
->>>>>>> a2dd458 (fix: auto resolve conflict)
-            // Add only supported fields with correct types (Aggiungiamo solo i campi supportati con i tipi corretti)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f58c718 (.)
         // Aggiungiamo la notifica solo se i dati sono in un formato valido
         // Verifichiamo che $this->data->data sia accessibile
         $dataProperty = $this->data->data ?? null;
@@ -131,30 +90,13 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
             
             // Aggiungiamo solo i campi supportati con i tipi corretti
             $allowedKeys = ['title', 'body', 'icon', 'color', 'sound', 'click_action'];
-<<<<<<< HEAD
-            
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
 
->>>>>>> a2dd458 (fix: auto resolve conflict)
             foreach ($allowedKeys as $key) {
                 if (isset($dataProperty[$key]) && (is_string($dataProperty[$key]) && $dataProperty[$key] !== '')) {
                     $notification[$key] = $dataProperty[$key];
                 }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
-<<<<<<< HEAD
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-<<<<<<< HEAD
->>>>>>> 06e3ad9 (fix: auto resolve conflict)
-=======
-
->>>>>>> a2dd458 (fix: auto resolve conflict)
             // Add notification only if it contains valid data (Aggiungiamo la notifica solo se contiene dati validi)
             // Add notification only if it contains valid data (Aggiungiamo la notifica solo se contiene dati validi)
             // Aggiungiamo la notifica solo se contiene dati validi
@@ -162,15 +104,7 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
                 $androidConfig['notification'] = $notification;
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
->>>>>>> a2dd458 (fix: auto resolve conflict)
         return CloudMessage::new()
             ->withNotification(FirebaseNotification::create($this->data->title, $this->data->body))
             ->withAndroidConfig(AndroidConfig::fromArray($androidConfig));
@@ -198,32 +132,12 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
     public function toCloudMessage(): Message
     {
         $notificationData = $this->data->data;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
->>>>>>> a2dd458 (fix: auto resolve conflict)
         /**
          * @var array<non-empty-string, string|Stringable>
          */
         $data = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
-<<<<<<< HEAD
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-<<<<<<< HEAD
->>>>>>> 06e3ad9 (fix: auto resolve conflict)
-=======
-
->>>>>>> a2dd458 (fix: auto resolve conflict)
         // Ensure each key is a non-empty string and each value is string or Stringable (Assicuriamoci che ogni chiave sia una stringa non vuota e ogni valore sia string o Stringable)
         // Ensure each key is a non-empty string and each value is string or Stringable (Assicuriamoci che ogni chiave sia una stringa non vuota e ogni valore sia string o Stringable)
         // Assicuriamoci che ogni chiave sia una stringa non vuota e ogni valore sia string o Stringable

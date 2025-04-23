@@ -75,6 +75,36 @@ Conflitti multipli:
 2. Utilizza la versione estesa della classe senza percorso completo
 3. Aggiunge modificatori `dateTime()` alle proprietà di tipo data per garantire una corretta formattazione
 
+### resources/views/filament/pages/send-email-parameters.blade.php
+
+**Percorso:** `resources/views/filament/pages/send-email-parameters.blade.php`
+
+**Problema identificato:**
+Conflitto nella definizione delle azioni del form: una versione utilizzava l'helper `route()`, l'altra usava URL hard-coded. Mantenuta la versione con `route('notify.send_parameters')` per coerenza con il flusso Livewire e il DTO `EmailData`.
+
+**Soluzione adottata:**
+Scelta la versione che integra centralmente la validazione e l'helper `optional()`, evitando duplicazioni e mantenendo l'interfaccia modulare.
+
+### resources/views/filament/pages/send-email.blade.php
+
+**Percorso:** `resources/views/filament/pages/send-email.blade.php`
+
+**Problema identificato:**
+Conflitto nei campi del form Filament: divergenza nei nomi degli input e nei validatori applicati.
+
+**Soluzione adottata:**
+Conservata la versione con componenti `TextInput`, `Textarea` e `FileUpload`, allineata al DTO `EmailData` per garantire consistenza dei dati.
+
+### resources/views/admin/index/acts/manage_template.blade.php
+
+**Percorso:** `resources/views/admin/index/acts/manage_template.blade.php`
+
+**Problema identificato:**
+Conflitto nel rendering della row: una versione mostrava direttamente la proprietà, l'altra invocava `$row->renderTemplate()`.
+
+**Soluzione adottata:**
+Mantenuta la versione con metodo `renderTemplate()`, assicurando separazione tra logica di presentazione e view.
+
 ## Collegamenti alla documentazione centrale
 
 Per una panoramica completa di tutti i conflitti risolti, vedere la [documentazione centrale sulla risoluzione dei conflitti git](../../../../docs/risoluzione_conflitti_git.md). 

@@ -12,19 +12,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 
 
-<<<<<<< HEAD
-
-=======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-=======
->>>>>>> ba48b8c (.)
->>>>>>> a2dd458 (fix: auto resolve conflict)
-=======
->>>>>>> f58c718 (.)
 
 
 

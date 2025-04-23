@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-[{"name":"send-mail-command","class":"SendMailCommand","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\SendMailCommand"},{"name":"telegram-webhook","class":"TelegramWebhook","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\TelegramWebhook"}]
-=======
-<<<<<<< HEAD
->>>>>>> 06e3ad9 (fix: auto resolve conflict)
-=======
-[{"name":"send-mail-command","class":"SendMailCommand","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\SendMailCommand"},{"name":"telegram-webhook","class":"TelegramWebhook","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\TelegramWebhook"}]
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ba48b8c (.)
->>>>>>> a2dd458 (fix: auto resolve conflict)
-=======
->>>>>>> f58c718 (.)
 [
     {
         "name": "send-mail-command",
@@ -32,20 +14,3 @@
         "ns": "Modules\\Notify\\Console\\Commands\\TelegramWebhook"
     }
 ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-[{"name":"send-mail-command","class":"SendMailCommand","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\SendMailCommand"},{"name":"telegram-webhook","class":"TelegramWebhook","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\TelegramWebhook"}]
-<<<<<<< HEAD
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> 06e3ad9 (fix: auto resolve conflict)
-=======
-=======
->>>>>>> ba48b8c (.)
->>>>>>> a2dd458 (fix: auto resolve conflict)
-=======
->>>>>>> f58c718 (.)

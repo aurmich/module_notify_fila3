@@ -61,63 +61,21 @@ class EmailData extends Data
 
     public function getFrom(): Address
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (!isset($this->from) || $this->from === null) {
-            Assert::string($from = config('mail.from.name', 'Default Sender'));
-            $this->from = $from;
-        }
-        if (!isset($this->from_email) || $this->from_email === null) {
-=======
-=======
-=======
->>>>>>> a2dd458 (fix: auto resolve conflict)
-=======
-<<<<<<< HEAD
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
->>>>>>> 06e3ad9 (fix: auto resolve conflict)
-=======
->>>>>>> f58c718 (.)
         if (!isset($this->from)) {
             Assert::string($from = config('mail.from.name', 'Default Sender'));
             $this->from = $from;
         }
         if (!isset($this->from_email)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f58c718 (.)
         if ($this->from == null) {
             Assert::string($from = config('mail.from.name', 'Default Sender'));
             $this->from = $from;
         }
         if ($this->from_email == null) {
-<<<<<<< HEAD
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-<<<<<<< HEAD
->>>>>>> 06e3ad9 (fix: auto resolve conflict)
-=======
-=======
-=======
->>>>>>> f58c718 (.)
         if (!isset($this->from) || $this->from === null) {
             Assert::string($from = config('mail.from.name', 'Default Sender'));
             $this->from = $from;
         }
         if (!isset($this->from_email) || $this->from_email === null) {
-<<<<<<< HEAD
->>>>>>> ba48b8c (.)
->>>>>>> a2dd458 (fix: auto resolve conflict)
-=======
->>>>>>> f58c718 (.)
             Assert::string($from_email = config('mail.from.address', 'default@example.com'));
             $this->from_email = $from_email;
         }

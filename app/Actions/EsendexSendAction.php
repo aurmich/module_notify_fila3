@@ -46,40 +46,16 @@ class EsendexSendAction
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'sms');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
->>>>>>> a2dd458 (fix: auto resolve conflict)
         // Verifichiamo che i valori dell'array di autenticazione siano stringhe
         if (!is_string($auth[0])) {
             $auth[0] = '';
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         if (!is_string($auth[1])) {
             $auth[1] = '';
         }
 
-=======
-        
-        if (!is_string($auth[1])) {
-            $auth[1] = '';
-        }
-        
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
-        if (!is_string($auth[1])) {
-            $auth[1] = '';
-        }
-
->>>>>>> a2dd458 (fix: auto resolve conflict)
         curl_setopt(
             $ch,
             CURLOPT_HTTPHEADER,

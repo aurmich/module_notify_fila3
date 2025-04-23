@@ -46,13 +46,6 @@
         <div class="content">
             {!! optional($email_data)->body_html !!}
         </div>
-<<<<<<< HEAD
-        <div class="content">
-            {!! $email_data->body_html !!}
->>>>>>> 9165bf1 (.)
-        </div>
-=======
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
         <div class="footer">
             <p>&copy; {{ date('Y') }} Your Company Name. All rights reserved.</p>
         </div>

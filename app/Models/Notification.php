@@ -5,15 +5,7 @@ namespace Modules\Notify\Models;
 use Modules\Xot\Models\BaseModel;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
-=======
- * 
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
- *
->>>>>>> a2dd458 (fix: auto resolve conflict)
  *
  * @property string $id
  * @property string $type

@@ -10,28 +10,9 @@ class EmailAttachmentData extends Data
 {
     public function __construct(
         private string $content,
-<<<<<<< HEAD
-<<<<<<< HEAD
         public string $name = 'attachment.pdf',
         public string $contentType = 'application/pdf'
     ) {}
-<<<<<<< HEAD
-
-
-=======
-        public string $name,
-        public string $contentType = 'application/octet-stream'
-=======
-        public string $name = 'attachment.pdf',
-        public string $contentType = 'application/pdf'
->>>>>>> a2dd458 (fix: auto resolve conflict)
-    ) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f58c718 (.)
     public string $name;
 
     public string $contentType;
@@ -49,7 +30,6 @@ class EmailAttachmentData extends Data
     }
 
 
->>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
     public function getContent(): string
     {
         return $this->content;
