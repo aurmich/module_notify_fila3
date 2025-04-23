@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Modules\Notify\Filament\Resources\ContactResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
@@ -21,6 +22,12 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 =======
 <<<<<<< HEAD
 >>>>>>> 06e3ad9 (fix: auto resolve conflict)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a2dd458 (fix: auto resolve conflict)
 
 =======
 <<<<<<< HEAD
@@ -28,6 +35,8 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 =======
 >>>>>>> 9165bf1 (.)
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+=======
+>>>>>>> ba48b8c (.)
 class ListContacts extends XotBaseListRecords
 {
     protected static string $resource = ContactResource::class;

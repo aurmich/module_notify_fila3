@@ -9,10 +9,14 @@ use Modules\Notify\Filament\Resources\NotificationResource\Pages;
 use Modules\Notify\Models\Notification;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> a2dd458 (fix: auto resolve conflict)
 
 class NotificationResource extends XotBaseResource
 {
@@ -56,11 +60,14 @@ class NotificationResource extends XotBaseResource
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
    
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
 =======
+=======
+>>>>>>> a2dd458 (fix: auto resolve conflict)
    
 =======
 <<<<<<< HEAD
@@ -69,5 +76,11 @@ class NotificationResource extends XotBaseResource
 
 >>>>>>> 9165bf1 (.)
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> 06e3ad9 (fix: auto resolve conflict)
+=======
+=======
+
+>>>>>>> ba48b8c (.)
+>>>>>>> a2dd458 (fix: auto resolve conflict)
 }

@@ -9,6 +9,7 @@ use Filament\Tables\Filters;
 use Modules\Notify\Filament\Resources\NotifyThemeResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
@@ -20,12 +21,18 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+<<<<<<< HEAD
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+=======
+>>>>>>> ba48b8c (.)
+>>>>>>> a2dd458 (fix: auto resolve conflict)
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -33,6 +40,13 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 >>>>>>> 9165bf1 (.)
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+=======
+
+
+
+
+
+>>>>>>> ba48b8c (.)
 class ListNotifyThemes extends XotBaseListRecords
 {
     protected static string $resource = NotifyThemeResource::class;

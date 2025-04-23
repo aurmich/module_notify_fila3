@@ -69,14 +69,18 @@ class MailtrapEngine
 
         // try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+=======
+>>>>>>> ba48b8c (.)
         Assert::string($this->body);
         Mail::raw($this->body, function (Message $msg): void {
             // Verifichiamo che $this->to sia valido
             $to = $this->to;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -86,16 +90,21 @@ class MailtrapEngine
             
 >>>>>>> 9165bf1 (.)
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+=======
+>>>>>>> ba48b8c (.)
             // Utilizziamo una condizione più appropriata
             if (!$to) {
                 throw new \InvalidArgumentException('Il destinatario email non è valido');
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
 =======
+=======
+>>>>>>> a2dd458 (fix: auto resolve conflict)
 
 =======
 <<<<<<< HEAD
@@ -104,7 +113,12 @@ class MailtrapEngine
             
 >>>>>>> 9165bf1 (.)
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+<<<<<<< HEAD
 >>>>>>> 06e3ad9 (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> ba48b8c (.)
+>>>>>>> a2dd458 (fix: auto resolve conflict)
             $msg->to($to)->subject('Test Email');
         });
         // Dead catch - ErrorException is never thrown in the try block.
