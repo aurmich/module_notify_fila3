@@ -18,6 +18,13 @@ class SmsService
     public ?string $from = null;
 
     public ?string $body = null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 9165bf1 (.)
+>>>>>>> 5a1e6f8 (fix: auto resolve conflict)
     /**
      * Variabili per il template SMS.
      *
@@ -46,8 +53,14 @@ class SmsService
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Factory method per creare un'istanza singleton.
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+>>>>>>> 06e3ad9 (fix: auto resolve conflict)
      * Factory method to create an instance.
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
      */
@@ -80,8 +93,15 @@ class SmsService
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Unisce le variabili con quelle esistenti (alias per compatibilità).
 =======
+=======
+=======
+=======
+>>>>>>> 9165bf1 (.)
+>>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+>>>>>>> 06e3ad9 (fix: auto resolve conflict)
      * Unisce le variabili con quelle esistenti.
      *
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
@@ -104,10 +124,20 @@ class SmsService
     public function send(): self
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $engineClassName = '\Modules\Notify\Services\SmsEngines\' . Str::studly($this->driver) . 'Engine';
 
 =======
+=======
+>>>>>>> 06e3ad9 (fix: auto resolve conflict)
         $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
+=======
+<<<<<<< HEAD
+        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
+=======
+        $engineClassName = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
+>>>>>>> 9165bf1 (.)
+>>>>>>> 5a1e6f8 (fix: auto resolve conflict)
         
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
         // Verifichiamo che la classe esista
@@ -215,4 +245,20 @@ class SmsService
 
         return $this;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    /**
+     * Ottiene le variabili.
+     *
+     * @return array<string, mixed>
+     */
+    public function getVars(): array
+    {
+        return $this->vars;
+    }
+>>>>>>> 9165bf1 (.)
+>>>>>>> 5a1e6f8 (fix: auto resolve conflict)
 }

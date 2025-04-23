@@ -55,8 +55,19 @@ class NotificationResource extends XotBaseResource
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
    
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+   
+=======
+<<<<<<< HEAD
+   
+=======
+
+>>>>>>> 9165bf1 (.)
+>>>>>>> 5a1e6f8 (fix: auto resolve conflict)
+>>>>>>> 06e3ad9 (fix: auto resolve conflict)
 }
