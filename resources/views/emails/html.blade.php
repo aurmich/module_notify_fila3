@@ -41,29 +41,10 @@
 <body>
     <div class="container">
         <div class="header">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
             <h1>{{ optional($email_data)->subject }}</h1>
         </div>
         <div class="content">
             {!! optional($email_data)->body_html !!}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-            <h1>{{ $email_data->subject }}</h1>
-=======
->>>>>>> ba48b8c (.)
-        </div>
-        <div class="content">
-            {!! $email_data->body_html !!}
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
         </div>
 <<<<<<< HEAD
         <div class="content">

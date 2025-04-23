@@ -19,6 +19,7 @@ class Dashboard extends Page
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $user?->hasRole('super-admin')) {
 =======
         if (! $user->hasRole('super-admin')) {
@@ -26,12 +27,12 @@ class Dashboard extends Page
 =======
 =======
 >>>>>>> a2dd458 (fix: auto resolve conflict)
-        if (! $user->hasRole('super-admin')) {
 =======
-<<<<<<< HEAD
+>>>>>>> f58c718 (.)
         if (! $user->hasRole('super-admin')) {
-=======
+        if (! $user->hasRole('super-admin')) {
         if (! $user?->hasRole('super-admin')) {
+<<<<<<< HEAD
 >>>>>>> 9165bf1 (.)
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
 <<<<<<< HEAD
@@ -42,6 +43,10 @@ class Dashboard extends Page
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
             redirect('/admin');
+=======
+          if (! $user?->hasRole('super-admin')) {
+             redirect('/admin');
+>>>>>>> f58c718 (.)
         }
         */
     }

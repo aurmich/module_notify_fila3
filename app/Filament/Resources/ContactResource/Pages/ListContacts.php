@@ -27,6 +27,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a2dd458 (fix: auto resolve conflict)
 
 =======
@@ -37,6 +38,8 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelat
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
 =======
 >>>>>>> ba48b8c (.)
+=======
+>>>>>>> f58c718 (.)
 class ListContacts extends XotBaseListRecords
 {
     protected static string $resource = ContactResource::class;

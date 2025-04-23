@@ -61,6 +61,7 @@ class NotificationResource extends XotBaseResource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
    
@@ -83,4 +84,6 @@ class NotificationResource extends XotBaseResource
 
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+>>>>>>> f58c718 (.)
 }

@@ -17,15 +17,6 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Stringable;
 use Kreait\Firebase\Contract\Messaging;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use Kreait\Firebase\Contract\Messaging;
-=======
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
 use Kreait\Firebase\Messaging\CloudMessage;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\User\Models\DeviceUser;
@@ -75,16 +66,6 @@ class SendPushNotification extends Page implements HasForms
         $callback = function ($item) {
             // Verifichiamo che $item sia un oggetto
             if (!$item) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            if (!$item) {
-=======
-            if (!is_object($item)) {
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
                 return [];
             }
 <<<<<<< HEAD
@@ -98,19 +79,6 @@ class SendPushNotification extends Page implements HasForms
 >>>>>>> a2dd458 (fix: auto resolve conflict)
             // Verifichiamo che $item abbia le proprietà necessarie
             if (!$item->profile || !property_exists($item->profile, 'full_name')) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            if (!$item->profile || !property_exists($item->profile, 'full_name')) {
-=======
-            if (!property_exists($item, 'push_notifications_token') || 
-                !property_exists($item, 'profile') || 
-                !is_object($item->profile) || 
-                !property_exists($item->profile, 'full_name')) {
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
                 return [];
             }
 <<<<<<< HEAD
@@ -125,16 +93,6 @@ class SendPushNotification extends Page implements HasForms
             // Otteniamo il token
             $token = $item->push_notifications_token;
             if (!$token) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            if (!$token) {
-=======
-            if (!is_string($token) || $token === '') {
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
                 return [];
             }
 <<<<<<< HEAD
@@ -156,6 +114,7 @@ class SendPushNotification extends Page implements HasForms
 
             // Otteniamo il robot
             $robot = '';
+<<<<<<< HEAD
             if ($item->device &&
 =======
             
@@ -177,24 +136,14 @@ class SendPushNotification extends Page implements HasForms
             if ($item->device &&
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+            if ($item->device && 
+>>>>>>> f58c718 (.)
                 property_exists($item->device, 'robot') &&
                 is_string($item->device->robot)) {
                 $robot = $item->device->robot;
             } else {
                 $robot = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-            if (property_exists($item, 'device') && 
-                is_object($item->device) && 
-                property_exists($item->device, 'robot') && 
-                is_string($item->device->robot)) {
-                $robot = $item->device->robot;
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,18 +171,6 @@ class SendPushNotification extends Page implements HasForms
          */
         $filterCallback = function ($item): bool {
             return $item && $item->profile !== null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            return $item && $item->profile !== null;
-=======
-            return is_object($item) && 
-                   property_exists($item, 'profile') && 
-                   $item->profile !== null;
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
         };
 
         $to = $devices
@@ -313,13 +250,6 @@ class SendPushNotification extends Page implements HasForms
 
 >>>>>>> a2dd458 (fix: auto resolve conflict)
         // Aggiungiamo i valori all'array solo se non sono vuoti
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
         // PHPStan sa che queste stringhe non possono essere vuote a questo punto
         $pushDataTemp['type'] = $type;
         $pushDataTemp['title'] = $title;
@@ -337,29 +267,6 @@ class SendPushNotification extends Page implements HasForms
 >>>>>>> a2dd458 (fix: auto resolve conflict)
         // Verifichiamo che l'array contenga almeno un elemento
         if (count($pushDataTemp) === 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-        if ($type !== '') {
-            $pushDataTemp['type'] = $type;
-        }
-        if ($title !== '') {
-            $pushDataTemp['title'] = $title;
-        }
-        if ($body !== '') {
-            $pushDataTemp['body'] = $body;
-        }
-        if ($jsonData !== '') {
-            $pushDataTemp['data'] = $jsonData;
-        }
-        
-        // Verifichiamo che l'array non sia vuoto
-        if (empty($pushDataTemp)) {
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
             $pushDataTemp['type'] = 'notification';
         }
 <<<<<<< HEAD
@@ -372,13 +279,6 @@ class SendPushNotification extends Page implements HasForms
 
 >>>>>>> a2dd458 (fix: auto resolve conflict)
         // Creiamo un MessageData object
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
         // Convertiamo tutti i valori in stringa come richiesto da MessageData
         $sanitizedData = [];
         foreach ($pushDataTemp as $key => $value) {
@@ -391,15 +291,6 @@ class SendPushNotification extends Page implements HasForms
             }
         }
         $messageData = \Kreait\Firebase\Messaging\MessageData::fromArray($sanitizedData);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-        $messageData = new \Kreait\Firebase\Messaging\MessageData($pushDataTemp);
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
 
         // Verifichiamo che deviceToken sia una stringa non vuota (per soddisfare il tipo non-empty-string)
         Assert::stringNotEmpty($deviceToken, 'Il token del dispositivo non può essere vuoto');
@@ -432,6 +323,7 @@ class SendPushNotification extends Page implements HasForms
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -458,6 +350,8 @@ class SendPushNotification extends Page implements HasForms
 
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+>>>>>>> f58c718 (.)
             $messaging->send($message);
         } catch (\Exception $e) {
             dddx([

@@ -8,13 +8,6 @@ use Spatie\LaravelData\Data;
 
 class EmailAttachmentData extends Data
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
     public function __construct(
         private string $content,
 <<<<<<< HEAD
@@ -22,6 +15,7 @@ class EmailAttachmentData extends Data
         public string $name = 'attachment.pdf',
         public string $contentType = 'application/pdf'
     ) {}
+<<<<<<< HEAD
 
 
 =======
@@ -36,6 +30,8 @@ class EmailAttachmentData extends Data
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f58c718 (.)
     public string $name;
 
     public string $contentType;
@@ -51,11 +47,7 @@ class EmailAttachmentData extends Data
         $this->name = $name;
         $this->contentType = $contentType;
     }
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
 
->>>>>>> ba48b8c (.)
 
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
     public function getContent(): string

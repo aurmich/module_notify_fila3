@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [{"name":"send-mail-command","class":"SendMailCommand","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\SendMailCommand"},{"name":"telegram-webhook","class":"TelegramWebhook","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\TelegramWebhook"}]
 =======
@@ -13,6 +14,8 @@
 =======
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+>>>>>>> f58c718 (.)
 [
     {
         "name": "send-mail-command",
@@ -30,6 +33,7 @@
     }
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [{"name":"send-mail-command","class":"SendMailCommand","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\SendMailCommand"},{"name":"telegram-webhook","class":"TelegramWebhook","module":null,"path":null,"ns":"Modules\\Notify\\Console\\Commands\\TelegramWebhook"}]
 <<<<<<< HEAD
@@ -43,3 +47,5 @@
 =======
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+>>>>>>> f58c718 (.)

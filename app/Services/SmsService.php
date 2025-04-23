@@ -18,17 +18,8 @@ class SmsService
     public ?string $from = null;
 
     public ?string $body = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
-    /**
+       /**
      * Variabili per il template SMS.
      *
      * @var array<string, mixed>
@@ -58,6 +49,7 @@ class SmsService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Factory method per creare un'istanza singleton.
 =======
 =======
@@ -76,6 +68,11 @@ class SmsService
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
      */
+=======
+      * Factory method to create an instance.
+     * Factory method per creare un'istanza singleton.
+      */
+>>>>>>> f58c718 (.)
     public static function make(): self
     {
         return static::getInstance();
@@ -114,6 +111,7 @@ class SmsService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Unisce le variabili con quelle esistenti (alias per compatibilità).
 =======
 =======
@@ -134,6 +132,12 @@ class SmsService
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
      * @param array<string, mixed> $vars
+=======
+       * Unisce le variabili con quelle esistenti.
+     *
+     * Unisce le variabili con quelle esistenti (alias per compatibilità).
+      * @param array<string, mixed> $vars
+>>>>>>> f58c718 (.)
      */
     public function mergeVars(array $vars): self
     {
@@ -158,6 +162,7 @@ class SmsService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $engineClassName = '\Modules\Notify\Services\SmsEngines\' . Str::studly($this->driver) . 'Engine';
 
 =======
@@ -165,12 +170,12 @@ class SmsService
 >>>>>>> 06e3ad9 (fix: auto resolve conflict)
 =======
 >>>>>>> a2dd458 (fix: auto resolve conflict)
-        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
 =======
-<<<<<<< HEAD
+>>>>>>> f58c718 (.)
         $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
-=======
+        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
         $engineClassName = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
+<<<<<<< HEAD
 >>>>>>> 9165bf1 (.)
 >>>>>>> 5a1e6f8 (fix: auto resolve conflict)
         
@@ -183,6 +188,12 @@ class SmsService
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
         // Verifichiamo che la classe esista
+=======
+          
+        $engineClassName = '\Modules\Notify\Services\SmsEngines\' . Str::studly($this->driver) . 'Engine';
+
+         // Verifichiamo che la classe esista
+>>>>>>> f58c718 (.)
         if (!class_exists($engineClassName)) {
             throw new \RuntimeException("La classe del motore SMS {$engineClassName} non esiste");
         }
@@ -318,11 +329,6 @@ class SmsService
 
         return $this;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     /**
      * Ottiene le variabili.
@@ -333,8 +339,4 @@ class SmsService
     {
         return $this->vars;
     }
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
-}
+   }

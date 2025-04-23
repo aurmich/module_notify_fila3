@@ -49,31 +49,16 @@ class NetfunSendAction
 
         $smsData->to .= '';
         if (Str::startsWith($smsData->to, '00')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
             $smsData->to = '+39' . mb_substr($smsData->to, 2);
         }
 
         if (! Str::startsWith($smsData->to, '+')) {
             $smsData->to = '+39' . $smsData->to;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
             $smsData->to = '+39'.mb_substr($smsData->to, 2);
         }
 
         if (! Str::startsWith($smsData->to, '+')) {
             $smsData->to = '+39'.$smsData->to;
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
         }
 
         $body = [

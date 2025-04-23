@@ -29,18 +29,10 @@ use Modules\Xot\Models\BaseModel;
  * @property string|null $deleted_by
  * @property-read \Illuminate\Database\Eloquent\Model|null $creator
  * @property-read \Illuminate\Database\Eloquent\Model|null $updater
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  * @property-read \Illuminate\Database\Eloquent\Model|null $creator
  * @property-read \Illuminate\Database\Eloquent\Model|null $updater
-=======
  * @property-read \Modules\Broker\Models\Profile|null $creator
  * @property-read \Modules\Broker\Models\Profile|null $updater
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
->>>>>>> ba48b8c (.)
  * @method static \Modules\Notify\Database\Factories\NotificationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification newQuery()

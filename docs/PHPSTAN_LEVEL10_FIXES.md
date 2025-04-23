@@ -5,6 +5,7 @@ Questo documento traccia gli errori PHPStan di livello 10 identificati nel modul
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
@@ -21,10 +22,21 @@ Questo documento traccia gli errori PHPStan di livello 10 identificati nel modul
 
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+
+
+
+
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ ba48b8c (.)
+>>>>>>> f58c718 (.)
 ## Stato Attuale
 
 Abbiamo completato la maggior parte delle correzioni necessarie per portare il modulo Notify a livello 10 di PHPStan. Rimangono solo alcuni errori in pochi file che possono essere facilmente risolti seguendo i pattern già stabiliti.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +59,18 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
  9165bf1 (.)
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+
+
+
+
+ 9165bf1 (.)
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ 9165bf1 (.)
+ ba48b8c (.)
+>>>>>>> f58c718 (.)
 ## Errori Principali e Soluzioni
 
 ### 1. Operazioni binarie con mixed
@@ -92,17 +116,17 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 
 >>>>>>> a2dd458 (fix: auto resolve conflict)
 - Utilizzare Reflection API per interagire con oggetti di tipo sconosciuto
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 - Utilizzare Reflection API per interagire con oggetti di tipo sconosciuto
-=======
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
 
  9165bf1 (.)
->>>>>>> ba48b8c (.)
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ 9165bf1 (.)
+ ba48b8c (.)
 
  9165bf1 (.)
 
@@ -128,17 +152,17 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 
 >>>>>>> a2dd458 (fix: auto resolve conflict)
 - `Filament/Clusters/Test/Pages/SendPushNotification.php`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 - `Filament/Clusters/Test/Pages/SendPushNotification.php`
-=======
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
 
  9165bf1 (.)
->>>>>>> ba48b8c (.)
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ 9165bf1 (.)
+ ba48b8c (.)
 
  9165bf1 (.)
 
@@ -161,17 +185,17 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 
 >>>>>>> a2dd458 (fix: auto resolve conflict)
 - Utilizzare factory method invece di costruttori diretti per classi complesse
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 - Utilizzare factory method invece di costruttori diretti per classi complesse
-=======
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
 
  9165bf1 (.)
->>>>>>> ba48b8c (.)
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ 9165bf1 (.)
+ ba48b8c (.)
 
  9165bf1 (.)
 
@@ -194,6 +218,7 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
@@ -210,6 +235,16 @@ Abbiamo completato la maggior parte delle correzioni necessarie per portare il m
 
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+
+
+
+
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ ba48b8c (.)
+>>>>>>> f58c718 (.)
 ## Errori Rimanenti
 
 Rimangono alcuni errori da risolvere nei seguenti file:
@@ -239,6 +274,7 @@ Rimangono alcuni errori da risolvere nei seguenti file:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  9165bf1 (.)
 =======
@@ -258,6 +294,18 @@ Rimangono alcuni errori da risolvere nei seguenti file:
  9165bf1 (.)
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+
+
+
+
+ 9165bf1 (.)
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ 9165bf1 (.)
+ ba48b8c (.)
+>>>>>>> f58c718 (.)
 ## Principi Applicati nelle Correzioni
 
 1. **Controlli di tipo espliciti**: Verificare sempre il tipo di un valore prima di utilizzarlo in operazioni che richiedono un tipo specifico.
@@ -275,17 +323,17 @@ Rimangono alcuni errori da risolvere nei seguenti file:
 
 >>>>>>> a2dd458 (fix: auto resolve conflict)
 6. **Reflection API**: Utilizzare Reflection per interagire con oggetti di tipo sconosciuto quando necessario.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 6. **Reflection API**: Utilizzare Reflection per interagire con oggetti di tipo sconosciuto quando necessario.
-=======
->>>>>>> 9165bf1 (.)
->>>>>>> 5a1e6f8 (fix: auto resolve conflict)
-=======
 
  9165bf1 (.)
->>>>>>> ba48b8c (.)
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ 9165bf1 (.)
+ ba48b8c (.)
 
  9165bf1 (.)
 
@@ -346,6 +394,7 @@ Dopo aver implementato tutte le correzioni, PHPStan al livello 10 non riporta pi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
@@ -362,6 +411,16 @@ Dopo aver implementato tutte le correzioni, PHPStan al livello 10 non riporta pi
 
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+
+
+
+
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+ ba48b8c (.)
+>>>>>>> f58c718 (.)
 3. Documentare pattern comuni per evitare errori simili in futuro 
 ### Esempio 3: Utilizzare Reflection API per chiamate metodo sicure
 
@@ -402,6 +461,7 @@ Fino ad ora, abbiamo risolto la maggior parte degli errori di livello 10 in entr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 3. Documentare pattern comuni per evitare errori simili in futuro 
  9165bf1 (.)
@@ -424,3 +484,17 @@ Fino ad ora, abbiamo risolto la maggior parte degli errori di livello 10 in entr
  9165bf1 (.)
 >>>>>>> ba48b8c (.)
 >>>>>>> a2dd458 (fix: auto resolve conflict)
+=======
+
+
+
+
+3. Documentare pattern comuni per evitare errori simili in futuro 
+ 9165bf1 (.)
+ 5a1e6f8 (fix: auto resolve conflict)
+
+
+3. Documentare pattern comuni per evitare errori simili in futuro 
+ 9165bf1 (.)
+ ba48b8c (.)
+>>>>>>> f58c718 (.)
