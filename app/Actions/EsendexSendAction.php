@@ -46,16 +46,16 @@ class EsendexSendAction
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'sms');
-
+        
         // Verifichiamo che i valori dell'array di autenticazione siano stringhe
         if (!is_string($auth[0])) {
             $auth[0] = '';
         }
-
+        
         if (!is_string($auth[1])) {
             $auth[1] = '';
         }
-
+        
         curl_setopt(
             $ch,
             CURLOPT_HTTPHEADER,
@@ -78,8 +78,6 @@ class EsendexSendAction
         }
 
         $res = json_decode(is_string($response) ? $response : (string) $response, true, 512, JSON_THROW_ON_ERROR);
-        $res = json_decode(is_string($response) ? $response : (string) $response, true, 512, JSON_THROW_ON_ERROR);
-        $res = json_decode((string) $response, true, 512, JSON_THROW_ON_ERROR);
 
         dddx($res);
         if (! is_array($res)) {
@@ -120,7 +118,5 @@ class EsendexSendAction
         }
 
         return explode(';', is_string($response) ? $response : (string) $response);
-        return explode(';', is_string($response) ? $response : (string) $response);
-        return explode(';', (string) $response);
     }
 }

@@ -73,17 +73,11 @@ class MailtrapEngine
             // Verifichiamo che $this->to sia valido
             $to = $this->to;
 
-        Mail::raw((string) $this->body, function (Message $msg): void {
-            // Verifichiamo che $this->to sia valido
-            $to = $this->to;
-            
             // Utilizziamo una condizione più appropriata
             if (!$to) {
                 throw new \InvalidArgumentException('Il destinatario email non è valido');
             }
 
-
-            
             $msg->to($to)->subject('Test Email');
         });
         // Dead catch - ErrorException is never thrown in the try block.

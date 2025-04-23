@@ -54,11 +54,6 @@ class NetfunSendAction
 
         if (! Str::startsWith($smsData->to, '+')) {
             $smsData->to = '+39' . $smsData->to;
-            $smsData->to = '+39'.mb_substr($smsData->to, 2);
-        }
-
-        if (! Str::startsWith($smsData->to, '+')) {
-            $smsData->to = '+39'.$smsData->to;
         }
 
         $body = [

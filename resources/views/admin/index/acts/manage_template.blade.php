@@ -5,10 +5,7 @@
     @foreach ($rows as $row)
         <tr>
             <td>{{ $row-> }}</td>
-            <td>{{ $row-> }}</td>
-            <td>{{ $row->id }}</td>
-              <td>{{ $row->id }}</td>
- 
+
         </tr>
     @endforeach
     </table>

@@ -10,25 +10,9 @@ class EmailAttachmentData extends Data
 {
     public function __construct(
         private string $content,
-        public string $name = 'attachment.pdf',
-        public string $contentType = 'application/pdf'
+        public string $name,
+        public string $contentType = 'application/octet-stream'
     ) {}
-    public string $name;
-
-    public string $contentType;
-
-    private string $content;
-
-    public function __construct(
-        string $content,
-        string $name = 'attachment.pdf',
-        string $contentType = 'application/pdf'
-    ) {
-        $this->content = $content;
-        $this->name = $name;
-        $this->contentType = $contentType;
-    }
-
 
     public function getContent(): string
     {
