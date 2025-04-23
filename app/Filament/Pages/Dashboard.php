@@ -16,7 +16,11 @@ class Dashboard extends Page
     {
         /*
         $user = auth()->user();
+<<<<<<< HEAD
         if (! $user?->hasRole('super-admin')) {
+=======
+        if (! $user->hasRole('super-admin')) {
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             redirect('/admin');
         }
         */

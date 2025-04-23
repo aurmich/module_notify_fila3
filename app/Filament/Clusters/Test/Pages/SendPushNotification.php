@@ -68,37 +68,63 @@ class SendPushNotification extends Page implements HasForms
             if (!$item) {
                 return [];
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             // Verifichiamo che $item abbia le proprietà necessarie
             if (!$item->profile || !property_exists($item->profile, 'full_name')) {
                 return [];
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             // Otteniamo il token
             $token = $item->push_notifications_token;
             if (!$token) {
                 return [];
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             // Otteniamo il nome completo
             $fullName = $item->profile->full_name;
             if (!is_string($fullName)) {
                 $fullName = 'Utente';
             }
+<<<<<<< HEAD
 
             // Otteniamo il robot
             $robot = '';
             if ($item->device &&
+=======
+            
+            // Otteniamo il robot
+            $robot = '';
+            if ($item->device && 
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
                 property_exists($item->device, 'robot') &&
                 is_string($item->device->robot)) {
                 $robot = $item->device->robot;
             } else {
                 $robot = null;
             }
+<<<<<<< HEAD
 
             // Creiamo la label con gli ultimi 5 caratteri del token
             $tokenSuffix = mb_substr($token, -5);
 
+=======
+            
+            // Creiamo la label con gli ultimi 5 caratteri del token
+            $tokenSuffix = mb_substr($token, -5);
+            
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             return [$token => $fullName.' ('.$robot.') '.$tokenSuffix];
         };
 
@@ -160,6 +186,7 @@ class SendPushNotification extends Page implements HasForms
         $title = $data['title'] ?? '';
         $body = $data['body'] ?? '';
         $jsonData = isset($data['data']) ? json_encode($data['data']) : '{}';
+<<<<<<< HEAD
 
         // Verifichiamo che jsonData sia una stringa
         $jsonData = $jsonData ?: '{}';
@@ -167,6 +194,15 @@ class SendPushNotification extends Page implements HasForms
         // Creiamo un array con chiavi non vuote e valori stringa che implementano Stringable
         $pushDataTemp = [];
 
+=======
+        
+        // Verifichiamo che jsonData sia una stringa
+        $jsonData = $jsonData ?: '{}';
+        
+        // Creiamo un array con chiavi non vuote e valori stringa che implementano Stringable
+        $pushDataTemp = [];
+        
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
         // Aggiungiamo i valori all'array solo se non sono vuoti
         // PHPStan sa che queste stringhe non possono essere vuote a questo punto
         $pushDataTemp['type'] = $type;
@@ -174,12 +210,20 @@ class SendPushNotification extends Page implements HasForms
         $pushDataTemp['body'] = $body;
         // Adding data field (we know jsonData can't be empty due to fallback to '{}' earlier)
         $pushDataTemp['data'] = $jsonData;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
         // Verifichiamo che l'array contenga almeno un elemento
         if (count($pushDataTemp) === 0) {
             $pushDataTemp['type'] = 'notification';
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
         // Creiamo un MessageData object
         // Convertiamo tutti i valori in stringa come richiesto da MessageData
         $sanitizedData = [];
@@ -196,17 +240,29 @@ class SendPushNotification extends Page implements HasForms
 
         // Verifichiamo che deviceToken sia una stringa non vuota (per soddisfare il tipo non-empty-string)
         Assert::stringNotEmpty($deviceToken, 'Il token del dispositivo non può essere vuoto');
+<<<<<<< HEAD
 
         $message = CloudMessage::withTarget('token', $deviceToken)
             ->withHighestPossiblePriority()
             ->withData($messageData);
 
+=======
+        
+        $message = CloudMessage::withTarget('token', $deviceToken)
+            ->withHighestPossiblePriority()
+            ->withData($messageData);
+            
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
         try {
             // Otteniamo l'istanza di messaging e verifichiamo che sia valida
             /** @var Messaging $messaging */
             $messaging = app('firebase.messaging');
             Assert::isInstanceOf($messaging, Messaging::class, 'Invalid messaging instance');
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             $messaging->send($message);
         } catch (\Exception $e) {
             dddx([

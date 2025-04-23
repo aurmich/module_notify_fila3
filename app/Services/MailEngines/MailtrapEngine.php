@@ -77,6 +77,10 @@ class MailtrapEngine
             if (!$to) {
                 throw new \InvalidArgumentException('Il destinatario email non è valido');
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             $msg->to($to)->subject('Test Email');
         });
         // Dead catch - ErrorException is never thrown in the try block.

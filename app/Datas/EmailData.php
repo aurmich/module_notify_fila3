@@ -55,11 +55,19 @@ class EmailData extends Data
 
     public function getFrom(): Address
     {
+<<<<<<< HEAD
         if (!isset($this->from) || $this->from === null) {
             Assert::string($from = config('mail.from.name', 'Default Sender'));
             $this->from = $from;
         }
         if (!isset($this->from_email) || $this->from_email === null) {
+=======
+        if (!isset($this->from)) {
+            Assert::string($from = config('mail.from.name', 'Default Sender'));
+            $this->from = $from;
+        }
+        if (!isset($this->from_email)) {
+>>>>>>> 4f42322 (Merge remote-tracking branch 'origin/dev' into dev)
             Assert::string($from_email = config('mail.from.address', 'default@example.com'));
             $this->from_email = $from_email;
         }
