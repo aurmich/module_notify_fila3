@@ -18,7 +18,11 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
+<<<<<<< HEAD
 class ListNotifyThemes extends XotBaseListRecords
+=======
+abstract class ListNotifyThemes extends XotBaseListRecords
+>>>>>>> 494e68d (.)
 {
     protected static string $resource = NotifyThemeResource::class;
 
