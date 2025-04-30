@@ -55,4 +55,12 @@ class ContactResource extends XotBaseResource
             'edit' => Pages\EditContact::route('/{record}/edit'),
         ];
     }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 494e68d (.)
+>>>>>>> aurmich/dev

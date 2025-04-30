@@ -14,8 +14,17 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\EditNotifyTheme;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\ListNotifyThemes;
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+<<<<<<< HEAD
 
 class NotifyThemeResource extends XotBaseResource
+=======
+<<<<<<< HEAD
+
+class NotifyThemeResource extends XotBaseResource
+=======
+abstract class NotifyThemeResource extends XotBaseResource
+>>>>>>> 494e68d (.)
+>>>>>>> aurmich/dev
 {
     protected static ?string $model = NotifyTheme::class;
 
