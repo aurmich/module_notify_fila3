@@ -10,15 +10,7 @@ use Modules\Notify\Models\Notification;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
-<<<<<<< HEAD
 class NotificationResource extends XotBaseResource
-=======
-<<<<<<< HEAD
-class NotificationResource extends XotBaseResource
-=======
-abstract class NotificationResource extends XotBaseResource
->>>>>>> 494e68d (.)
->>>>>>> aurmich/dev
 {
     protected static ?string $model = Notification::class;
 
