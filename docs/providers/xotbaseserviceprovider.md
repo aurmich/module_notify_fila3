@@ -125,4 +125,11 @@ public function boot(): void
 ## Vedi Anche
 - [Laravel Service Providers](https://laravel.com/docs/providers)
 - [Laravel Package Development](https://laravel.com/docs/packages)
+<<<<<<< HEAD
 - [Laravel Module Development](https://nwidart.com/laravel-modules/v6/introduction) 
+=======
+- [Laravel Module Development](https://nwidart.com/laravel-modules/v6/introduction) 
+## Collegamenti tra versioni di xotbaseserviceprovider.md
+* [xotbaseserviceprovider.md](../../../Xot/docs/providers/xotbaseserviceprovider.md)
+
+>>>>>>> 76f83d0 (.)

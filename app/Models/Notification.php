@@ -2,7 +2,7 @@
 
 namespace Modules\Notify\Models;
 
-use Modules\Xot\Models\BaseModel;
+use Modules\Notify\Models\BaseModel;
 
 /**
  * 
@@ -47,7 +47,11 @@ class Notification extends BaseModel
         'read_at',
     ];
 
-    protected $casts = [
-        'read_at' => 'datetime',
-    ];
+    /** @return array<string, string> */
+    public function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'read_at' => 'datetime',
+        ]);
+    }
 }

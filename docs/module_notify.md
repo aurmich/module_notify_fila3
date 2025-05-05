@@ -112,3 +112,7 @@ composer format        # Formatta il codice
 
 ## Changelog
 Le modifiche vengono tracciate nel repository GitHub. 
+## Collegamenti tra versioni di module_notify.md
+* [module_notify.md](docs/module_notify.md)
+* [module_notify.md](laravel/Modules/Notify/docs/module_notify.md)
+

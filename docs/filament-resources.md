@@ -1,9 +1,16 @@
 # Risorse Filament del Modulo Notify
 
+<<<<<<< HEAD
 ## NotificationTemplateResource
 
 ### Panoramica
 NotificationTemplateResource gestisce i template delle notifiche nel sistema. Estende `XotBaseResource` e implementa le funzionalità base per la gestione dei template.
+=======
+## MailTemplateResource
+
+### Panoramica
+MailTemplateResource gestisce i template delle email nel sistema. Estende `XotBaseResource` e implementa le funzionalità base per la gestione dei template.
+>>>>>>> 76f83d0 (.)
 
 ### Schema del Form
 
@@ -17,10 +24,22 @@ public static function getFormSchema(): array
                     ->required()
                     ->maxLength(255),
 
+<<<<<<< HEAD
+=======
+                Forms\Components\TextInput::make('code')
+                    ->required()
+                    ->maxLength(255)
+                    ->unique(ignoreRecord: true),
+
+                Forms\Components\Textarea::make('description')
+                    ->maxLength(65535),
+
+>>>>>>> 76f83d0 (.)
                 Forms\Components\TextInput::make('subject')
                     ->required()
                     ->maxLength(255),
 
+<<<<<<< HEAD
                 Forms\Components\Textarea::make('body_text')
                     ->required()
                     ->maxLength(65535)
@@ -36,6 +55,54 @@ public static function getFormSchema(): array
                     ->columnSpan(['lg' => 3]),
             ])
             ->columns(['lg' => 3])
+=======
+                Forms\Components\RichEditor::make('body_html')
+                    ->required()
+                    ->columnSpanFull(),
+
+                Forms\Components\Textarea::make('body_text')
+                    ->maxLength(65535)
+                    ->columnSpanFull(),
+
+                Forms\Components\Select::make('channels')
+                    ->multiple()
+                    ->options(fn () => collect(__('notify::mail.template.fields.channels.options'))
+                        ->map(fn ($option) => $option['label'])
+                        ->toArray())
+                    ->required(),
+
+                Forms\Components\KeyValue::make('variables')
+                    ->columnSpanFull()
+                    ->json()
+                    ->validate([
+                        'key' => 'required|string',
+                        'value' => 'required|string'
+                    ]),
+
+                Forms\Components\KeyValue::make('conditions')
+                    ->columnSpanFull()
+                    ->json()
+                    ->validate([
+                        'key' => 'required|string',
+                        'value' => 'required|string'
+                    ]),
+
+                Forms\Components\KeyValue::make('preview_data')
+                    ->columnSpanFull()
+                    ->json()
+                    ->validate([
+                        'key' => 'required|string',
+                        'value' => 'required|string'
+                    ]),
+
+                Forms\Components\TextInput::make('category')
+                    ->maxLength(255),
+
+                Forms\Components\Toggle::make('is_active')
+                    ->required(),
+            ])
+            ->columns(2),
+>>>>>>> 76f83d0 (.)
     ];
 }
 ```
@@ -46,12 +113,72 @@ public static function getFormSchema(): array
 public static function getTableColumns(): array
 {
     return [
+<<<<<<< HEAD
         Tables\Columns\TextColumn::make('name'),
         Tables\Columns\TextColumn::make('subject'),
         Tables\Columns\TextColumn::make('created_at')
             ->dateTime(),
         Tables\Columns\TextColumn::make('updated_at')
             ->dateTime(),
+=======
+        Tables\Columns\TextColumn::make('name')
+            ->searchable()
+            ->sortable(),
+
+        Tables\Columns\TextColumn::make('code')
+            ->searchable()
+            ->sortable(),
+
+        Tables\Columns\TextColumn::make('category')
+            ->searchable()
+            ->sortable(),
+
+        Tables\Columns\IconColumn::make('is_active')
+            ->boolean()
+            ->sortable(),
+
+        Tables\Columns\TextColumn::make('created_at')
+            ->dateTime()
+            ->sortable()
+            ->toggleable(isToggledHiddenByDefault: true),
+
+        Tables\Columns\TextColumn::make('updated_at')
+            ->dateTime()
+            ->sortable()
+            ->toggleable(isToggledHiddenByDefault: true),
+    ];
+}
+```
+
+### Filtri della Tabella
+
+```php
+public static function getTableFilters(): array
+{
+    return [
+        Tables\Filters\SelectFilter::make('category')
+            ->options(fn () => collect(__('notify::mail.template.filters.category.options'))
+                ->map(fn ($option) => $option['label'])
+                ->toArray()),
+
+        Tables\Filters\TernaryFilter::make('is_active'),
+    ];
+}
+```
+
+### Azioni della Tabella
+
+```php
+public static function getTableActions(): array
+{
+    return [
+        Tables\Actions\EditAction::make(),
+        Tables\Actions\DeleteAction::make(),
+        Tables\Actions\Action::make('preview')
+            ->icon('heroicon-o-eye')
+            ->color('success')
+            ->url(fn (MailTemplate $record): string => route('filament.resources.mail-templates.preview', $record)),
+>>>>>>> 76f83d0 (.)
     ];
 }
 ```
@@ -73,6 +200,19 @@ public static function getTableColumns(): array
    - Validazione appropriata
    - Gestione responsive con columnSpan
 
+<<<<<<< HEAD
+=======
+4. **Validazione JSON**
+   - Validazione per campi KeyValue
+   - Struttura JSON definita
+   - Regole di validazione chiare
+
+5. **Gestione Traduzioni**
+   - Tutte le traduzioni in file dedicati
+   - Struttura gerarchica delle traduzioni
+   - Supporto per tooltip e placeholder
+
+>>>>>>> 76f83d0 (.)
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
@@ -89,4 +229,18 @@ public static function getTableColumns(): array
 2. La validazione è implementata a livello di form
 3. I campi sono organizzati in modo logico e responsive
 4. Le azioni della tabella seguono le convenzioni standard
+<<<<<<< HEAD
 5. Non ci sono override non necessari di metodi 
+=======
+5. Non ci sono override non necessari di metodi
+6. I campi JSON sono validati correttamente
+7. Le traduzioni seguono la struttura corretta 
+## Collegamenti tra versioni di filament-resources.md
+* [filament-resources.md](../../../../docs/tecnico/filament/filament-resources.md)
+* [filament-resources.md](../../../../docs/regole/filament-resources.md)
+* [filament-resources.md](../../Gdpr/docs/filament-resources.md)
+* [filament-resources.md](../../Xot/docs/filament-resources.md)
+* [filament-resources.md](../../Patient/docs/filament-resources.md)
+* [filament-resources.md](../../Cms/docs/filament-resources.md)
+
+>>>>>>> 76f83d0 (.)

@@ -165,4 +165,11 @@ Le traduzioni sono gestite tramite il file `resources/lang/it/template.php` e se
 4. Le relazioni sono definite in modo tipizzato
 5. La documentazione è mantenuta aggiornata
 6. Le traduzioni seguono la struttura standard con label, placeholder e tooltip
+<<<<<<< HEAD
 7. Le azioni includono icon e color per una migliore UX 
+=======
+7. Le azioni includono icon e color per una migliore UX 
+## Collegamenti tra versioni di models.md
+* [models.md](../../Xot/docs/architecture/models.md)
+
+>>>>>>> 76f83d0 (.)

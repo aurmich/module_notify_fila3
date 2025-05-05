@@ -1,5 +1,6 @@
-# Modulo Notify
+# Documentazione Modulo Notify
 
+<<<<<<< HEAD
 ## Panoramica
 
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
@@ -340,3 +341,118 @@ Notify::event('user.registered', $user);
 - Bug notifiche
 - Problemi template
 - Errori configurazione 
+=======
+> **Nota architetturale**: In SaluteOra non si utilizzano classi Service custom. Tutte le azioni asincrone e la business logic riutilizzabile devono essere implementate come Queueable Actions tramite il package spatie/laravel-queueable-action.
+> Vedi [Queueable Actions con Spatie](queueable-actions.md) per definizione, dispatch e testing.
+
+> **Nota UI/UX**: Usa SEMPRE i componenti Blade nativi di Filament (`<x-filament::...>`). Non usare componenti UI custom se esiste un equivalente Filament. Approfondisci in [filament-blade-components.md](/Themes/One/docs/FILAMENT_COMPONENTS.md) e nella [documentazione Filament](https://filamentphp.com/docs/3.x/support/blade-components/overview).
+
+## Table of Contents
+- [Panoramica](#panoramica)
+- [Struttura della Documentazione](#struttura-della-documentazione)
+  - [Template Email](#template-email)
+  - [Notifiche](#notifiche)
+  - [Integrazioni](#integrazioni)
+- [Analisi delle Soluzioni](#analisi-delle-soluzioni)
+  - [Soluzioni Analizzate](#soluzioni-analizzate)
+  - [Soluzione Scelta](#soluzione-scelta)
+- [Queueable Action: Standard SaluteOra](#queueable-action-standard-saluteora)
+- [Componenti Blade: Standard Filament](#componenti-blade-standard-filament)
+- [Note](#note)
+- [Contribuire](#contribuire)
+- [Collegamenti Completi](#collegamenti-completi)
+
+## Queueable Action: Standard SaluteOra
+
+SaluteOra adotta come standard [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action) per la business logic asincrona e la gestione di azioni riutilizzabili. Non utilizzare Service class custom. Approfondisci in [queueable-action.md](queueable-action.md).
+
+## Componenti Blade: Standard Filament
+
+La PRIMA SCELTA per i componenti Blade sono SEMPRE i [componenti nativi Filament](filament-blade-components.md). Non usare componenti custom se esiste un equivalente Filament. Approfondisci in [filament-blade-components.md](filament-blade-components.md) e nella [documentazione Filament](https://filamentphp.com/docs/3.x/support/blade-components/overview).
+
+## Panoramica
+### Esempio Rapido di Invio
+```php
+Mail::to($user)->send(new Modules\Notify\Mail\WelcomeMail($user));
+```
+Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema SaluteOra.
+
+## Struttura della Documentazione
+
+### Template Email
+- [README.md Template](templates/README.md)
+- [Panoramica Template Email](email-template-landscape.md)
+- [Deep Dive Tecnico Template](email-templates-deep-dive.md)
+- [Analisi Tools Esterni](codebrisk-tools-analysis.md)
+- [Collezione Tailwind CSS](webcrunch-tailwind-collection.md)
+- [Gestione Template](templates/gestione.md)
+- [Personalizzazione](templates/personalizzazione.md)
+
+### Notifiche
+- [README.md Notifiche](notifications/README.md)
+- [Configurazione](notifications/configurazione.md)
+- [Best Practices](notifications/best-practices.md)
+
+### Integrazioni
+- [README.md Integrazioni](integrations/README.md)
+- [Mailgun](integrations/mailgun.md)
+- [Mailtrap](integrations/mailtrap.md)
+
+## Analisi delle Soluzioni
+
+### Soluzioni Analizzate
+1. **Laravel Email Templates**
+   - Vantaggi:
+     - Integrazione nativa con Laravel
+     - Sistema di template semplice
+     - Supporto per markdown
+   - Svantaggi:
+     - Funzionalità limitate
+     - Personalizzazione complessa
+
+2. **Spatie Database Mail Templates**
+   - Vantaggi:
+     - Template gestibili dal database
+     - Sistema di versioning
+     - API flessibile
+   - Svantaggi:
+     - Overhead database
+     - Complessità aggiuntiva
+
+3. **Mailgun Templates**
+   - Vantaggi:
+     - Editor visuale
+     - Analytics avanzate
+     - A/B testing
+   - Svantaggi:
+     - Costi
+     - Dipendenza esterna
+
+4. **Laravel Mail Editor**
+   - Vantaggi:
+     - Editor visuale integrato
+     - Preview in tempo reale
+     - Gestione template semplice
+   - Svantaggi:
+     - Limitazioni personalizzazione
+     - Performance overhead
+
+### Soluzione Scelta
+Per SaluteOra è stata scelta una soluzione ibrida che combina:
+- Template base in Laravel Markdown
+- Editor visuale per personalizzazione
+- Integrazione con Mailgun per delivery
+- Sistema di versioning dei template
+
+## Note
+- Tutti i collegamenti sono relativi
+- La documentazione è mantenuta in italiano
+- I collegamenti sono bidirezionali quando appropriato
+- Ogni sezione ha il suo README.md specifico
+
+## Contribuire
+Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../docs/regole_collegamenti_documentazione.md).
+
+## Collegamenti Completi
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).
+>>>>>>> 76f83d0 (.)

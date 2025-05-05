@@ -52,3 +52,7 @@ Here's a complete example of a properly formatted schema:
             ->dateTime(),
     ])
 ```
+## Collegamenti tra versioni di schema_conventions.md
+* [schema_conventions.md](docs/schema_conventions.md)
+* [schema_conventions.md](laravel/Modules/Notify/docs/schema_conventions.md)
+

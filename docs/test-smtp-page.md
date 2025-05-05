@@ -9,3 +9,7 @@ Il sistema rileverà in automatico la configurazione di default, ma si potrà be
 ![test smtp form](test-smtp-page-form.jpg)
 
 Inseriti le varie impostazioni, si potrà verificare il funzionamento di una determinata configurazione email.
+## Collegamenti tra versioni di test-smtp-page.md
+* [test-smtp-page.md](laravel/Modules/Notify/docs/test-smtp-page.md)
+* [test-smtp-page.md](laravel/Modules/Cms/docs/test-smtp-page.md)
+

@@ -131,6 +131,10 @@ return array (
     array (
       'helper_text' => 'body_html',
       'placeholder' => 'body_html',
+<<<<<<< HEAD
+=======
+      'label' => 'body_html',
+>>>>>>> 76f83d0 (.)
     ),
     'toggleColumns' => 
     array (
@@ -144,6 +148,97 @@ return array (
     array (
       'label' => 'resetFilters',
     ),
+<<<<<<< HEAD
+=======
+    'body' => 
+    array (
+      'helper_text' => 'body',
+      'label' => 'body',
+      'placeholder' => 'body',
+    ),
+    'lang' => 
+    array (
+      'label' => 'lang',
+      'placeholder' => 'lang',
+      'helper_text' => 'lang',
+    ),
+    'type' => 
+    array (
+      'label' => 'type',
+      'placeholder' => 'type',
+      'helper_text' => 'type',
+    ),
+    'post_type' => 
+    array (
+      'label' => 'post_type',
+      'placeholder' => 'post_type',
+      'helper_text' => 'post_type',
+    ),
+    'post_id' => 
+    array (
+      'label' => 'post_id',
+      'placeholder' => 'post_id',
+      'helper_text' => 'post_id',
+    ),
+    'subject' => 
+    array (
+      'label' => 'subject',
+      'placeholder' => 'subject',
+      'helper_text' => 'subject',
+    ),
+    'from' => 
+    array (
+      'label' => 'from',
+      'placeholder' => 'from',
+      'helper_text' => 'from',
+    ),
+    'from_email' => 
+    array (
+      'label' => 'from_email',
+      'placeholder' => 'from_email',
+      'helper_text' => 'from_email',
+    ),
+    'logo_src' => 
+    array (
+      'label' => 'logo_src',
+      'placeholder' => 'logo_src',
+      'helper_text' => 'logo_src',
+    ),
+    'logo_width' => 
+    array (
+      'label' => 'logo_width',
+      'placeholder' => 'logo_width',
+      'helper_text' => 'logo_width',
+    ),
+    'logo_height' => 
+    array (
+      'label' => 'logo_height',
+      'placeholder' => 'logo_height',
+      'helper_text' => 'logo_height',
+    ),
+    'theme' => 
+    array (
+      'label' => 'theme',
+      'placeholder' => 'theme',
+      'helper_text' => 'theme',
+    ),
+    'openFilters' => 
+    array (
+      'label' => 'openFilters',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'updated_at',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'created_at',
+    ),
+    'id' => 
+    array (
+      'label' => 'id',
+    ),
+>>>>>>> 76f83d0 (.)
   ),
   'actions' => 
   array (
@@ -216,4 +311,11 @@ return array (
       'message' => 'Il tema è stato impostato come predefinito',
     ),
   ),
+<<<<<<< HEAD
+=======
+  'model' => 
+  array (
+    'label' => 'notify theme.model',
+  ),
+>>>>>>> 76f83d0 (.)
 );

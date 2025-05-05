@@ -221,4 +221,12 @@ public function template(): BelongsTo
 
 - [Laravel Migrations](https://laravel.com/docs/migrations)
 - [Database Mail](database-mail.md)
+<<<<<<< HEAD
 - [Email Events](events.md) 
+=======
+- [Email Events](events.md) 
+## Collegamenti tra versioni di migrations.md
+* [migrations.md](../../Gdpr/docs/migrations.md)
+* [migrations.md](../../Activity/docs/database/migrations.md)
+
+>>>>>>> 76f83d0 (.)
