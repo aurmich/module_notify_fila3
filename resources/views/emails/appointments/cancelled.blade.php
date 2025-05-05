@@ -81,7 +81,7 @@
         <a href="{{ url('/appointments/new') }}" class="button">Prenota Nuovo Appuntamento</a>
         
         <p>Cordiali saluti,<br>
-        Il Team di SaluteOra</p>
+        Il Team di il progetto</p>
     </div>
     
     <div class="footer">

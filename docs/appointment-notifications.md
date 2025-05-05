@@ -1,8 +1,8 @@
-# Sistema di Notifica Appuntamenti - SaluteOra
+# Sistema di Notifica Appuntamenti - il progetto
 
 ## Panoramica
 
-Il sistema di notifica degli appuntamenti di SaluteOra consente l'invio automatico di email ai pazienti in diverse fasi del ciclo di vita di un appuntamento. Il sistema è completamente integrato con il modulo Dental e utilizza esclusivamente le Spatie Laravel-Queueable-Action per le operazioni asincrone, in linea con le best practice del progetto.
+Il sistema di notifica degli appuntamenti di il progetto consente l'invio automatico di email ai pazienti in diverse fasi del ciclo di vita di un appuntamento. Il sistema è completamente integrato con il modulo Dental e utilizza esclusivamente le Spatie Laravel-Queueable-Action per le operazioni asincrone, in linea con le best practice del progetto.
 
 ## Tipi di Notifiche
 

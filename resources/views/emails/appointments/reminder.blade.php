@@ -100,7 +100,7 @@
         <a href="{{ url('/appointments/' . $appointment->id) }}" class="button">Gestisci Appuntamento</a>
         
         <p>Cordiali saluti,<br>
-        Il Team di SaluteOra</p>
+        Il Team di il progetto</p>
     </div>
     
     <div class="footer">

@@ -1,12 +1,107 @@
 # Modulo Notify
 
 ## Panoramica
-Il modulo Notify gestisce tutte le notifiche dell'applicazione, fornendo un sistema centralizzato per l'invio di notifiche via email, SMS, push e altri canali. Si integra con tutti gli altri moduli per garantire una comunicazione efficace con gli utenti.
+
+Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
+- Email
+- SMS
+- Notifiche push
+- Notifiche in-app
+- Notifiche WhatsApp
+- Notifiche Telegram
+
+## Documentazione
+
+### Core
+- [Struttura del Modulo](structure.md)
+- [Eventi](events.md)
+- [Template](templates.md)
+- [Migrations](migrations.md)
+- [Traduzioni](translations.md)
+
+### Modelli
+- [BaseModel](base-model.md)
+- [Modelli](models.md)
+
+### Filament
+- [Risorse](filament-resources.md)
+- [Pagine](filament-pages.md)
+
+### Email
+- [Sistema Email](database-mail-system.md)
+- [Code Email](database-mail-queue.md)
+- [Template Email](improved-email-templates.md)
+- [Editor WYSIWYG](email-wysiwyg-editor.md)
+- [Test Email](email-tests.md)
+- [Log Email](email-logs.md)
+- [Monitoraggio Email](email-monitoring.md)
+- [Backup Email](email-backup.md)
+- [Cache Email](email-cache.md)
+- [Analytics Email](email-analytics.md)
+- [Traduzioni Email](email-translations.md)
+
+### Editor
+- [GrapesJS](grapesjs.md)
+- [GrapesJS Filament](grapesjs-filament.md)
+- [GrapesJS Enhancement](grapesjs-enhancement.md)
+- [Test Editor](email-wysiwyg-editor-tests.md)
+
+### Canali
+- [WhatsApp](whatsapp.md)
+- [Telegram](telegram.md)
+- [SMS](sms.md)
+- [Push](send_push_notification_conflict_resolution.md)
+
+### Errori
+- [Error Mailer](error-mailer.md)
+- [Conflitti Git](conflitti_git.md)
+- [PHPStan](phpstan-usage.md)
+- [PHPStan Level 10](phpstan_level10_fixes.md)
+
+### Analisi
+- [Analisi Plugin](email-plugins-analysis.md)
+- [Schema Conventions](schema_conventions.md)
+- [Roadmap](roadmap.md)
+- [Packages](packages.md)
+
+## Collegamenti Bidirezionali
+
+### Collegamenti nella Root
+- [Architettura dei Moduli](../../../docs/architecture/modules.md)
+- [Gestione Notifiche](../../../docs/architecture/notifications.md)
+
+### Collegamenti ai Moduli
+- [XotBaseModel](../../Xot/docs/XotBaseModel.md)
+- [XotBaseResource](../../Xot/docs/XotBaseResource.md)
+- [XotBaseServiceProvider](../../Xot/docs/XotBaseServiceProvider.md)
+
+## Note Importanti
+
+1. Estendere sempre le classi base appropriate
+2. Non sovrascrivere metodi se non necessario
+3. Mantenere la documentazione aggiornata
+4. Seguire le convenzioni di namespace
+5. Utilizzare i file di traduzione per le label
+
+## Vedi Anche
+- [Modulo Notify](module_notify.md)
+- [Notifiche Appuntamenti](appointment-notifications.md)
+- [Test SMTP](test_smtp.md)
+- [Login](login.md)
+- [Firebase](firebase.md)
+
+## Collegamenti Esterni
+- [Laravel Notifications](https://laravel.com/docs/notifications)
+- [Filament Documentation](https://filamentphp.com/docs)
+- [GrapesJS Documentation](https://grapesjs.com/docs/)
+- [WhatsApp Business API](https://developers.facebook.com/docs/whatsapp/cloud-api)
+- [Telegram Bot API](https://core.telegram.org/bots/api)
 
 ## Collegamenti Principali
 
 ### Documentazione Core
 - [Struttura del Modulo](structure.md)
+- [Rotte Web](structure.md#rotte-web)
 - [Canali Notifica](channels.md)
 - [Template](templates.md)
 - [Eventi](events.md)

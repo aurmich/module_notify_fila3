@@ -88,7 +88,7 @@
         <a href="{{ url('/appointments/' . $appointment->id) }}" class="button">Visualizza Appuntamento</a>
         
         <p>Cordiali saluti,<br>
-        Il Team di SaluteOra</p>
+        Il Team di il progetto</p>
     </div>
     
     <div class="footer">

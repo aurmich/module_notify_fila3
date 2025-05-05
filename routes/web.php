@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,4 +10,6 @@
 |
 */
 
-// Filament will handle all routes for this module
+// Questo file è intenzionalmente vuoto.
+// Il backoffice utilizza Filament per tutte le rotte del modulo Notify.
+// Il frontoffice è gestito da Volt + Folio; non definire rotte web qui.

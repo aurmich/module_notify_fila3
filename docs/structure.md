@@ -13,10 +13,36 @@ Marco Sottana
 - **Totale file PHP**: 165
 - **Totale classi/interfacce**: 73
 
+## Struttura del modulo Notify
+
+## Rotte Web
+
+Il file `routes/web.php` di questo modulo è **intenzionalmente vuoto**, poiché:
+
+1. **Backoffice**: utilizza interamente Filament per la gestione delle rotte e delle pagine di amministrazione.
+2. **Frontoffice**: è gestito da **Volt + Folio**, pertanto non servono route web in Laravel.
+
+> Vedi anche il file `Modules/Notify/routes/web.php` per commenti esplicativi.
+
+## Regola sulle rotte (`routes/web.php`)
+
+Il file `routes/web.php` del modulo Notify **deve essere vuoto**:
+- **Backoffice**: tutte le funzionalità di gestione sono fornite tramite Filament, che registra le proprie rotte automaticamente e in modo isolato.
+- **Frontoffice**: l'esposizione di funzionalità pubbliche avviene tramite Volt/Folio, che gestisce le proprie rotte e controller.
+
+> **Non vanno mai aggiunte rotte custom in `Modules/Notify/routes/web.php`.**
+>
+> - Garantisce separazione tra backoffice (Filament) e frontoffice (Volt/Folio)
+> - Evita conflitti, duplicazioni e problemi di sicurezza
+> - Mantiene il modulo riutilizzabile e conforme alle best practice
+
+**Collegamenti:**
+- [database-mail.md](database-mail.md#regola-sulle-rotte)
+- [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+
 ## Struttura delle directory
 
 ```
-
 .git
 .git/branches
 .git/hooks
@@ -398,3 +424,8 @@ tests/Unit
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
+---
+
+## Collegamenti correlati
+- [Regola sulle rotte vuote in database-mail.md](database-mail.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
