@@ -1,11 +1,11 @@
 # Documentazione Modulo Notify
 
-> **Backlink:** [Torna alla documentazione globale <nome progetto>](/docs/README.md)
+> **Backlink:** [Torna alla documentazione globale](../../../../docs/README.md)
 
 ## Motivazione architetturale
 Il modulo Notify nasce per fornire un sistema di notifiche scalabile e riusabile, basato su principi DDD (Domain-Driven Design) e su [Spatie QueueableActions](https://github.com/spatie/laravel-queueable-action) per la business logic asincrona. L'adozione di componenti nativi Filament garantisce coerenza visiva e facilità di manutenzione.
 
-Per approfondimenti sulle scelte architetturali e motivazionali consulta la [documentazione globale <nome progetto>](/docs/README.md) e la sezione [Architettura e Struttura](ARCHITECTURE.md) di questo modulo.
+Per approfondimenti sulle scelte architetturali e motivazionali consulta la [documentazione globale](../../../../docs/README.md) e la sezione [Architettura e Struttura](./ARCHITECTURE.md) di questo modulo.
 
 
 ### Versione HEAD
@@ -23,62 +23,62 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ## Documentazione
 
 ### Core
-- [Struttura del Modulo](structure.md)
-- [Eventi](events.md)
-- [Template](templates.md)
-- [Migrations](migrations.md)
-- [Traduzioni](translations.md)
+- [Struttura del Modulo](./structure.md)
+- [Eventi](./events.md)
+- [Template](./templates.md)
+- [Migrations](./migrations.md)
+- [Traduzioni](./translations.md)
 
 ### Modelli
-- [BaseModel](base-model.md)
-- [Modelli](models.md)
+- [BaseModel](./base-model.md)
+- [Modelli](./models.md)
 
 ### Filament
-- [Risorse](filament-resources.md)
-- [Pagine](filament-pages.md)
+- [Risorse](./filament-resources.md)
+- [Pagine](./filament-pages.md)
 
 ### Email
-- [Sistema Email](database-mail-system.md)
-- [Code Email](database-mail-queue.md)
-- [Template Email](improved-email-templates.md)
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Test Email](email-tests.md)
-- [Log Email](email-logs.md)
-- [Monitoraggio Email](email-monitoring.md)
-- [Backup Email](email-backup.md)
-- [Cache Email](email-cache.md)
-- [Analytics Email](email-analytics.md)
-- [Traduzioni Email](email-translations.md)
+- [Sistema Email](./database-mail-system.md)
+- [Code Email](./database-mail-queue.md)
+- [Template Email](./improved-email-templates.md)
+- [Editor WYSIWYG](./email-wysiwyg-editor.md)
+- [Test Email](./email-tests.md)
+- [Log Email](./email-logs.md)
+- [Monitoraggio Email](./email-monitoring.md)
+- [Backup Email](./email-backup.md)
+- [Cache Email](./email-cache.md)
+- [Analytics Email](./email-analytics.md)
+- [Traduzioni Email](./email-translations.md)
 
 ### Editor
-- [GrapesJS](grapesjs.md)
-- [GrapesJS Filament](grapesjs-filament.md)
-- [GrapesJS Enhancement](grapesjs-enhancement.md)
-- [Test Editor](email-wysiwyg-editor-tests.md)
+- [GrapesJS](./grapesjs.md)
+- [GrapesJS Filament](./grapesjs-filament.md)
+- [GrapesJS Enhancement](./grapesjs-enhancement.md)
+- [Test Editor](./email-wysiwyg-editor-tests.md)
 
 ### Canali
-- [WhatsApp](whatsapp.md)
-- [Telegram](telegram.md)
-- [SMS](sms.md)
-- [Push](send_push_notification_conflict_resolution.md)
+- [WhatsApp](./whatsapp.md)
+- [Telegram](./telegram.md)
+- [SMS](./sms.md)
+- [Push](./send_push_notification_conflict_resolution.md)
 
 ### Errori
-- [Error Mailer](error-mailer.md)
-- [Conflitti Git](conflitti_git.md)
-- [PHPStan](phpstan-usage.md)
-- [PHPStan Level 10](phpstan_level10_fixes.md)
+- [Error Mailer](./error-mailer.md)
+- [Conflitti Git](./conflitti_git.md)
+- [PHPStan](./phpstan-usage.md)
+- [PHPStan Level 10](./phpstan_level10_fixes.md)
 
 ### Analisi
-- [Analisi Plugin](email-plugins-analysis.md)
-- [Schema Conventions](schema_conventions.md)
-- [Roadmap](roadmap.md)
-- [Packages](packages.md)
+- [Analisi Plugin](./email-plugins-analysis.md)
+- [Schema Conventions](./schema_conventions.md)
+- [Roadmap](./roadmap.md)
+- [Packages](./packages.md)
 
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
-- [Architettura dei Moduli](../../../docs/architecture/modules.md)
-- [Gestione Notifiche](../../../docs/architecture/notifications.md)
+- [Architettura dei Moduli](../../../../docs/architecture/modules.md)
+- [Gestione Notifiche](../../../../docs/architecture/notifications.md)
 
 ### Collegamenti ai Moduli
 - [XotBaseModel](../../Xot/docs/XotBaseModel.md)
@@ -94,11 +94,11 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 5. Utilizzare i file di traduzione per le label
 
 ## Vedi Anche
-- [Modulo Notify](module_notify.md)
-- [Notifiche Appuntamenti](appointment-notifications.md)
-- [Test SMTP](test_smtp.md)
-- [Login](login.md)
-- [Firebase](firebase.md)
+- [Modulo Notify](./module_notify.md)
+- [Notifiche Appuntamenti](./appointment-notifications.md)
+- [Test SMTP](./test_smtp.md)
+- [Login](./login.md)
+- [Firebase](./firebase.md)
 
 ## Collegamenti Esterni
 - [Laravel Notifications](https://laravel.com/docs/notifications)
@@ -110,12 +110,12 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ## Collegamenti Principali
 
 ### Documentazione Core
-- [Struttura del Modulo](structure.md)
-- [Rotte Web](structure.md#rotte-web)
-- [Canali Notifica](channels.md)
-- [Template](templates.md)
-- [Eventi](events.md)
-- [Best Practices](BEST-PRACTICES.md)
+- [Struttura del Modulo](./structure.md)
+- [Rotte Web](./structure.md#rotte-web)
+- [Canali Notifica](./channels.md)
+- [Template](./templates.md)
+- [Eventi](./events.md)
+- [Best Practices](./BEST-PRACTICES.md)
 
 ### Integrazioni
 - [Integrazione con User](../User/docs/README.md)
@@ -123,14 +123,14 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - [Integrazione con Lang](../Lang/docs/README.md)
 
 ### Best Practices
-- [Convenzioni Notifiche](notification-conventions.md)
-- [Gestione Template](template-management.md)
-- [PHPStan Fixes](phpstan-fixes.md)
+- [Convenzioni Notifiche](./notification-conventions.md)
+- [Gestione Template](./template-management.md)
+- [PHPStan Fixes](./phpstan-fixes.md)
 
 ### Testing e Qualità
-- [PHPStan Level 9](PHPSTAN_LEVEL9_FIXES.md)
-- [PHPStan Level 10](PHPSTAN_LEVEL10_FIXES.md)
-- [Testing Best Practices](testing-best-practices.md)
+- [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
+- [Testing Best Practices](./testing-best-practices.md)
 
 ## Struttura del Modulo
 

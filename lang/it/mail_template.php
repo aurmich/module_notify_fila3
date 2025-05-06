@@ -76,6 +76,14 @@ return array (
     array (
       'label' => 'toggleColumns',
     ),
+    'reorderRecords' => 
+    array (
+      'label' => 'reorderRecords',
+    ),
+    'resetFilters' => 
+    array (
+      'label' => 'resetFilters',
+    ),
   ),
   'filters' => 
   array (
