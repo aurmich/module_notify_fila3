@@ -6,11 +6,7 @@ namespace Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-=======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
->>>>>>> 185a07e (.)
 
 class LinkableRelationManager extends XotBaseRelationManager
 {

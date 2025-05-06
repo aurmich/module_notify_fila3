@@ -14,11 +14,11 @@ return [
         'mail' => [
             'driver' => 'mail',
             'from' => [
-                'address' => env('MAIL_FROM_ADDRESS', 'noreply@saluteora.it'),
+                'address' => env('MAIL_FROM_ADDRESS', 'noreply@<nome progetto>.it'),
                 'name' => env('MAIL_FROM_NAME', 'il progetto'),
             ],
             'reply_to' => [
-                'address' => env('MAIL_REPLY_TO_ADDRESS', 'info@saluteora.it'),
+                'address' => env('MAIL_REPLY_TO_ADDRESS', 'info@<nome progetto>.it'),
                 'name' => env('MAIL_REPLY_TO_NAME', 'il progetto Support'),
             ],
             'tracking' => [

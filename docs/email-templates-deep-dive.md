@@ -14,7 +14,7 @@ class NotifyMail extends Mailable
 {
     public function build()
     {
-        return $this->from('noreply@saluteora.it')
+        return $this->from('noreply@<nome progetto>.it')
                     ->subject(__('notify::mail.subject'))
                     ->view('notify::emails.template', ['data' => $this->data]);
     }

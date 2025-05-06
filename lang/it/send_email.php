@@ -31,11 +31,6 @@ return array (
     'body_html' => 
     array (
       'label' => 'Contenuto HTML',
-<<<<<<< HEAD
-      'helper_text' => 'body_html',
-      'placeholder' => 'body_html',
-=======
->>>>>>> 185a07e (.)
     ),
   ),
   'actions' => 

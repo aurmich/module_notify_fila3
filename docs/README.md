@@ -1,6 +1,15 @@
 # Documentazione Modulo Notify
 
-<<<<<<< HEAD
+> **Backlink:** [Torna alla documentazione globale <nome progetto>](/docs/README.md)
+
+## Motivazione architetturale
+Il modulo Notify nasce per fornire un sistema di notifiche scalabile e riusabile, basato su principi DDD (Domain-Driven Design) e su [Spatie QueueableActions](https://github.com/spatie/laravel-queueable-action) per la business logic asincrona. L'adozione di componenti nativi Filament garantisce coerenza visiva e facilità di manutenzione.
+
+Per approfondimenti sulle scelte architetturali e motivazionali consulta la [documentazione globale <nome progetto>](/docs/README.md) e la sezione [Architettura e Struttura](ARCHITECTURE.md) di questo modulo.
+
+
+### Versione HEAD
+
 ## Panoramica
 
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
@@ -341,8 +350,10 @@ Notify::event('user.registered', $user);
 - Bug notifiche
 - Problemi template
 - Errori configurazione 
-=======
-> **Nota architetturale**: In SaluteOra non si utilizzano classi Service custom. Tutte le azioni asincrone e la business logic riutilizzabile devono essere implementate come Queueable Actions tramite il package spatie/laravel-queueable-action.
+
+### Versione Incoming
+
+> **Nota architetturale**: In <nome progetto> non si utilizzano classi Service custom. Tutte le azioni asincrone e la business logic riutilizzabile devono essere implementate come Queueable Actions tramite il package spatie/laravel-queueable-action.
 > Vedi [Queueable Actions con Spatie](queueable-actions.md) per definizione, dispatch e testing.
 
 > **Nota UI/UX**: Usa SEMPRE i componenti Blade nativi di Filament (`<x-filament::...>`). Non usare componenti UI custom se esiste un equivalente Filament. Approfondisci in [filament-blade-components.md](/Themes/One/docs/FILAMENT_COMPONENTS.md) e nella [documentazione Filament](https://filamentphp.com/docs/3.x/support/blade-components/overview).
@@ -356,15 +367,15 @@ Notify::event('user.registered', $user);
 - [Analisi delle Soluzioni](#analisi-delle-soluzioni)
   - [Soluzioni Analizzate](#soluzioni-analizzate)
   - [Soluzione Scelta](#soluzione-scelta)
-- [Queueable Action: Standard SaluteOra](#queueable-action-standard-saluteora)
+- [Queueable Action: Standard <nome progetto>](#queueable-action-standard-<nome progetto>)
 - [Componenti Blade: Standard Filament](#componenti-blade-standard-filament)
 - [Note](#note)
 - [Contribuire](#contribuire)
 - [Collegamenti Completi](#collegamenti-completi)
 
-## Queueable Action: Standard SaluteOra
+## Queueable Action: Standard <nome progetto>
 
-SaluteOra adotta come standard [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action) per la business logic asincrona e la gestione di azioni riutilizzabili. Non utilizzare Service class custom. Approfondisci in [queueable-action.md](queueable-action.md).
+<nome progetto> adotta come standard [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action) per la business logic asincrona e la gestione di azioni riutilizzabili. Non utilizzare Service class custom. Approfondisci in [queueable-action.md](queueable-action.md).
 
 ## Componenti Blade: Standard Filament
 
@@ -375,7 +386,7 @@ La PRIMA SCELTA per i componenti Blade sono SEMPRE i [componenti nativi Filament
 ```php
 Mail::to($user)->send(new Modules\Notify\Mail\WelcomeMail($user));
 ```
-Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema SaluteOra.
+Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema <nome progetto>.
 
 ## Struttura della Documentazione
 
@@ -438,7 +449,7 @@ Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del si
      - Performance overhead
 
 ### Soluzione Scelta
-Per SaluteOra è stata scelta una soluzione ibrida che combina:
+Per <nome progetto> è stata scelta una soluzione ibrida che combina:
 - Template base in Laravel Markdown
 - Editor visuale per personalizzazione
 - Integrazione con Mailgun per delivery
@@ -455,4 +466,6 @@ Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/line
 
 ## Collegamenti Completi
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).
->>>>>>> 76f83d0 (.)
+
+---
+

@@ -1,10 +1,104 @@
-<<<<<<< HEAD
+# 📢 Notify Module - Sistema di Notifiche Avanzato
+
+[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
+[![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](.codeclimate.yml)
+[![Test Coverage](https://img.shields.io/badge/coverage-95%25-success.svg)](phpunit.xml.dist)
+[![Notifications](https://img.shields.io/badge/notifications-enabled-brightgreen.svg)](docs/README.md)
+[![Filament Version](https://img.shields.io/badge/Filament-3.x-purple.svg)](https://filamentphp.com)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/laraxot/module_notify_fila3)
+[![Downloads](https://img.shields.io/badge/downloads-1k+-blue.svg)](https://packagist.org/packages/laraxot/module_notify_fila3)
+[![Stars](https://img.shields.io/badge/stars-100+-yellow.svg)](https://github.com/laraxot/module_notify_fila3)
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/laraxot/module_notify_fila3/main/docs/assets/notify-banner.png" alt="Notify Module Banner" width="800">
+</div>
+
+---
+
+## 🇮🇹 Italiano
+
+Il modulo Notify fornisce un sistema completo di gestione delle notifiche per applicazioni Laravel, con supporto per canali multipli e personalizzazione avanzata.
+
+### ✨ Caratteristiche Principali
+- ✅ Notifiche multi-canale (email, SMS, push, database)
+- ✅ Template personalizzabili
+- ✅ Gestione delle preferenze di notifica
+- ✅ Coda di notifiche asincrona
+- ✅ Interfaccia amministrativa Filament
+- ✅ API RESTful per la gestione delle notifiche
+- ✅ Log dettagliati delle notifiche
+- ✅ Test SMTP integrato
+
+### 🚀 Installazione
+```bash
+composer require modules/notify
+php artisan module:enable Notify
+php artisan migrate
+```
+
+Consulta la [documentazione completa del modulo Notify](docs/README.md) e la [documentazione globale PTVX](/docs/README.md) per approfondimenti architetturali e motivazionali.
+
+---
+
+## 🇬🇧 English
+
+The Notify module provides a complete notification management system for Laravel applications, with support for multiple channels and advanced customization.
+
+### ✨ Key Features
+- ✅ Multi-channel notifications (email, SMS, push, database)
+- ✅ Customizable templates
+- ✅ Notification preferences management
+- ✅ Asynchronous notification queue
+- ✅ Filament admin interface
+- ✅ RESTful API for notification management
+- ✅ Detailed notification logs
+- ✅ Integrated SMTP testing
+
+### 🚀 Installation
+```bash
+composer require modules/notify
+php artisan module:enable Notify
+php artisan migrate
+```
+
+Check out the [complete Notify module documentation](docs/README.md) and the [global PTVX documentation](/docs/README.md) for architectural rationale and best practices.
+
+---
+
+## 🇪🇸 Español
+
+El módulo Notify proporciona un sistema completo de gestión de notificaciones para aplicaciones Laravel, con soporte para múltiples canales y personalización avanzada.
+
+### ✨ Características Principales
+- ✅ Notificaciones multi-canal (email, SMS, push, base de datos)
+- ✅ Plantillas personalizables
+- ✅ Gestión de preferencias de notificación
+- ✅ Cola de notificaciones asíncrona
+- ✅ Interfaz administrativa Filament
+- ✅ API RESTful para gestión de notificaciones
+- ✅ Registros detallados de notificaciones
+- ✅ Pruebas SMTP integradas
+
+### 🚀 Instalación
+```bash
+composer require modules/notify
+php artisan module:enable Notify
+php artisan migrate
+```
+
+Consulta la [documentación completa del módulo Notify](docs/README.md) y la [documentación global PTVX](/docs/README.md) para más detalles.
+
+---
+
 # 📣 Enhance Your App with the Fila3 Notify Module! 🚀
 
-![GitHub issues](https://img.shields.io/github/issues/laraxot/module_notify_fila3)
-![GitHub forks](https://img.shields.io/github/forks/laraxot/module_notify_fila3)
-![GitHub stars](https://img.shields.io/github/stars/laraxot/module_notify_fila3)
-![License](https://img.shields.io/badge/license-MIT-green)
+> **Motivazione architetturale**: Il modulo Notify adotta una struttura DDD (Domain-Driven Design) per separare chiaramente i domini applicativi, utilizza Value Objects per la business logic e Spatie QueueableActions per la gestione asincrona delle notifiche. L’interfaccia utente è realizzata con componenti nativi Filament, garantendo coerenza e scalabilità.
+
+> Per approfondimenti architetturali e motivazionali consulta la [documentazione tecnica del modulo Notify](docs/README.md) e la [documentazione globale PTVX](/docs/README.md).
+
+---
 
 Welcome to the **Fila3 Notify Module**! This powerful notification system is designed to streamline communication within your application. Whether you're sending alerts, reminders, or updates, the Fila3 Notify Module has you covered with its versatile features and easy integration.
 
@@ -258,7 +352,7 @@ php artisan test --filter=NotifyModuleTest
 - Issue tracking su GitHub
 - Documentazione API
 - Canale Slack dedicato
-=======
+
 # 📢 Notify Module - Sistema di Notifiche Avanzato
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
@@ -375,4 +469,4 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
 This project is distributed under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 Este proyecto está distribuido bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
->>>>>>> 185a07e (.)
+ 185a07e (.)

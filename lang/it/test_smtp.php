@@ -17,23 +17,6 @@ return array (
     'parent.name' => 'Settore di appartenenza',
     'parent_name' => 'Settore di appartenenza',
     'assets' => 'Quantità di asset',
-<<<<<<< HEAD
-    'body_html' => 
-    array (
-      'helper_text' => 'body_html',
-      'placeholder' => 'body_html',
-      'label' => 'body_html',
-    ),
-    'subject' => 
-    array (
-      'helper_text' => 'subject',
-      'placeholder' => 'subject',
-      'label' => 'subject',
-    ),
-    'to' => 
-    array (
-      'helper_text' => 'to',
-=======
     'host' => 
     array (
       'label' => 'host',
@@ -73,7 +56,6 @@ return array (
     'body_html' => 
     array (
       'label' => 'body_html',
->>>>>>> 185a07e (.)
     ),
   ),
   'actions' => 
