@@ -178,9 +178,7 @@
   array (
     'label' => 'notify theme.model',
   ),
-);
-=======
-return [
+);return [
     'navigation' => [
         'group' => 'Sistema',
         'label' => 'Tema Notifica',
