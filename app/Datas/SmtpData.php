@@ -40,7 +40,11 @@ class SmtpData extends Data
 
     public static function make(string $name = 'smtp'): self
     {
+<<<<<<< HEAD
         if (! self::$instance[$name] instanceof self) {
+=======
+        if (!isset(self::$instance[$name]) || ! self::$instance[$name] instanceof self) {
+>>>>>>> 185a07e (.)
             // $data = TenantService::getConfig('mail');
             Assert::isArray($data = config('mail'));
             $data_name = Arr::get($data, 'mailers.'.$name);

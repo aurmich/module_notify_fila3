@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
 
+<<<<<<< HEAD
 use Illuminate\Support\ServiceProvider;
+=======
+// use Illuminate\Support\Facades\Notification;
+>>>>>>> 185a07e (.)
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 class NotifyServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'Notify';
 
+<<<<<<< HEAD
     /**
      * @var string
      */
@@ -44,5 +49,14 @@ class NotifyServiceProvider extends XotBaseServiceProvider
         return [
             'notify.manager',
         ];
+=======
+    protected string $module_dir = __DIR__;
+
+    protected string $module_ns = __NAMESPACE__;
+
+    public function boot(): void
+    {
+        parent::boot();
+>>>>>>> 185a07e (.)
     }
 }

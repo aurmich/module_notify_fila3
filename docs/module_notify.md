@@ -111,8 +111,12 @@ composer format        # Formatta il codice
 - Debug problemi di invio
 
 ## Changelog
+<<<<<<< HEAD
 Le modifiche vengono tracciate nel repository GitHub. 
 ## Collegamenti tra versioni di module_notify.md
 * [module_notify.md](docs/module_notify.md)
 * [module_notify.md](laravel/Modules/Notify/docs/module_notify.md)
 
+=======
+Le modifiche vengono tracciate nel repository GitHub. 
+>>>>>>> 185a07e (.)

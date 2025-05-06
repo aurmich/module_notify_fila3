@@ -58,6 +58,7 @@ Modules/Notify/
 - Integration tests with dependent modules
 - Security testing
 - Performance testing
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](laravel/Modules/Notify/docs/analysis.md)
@@ -74,3 +75,5 @@ Modules/Notify/
 * [analysis.md](laravel/Modules/Media/docs/phpstan/analysis.md)
 * [analysis.md](laravel/Themes/One/docs/analysis.md)
 
+=======
+>>>>>>> 185a07e (.)
