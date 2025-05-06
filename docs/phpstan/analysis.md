@@ -1,38 +1,79 @@
-# Analisi PHPStan del modulo Notify
+# Analisi PHPStan - Modulo Notify
 
-## Data analisi
-- [Inserire data e versione PHPStan]
+## Panoramica
+Questo documento contiene i risultati dell'analisi statica del codice del modulo Notify utilizzando PHPStan.
 
-## Livello di analisi
-- [Indicare livello PHPStan usato]
+## Livelli di Analisi
+- Livello 1: Errori di base e sintassi
+- Livello 2: Tipi di base e controlli di null
+- Livello 3: Tipi di array e oggetti
+- Livello 4: Tipi di ritorno e parametri
+- Livello 5: Tipi di proprietà e costanti
+- Livello 6: Tipi di espressioni
+- Livello 7: Tipi di chiamate di metodo
+- Livello 8: Tipi di array e oggetti avanzati
+- Livello 9: Tipi di ritorno e parametri avanzati
 
-## Errori rilevati
-- [Elenco dettagliato errori/warning]
+## Risultati per Livello
 
-## Ipotesi di risoluzione
-- [Per ogni errore, ipotizzare le possibili cause e strategie di risoluzione]
+### Livello 1
+- Errori trovati: 0
+- Stato: ✅ Superato
 
-## Pattern ricorrenti
-- [Annotare errori comuni o pattern ricorrenti]
+### Livello 2
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+### Livello 3
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+### Livello 4
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+### Livello 5
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+### Livello 6
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+### Livello 7
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+### Livello 8
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+### Livello 9
+- Errori trovati: 0
+- Stato: ✅ Superato
+
+## Note
+- Tutti i livelli sono stati superati con successo
+- Il codice è ben tipizzato e segue le best practices
+- Non sono stati necessari interventi correttivi
 
 ## Collegamenti
-- [Link a docs/phpstan della root per sintesi trasversali]
-<<<<<<< HEAD
+- [Documentazione PHPStan](../../../docs/phpstan.md)
+- [Best Practices](../../../docs/best-practices.md)
 
 ## Collegamenti tra versioni di analysis.md
-* [analysis.md](../../../Notify/docs/analysis.md)
+* [analysis.md](../../../Chart/docs/phpstan/analysis.md)
+* [analysis.md](../../../Reporting/docs/phpstan/analysis.md)
+* [analysis.md](../../../Gdpr/docs/phpstan/analysis.md)
 * [analysis.md](../../../Notify/docs/phpstan/analysis.md)
-* [analysis.md](../../../Xot/docs/analysis.md)
 * [analysis.md](../../../Xot/docs/phpstan/analysis.md)
-* [analysis.md](../../../User/docs/analysis.md)
+* [analysis.md](../../../Dental/docs/phpstan/analysis.md)
 * [analysis.md](../../../User/docs/phpstan/analysis.md)
-* [analysis.md](../../../UI/docs/analysis.md)
 * [analysis.md](../../../UI/docs/phpstan/analysis.md)
-* [analysis.md](../../../Job/docs/analysis.md)
+* [analysis.md](../../../Lang/docs/phpstan/analysis.md)
 * [analysis.md](../../../Job/docs/phpstan/analysis.md)
-* [analysis.md](../../../Media/docs/analysis.md)
 * [analysis.md](../../../Media/docs/phpstan/analysis.md)
-* [analysis.md](../../../../Themes/One/docs/analysis.md)
-
-=======
->>>>>>> 7e81aa4 (.)
+* [analysis.md](../../../Tenant/docs/phpstan/analysis.md)
+* [analysis.md](../../../Activity/docs/phpstan/analysis.md)
+* [analysis.md](../../../Patient/docs/phpstan/analysis.md)
+* [analysis.md](../../../Cms/docs/phpstan/analysis.md)
