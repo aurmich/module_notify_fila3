@@ -1,14 +1,47 @@
+<<<<<<< HEAD
+
+=======
 
 
+=======
 
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> 7e81aa4 (.)
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 7e81aa4 (.)
 # Rapporto PHPStan Livello 6 per il modulo Notify
 
 Data analisi: 2025-04-15 21:51:12
 
 🎉 **Congratulazioni!** Nessun errore trovato a questo livello.
+<<<<<<< HEAD
+aurmich/dev
+=======
+
+
+=======
+aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> 7e81aa4 (.)
 aurmich/dev
 aurmich/dev
-aurmich/dev
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di level_6.md
 * [level_6.md](../../../Chart/docs/phpstan/level_6.md)
@@ -27,3 +60,10 @@ aurmich/dev
 * [level_6.md](../../../Patient/docs/phpstan/level_6.md)
 * [level_6.md](../../../Cms/docs/phpstan/level_6.md)
 
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 7e81aa4 (.)
