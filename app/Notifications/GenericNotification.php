@@ -11,7 +11,11 @@ use Illuminate\Notifications\Notification;
 use NotificationChannels\Twilio\TwilioSmsMessage;
 
 /**
+<<<<<<< HEAD
  * Notifica generica configurabile per il sistema il progetto.
+=======
+ * Notifica generica configurabile per il sistema SaluteOra.
+>>>>>>> 4c11a11 (.)
  * Supporta l'invio tramite email, SMS (Twilio) e database.
  */
 class GenericNotification extends Notification implements ShouldQueue
@@ -91,7 +95,11 @@ class GenericNotification extends Notification implements ShouldQueue
         }
 
         return $mail->salutation('Cordiali saluti,')
+<<<<<<< HEAD
             ->line('Team il progetto');
+=======
+            ->line('Team SaluteOra');
+>>>>>>> 4c11a11 (.)
     }
 
     /**
@@ -102,7 +110,11 @@ class GenericNotification extends Notification implements ShouldQueue
      */
     public function toTwilio($notifiable): TwilioSmsMessage
     {
+<<<<<<< HEAD
         $content = "il progetto: {$this->title}\n{$this->message}";
+=======
+        $content = "SaluteOra: {$this->title}\n{$this->message}";
+>>>>>>> 4c11a11 (.)
         
         // Limita la lunghezza del messaggio SMS
         if (mb_strlen($content) > 320) {

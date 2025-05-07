@@ -13,6 +13,7 @@ Marco Sottana
 - **Totale file PHP**: 165
 - **Totale classi/interfacce**: 73
 
+<<<<<<< HEAD
 ## Struttura del modulo Notify
 
 ## Rotte Web
@@ -43,6 +44,12 @@ Il file `routes/web.php` del modulo Notify **deve essere vuoto**:
 ## Struttura delle directory
 
 ```
+=======
+## Struttura delle directory
+
+```
+
+>>>>>>> 4c11a11 (.)
 .git
 .git/branches
 .git/hooks
@@ -424,6 +431,7 @@ tests/Unit
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
+<<<<<<< HEAD
 ---
 
 ## Collegamenti correlati
@@ -456,3 +464,5 @@ tests/Unit
 
 ---
 
+=======
+>>>>>>> 4c11a11 (.)
