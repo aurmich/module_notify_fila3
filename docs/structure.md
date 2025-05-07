@@ -13,13 +13,6 @@ Marco Sottana
 - **Totale file PHP**: 165
 - **Totale classi/interfacce**: 73
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 3f8adab (.)
 ## Struttura del modulo Notify
 
 ## Rotte Web
@@ -47,30 +40,9 @@ Il file `routes/web.php` del modulo Notify **deve essere vuoto**:
 - [database-mail.md](database-mail.md#regola-sulle-rotte)
 - [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
 
-<<<<<<< HEAD
 ## Struttura delle directory
 
 ```
-=======
-=======
->>>>>>> 3f8adab (.)
-## Struttura delle directory
-
-```
-
-<<<<<<< HEAD
->>>>>>> 4c11a11 (.)
-=======
-### Versione Alternativa
-
-## Struttura delle directory
-
-```
-
-
----
-
->>>>>>> 3f8adab (.)
 .git
 .git/branches
 .git/hooks
@@ -452,13 +424,6 @@ tests/Unit
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 3f8adab (.)
 ---
 
 ## Collegamenti correlati
@@ -491,14 +456,3 @@ tests/Unit
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 4c11a11 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 3f8adab (.)

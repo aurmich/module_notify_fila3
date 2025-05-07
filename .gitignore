@@ -68,20 +68,9 @@ cache/
 *.exe
 .php-cs-fixer.cache
 *:Zone.Identifier
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 # Backup files
 *.bak
 -e 
 # PHPStan documentation
 docs/phpstan/
-=======
->>>>>>> 4c11a11 (.)
-=======
-
-# Backup files
-*.bak
-# PHPStan documentation
-docs/phpstan/
->>>>>>> 3f8adab (.)

@@ -111,13 +111,6 @@ composer format        # Formatta il codice
 - Debug problemi di invio
 
 ## Changelog
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 3f8adab (.)
 ### Versione HEAD
 
 Le modifiche vengono tracciate nel repository GitHub. 
@@ -132,16 +125,3 @@ Le modifiche vengono tracciate nel repository GitHub.
 
 ---
 
-<<<<<<< HEAD
-=======
-Le modifiche vengono tracciate nel repository GitHub. 
->>>>>>> 4c11a11 (.)
-=======
-
-### Versione Alternativa
-
-Le modifiche vengono tracciate nel repository GitHub. 
-
----
-
->>>>>>> 3f8adab (.)

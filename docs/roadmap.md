@@ -75,13 +75,6 @@ Overall Module Completion: 60%
    - Query optimization
    - Cache implementation
    - Priority: High
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 3f8adab (.)
 ### Versione HEAD
 
 
@@ -261,14 +254,3 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 4c11a11 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 3f8adab (.)

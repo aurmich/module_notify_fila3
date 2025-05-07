@@ -10,13 +10,6 @@ Data: Wed Apr 23 10:44:20 CEST 2025
 ## Collegamenti
 
 - [Report Generale](/docs/phpstan/README.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 3f8adab (.)
 
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
@@ -96,14 +89,3 @@ Data: Wed Apr 23 10:44:20 CEST 2025
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
 
-<<<<<<< HEAD
-=======
->>>>>>> 4c11a11 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 3f8adab (.)

@@ -52,13 +52,6 @@
 - [Queue](packages/queue.md)
 - [Performance](packages/performance.md)
 - [Integrazioni](packages/integrations.md) 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 3f8adab (.)
 ### Versione HEAD
 
 
@@ -79,14 +72,3 @@
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 4c11a11 (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 3f8adab (.)
