@@ -5,6 +5,12 @@ https://github.com/codedor/filament-mail-templates/
 
 https://www.mailcoach.app/resources/blog/using-the-mailcoach-markdown-editor-in-filament
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 3f8adab (.)
 ### Versione HEAD
 
 
@@ -19,5 +25,14 @@ https://www.mailcoach.app/resources/blog/using-the-mailcoach-markdown-editor-in-
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4c11a11 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 3f8adab (.)

@@ -59,6 +59,12 @@ Modules/Notify/
 - Security testing
 - Performance testing
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 3f8adab (.)
 ### Versione HEAD
 
 
@@ -83,5 +89,14 @@ Modules/Notify/
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4c11a11 (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 3f8adab (.)

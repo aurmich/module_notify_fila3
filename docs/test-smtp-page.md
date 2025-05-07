@@ -9,6 +9,12 @@ Il sistema rileverà in automatico la configurazione di default, ma si potrà be
 ![test smtp form](test-smtp-page-form.jpg)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 3f8adab (.)
 ### Versione HEAD
 
 Inseriti le varie impostazioni, si potrà verificare il funzionamento di una determinata configurazione email.
@@ -23,6 +29,16 @@ Inseriti le varie impostazioni, si potrà verificare il funzionamento di una det
 
 ---
 
+<<<<<<< HEAD
 =======
 Inseriti le varie impostazioni, si potrà verificare il funzionamento di una determinata configurazione email.
 >>>>>>> 4c11a11 (.)
+=======
+
+### Versione Alternativa
+
+Inseriti le varie impostazioni, si potrà verificare il funzionamento di una determinata configurazione email.
+
+---
+
+>>>>>>> 3f8adab (.)
