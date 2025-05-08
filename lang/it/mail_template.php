@@ -25,6 +25,8 @@ return array (
       'label' => 'Classe Mailable',
       'placeholder' => 'Inserisci il nome della classe Mailable',
       'help' => 'La classe PHP che gestisce l\'invio dell\'email',
+      'description' => 'mailable',
+      'helper_text' => 'mailable',
     ),
     'subject' => 
     array (
@@ -32,6 +34,7 @@ return array (
       'placeholder' => 'Inserisci l\'oggetto dell\'email',
       'help' => 'L\'oggetto che apparirà nell\'email',
       'helper_text' => 'subject',
+      'description' => 'subject',
     ),
     'html_template' => 
     array (
@@ -39,6 +42,7 @@ return array (
       'placeholder' => 'Inserisci il contenuto HTML dell\'email',
       'help' => 'Il contenuto dell\'email in formato HTML',
       'helper_text' => 'html_template',
+      'description' => 'html_template',
     ),
     'text_template' => 
     array (
@@ -46,6 +50,7 @@ return array (
       'placeholder' => 'Inserisci il contenuto testuale dell\'email',
       'help' => 'Versione testuale dell\'email per client che non supportano HTML',
       'helper_text' => 'text_template',
+      'description' => 'text_template',
     ),
     'version' => 
     array (
@@ -83,6 +88,38 @@ return array (
     'resetFilters' => 
     array (
       'label' => 'resetFilters',
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+    ),
+    'openFilters' => 
+    array (
+      'label' => 'openFilters',
+    ),
+    'forceDelete' => 
+    array (
+      'label' => 'forceDelete',
+    ),
+    'restore' => 
+    array (
+      'label' => 'restore',
+    ),
+    'delete' => 
+    array (
+      'label' => 'delete',
+    ),
+    'edit' => 
+    array (
+      'label' => 'edit',
+    ),
+    'layout' => 
+    array (
+      'label' => 'layout',
+    ),
+    'name' => 
+    array (
+      'label' => 'name',
     ),
   ),
   'filters' => 

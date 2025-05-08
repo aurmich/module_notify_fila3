@@ -14,6 +14,16 @@ return [
             'main' => 'Main Information',
         ],
         'fields' => [
+            'name' => [
+                'label' => 'Name',
+                'placeholder' => 'Enter template name',
+                'tooltip' => 'The identifying name of the email template',
+            ],
+            'layout' => [
+                'label' => 'Layout',
+                'placeholder' => 'Select template layout',
+                'tooltip' => 'The graphical layout that will be used for the email',
+            ],
             'mailable' => [
                 'label' => 'Mailable Class',
                 'placeholder' => 'Enter the Mailable class name',

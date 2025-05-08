@@ -2,11 +2,11 @@
 
 namespace Modules\Notify\Filament\Resources\MailTemplateResource\Pages;
 
-use Modules\Notify\Filament\Resources\MailTemplateResource;
 use Filament\Actions;
-use Filament\Resources\Pages\CreateRecord;
+use Modules\Notify\Filament\Resources\MailTemplateResource;
+use Modules\Lang\Filament\Resources\Pages\LangBaseCreateRecord;
 
-class CreateMailTemplate extends CreateRecord
+class CreateMailTemplate extends LangBaseCreateRecord
 {
     protected static string $resource = MailTemplateResource::class;
 }

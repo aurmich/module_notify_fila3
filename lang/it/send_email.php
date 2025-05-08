@@ -23,14 +23,21 @@ return array (
     'to' => 
     array (
       'label' => 'Destinatario',
+      'description' => 'to',
     ),
     'subject' => 
     array (
       'label' => 'Oggetto',
+      'description' => 'subject',
+      'helper_text' => 'subject',
+      'placeholder' => 'subject',
     ),
     'body_html' => 
     array (
       'label' => 'Contenuto HTML',
+      'description' => 'body_html',
+      'helper_text' => 'body_html',
+      'placeholder' => 'body_html',
     ),
   ),
   'actions' => 

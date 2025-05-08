@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\LaravelPackageTools\Concerns\Package\HasTranslations;
+//use Spatie\LaravelPackageTools\Concerns\Package\HasTranslations;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
 
 /**
@@ -22,18 +24,18 @@ use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Notify\Models\MailTemplateVersion> $versions
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Notify\Models\MailTemplateLog> $logs
  */
-class MailTemplate extends SpatieMailTemplate
+class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 {
-    use SoftDeletes;
+    //use SoftDeletes;
     use HasTranslations;
 
     /** @var string */
     protected $connection = 'notify';
 
-    /** @var array<string> */
-    public $translatable = ['subject', 'html_template', 'text_template'];
+    /** @var list<string> */
+    public array $translatable = ['subject', 'html_template', 'text_template'];
 
-    /** @var array<string> */
+    /** @var list<string> */
     protected $fillable = [
         'mailable',
         'subject',
@@ -42,12 +44,19 @@ class MailTemplate extends SpatieMailTemplate
         'version',
     ];
 
-    /** @var array<string, string> */
-    protected $casts = [
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
-        'deleted_at' => 'datetime',
-    ];
+    /**
+     * Define attribute casts.
+     *
+     * @return array<string, string>
+     */
+    public function casts(): array
+    {
+        return [
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+        ];
+    }
 
     /**
      * Versioni del template email.

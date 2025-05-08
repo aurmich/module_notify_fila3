@@ -21,9 +21,9 @@ return new class () extends XotBaseMigration {
             function (Blueprint $table): void {
                 $table->increments('id');
                 $table->string('mailable');
-                $table->text('subject')->nullable();
-                $table->longText('html_template');
-                $table->longText('text_template')->nullable();
+                $table->json('subject')->nullable();
+                $table->json('html_template')->nullable();
+                $table->json('text_template')->nullable();
                 
             }
         );
@@ -31,6 +31,15 @@ return new class () extends XotBaseMigration {
          // -- UPDATE --
          $this->tableUpdate(
             function (Blueprint $table): void {
+                if(in_array($this->getColumnType('subject'),['text'])){
+                    $table->json('subject')->nullable()->change();
+                }
+                if(in_array($this->getColumnType('html_template'),['text'])){
+                    $table->json('html_template')->nullable()->change();
+                }
+                if(in_array($this->getColumnType('text_template'),['text'])){
+                    $table->json('text_template')->nullable()->change();
+                }
                 $this->updateTimestamps(table: $table, hasSoftDeletes: true);
             }
         );

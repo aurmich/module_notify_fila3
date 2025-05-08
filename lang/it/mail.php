@@ -14,6 +14,16 @@ return [
             'main' => 'Informazioni Principali',
         ],
         'fields' => [
+            'name' => [
+                'label' => 'Nome',
+                'placeholder' => 'Inserisci il nome del template',
+                'tooltip' => 'Il nome identificativo del template email',
+            ],
+            'layout' => [
+                'label' => 'Layout',
+                'placeholder' => 'Seleziona il layout del template',
+                'tooltip' => 'Il layout grafico che verrà utilizzato per l\'email',
+            ],
             'mailable' => [
                 'label' => 'Classe Mailable',
                 'placeholder' => 'Inserisci il nome della classe Mailable',

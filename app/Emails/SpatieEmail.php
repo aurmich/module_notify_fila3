@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Emails;
 
 use Illuminate\Database\Eloquent\Model;
+use Modules\Notify\Models\MailTemplate;
 use Spatie\MailTemplates\TemplateMailable;
 
 /**
@@ -12,7 +13,9 @@ use Spatie\MailTemplates\TemplateMailable;
  */
 class SpatieEmail extends TemplateMailable
 {
-    
+    // use our custom mail template model
+    protected static $templateModelClass = MailTemplate::class;
+
     public function __construct(Model $record)
     {
         $data=$record->toArray();
@@ -21,9 +24,9 @@ class SpatieEmail extends TemplateMailable
     
     public function getHtmlLayout(): string
     {
-        $pathToLayout = storage_path('mail-layouts/main.html');
+        //$pathToLayout = storage_path('mail-layouts/main.html');
     
-        return file_get_contents($pathToLayout);
+        //return file_get_contents($pathToLayout);
         /**
          * In your application you might want to fetch the layout from an external file or Blade view.
          * 
@@ -32,7 +35,7 @@ class SpatieEmail extends TemplateMailable
          * Blade view: `return view('mailLayouts.main', $data)->render();`
          */
         
-        //return '<header>Site name!</header>{{{ body }}}<footer>Copyright 2018</footer>';
+        return '<header>Site name!</header>{{{ body }}}<footer>Copyright 2018</footer>';
     }
 }
 
