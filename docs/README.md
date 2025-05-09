@@ -7,9 +7,6 @@ Il modulo Notify nasce per fornire un sistema di notifiche scalabile e riusabile
 
 Per approfondimenti sulle scelte architetturali e motivazionali consulta la [documentazione globale](../../../../docs/README.md) e la sezione [Architettura e Struttura](./ARCHITECTURE.md) di questo modulo.
 
-
-### Versione HEAD
-
 ## Panoramica
 
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
@@ -32,15 +29,26 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ### Modelli
 - [BaseModel](./base-model.md)
 - [Modelli](./models.md)
+- [Modifiche Modello MailTemplate](./MODEL_CHANGES.md)
+- [Documentazione Tecnica MailTemplate](./mail-templates/MODEL_MAIL_TEMPLATE_CHANGES.md)
 
 ### Filament
 - [Risorse](./filament-resources.md)
 - [Pagine](./filament-pages.md)
+- [Miglioramenti UI/UX](./mail-templates/FILAMENT_UI_ENHANCEMENTS.md)
+- [Analisi Title With Slug](./mail-templates/TITLE_WITH_SLUG_ANALYSIS.md)
+- [Generazione Slug](./mail-templates/FILAMENT_SLUG_GENERATION.md)
 
 ### Email
 - [Sistema Email](./database-mail-system.md)
 - [Code Email](./database-mail-queue.md)
 - [Template Email](./improved-email-templates.md)
+- [Guida all'utilizzo di SpatieEmail](./SPATIE_EMAIL_USAGE_GUIDE.md)
+- [Guida alla Migrazione MailTemplate](./MAIL_TEMPLATE_MIGRATION_GUIDE.md)
+- [Struttura della Migrazione](./mail-templates/MIGRATION_STRUCTURE.md)
+- [Implementazione Campo Slug](./mail-templates/SLUG_FIELD_IMPLEMENTATION.md)
+- [Implementazione Modello con Slug](./mail-templates/MODEL_SLUG_IMPLEMENTATION.md)
+- [Implementazione Risorsa con Slug](./mail-templates/RESOURCE_SLUG_IMPLEMENTATION.md)
 - [Editor WYSIWYG](./email-wysiwyg-editor.md)
 - [Test Email](./email-tests.md)
 - [Log Email](./email-logs.md)
@@ -74,6 +82,17 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - [Roadmap](./roadmap.md)
 - [Packages](./packages.md)
 
+### Changelog e Migrazioni
+- [Changelog Migrazioni](./MIGRATIONS_CHANGELOG.md)
+
+### Best Practices
+- [Best Practices Email](./EMAIL_BEST_PRACTICES.md)
+- [Gestione Errori](./ERROR_HANDLING.md)
+
+### Migrazioni
+- [Struttura Migrazioni](./migrations.md)
+- [Gestione Conversioni JSON](./mail-templates/MIGRATION_JSON_CONVERSION.md)
+
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
@@ -83,15 +102,14 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ### Collegamenti ai Moduli
 - [XotBaseModel](../../Xot/docs/XotBaseModel.md)
 - [XotBaseResource](../../Xot/docs/XotBaseResource.md)
-- [XotBaseServiceProvider](../../Xot/docs/XotBaseServiceProvider.md)
-
 ## Note Importanti
 
 1. Estendere sempre le classi base appropriate
 2. Non sovrascrivere metodi se non necessario
-3. Mantenere la documentazione aggiornata
+3. Mantenere la documentazione tecnica aggiornata
 4. Seguire le convenzioni di namespace
 5. Utilizzare i file di traduzione per le label
+- [Regole sulle migration e detection colonne](./MIGRATION_RULES.md)
 
 ## Vedi Anche
 - [Modulo Notify](./module_notify.md)
@@ -386,7 +404,7 @@ La PRIMA SCELTA per i componenti Blade sono SEMPRE i [componenti nativi Filament
 ```php
 Mail::to($user)->send(new Modules\Notify\Mail\WelcomeMail($user));
 ```
-Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema <nome progetto>.
+Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema.
 
 ## Struttura della Documentazione
 
@@ -468,4 +486,62 @@ Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/line
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).
 
 ---
+
+# Modulo Notify
+
+## Introduzione
+
+Il modulo Notify gestisce tutte le funzionalità relative alle notifiche e alle comunicazioni del sistema.
+
+## Funzionalità Principali
+
+- Gestione template email
+- Invio notifiche
+- Gestione preferenze utente
+- Log delle comunicazioni
+
+## Struttura del Modulo
+
+```
+Notify/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   └── Requests/
+│   ├── Models/
+│   ├── Services/
+│   └── Filament/
+├── database/
+│   └── migrations/
+├── resources/
+│   └── views/
+└── routes/
+    └── web.php
+```
+
+## Modifiche Recenti
+
+### Migrazione Mail Templates (2024-03-20)
+- Aggiunto supporto per slug univoci
+- Implementato sistema di versioning
+- Migliorata la struttura dei campi JSON
+- Standardizzazione con best practices Laravel
+
+Per maggiori dettagli, consultare:
+- [Modifiche Migrazione](./MIGRATION_CHANGES.md)
+- [Regole Migrazioni](./MIGRATION_RULES.md)
+- [Documentazione Template](./EMAIL_TEMPLATES.md)
+
+## Collegamenti Correlati
+
+- [Documentazione API](./api.md)
+- [Documentazione Filament](./filament.md)
+- [Best Practices](./best-practices.md)
+
+## Supporto
+
+Per supporto tecnico:
+- Email: support@example.com
+- Documentazione: https://docs.example.com
+- Repository: https://github.com/organization/notify
 

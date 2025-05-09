@@ -24,6 +24,8 @@ return array (
     array (
       'label' => 'Destinatario',
       'description' => 'to',
+      'helper_text' => 'to',
+      'placeholder' => 'to',
     ),
     'subject' => 
     array (

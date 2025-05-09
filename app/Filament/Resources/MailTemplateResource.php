@@ -4,9 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
-use Modules\Notify\Models\MailTemplate;
-use Modules\Lang\Filament\Resources\LangBaseResource;
 use Filament\Forms;
+use Filament\Forms\Set;
+use Illuminate\Support\Str;
+use Filament\Forms\Components\Group;
+use Modules\Notify\Models\MailTemplate;
+use Filament\Forms\Components\TextInput;
+use Modules\Lang\Filament\Resources\LangBaseResource;
 
 class MailTemplateResource extends LangBaseResource
 {
@@ -26,6 +30,25 @@ class MailTemplateResource extends LangBaseResource
             'mailable' => Forms\Components\TextInput::make('mailable')
                 ->required()
                 ->maxLength(255),
+            //'name' => Forms\Components\TextInput::make('name'),
+            //'slug' => Forms\Components\TextInput::make('slug'),
+            Group::make()
+                ->schema([
+                    TextInput::make('name')
+                        ->label('Nome Template')
+                        ->required()
+                        //->live(debounce: 200)
+                        //->reactive()
+                        ->afterStateUpdated(function (string $state, Set $set) {
+                            $set('slug', Str::slug($state));
+                        }),
+                    TextInput::make('slug')
+                        ->label('Slug')
+                        ->required()
+                        ->unique(ignoreRecord: true)
+                ])
+                ->columns(2),
+                //->columnSpan('full'),
 
             'subject' => Forms\Components\TextInput::make('subject')
                 ->required()

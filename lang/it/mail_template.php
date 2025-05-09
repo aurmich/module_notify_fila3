@@ -120,6 +120,16 @@ return array (
     'name' => 
     array (
       'label' => 'name',
+      'description' => 'name',
+      'helper_text' => 'name',
+      'placeholder' => 'name',
+    ),
+    'slug' => 
+    array (
+      'description' => 'slug',
+      'helper_text' => 'slug',
+      'placeholder' => 'slug',
+      'label' => 'slug',
     ),
   ),
   'filters' => 

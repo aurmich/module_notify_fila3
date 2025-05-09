@@ -25,6 +25,16 @@ return array (
     'subject' => 
     array (
       'description' => 'subject',
+      'helper_text' => 'subject',
+      'placeholder' => 'subject',
+      'label' => 'subject',
+    ),
+    'to' => 
+    array (
+      'description' => 'to',
+      'helper_text' => 'to',
+      'placeholder' => 'to',
+      'label' => 'to',
     ),
   ),
 );
