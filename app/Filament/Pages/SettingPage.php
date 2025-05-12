@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Pages;
 
-use Filament\Pages\Page;
+use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Widgets\EnvWidget;
 
-class SettingPage extends Page
+class SettingPage extends XotBasePage
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 

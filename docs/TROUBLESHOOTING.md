@@ -134,6 +134,41 @@ Invalid mime type: application/octet-stream
    - Verificare la consegna
    - Testare gli allegati
 
+### 1. Errori con Notifiche Email
+
+#### Errore: An email must have a "To", "Cc", or "Bcc" header
+```
+Symfony\Component\Mime\Exception\LogicException
+An email must have a "To", "Cc", or "Bcc" header.
+```
+
+**Causa**: 
+- Destinatario non specificato o null
+- Dati non validati prima dell'invio
+- Problemi con il routing delle notifiche
+
+**Soluzione**:
+```php
+// Validazione
+if (empty($data['to']) || !filter_var($data['to'], FILTER_VALIDATE_EMAIL)) {
+    throw new \InvalidArgumentException('Indirizzo email non valido');
+}
+
+// Routing corretto
+try {
+    Notification::route('mail', $data['to'])
+        ->notify(new YourNotification());
+} catch (\Exception $e) {
+    Log::error('Errore invio notifica: ' . $e->getMessage());
+    throw $e;
+}
+```
+
+**Lezione Appresa**:
+- Validare sempre i dati in ingresso
+- Usare try/catch per gestire gli errori
+- Loggare gli errori per il debugging
+
 ## Collegamenti Utili
 
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)

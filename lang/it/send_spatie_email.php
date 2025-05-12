@@ -1,35 +1,35 @@
 <?php
 
 return array (
-  'navigation' => 
+  'navigation' =>
   array (
-    'label' => 'send spatie email.navigation',
-    'group' => 'send spatie email.navigation',
+    'label' => 'Invio Email (Spatie)',
+    'group' => 'Notifiche',
   ),
-  'actions' => 
+  'actions' =>
   array (
-    'emailFormActions' => 
+    'emailFormActions' =>
     array (
       'label' => 'emailFormActions',
     ),
   ),
-  'fields' => 
+  'fields' =>
   array (
-    'body_html' => 
+    'body_html' =>
     array (
       'description' => 'body_html',
       'helper_text' => 'body_html',
       'placeholder' => 'body_html',
       'label' => 'body_html',
     ),
-    'subject' => 
+    'subject' =>
     array (
       'description' => 'subject',
       'helper_text' => 'subject',
       'placeholder' => 'subject',
       'label' => 'subject',
     ),
-    'to' => 
+    'to' =>
     array (
       'description' => 'to',
       'helper_text' => 'to',

@@ -10,34 +10,48 @@ declare(strict_types=1);
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
-use InvalidArgumentException;
-use NotificationChannels\Telegram\TelegramMessage;
+use Modules\Notify\Notifications\Channels\TelegramChannel;
 
 /**
  * Classe per inviare notifiche tramite Telegram.
  */
-class TelegramNotification extends Notification
+class TelegramNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
     /**
-     * Create a new notification instance.
+     * @var string
      */
-    public function __construct()
+    protected string $message;
+
+    /**
+     * @var array
+     */
+    protected array $options;
+
+    /**
+     * Create a new notification instance.
+     *
+     * @param string $message
+     * @param array $options
+     */
+    public function __construct(string $message, array $options = [])
     {
-        // $this->data = $data;
+        $this->message = $message;
+        $this->options = $options;
     }
 
     /**
      * Get the notification's delivery channels.
      *
-     * @param object $notifiable The entity to be notified
-     * @return array<string>
+     * @param mixed $notifiable
+     * @return array
      */
-    public function via(object $notifiable): array
+    public function via($notifiable): array
     {
-        return ['telegram'];
+        return [TelegramChannel::class];
     }
 
     /**
@@ -55,30 +69,11 @@ class TelegramNotification extends Notification
     /**
      * Get the Telegram representation of the notification.
      *
-     * @param object|null $notifiable The entity to be notified
-     * @return TelegramMessage
+     * @param mixed $notifiable
+     * @return string
      */
-    public function toTelegram(?object $notifiable): TelegramMessage
+    public function toTelegram($notifiable): string
     {
-        // $url = url('/invoice/'.$this->invoice->id);
-        $url = '#';
-
-        return TelegramMessage::create()
-            // Optional recipient user id.
-            // ->to(' dddd ')
-            // Markdown supported.
-            ->content('Hello there!')
-            ->line('Your invoice has been *PAID*')
-            // ->lineIf($notifiable->amount > 0, "Amount paid: {$notifiable->amount}")
-            // ->line('Thank you!')
-
-            // (Optional) Blade template for the content.
-            // ->view('notification', ['url' => $url])
-
-            // (Optional) Inline Buttons
-            ->button('View Invoice', $url)
-            ->button('Download Invoice', $url);
-        // (Optional) Inline Button with callback. You can handle callback in your bot instance
-        // ->buttonWithCallback('Confirm', 'confirm_invoice '.$this->invoice->id)
+        return $this->message;
     }
 }

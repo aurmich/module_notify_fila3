@@ -12,7 +12,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
-use Filament\Pages\Page;
+use Modules\Xot\Filament\Pages\XotBasePage;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Stringable;
@@ -30,9 +30,8 @@ use function Safe\json_encode;
 /**
  * @property ComponentContainer $notificationForm
  */
-class SendPushNotification extends Page implements HasForms
+class SendPushNotificationPage extends XotBasePage
 {
-    use InteractsWithForms;
 
     // use NavigationLabelTrait;
 

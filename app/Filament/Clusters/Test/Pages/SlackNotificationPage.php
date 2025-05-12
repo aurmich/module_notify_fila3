@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
-use Filament\Pages\Page;
+use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Notify\Filament\Clusters\Test;
 
-class SlackNotification extends Page
+class SlackNotificationPage extends XotBasePage
 {
     protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
 
