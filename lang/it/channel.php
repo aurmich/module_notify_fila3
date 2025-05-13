@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 return [
+    'resource' => [
+        'name' => 'Canale di Notifica',
+    ],
     'navigation' => [
         'group' => 'Sistema',
         'label' => 'Canali di Notifica',
@@ -173,4 +176,5 @@ return [
             'message' => 'Impossibile inviare il messaggio di test: :error',
         ],
     ],
+    'messages' => [],
 ];

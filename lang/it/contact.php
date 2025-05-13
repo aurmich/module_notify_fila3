@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'resource' => [
         'name' => 'Contact',
@@ -185,4 +187,5 @@ return [
             'message' => 'Impossibile verificare il contatto: :error',
         ],
     ],
+    'messages' => [],
 ];

@@ -1,6 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 return [
+    'resource' => [
+        'name' => 'Notifica',
+    ],
     'navigation' => [
         'name' => 'Notifica',              // Nome singolare
         'plural' => 'Notifiche',           // Nome plurale
@@ -212,4 +217,5 @@ return [
             ],
         ],
     ],
+    'messages' => [],
 ];
