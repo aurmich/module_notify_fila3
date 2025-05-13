@@ -191,7 +191,11 @@ class AppointmentReminder extends Notification
 ## Errori Comuni da Evitare
 
 1. **Mai modificare i moduli riutilizzabili** - Non modificare direttamente `config/sms.php` nel modulo Notify
+<<<<<<< HEAD
 2. **Mai utilizzare il namespace sbagliato** - Usare `Modules\Notify\Datas` e non `Modules\Notify\Datas`
+=======
+2. **Mai utilizzare il namespace sbagliato** - Usare `Modules\Notify\Datas` e non `Modules\Notify\App\Datas`
+>>>>>>> c13b64b (.)
 3. **Mai utilizzare username/password per Netfun** - Netfun utilizza un API token, non username/password
 4. **Mai usare HTTP client sbagliato** - Utilizzare `GuzzleHttp\Client` come nella classe `NetfunSendAction` esistente
 

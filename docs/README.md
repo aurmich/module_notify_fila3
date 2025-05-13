@@ -7,9 +7,6 @@ Il modulo Notify nasce per fornire un sistema di notifiche scalabile e riusabile
 
 Per approfondimenti sulle scelte architetturali e motivazionali consulta la [documentazione globale](../../../../docs/README.md) e la sezione [Architettura e Struttura](./ARCHITECTURE.md) di questo modulo.
 
-
-### Versione HEAD
-
 ## Panoramica
 
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
@@ -105,19 +102,21 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ### Collegamenti ai Moduli
 - [XotBaseModel](../../Xot/docs/XotBaseModel.md)
 - [XotBaseResource](../../Xot/docs/XotBaseResource.md)
-- [XotBaseServiceProvider](../../Xot/docs/XotBaseServiceProvider.md)
-
 ## Note Importanti
 
 1. Estendere sempre le classi base appropriate
 2. Non sovrascrivere metodi se non necessario
 3. Mantenere la documentazione tecnica aggiornata
+<<<<<<< HEAD
 4. Seguire le convenzioni di namespace
 5. Utilizzare i file di traduzione per le label
 - [Regole sulle migration e detection colonne](./MIGRATION_RULES.md)
 3. Mantenere la documentazione aggiornata
+=======
+>>>>>>> c13b64b (.)
 4. Seguire le convenzioni di namespace
 5. Utilizzare i file di traduzione per le label
+- [Regole sulle migration e detection colonne](./MIGRATION_RULES.md)
 
 ## Vedi Anche
 - [Modulo Notify](./module_notify.md)
@@ -413,7 +412,10 @@ La PRIMA SCELTA per i componenti Blade sono SEMPRE i [componenti nativi Filament
 Mail::to($user)->send(new Modules\Notify\Mail\WelcomeMail($user));
 ```
 Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema.
+<<<<<<< HEAD
 Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema <nome progetto>.
+=======
+>>>>>>> c13b64b (.)
 
 ## Struttura della Documentazione
 
@@ -496,7 +498,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ---
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c13b64b (.)
 # Modulo Notify
 
 ## Introduzione
@@ -562,6 +567,7 @@ Per supporto tecnico:
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
+<<<<<<< HEAD
 ## Regole sui Namespace
 
 Segui SEMPRE le regole sui namespace:
@@ -571,3 +577,6 @@ Segui SEMPRE le regole sui namespace:
 - Collegamento bidirezionale: vedi anche [links.md nella root](../../../../docs/links.md)
 
 b0005ff (.)
+=======
+
+>>>>>>> c13b64b (.)

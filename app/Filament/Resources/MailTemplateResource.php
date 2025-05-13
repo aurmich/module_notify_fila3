@@ -63,4 +63,8 @@ class MailTemplateResource extends LangBaseResource
                 ->columnSpanFull(),
         ];
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c13b64b (.)

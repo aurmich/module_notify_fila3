@@ -25,7 +25,10 @@
 - ✅ Usare classi dedicate per le notifiche
 - ✅ Documentare il codice
 - ❌ Non mischiare responsabilità
+<<<<<<< HEAD
 - ❌ Non usare mai il segmento `App` nei namespace, anche se il file è in `app/`. Per i Data Object usare sempre `Modules\<NomeModulo>\Datas`. Vedi [PATH_AND_NAMESPACE_RULES.md](./PATH_AND_NAMESPACE_RULES.md) per dettagli.
+=======
+>>>>>>> c13b64b (.)
 
 ### 5. Testing
 - ✅ Testare con dati validi

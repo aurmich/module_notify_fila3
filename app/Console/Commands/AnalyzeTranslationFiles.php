@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Console\Commands;
+=======
+namespace Modules\Notify\App\Console\Commands;
+>>>>>>> c13b64b (.)
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
