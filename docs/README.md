@@ -587,5 +587,16 @@ Per supporto tecnico:
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
 
+<<<<<<< HEAD
 =======
 >>>>>>> ad8c547 (.)
+=======
+## Regole sui Namespace
+
+Segui SEMPRE le regole sui namespace:
+- Non includere mai il segmento `App` nel namespace, anche se il file si trova in `app`.
+- Esempio corretto: `namespace Modules\Notify\Datas;`
+- Consulta la [documentazione dettagliata sulle regole di path e namespace](./PATH_AND_NAMESPACE_RULES.md) e le [regole generali in Xot](../../Xot/docs/NAMESPACE-RULES.md).
+- Collegamento bidirezionale: vedi anche [links.md nella root](../../../../docs/links.md)
+
+>>>>>>> b0005ff (.)

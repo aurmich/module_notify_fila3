@@ -394,7 +394,7 @@ Creiamo un Data Transfer Object (DTO) per rappresentare un messaggio SMS Netfun:
 ```php
 <?php
 
-namespace Modules\Notify\DTOs;
+namespace Modules\Notify\Datas;
 
 class NetfunSMSMessage
 {
@@ -478,7 +478,7 @@ namespace Modules\Notify\Channels;
 
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Actions\SMS\SendNetfunSMSAction;
-use Modules\Notify\DTOs\NetfunSMSMessage;
+use Modules\Notify\Datas\NetfunSMSMessage;
 
 class NetfunChannel
 {
@@ -563,7 +563,7 @@ namespace Modules\Notify\Notifications;
 
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Channels\NetfunChannel;
-use Modules\Notify\DTOs\NetfunSMSMessage;
+use Modules\Notify\Datas\NetfunSMSMessage;
 
 class AppointmentReminder extends Notification
 {
@@ -589,7 +589,7 @@ class AppointmentReminder extends Notification
      * Formatta il messaggio per il canale Netfun
      * 
      * @param mixed $notifiable
-     * @return \Modules\Notify\DTOs\NetfunSMSMessage
+     * @return \Modules\Notify\Datas\NetfunSMSMessage
      */
     public function toNetfun($notifiable)
     {
@@ -615,7 +615,7 @@ namespace Modules\Notify\Tests\Feature;
 
 use Tests\TestCase;
 use Modules\User\Models\User;
-use Modules\Notify\DTOs\NetfunSMSMessage;
+use Modules\Notify\Datas\NetfunSMSMessage;
 use Modules\Notify\Actions\SMS\SendNetfunSMSAction;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Http;
@@ -666,7 +666,7 @@ Puoi anche utilizzare la Queueable Action direttamente nei tuoi controller o ser
 namespace Modules\Appointment\Controllers;
 
 use Illuminate\Http\Request;
-use Modules\Notify\DTOs\NetfunSMSMessage;
+use Modules\Notify\Datas\NetfunSMSMessage;
 use Modules\Notify\Actions\SMS\SendNetfunSMSAction;
 use Modules\Appointment\Models\Appointment;
 

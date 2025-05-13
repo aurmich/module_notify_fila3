@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Notify\App\Console\Commands;
+namespace Modules\Notify\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
