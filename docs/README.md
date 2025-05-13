@@ -7,12 +7,9 @@ Il modulo Notify nasce per fornire un sistema di notifiche scalabile e riusabile
 
 Per approfondimenti sulle scelte architetturali e motivazionali consulta la [documentazione globale](../../../../docs/README.md) e la sezione [Architettura e Struttura](./ARCHITECTURE.md) di questo modulo.
 
-<<<<<<< HEAD
-=======
 
 ### Versione HEAD
 
->>>>>>> ad8c547 (.)
 ## Panoramica
 
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
@@ -35,35 +32,26 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ### Modelli
 - [BaseModel](./base-model.md)
 - [Modelli](./models.md)
-<<<<<<< HEAD
 - [Modifiche Modello MailTemplate](./MODEL_CHANGES.md)
 - [Documentazione Tecnica MailTemplate](./mail-templates/MODEL_MAIL_TEMPLATE_CHANGES.md)
-=======
->>>>>>> ad8c547 (.)
 
 ### Filament
 - [Risorse](./filament-resources.md)
 - [Pagine](./filament-pages.md)
-<<<<<<< HEAD
 - [Miglioramenti UI/UX](./mail-templates/FILAMENT_UI_ENHANCEMENTS.md)
 - [Analisi Title With Slug](./mail-templates/TITLE_WITH_SLUG_ANALYSIS.md)
 - [Generazione Slug](./mail-templates/FILAMENT_SLUG_GENERATION.md)
-=======
->>>>>>> ad8c547 (.)
 
 ### Email
 - [Sistema Email](./database-mail-system.md)
 - [Code Email](./database-mail-queue.md)
 - [Template Email](./improved-email-templates.md)
-<<<<<<< HEAD
 - [Guida all'utilizzo di SpatieEmail](./SPATIE_EMAIL_USAGE_GUIDE.md)
 - [Guida alla Migrazione MailTemplate](./MAIL_TEMPLATE_MIGRATION_GUIDE.md)
 - [Struttura della Migrazione](./mail-templates/MIGRATION_STRUCTURE.md)
 - [Implementazione Campo Slug](./mail-templates/SLUG_FIELD_IMPLEMENTATION.md)
 - [Implementazione Modello con Slug](./mail-templates/MODEL_SLUG_IMPLEMENTATION.md)
 - [Implementazione Risorsa con Slug](./mail-templates/RESOURCE_SLUG_IMPLEMENTATION.md)
-=======
->>>>>>> ad8c547 (.)
 - [Editor WYSIWYG](./email-wysiwyg-editor.md)
 - [Test Email](./email-tests.md)
 - [Log Email](./email-logs.md)
@@ -97,7 +85,6 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - [Roadmap](./roadmap.md)
 - [Packages](./packages.md)
 
-<<<<<<< HEAD
 ### Changelog e Migrazioni
 - [Changelog Migrazioni](./MIGRATIONS_CHANGELOG.md)
 
@@ -109,8 +96,6 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - [Struttura Migrazioni](./migrations.md)
 - [Gestione Conversioni JSON](./mail-templates/MIGRATION_JSON_CONVERSION.md)
 
-=======
->>>>>>> ad8c547 (.)
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
@@ -120,25 +105,19 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ### Collegamenti ai Moduli
 - [XotBaseModel](../../Xot/docs/XotBaseModel.md)
 - [XotBaseResource](../../Xot/docs/XotBaseResource.md)
-<<<<<<< HEAD
-=======
 - [XotBaseServiceProvider](../../Xot/docs/XotBaseServiceProvider.md)
 
->>>>>>> ad8c547 (.)
 ## Note Importanti
 
 1. Estendere sempre le classi base appropriate
 2. Non sovrascrivere metodi se non necessario
-<<<<<<< HEAD
 3. Mantenere la documentazione tecnica aggiornata
 4. Seguire le convenzioni di namespace
 5. Utilizzare i file di traduzione per le label
 - [Regole sulle migration e detection colonne](./MIGRATION_RULES.md)
-=======
 3. Mantenere la documentazione aggiornata
 4. Seguire le convenzioni di namespace
 5. Utilizzare i file di traduzione per le label
->>>>>>> ad8c547 (.)
 
 ## Vedi Anche
 - [Modulo Notify](./module_notify.md)
@@ -433,11 +412,8 @@ La PRIMA SCELTA per i componenti Blade sono SEMPRE i [componenti nativi Filament
 ```php
 Mail::to($user)->send(new Modules\Notify\Mail\WelcomeMail($user));
 ```
-<<<<<<< HEAD
 Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema.
-=======
 Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema <nome progetto>.
->>>>>>> ad8c547 (.)
 
 ## Struttura della Documentazione
 
@@ -520,7 +496,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ---
 
-<<<<<<< HEAD
+
 # Modulo Notify
 
 ## Introduzione
@@ -586,11 +562,6 @@ Per supporto tecnico:
 - **Religione**: Laicità, rispetto di tutte le fedi, libertà di pensiero.
 - **Etica**: Onestà, rispetto, responsabilità, attenzione all'impatto sociale e ambientale.
 - **Zen**: Semplicità, concentrazione sul presente, armonia e serenità nello sviluppo.
-
-<<<<<<< HEAD
-=======
->>>>>>> ad8c547 (.)
-=======
 ## Regole sui Namespace
 
 Segui SEMPRE le regole sui namespace:
@@ -599,4 +570,4 @@ Segui SEMPRE le regole sui namespace:
 - Consulta la [documentazione dettagliata sulle regole di path e namespace](./PATH_AND_NAMESPACE_RULES.md) e le [regole generali in Xot](../../Xot/docs/NAMESPACE-RULES.md).
 - Collegamento bidirezionale: vedi anche [links.md nella root](../../../../docs/links.md)
 
->>>>>>> b0005ff (.)
+b0005ff (.)

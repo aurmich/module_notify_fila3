@@ -14,7 +14,6 @@ return [
             'main' => 'Main Information',
         ],
         'fields' => [
-<<<<<<< HEAD
             'name' => [
                 'label' => 'Name',
                 'placeholder' => 'Enter template name',
@@ -25,8 +24,6 @@ return [
                 'placeholder' => 'Select template layout',
                 'tooltip' => 'The graphical layout that will be used for the email',
             ],
-=======
->>>>>>> ad8c547 (.)
             'mailable' => [
                 'label' => 'Mailable Class',
                 'placeholder' => 'Enter the Mailable class name',

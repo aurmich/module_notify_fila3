@@ -1,10 +1,7 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> ad8c547 (.)
 return [
     'template' => [
         'navigation' => [
@@ -19,7 +16,6 @@ return [
             'main' => 'Informazioni Principali',
         ],
         'fields' => [
-<<<<<<< HEAD
             'name' => [
                 'label' => 'Nome',
                 'placeholder' => 'Inserisci il nome del template',
@@ -30,8 +26,6 @@ return [
                 'placeholder' => 'Seleziona il layout del template',
                 'tooltip' => 'Il layout grafico che verrà utilizzato per l\'email',
             ],
-=======
->>>>>>> ad8c547 (.)
             'mailable' => [
                 'label' => 'Classe Mailable',
                 'placeholder' => 'Inserisci il nome della classe Mailable',

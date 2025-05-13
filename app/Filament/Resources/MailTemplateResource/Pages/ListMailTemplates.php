@@ -6,7 +6,6 @@ namespace Modules\Notify\Filament\Resources\MailTemplateResource\Pages;
 
 use Modules\Notify\Filament\Resources\MailTemplateResource;
 use Modules\Notify\Models\MailTemplate;
-<<<<<<< HEAD
 use Modules\Lang\Filament\Resources\Pages\LangBaseListRecords;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -23,19 +22,6 @@ class ListMailTemplates extends LangBaseListRecords
                 ->sortable()
                 ->label(__('notify::mail.template.fields.name.label')),
 
-=======
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Filament\Tables;
-use Filament\Tables\Table;
-
-class ListMailTemplates extends XotBaseListRecords
-{
-    protected static string $resource = MailTemplateResource::class;
-
-    public function getListTableColumns(): array
-    {
-        return [
->>>>>>> ad8c547 (.)
             Tables\Columns\TextColumn::make('mailable')
                 ->searchable()
                 ->sortable()
@@ -46,14 +32,11 @@ class ListMailTemplates extends XotBaseListRecords
                 ->sortable()
                 ->label(__('notify::mail.template.fields.subject.label')),
 
-<<<<<<< HEAD
             Tables\Columns\TextColumn::make('layout')
                 ->searchable()
                 ->sortable()
                 ->label(__('notify::mail.template.fields.layout.label')),
 
-=======
->>>>>>> ad8c547 (.)
             Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
@@ -66,11 +49,5 @@ class ListMailTemplates extends XotBaseListRecords
         ];
     }
 
-<<<<<<< HEAD
     
-=======
-
-
-
->>>>>>> ad8c547 (.)
 }
