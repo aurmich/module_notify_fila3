@@ -1,10 +1,7 @@
 # Regole per Path e Namespace nel Modulo Notify
 
-<<<<<<< HEAD
 > **ATTENZIONE:** In nessun caso il namespace deve contenere il segmento `App`, anche se il file si trova nella cartella `app/`. Questa è una regola fondamentale e ogni violazione può causare errori di autoloading, incompatibilità con PSR-4 e problemi di coerenza nel progetto. Consulta sempre questa sezione prima di creare nuovi file o correggere errori di namespace.
 
-=======
->>>>>>> c13b64b (.)
 ## Struttura Corretta dei Path
 
 ### ✅ Path Corretti
@@ -35,10 +32,7 @@ namespace Modules\Notify\Http\Controllers;
 namespace Modules\Notify\Providers;
 namespace Modules\Notify\Models;
 namespace Modules\Notify\Filament;
-<<<<<<< HEAD
 namespace Modules\Notify\Datas;
-=======
->>>>>>> c13b64b (.)
 ```
 
 ### ❌ Namespace Errati
@@ -47,19 +41,12 @@ namespace Modules\Notify\Datas;
 namespace Modules\Notify\App\Actions\SMS;
 namespace Modules\Notify\App\Http\Controllers;
 namespace Modules\Notify\App\Providers;
-<<<<<<< HEAD
 namespace Modules\Notify\App\Datas;
-=======
->>>>>>> c13b64b (.)
 ```
 
 ## Regola Fondamentale
 
-<<<<<<< HEAD
 **Il namespace NON deve mai contenere il segmento `App`.** Anche se i file sono fisicamente posizionati nella cartella `app` (minuscolo), il namespace deve partire da `Modules\Notify\` seguito dalla sottocartella, senza mai includere `App`.
-=======
-Anche se i file sono fisicamente posizionati nella cartella `app` (minuscolo), il namespace **NON** deve includere il segmento `App`. Questo è un punto critico da ricordare per evitare errori.
->>>>>>> c13b64b (.)
 
 ## Esempi Concreti
 
@@ -99,7 +86,6 @@ namespace Modules\Notify\Http\Controllers;
 namespace Modules\Notify\Providers;
 ```
 
-<<<<<<< HEAD
 ### Esempio 4: Data per SMS Netfun
 
 **Path fisico corretto:**
@@ -119,13 +105,10 @@ namespace Modules\Notify\App\Datas;
 
 > **Nota:** Questa regola si applica a tutte le sottocartelle di `app`, incluse `Datas`, `Filament`, ecc. Il segmento `App` non deve mai comparire nel namespace.
 
-=======
->>>>>>> c13b64b (.)
 ## Motivo di questa Regola
 
 Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto SaluteOra.
 
-<<<<<<< HEAD
 ## Esempio per Datas
 
 ### ❌ Namespace Errato
@@ -145,14 +128,11 @@ namespace Modules\Notify\Datas; // CORRETTO
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
 - [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
-=======
->>>>>>> c13b64b (.)
 ## Collegamenti
 
 - [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
 - [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
 - [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
-<<<<<<< HEAD
 - [Collegamento Bidirezionale: Documentazione Root](../../../../docs/links.md)
 
 ### Esempio 5: Console Command
@@ -173,8 +153,6 @@ namespace Modules\Notify\App\Console\Commands;
 ```
 
 > **Nota:** Anche per i comandi console, il namespace non deve mai includere il segmento `App`.
-=======
->>>>>>> c13b64b (.)
 
 ---
 

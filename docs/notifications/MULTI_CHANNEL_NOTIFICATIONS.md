@@ -394,11 +394,7 @@ Creiamo un Data Transfer Object (DTO) per rappresentare un messaggio SMS Netfun:
 ```php
 <?php
 
-<<<<<<< HEAD
 namespace Modules\Notify\Datas;
-=======
-namespace Modules\Notify\DTOs;
->>>>>>> c13b64b (.)
 
 class NetfunSMSMessage
 {
@@ -482,11 +478,7 @@ namespace Modules\Notify\Channels;
 
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Actions\SMS\SendNetfunSMSAction;
-<<<<<<< HEAD
 use Modules\Notify\Datas\NetfunSMSMessage;
-=======
-use Modules\Notify\DTOs\NetfunSMSMessage;
->>>>>>> c13b64b (.)
 
 class NetfunChannel
 {
@@ -571,11 +563,7 @@ namespace Modules\Notify\Notifications;
 
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Channels\NetfunChannel;
-<<<<<<< HEAD
 use Modules\Notify\Datas\NetfunSMSMessage;
-=======
-use Modules\Notify\DTOs\NetfunSMSMessage;
->>>>>>> c13b64b (.)
 
 class AppointmentReminder extends Notification
 {
@@ -601,11 +589,7 @@ class AppointmentReminder extends Notification
      * Formatta il messaggio per il canale Netfun
      * 
      * @param mixed $notifiable
-<<<<<<< HEAD
      * @return \Modules\Notify\Datas\NetfunSMSMessage
-=======
-     * @return \Modules\Notify\DTOs\NetfunSMSMessage
->>>>>>> c13b64b (.)
      */
     public function toNetfun($notifiable)
     {
@@ -631,11 +615,7 @@ namespace Modules\Notify\Tests\Feature;
 
 use Tests\TestCase;
 use Modules\User\Models\User;
-<<<<<<< HEAD
 use Modules\Notify\Datas\NetfunSMSMessage;
-=======
-use Modules\Notify\DTOs\NetfunSMSMessage;
->>>>>>> c13b64b (.)
 use Modules\Notify\Actions\SMS\SendNetfunSMSAction;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Http;
@@ -686,11 +666,7 @@ Puoi anche utilizzare la Queueable Action direttamente nei tuoi controller o ser
 namespace Modules\Appointment\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use Modules\Notify\Datas\NetfunSMSMessage;
-=======
-use Modules\Notify\DTOs\NetfunSMSMessage;
->>>>>>> c13b64b (.)
 use Modules\Notify\Actions\SMS\SendNetfunSMSAction;
 use Modules\Appointment\Models\Appointment;
 

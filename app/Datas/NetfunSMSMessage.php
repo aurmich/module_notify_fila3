@@ -1,12 +1,8 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Notify\Datas;
-=======
-namespace Modules\Notify\App\Datas;
->>>>>>> c13b64b (.)
 
 use Spatie\LaravelData\Data;
 
@@ -18,12 +14,8 @@ class NetfunSMSMessage extends Data
         public string $from,
         public ?string $reference = null,
         public ?string $scheduled_date = null
-<<<<<<< HEAD
     ) {
     }
-=======
-    ) {}
->>>>>>> c13b64b (.)
 
     public static function fromArray(array $data): self
     {

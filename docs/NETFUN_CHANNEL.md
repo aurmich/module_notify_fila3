@@ -6,11 +6,7 @@
 ```php
 <?php
 
-<<<<<<< HEAD
 namespace Modules\Notify\Datas;
-=======
-namespace Modules\Notify\App\Datas;
->>>>>>> c13b64b (.)
 
 use Spatie\LaravelData\Data;
 
@@ -163,13 +159,8 @@ use Spatie\QueueableAction\QueueableAction;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
-<<<<<<< HEAD
 use Modules\Notify\Datas\NetfunSmsRequestData;
 use Modules\Notify\Datas\NetfunSmsResponseData;
-=======
-use Modules\Notify\App\Data\NetfunSmsRequestData;
-use Modules\Notify\App\Data\NetfunSmsResponseData;
->>>>>>> c13b64b (.)
 
 class SendNetfunSmsAction
 {
