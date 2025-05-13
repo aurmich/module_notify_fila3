@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> ad8c547 (.)
 return [
     'navigation' => [
         'group' => 'Sistema',

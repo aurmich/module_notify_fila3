@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Spatie\Sluggable\HasSlug;
 //use Spatie\LaravelPackageTools\Concerns\Package\HasTranslations;
@@ -14,6 +15,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
+=======
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\LaravelPackageTools\Concerns\Package\HasTranslations;
+>>>>>>> ad8c547 (.)
 use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
 
 /**
@@ -29,15 +35,23 @@ use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Notify\Models\MailTemplateVersion> $versions
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Notify\Models\MailTemplateLog> $logs
  */
+<<<<<<< HEAD
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 {
     //use SoftDeletes;
     use HasTranslations;
     use HasSlug;
+=======
+class MailTemplate extends SpatieMailTemplate
+{
+    use SoftDeletes;
+    use HasTranslations;
+>>>>>>> ad8c547 (.)
 
     /** @var string */
     protected $connection = 'notify';
 
+<<<<<<< HEAD
     /** @var list<string> */
     public array $translatable = ['subject', 'html_template', 'text_template'];
 
@@ -90,6 +104,32 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
      *
      * @return HasMany<MailTemplateVersion>
 
+=======
+    /** @var array<string> */
+    public $translatable = ['subject', 'html_template', 'text_template'];
+
+    /** @var array<string> */
+    protected $fillable = [
+        'mailable',
+        'subject',
+        'html_template',
+        'text_template',
+        'version',
+    ];
+
+    /** @var array<string, string> */
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+    ];
+
+    /**
+     * Versioni del template email.
+     *
+     * @return HasMany<MailTemplateVersion>
+     */
+>>>>>>> ad8c547 (.)
     public function versions(): HasMany
     {
         return $this->hasMany(MailTemplateVersion::class, 'template_id')
@@ -101,13 +141,21 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         return $this->hasMany(MailTemplateLog::class, 'template_id');
     }
 
+<<<<<<< HEAD
 
+=======
+    /**
+>>>>>>> ad8c547 (.)
      * Create a new version of the template.
      *
      * @param string $createdBy The user who created the version
      * @param string|null $notes Optional notes about the changes
      * @return self
+<<<<<<< HEAD
 
+=======
+     */
+>>>>>>> ad8c547 (.)
     public function createNewVersion(string $createdBy, ?string $notes = null): self
     {
         $this->versions()->create([
@@ -123,7 +171,10 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         $this->increment('version');
         return $this;
     }
+<<<<<<< HEAD
     */
 
 
+=======
+>>>>>>> ad8c547 (.)
 }

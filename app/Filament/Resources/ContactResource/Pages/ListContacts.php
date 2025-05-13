@@ -18,7 +18,11 @@ class ListContacts extends XotBaseListRecords
 {
     protected static string $resource = ContactResource::class;
 
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> ad8c547 (.)
     {
         return [
             'id' => TextColumn::make('id')
