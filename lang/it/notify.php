@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,12 +9,15 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
     'resource' => [
         'name' => 'Notifica',
     ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -26,6 +30,8 @@ return [
 return [
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     'navigation' => [
         'name' => 'Notifica',              // Nome singolare
         'plural' => 'Notifiche',           // Nome plurale
@@ -237,6 +243,7 @@ return [
             ],
         ],
     ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     'messages' => [],
 =======
@@ -252,4 +259,7 @@ return [
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+    'messages' => [],
+>>>>>>> Stashed changes
 ];

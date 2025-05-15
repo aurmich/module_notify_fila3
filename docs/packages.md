@@ -52,7 +52,6 @@
 - [Queue](packages/queue.md)
 - [Performance](packages/performance.md)
 - [Integrazioni](packages/integrations.md) 
-<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -73,5 +72,3 @@
 
 ---
 
-=======
->>>>>>> 064a54f (.)

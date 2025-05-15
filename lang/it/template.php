@@ -1,11 +1,14 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
@@ -23,6 +26,7 @@ return [
         'label' => 'Template Notifiche',
         'icon' => 'notify-template-animated',
         'sort' => 48,
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -60,12 +64,15 @@ return [
         'description' => 'Gestione dei modelli per le notifiche',
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     ],
     'fields' => [
         'name' => [
             'label' => 'Nome',
             'tooltip' => 'Nome identificativo del template',
             'placeholder' => 'es: Notifica Scadenza',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'helper_text' => 'Inserisci un nome descrittivo per il template',
 =======
@@ -81,12 +88,16 @@ return [
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+            'helper_text' => 'Inserisci un nome descrittivo per il template',
+>>>>>>> Stashed changes
             'help' => 'Inserisci un nome descrittivo per il template',
         ],
         'description' => [
             'label' => 'Descrizione',
             'tooltip' => 'Descrizione del template',
             'placeholder' => 'es: Template per le notifiche di scadenza',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -95,6 +106,8 @@ return [
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
             'helper_text' => 'Breve descrizione dello scopo del template',
         ],
         'type' => [
@@ -109,6 +122,7 @@ return [
                 'telegram' => 'Telegram',
                 'whatsapp' => 'WhatsApp',
             ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -121,16 +135,21 @@ return [
             'help' => 'Breve descrizione dello scopo del template',
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
         ],
         'subject' => [
             'label' => 'Oggetto',
             'tooltip' => 'Oggetto della notifica',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
             'placeholder' => 'es: Promemoria appuntamento',
             'helper_text' => 'Oggetto visualizzato nella notifica (es. oggetto email)',
         ],
@@ -158,6 +177,7 @@ return [
         'updated_at' => [
             'label' => 'Ultima modifica',
             'tooltip' => 'Data dell\'ultima modifica del template',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -276,6 +296,8 @@ return [
             'help' => 'Solo i template attivi possono essere utilizzati',
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
         ],
     ],
     'actions' => [
@@ -283,12 +305,15 @@ return [
             'label' => 'Anteprima',
             'tooltip' => 'Visualizza anteprima del template',
             'icon' => 'heroicon-o-eye',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
             'success_message' => 'Anteprima generata con successo',
             'error_message' => 'Errore nella generazione dell\'anteprima',
         ],
@@ -314,6 +339,7 @@ return [
         'template_created' => 'Il template è stato creato con successo',
         'template_updated' => 'Il template è stato aggiornato con successo',
         'template_deleted' => 'Il template è stato eliminato con successo',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -397,5 +423,7 @@ return [
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     ],
 ];

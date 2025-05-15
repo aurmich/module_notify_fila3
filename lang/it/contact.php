@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 declare(strict_types=1);
 
@@ -18,6 +19,10 @@ declare(strict_types=1);
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> Stashed changes
 return [
     'resource' => [
         'name' => 'Contact',
@@ -203,6 +208,7 @@ return [
             'message' => 'Impossibile verificare il contatto: :error',
         ],
     ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     'messages' => [],
 =======
@@ -218,4 +224,7 @@ return [
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+    'messages' => [],
+>>>>>>> Stashed changes
 ];

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
 <x-filament-panels::page>
     <x-filament::section>
         <x-slot name="heading">
@@ -27,6 +30,7 @@
         </x-filament-panels::form>
     </x-filament::section>
 </x-filament-panels::page>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -70,3 +74,5 @@
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes

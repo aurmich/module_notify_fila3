@@ -12,11 +12,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 
 
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 064a54f (.)
 
 
 
@@ -26,6 +22,7 @@ class ListNotifyThemes extends XotBaseListRecords
 {
     protected static string $resource = NotifyThemeResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -43,6 +40,9 @@ class ListNotifyThemes extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'id' => Columns\TextColumn::make('id')

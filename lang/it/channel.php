@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,12 +9,15 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
     'resource' => [
         'name' => 'Canale di Notifica',
     ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -26,6 +30,8 @@ return [
 return [
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     'navigation' => [
         'group' => 'Sistema',
         'label' => 'Canali di Notifica',
@@ -196,6 +202,7 @@ return [
             'message' => 'Impossibile inviare il messaggio di test: :error',
         ],
     ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     'messages' => [],
 =======
@@ -211,4 +218,7 @@ return [
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+    'messages' => [],
+>>>>>>> Stashed changes
 ];

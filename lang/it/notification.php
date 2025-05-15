@@ -1,11 +1,14 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
@@ -80,6 +83,7 @@ return [
             'tooltip' => 'Canale di invio della notifica',
             'helper_text' => 'Seleziona il canale attraverso cui inviare la notifica',
             'placeholder' => 'Seleziona un canale',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -201,6 +205,8 @@ return [
             'help' => 'Seleziona il canale attraverso cui inviare la notifica',
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
             'options' => [
                 'email' => [
                     'label' => 'Email',
@@ -223,6 +229,7 @@ return [
         'template' => [
             'label' => 'Template',
             'tooltip' => 'Template da utilizzare per la notifica',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'helper_text' => 'Scegli il modello predefinito per questa notifica',
             'placeholder' => 'Seleziona un template',
@@ -243,6 +250,10 @@ return [
             'help' => 'Scegli il modello predefinito per questa notifica',
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+            'helper_text' => 'Scegli il modello predefinito per questa notifica',
+            'placeholder' => 'Seleziona un template',
+>>>>>>> Stashed changes
             'options' => [
                 'subject' => [
                     'label' => 'Oggetto',
@@ -257,6 +268,7 @@ return [
                 'variables' => [
                     'label' => 'Variabili disponibili',
                     'tooltip' => 'Variabili che possono essere utilizzate nel template',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                     'helper_text' => 'Usa {variable} per inserire valori dinamici',
 =======
@@ -274,12 +286,16 @@ return [
                     'help' => 'Usa {variable} per inserire valori dinamici',
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+                    'helper_text' => 'Usa {variable} per inserire valori dinamici',
+>>>>>>> Stashed changes
                 ],
             ],
         ],
         'schedule' => [
             'label' => 'Programmazione',
             'tooltip' => 'Quando inviare la notifica',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'helper_text' => 'Imposta quando la notifica deve essere inviata',
             'placeholder' => 'Seleziona l\'opzione di programmazione',
@@ -300,6 +316,10 @@ return [
             'help' => 'Imposta quando la notifica deve essere inviata',
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+            'helper_text' => 'Imposta quando la notifica deve essere inviata',
+            'placeholder' => 'Seleziona l\'opzione di programmazione',
+>>>>>>> Stashed changes
             'options' => [
                 'immediate' => [
                     'label' => 'Immediata',
@@ -323,6 +343,7 @@ return [
         ],
     ],
     'actions' => [
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -331,6 +352,8 @@ return [
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
         'mark_as_read' => [
             'label' => 'Segna come letta',
             'tooltip' => 'Marca la notifica come letta',
@@ -385,6 +408,7 @@ return [
         'batch_action_confirmation' => 'Sei sicuro di voler eseguire questa azione su tutte le notifiche selezionate?',
         'success' => 'Operazione completata con successo',
         'error' => 'Si è verificato un errore durante l\'operazione',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -517,5 +541,7 @@ return [
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     ],
 ];

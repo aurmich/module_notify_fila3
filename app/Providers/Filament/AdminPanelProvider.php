@@ -14,6 +14,7 @@ use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Filament\SpatieLaravelTranslatablePlugin;
 =======
@@ -29,12 +30,16 @@ use Filament\SpatieLaravelTranslatablePlugin;
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+use Filament\SpatieLaravelTranslatablePlugin;
+>>>>>>> Stashed changes
 
 class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'Notify';
 
     public function panel(Panel $panel): Panel
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -43,10 +48,13 @@ class AdminPanelProvider extends XotBasePanelProvider
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     { 
         $panel->plugins([
             SpatieLaravelTranslatablePlugin::make(),
         ]);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -59,6 +67,8 @@ class AdminPanelProvider extends XotBasePanelProvider
     {
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
         if (! XotData::make()->disable_database_notifications) {
             DatabaseNotifications::trigger('notify::livewire.database-notifications-trigger');
             // DatabaseNotifications::databaseNotificationsPollingInterval('30s');
@@ -69,6 +79,7 @@ class AdminPanelProvider extends XotBasePanelProvider
             );
         }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -77,12 +88,15 @@ class AdminPanelProvider extends XotBasePanelProvider
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
        
 
         return parent::panel($panel);
     }
 }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -99,3 +113,5 @@ class AdminPanelProvider extends XotBasePanelProvider
 }
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes

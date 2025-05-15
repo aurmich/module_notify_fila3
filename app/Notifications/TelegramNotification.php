@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
@@ -37,10 +38,16 @@ use InvalidArgumentException;
 use NotificationChannels\Telegram\TelegramMessage;
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Notification;
+use Modules\Notify\Notifications\Channels\TelegramChannel;
+>>>>>>> Stashed changes
 
 /**
  * Classe per inviare notifiche tramite Telegram.
  */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 class TelegramNotification extends Notification implements ShouldQueue
 =======
@@ -58,10 +65,14 @@ class TelegramNotification extends Notification implements ShouldQueue
 class TelegramNotification extends Notification
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+class TelegramNotification extends Notification implements ShouldQueue
+>>>>>>> Stashed changes
 {
     use Queueable;
 
     /**
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -92,8 +103,9 @@ class TelegramNotification extends Notification
 =======
      * Create a new notification instance.
 =======
-     * @var string
+=======
 >>>>>>> Stashed changes
+     * @var string
      */
     protected string $message;
 
@@ -110,12 +122,9 @@ class TelegramNotification extends Notification
      */
     public function __construct(string $message, array $options = [])
     {
-<<<<<<< Updated upstream
-        // $this->data = $data;
->>>>>>> a5a128a (.)
-=======
         $this->message = $message;
         $this->options = $options;
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
      * Create a new notification instance.
@@ -125,23 +134,29 @@ class TelegramNotification extends Notification
         // $this->data = $data;
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     }
 
     /**
      * Get the notification's delivery channels.
      *
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
      * @param mixed $notifiable
      * @return array
      */
     public function via($notifiable): array
     {
         return [TelegramChannel::class];
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -169,6 +184,8 @@ class TelegramNotification extends Notification
         return ['telegram'];
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     }
 
     /**
@@ -186,18 +203,22 @@ class TelegramNotification extends Notification
     /**
      * Get the Telegram representation of the notification.
      *
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
      * @param mixed $notifiable
      * @return string
      */
     public function toTelegram($notifiable): string
     {
         return $this->message;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -246,5 +267,7 @@ class TelegramNotification extends Notification
 =======
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
     }
 }

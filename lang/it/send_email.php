@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,17 +9,14 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
     'resource' => [
         'name' => 'Invio Email',
         'plural' => 'Invio Email',
-=======
-return [
-    'resource' => [
-        'name' => 'Invio Email',
->>>>>>> 064a54f (.)
     ],
     'navigation' => [
         'name' => 'Invio Email',
@@ -32,7 +30,6 @@ return [
         'sort' => 49,
     ],
     'fields' => [
-<<<<<<< HEAD
         'object' => [
             'description' => 'Oggetto della email',
             'placeholder' => 'Inserisci l\'oggetto',
@@ -57,21 +54,10 @@ return [
             'description' => 'Parametri del template',
             'placeholder' => 'Inserisci i parametri',
             'label' => 'Parametri',
-=======
-        'to' => [
-            'label' => 'Destinatario',
-        ],
-        'subject' => [
-            'label' => 'Oggetto',
-        ],
-        'body_html' => [
-            'label' => 'Contenuto HTML',
->>>>>>> 064a54f (.)
         ],
     ],
     'actions' => [
         'send' => [
-<<<<<<< HEAD
             'label' => 'Invia',
             'tooltip' => 'Invia l\'email al destinatario',
             'success_message' => 'Email inviata con successo',
@@ -90,6 +76,7 @@ return [
         'confirmation' => 'Sei sicuro di voler inviare questa email?',
     ],
 ];
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -160,3 +147,5 @@ return array (
 ];
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+>>>>>>> Stashed changes

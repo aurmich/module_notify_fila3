@@ -16,6 +16,7 @@ class ListNotifications extends XotBaseListRecords
 {
     protected static string $resource = NotificationResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -33,6 +34,9 @@ class ListNotifications extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 064a54f (.)
 >>>>>>> b968ad9 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'id' => TextColumn::make('id')
