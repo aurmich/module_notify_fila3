@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
@@ -66,6 +69,7 @@ return [
         'confirmation' => 'Sei sicuro di voler inviare questa email?',
     ],
 ];
+<<<<<<< Updated upstream
 =======
 return array (
   'resource' => 
@@ -119,3 +123,5 @@ return array (
   ),
 );
 >>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes

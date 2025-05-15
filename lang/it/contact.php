@@ -1,10 +1,15 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> a5a128a (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> Stashed changes
 return [
     'resource' => [
         'name' => 'Contact',
@@ -190,8 +195,12 @@ return [
             'message' => 'Impossibile verificare il contatto: :error',
         ],
     ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     'messages' => [],
 =======
 >>>>>>> a5a128a (.)
+=======
+    'messages' => [],
+>>>>>>> Stashed changes
 ];

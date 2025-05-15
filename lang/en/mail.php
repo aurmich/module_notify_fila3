@@ -14,7 +14,10 @@ return [
             'main' => 'Main Information',
         ],
         'fields' => [
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
             'name' => [
                 'label' => 'Name',
                 'placeholder' => 'Enter template name',
@@ -25,8 +28,11 @@ return [
                 'placeholder' => 'Select template layout',
                 'tooltip' => 'The graphical layout that will be used for the email',
             ],
+<<<<<<< Updated upstream
 =======
 >>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
             'mailable' => [
                 'label' => 'Mailable Class',
                 'placeholder' => 'Enter the Mailable class name',

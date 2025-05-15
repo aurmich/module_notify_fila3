@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Pages;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Modules\Xot\Filament\Pages\XotBasePage;
 
@@ -13,6 +14,11 @@ use Filament\Pages\Page;
 
 class Dashboard extends Page
 >>>>>>> a5a128a (.)
+=======
+use Modules\Xot\Filament\Pages\XotBasePage;
+
+class Dashboard extends XotBasePage
+>>>>>>> Stashed changes
 {
     protected static ?string $navigationIcon = 'heroicon-o-home';
 

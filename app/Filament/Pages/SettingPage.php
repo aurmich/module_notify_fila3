@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Pages;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Widgets\EnvWidget;
@@ -15,6 +16,12 @@ use Modules\Xot\Filament\Widgets\EnvWidget;
 
 class SettingPage extends Page
 >>>>>>> a5a128a (.)
+=======
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Filament\Widgets\EnvWidget;
+
+class SettingPage extends XotBasePage
+>>>>>>> Stashed changes
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 

@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
@@ -133,6 +136,7 @@ return [
         'spam' => 'Segnalata come spam',
     ],
 ];
+<<<<<<< Updated upstream
 =======
 return array (
   'navigation' => 
@@ -308,3 +312,5 @@ return array (
   ),
 );
 >>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes

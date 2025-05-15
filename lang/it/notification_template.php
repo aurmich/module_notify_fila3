@@ -1,6 +1,7 @@
 <?php
 
 return array (
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   'navigation' =>
   array (
@@ -20,22 +21,29 @@ return array (
     'openFilters' =>
 =======
   'navigation' => 
+=======
+  'navigation' =>
+>>>>>>> Stashed changes
   array (
-    'icon' => 'notification template.navigation',
+    'icon' => 'icona-template-notifica',
     'sort' => 52,
   ),
-  'fields' => 
+  'fields' =>
   array (
-    'resetFilters' => 
+    'resetFilters' =>
     array (
       'label' => 'resetFilters',
     ),
-    'applyFilters' => 
+    'applyFilters' =>
     array (
       'label' => 'applyFilters',
     ),
+<<<<<<< Updated upstream
     'openFilters' => 
 >>>>>>> a5a128a (.)
+=======
+    'openFilters' =>
+>>>>>>> Stashed changes
     array (
       'label' => 'openFilters',
     ),

@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 declare(strict_types=1);
 
@@ -19,31 +20,54 @@ return [
         'icon' => 'notify-template-animated',
         'sort' => 48,
 =======
+=======
+declare(strict_types=1);
+
+>>>>>>> Stashed changes
 return [
+    'resource' => [
+        'name' => 'Template Notifiche',
+        'plural' => 'Template Notifiche',
+    ],
     'navigation' => [
-        'group' => 'Sistema',
+        'name' => 'Template Notifiche',
+        'plural' => 'Template Notifiche',
+        'group' => [
+            'name' => 'Sistema',
+            'description' => 'Gestione dei modelli per le notifiche',
+        ],
         'label' => 'Template Notifiche',
         'icon' => 'notify-template-animated',
         'sort' => 48,
+<<<<<<< Updated upstream
         'description' => 'Gestione dei modelli per le notifiche',
 >>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
     ],
     'fields' => [
         'name' => [
             'label' => 'Nome',
             'tooltip' => 'Nome identificativo del template',
             'placeholder' => 'es: Notifica Scadenza',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'helper_text' => 'Inserisci un nome descrittivo per il template',
 =======
 >>>>>>> a5a128a (.)
+=======
+            'helper_text' => 'Inserisci un nome descrittivo per il template',
+>>>>>>> Stashed changes
             'help' => 'Inserisci un nome descrittivo per il template',
         ],
         'description' => [
             'label' => 'Descrizione',
             'tooltip' => 'Descrizione del template',
             'placeholder' => 'es: Template per le notifiche di scadenza',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
             'helper_text' => 'Breve descrizione dello scopo del template',
         ],
         'type' => [
@@ -58,13 +82,17 @@ return [
                 'telegram' => 'Telegram',
                 'whatsapp' => 'WhatsApp',
             ],
+<<<<<<< Updated upstream
 =======
             'help' => 'Breve descrizione dello scopo del template',
 >>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
         ],
         'subject' => [
             'label' => 'Oggetto',
             'tooltip' => 'Oggetto della notifica',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'placeholder' => 'es: Promemoria appuntamento',
             'helper_text' => 'Oggetto visualizzato nella notifica (es. oggetto email)',
@@ -96,80 +124,41 @@ return [
 =======
             'placeholder' => 'es: Promemoria: {event_name}',
             'help' => 'Puoi usare le variabili tra parentesi graffe',
+=======
+            'placeholder' => 'es: Promemoria appuntamento',
+            'helper_text' => 'Oggetto visualizzato nella notifica (es. oggetto email)',
+>>>>>>> Stashed changes
         ],
-        'body' => [
-            'label' => 'Corpo',
-            'tooltip' => 'Contenuto del messaggio',
-            'placeholder' => 'es: Gentile {user_name},\n\nTi ricordiamo che...',
-            'help' => 'Il contenuto principale della notifica. Supporta HTML per le email.',
-        ],
-        'type' => [
-            'label' => 'Tipo',
-            'tooltip' => 'Tipo di notifica',
-            'help' => 'Seleziona il tipo di notifica per cui usare questo template',
-            'options' => [
-                'email' => [
-                    'label' => 'Email',
-                    'tooltip' => 'Template per notifiche email',
-                ],
-                'sms' => [
-                    'label' => 'SMS',
-                    'tooltip' => 'Template per messaggi SMS',
-                ],
-                'push' => [
-                    'label' => 'Push',
-                    'tooltip' => 'Template per notifiche push',
-                ],
-                'telegram' => [
-                    'label' => 'Telegram',
-                    'tooltip' => 'Template per messaggi Telegram',
-                ],
-            ],
+        'content' => [
+            'label' => 'Contenuto',
+            'tooltip' => 'Corpo del messaggio',
+            'placeholder' => 'Inserisci il testo del messaggio',
+            'helper_text' => 'Contenuto principale della notifica',
         ],
         'variables' => [
-            'label' => 'Variabili disponibili',
-            'tooltip' => 'Variabili che possono essere utilizzate nel template',
-            'help' => 'Usa queste variabili per personalizzare il contenuto',
-            'sections' => [
-                'user' => [
-                    'label' => 'Utente',
-                    'tooltip' => 'Variabili relative all\'utente',
-                    'variables' => [
-                        'name' => [
-                            'label' => 'Nome utente',
-                            'tooltip' => '{user_name} - Nome completo dell\'utente',
-                        ],
-                        'email' => [
-                            'label' => 'Email utente',
-                            'tooltip' => '{user_email} - Indirizzo email dell\'utente',
-                        ],
-                    ],
-                ],
-                'notification' => [
-                    'label' => 'Notifica',
-                    'tooltip' => 'Variabili relative alla notifica',
-                    'variables' => [
-                        'title' => [
-                            'label' => 'Titolo notifica',
-                            'tooltip' => '{notification_title} - Titolo della notifica',
-                        ],
-                        'message' => [
-                            'label' => 'Messaggio notifica',
-                            'tooltip' => '{notification_message} - Messaggio della notifica',
-                        ],
-                        'date' => [
-                            'label' => 'Data notifica',
-                            'tooltip' => '{notification_date} - Data della notifica',
-                        ],
-                    ],
-                ],
-            ],
+            'label' => 'Variabili',
+            'tooltip' => 'Variabili disponibili',
+            'placeholder' => '{{nome}}, {{email}}, ecc.',
+            'helper_text' => 'Variabili che possono essere utilizzate nel template',
         ],
         'is_active' => [
             'label' => 'Attivo',
+<<<<<<< Updated upstream
             'tooltip' => 'Stato di attivazione del template',
             'help' => 'Solo i template attivi possono essere utilizzati',
 >>>>>>> a5a128a (.)
+=======
+            'tooltip' => 'Stato del template',
+            'helper_text' => 'Se attivo, il template può essere utilizzato per l\'invio di notifiche',
+        ],
+        'created_at' => [
+            'label' => 'Data creazione',
+            'tooltip' => 'Data di creazione del template',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima modifica',
+            'tooltip' => 'Data dell\'ultima modifica del template',
+>>>>>>> Stashed changes
         ],
     ],
     'actions' => [
@@ -177,6 +166,7 @@ return [
             'label' => 'Anteprima',
             'tooltip' => 'Visualizza anteprima del template',
             'icon' => 'heroicon-o-eye',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'success_message' => 'Anteprima generata con successo',
             'error_message' => 'Errore nella generazione dell\'anteprima',
@@ -217,21 +207,28 @@ return [
                 'confirm' => 'Sì, invia test',
                 'cancel' => 'No, annulla',
             ],
+=======
+            'success_message' => 'Anteprima generata con successo',
+            'error_message' => 'Errore nella generazione dell\'anteprima',
+>>>>>>> Stashed changes
         ],
         'duplicate' => [
             'label' => 'Duplica',
-            'tooltip' => 'Crea una copia di questo template',
+            'tooltip' => 'Crea una copia del template',
             'icon' => 'heroicon-o-document-duplicate',
-            'color' => 'success',
-            'confirmation' => [
-                'title' => 'Conferma duplicazione',
-                'message' => 'Vuoi creare una copia di questo template?',
-                'confirm' => 'Sì, duplica',
-                'cancel' => 'No, annulla',
-            ],
+            'success_message' => 'Template duplicato con successo',
+            'error_message' => 'Errore nella duplicazione del template',
+        ],
+        'test' => [
+            'label' => 'Test',
+            'tooltip' => 'Invia una notifica di test',
+            'icon' => 'heroicon-o-paper-airplane',
+            'success_message' => 'Notifica di test inviata con successo',
+            'error_message' => 'Errore nell\'invio della notifica di test',
         ],
     ],
     'messages' => [
+<<<<<<< Updated upstream
         'preview_title' => [
             'title' => 'Anteprima Template',
             'message' => 'Questa è un\'anteprima di come apparirà la notifica',
@@ -245,5 +242,13 @@ return [
             'message' => 'Il template è stato duplicato con successo',
         ],
 >>>>>>> a5a128a (.)
+=======
+        'success' => 'Operazione completata con successo',
+        'error' => 'Si è verificato un errore durante l\'operazione',
+        'confirmation' => 'Sei sicuro di voler procedere con questa operazione?',
+        'template_created' => 'Il template è stato creato con successo',
+        'template_updated' => 'Il template è stato aggiornato con successo',
+        'template_deleted' => 'Il template è stato eliminato con successo',
+>>>>>>> Stashed changes
     ],
 ];

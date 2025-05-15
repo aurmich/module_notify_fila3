@@ -13,11 +13,15 @@ class ListNotificationTemplates extends XotBaseListRecords
 {
     protected static string $resource = NotificationTemplateResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
     public function getListTableColumns(): array
 >>>>>>> a5a128a (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [];
     }
