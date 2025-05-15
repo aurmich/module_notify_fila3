@@ -1,7 +1,23 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+declare(strict_types=1);
+
+=======
+>>>>>>> a5a128a (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> Stashed changes
+=======
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
 return [
     'resource' => [
         'name' => 'Contact',
@@ -187,5 +203,19 @@ return [
             'message' => 'Impossibile verificare il contatto: :error',
         ],
     ],
+<<<<<<< HEAD
     'messages' => [],
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    'messages' => [],
+=======
+>>>>>>> a5a128a (.)
+=======
+    'messages' => [],
+>>>>>>> Stashed changes
+=======
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
 ];

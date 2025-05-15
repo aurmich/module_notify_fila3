@@ -13,7 +13,23 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Pages\XotBasePage;
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+use Modules\Xot\Filament\Pages\XotBasePage;
+=======
+use Filament\Pages\Page;
+>>>>>>> a5a128a (.)
+=======
+use Modules\Xot\Filament\Pages\XotBasePage;
+>>>>>>> Stashed changes
+=======
+use Filament\Pages\Page;
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -26,7 +42,23 @@ use Webmozart\Assert\Assert;
 /**
  * @property ComponentContainer $emailForm
  */
+<<<<<<< HEAD
 class TestSmtpPage extends XotBasePage implements HasForms
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+class TestSmtpPage extends XotBasePage implements HasForms
+=======
+class TestSmtpPage extends Page implements HasForms
+>>>>>>> a5a128a (.)
+=======
+class TestSmtpPage extends XotBasePage implements HasForms
+>>>>>>> Stashed changes
+=======
+class TestSmtpPage extends Page implements HasForms
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
 {
     use InteractsWithForms;
 

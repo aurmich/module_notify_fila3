@@ -17,6 +17,14 @@ return [
     'providers' => [
         'Modules\\Notify\\Providers\\NotifyServiceProvider',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> b968ad9 (.)
     /*
     |--------------------------------------------------------------------------
     | Email Layout Configuration
@@ -66,4 +74,14 @@ return [
         'welcome' => 'notify::mail-layouts.templates.welcome',
         // Add more templates here
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
 ];

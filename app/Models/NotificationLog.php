@@ -6,10 +6,14 @@ namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Tenant\Models\Traits\HasTenant;
 use Modules\Xot\Traits\Updater;
+=======
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+>>>>>>> 064a54f (.)
 
 /**
  * Modello per il logging delle notifiche inviate.
@@ -17,6 +21,7 @@ use Modules\Xot\Traits\Updater;
 class NotificationLog extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
     use HasTenant;
     use Updater;
 
@@ -28,6 +33,9 @@ class NotificationLog extends Model
     public const STATUS_OPENED = 'opened';
     public const STATUS_CLICKED = 'clicked';
 
+=======
+    
+>>>>>>> 064a54f (.)
     /**
      * Tabella associata al modello.
      *
@@ -41,6 +49,7 @@ class NotificationLog extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+<<<<<<< HEAD
         'template_id',
         'notifiable_type',
         'notifiable_id',
@@ -55,6 +64,17 @@ class NotificationLog extends Model
         'opened_at',
         'clicked_at',
         'tenant_id',
+=======
+        'notifiable_type',
+        'notifiable_id',
+        'title',
+        'content',
+        'channels',
+        'data',
+        'sent_at',
+        'status',
+        'error',
+>>>>>>> 064a54f (.)
     ];
     
     /**
@@ -63,6 +83,7 @@ class NotificationLog extends Model
      * @var array<string, string>
      */
     protected $casts = [
+<<<<<<< HEAD
         'data' => 'array',
         'metadata' => 'array',
         'sent_at' => 'datetime',
@@ -70,6 +91,11 @@ class NotificationLog extends Model
         'failed_at' => 'datetime',
         'opened_at' => 'datetime',
         'clicked_at' => 'datetime',
+=======
+        'channels' => 'array',
+        'data' => 'array',
+        'sent_at' => 'datetime',
+>>>>>>> 064a54f (.)
     ];
     
     /**
@@ -83,6 +109,7 @@ class NotificationLog extends Model
     }
     
     /**
+<<<<<<< HEAD
      * Ottiene il template della notifica.
      *
      * @return BelongsTo
@@ -93,6 +120,8 @@ class NotificationLog extends Model
     }
     
     /**
+=======
+>>>>>>> 064a54f (.)
      * Scope per filtrare per stato.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
@@ -111,9 +140,15 @@ class NotificationLog extends Model
      * @param string $channel
      * @return \Illuminate\Database\Eloquent\Builder
      */
+<<<<<<< HEAD
     public function scopeForChannel($query, string $channel)
     {
         return $query->where('channel', $channel);
+=======
+    public function scopeWithChannel($query, string $channel)
+    {
+        return $query->whereJsonContains('channels', $channel);
+>>>>>>> 064a54f (.)
     }
     
     /**
@@ -123,6 +158,7 @@ class NotificationLog extends Model
      * @param string $type
      * @return \Illuminate\Database\Eloquent\Builder
      */
+<<<<<<< HEAD
     public function scopeForNotifiable($query, Model $notifiable)
     {
         return $query->where('notifiable_type', get_class($notifiable))
@@ -188,5 +224,10 @@ class NotificationLog extends Model
     public function getChannelLabelAttribute(): string
     {
         return __('notify::notification.fields.channel.options.' . $this->channel . '.label');
+=======
+    public function scopeForNotifiableType($query, string $type)
+    {
+        return $query->where('notifiable_type', $type);
+>>>>>>> 064a54f (.)
     }
 }

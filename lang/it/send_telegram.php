@@ -5,7 +5,21 @@ declare(strict_types=1);
 return [
     'resource' => [
         'name' => 'Invio Telegram',
+<<<<<<< HEAD
         'plural' => 'Invio Telegram',
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+        'plural' => 'Invio Telegram',
+=======
+>>>>>>> a5a128a (.)
+=======
+        'plural' => 'Invio Telegram',
+>>>>>>> Stashed changes
+=======
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
     ],
     'navigation' => [
         'name' => 'Invio Telegram',
@@ -21,6 +35,12 @@ return [
     'fields' => [
         'chat_id' => [
             'label' => 'ID Chat',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+>>>>>>> b968ad9 (.)
             'placeholder' => 'Inserisci l\'ID della chat',
             'helper_text' => 'ID della chat Telegram di destinazione',
             'description' => 'Identificativo univoco della chat Telegram',
@@ -36,6 +56,39 @@ return [
             'placeholder' => 'Seleziona il formato',
             'helper_text' => 'Formato di interpretazione del messaggio',
             'description' => 'Modalità di formattazione del messaggio',
+<<<<<<< HEAD
+=======
+=======
+=======
+            'placeholder' => 'Inserisci l\'ID della chat',
+            'helper_text' => 'ID della chat Telegram di destinazione',
+            'description' => 'Identificativo univoco della chat Telegram',
+>>>>>>> Stashed changes
+        ],
+        'message' => [
+            'label' => 'Messaggio',
+            'placeholder' => 'Inserisci il messaggio da inviare',
+            'helper_text' => 'Contenuto del messaggio Telegram',
+            'description' => 'Testo del messaggio da inviare tramite Telegram',
+        ],
+        'parse_mode' => [
+            'label' => 'Formato',
+<<<<<<< Updated upstream
+>>>>>>> a5a128a (.)
+=======
+            'placeholder' => 'Seleziona il formato',
+            'helper_text' => 'Formato di interpretazione del messaggio',
+            'description' => 'Modalità di formattazione del messaggio',
+>>>>>>> Stashed changes
+=======
+        ],
+        'message' => [
+            'label' => 'Messaggio',
+        ],
+        'parse_mode' => [
+            'label' => 'Formato',
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
             'options' => [
                 'text' => 'Testo semplice',
                 'html' => 'HTML',
@@ -46,14 +99,40 @@ return [
     'actions' => [
         'send' => [
             'label' => 'Invia Messaggio',
+<<<<<<< HEAD
             'tooltip' => 'Invia un messaggio tramite Telegram',
             'success_message' => 'Messaggio inviato con successo',
             'error_message' => 'Errore nell\'invio del messaggio',
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+            'tooltip' => 'Invia un messaggio tramite Telegram',
+            'success_message' => 'Messaggio inviato con successo',
+            'error_message' => 'Errore nell\'invio del messaggio',
+=======
+>>>>>>> a5a128a (.)
+=======
+            'tooltip' => 'Invia un messaggio tramite Telegram',
+            'success_message' => 'Messaggio inviato con successo',
+            'error_message' => 'Errore nell\'invio del messaggio',
+>>>>>>> Stashed changes
+=======
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
             'success' => 'Messaggio inviato con successo',
             'error' => 'Errore durante l\'invio del messaggio',
         ],
         'preview' => [
             'label' => 'Anteprima',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> b968ad9 (.)
             'tooltip' => 'Visualizza un\'anteprima del messaggio',
             'success_message' => 'Anteprima generata',
             'error_message' => 'Errore nella generazione dell\'anteprima',
@@ -64,4 +143,18 @@ return [
         'error' => 'Si è verificato un errore durante l\'invio del messaggio Telegram',
         'confirmation' => 'Sei sicuro di voler inviare questo messaggio Telegram?',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+        ],
+    ],
+>>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
+=======
+        ],
+    ],
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
 ];

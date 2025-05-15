@@ -1,11 +1,24 @@
 <?php
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> b968ad9 (.)
 declare(strict_types=1);
 
 return [
     'resource' => [
         'name' => 'Invio Email',
         'plural' => 'Invio Email',
+=======
+return [
+    'resource' => [
+        'name' => 'Invio Email',
+>>>>>>> 064a54f (.)
     ],
     'navigation' => [
         'name' => 'Invio Email',
@@ -19,6 +32,7 @@ return [
         'sort' => 49,
     ],
     'fields' => [
+<<<<<<< HEAD
         'object' => [
             'description' => 'Oggetto della email',
             'placeholder' => 'Inserisci l\'oggetto',
@@ -43,10 +57,21 @@ return [
             'description' => 'Parametri del template',
             'placeholder' => 'Inserisci i parametri',
             'label' => 'Parametri',
+=======
+        'to' => [
+            'label' => 'Destinatario',
+        ],
+        'subject' => [
+            'label' => 'Oggetto',
+        ],
+        'body_html' => [
+            'label' => 'Contenuto HTML',
+>>>>>>> 064a54f (.)
         ],
     ],
     'actions' => [
         'send' => [
+<<<<<<< HEAD
             'label' => 'Invia',
             'tooltip' => 'Invia l\'email al destinatario',
             'success_message' => 'Email inviata con successo',
@@ -65,3 +90,73 @@ return [
         'confirmation' => 'Sei sicuro di voler inviare questa email?',
     ],
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+return array (
+  'resource' => 
+  array (
+    'name' => 'Invio Email',
+  ),
+  'navigation' => 
+  array (
+    'name' => 'Invio Email',
+    'plural' => 'Invio Email',
+    'group' => 
+    array (
+      'name' => 'Sistema',
+      'description' => 'Funzionalità per l\'invio di email attraverso il sistema di notifiche',
+    ),
+    'label' => 'Invio Email',
+    'icon' => 'notify-email-animated',
+    'sort' => 49,
+  ),
+  'fields' => 
+  array (
+    'to' => 
+    array (
+      'label' => 'Destinatario',
+    ),
+    'subject' => 
+    array (
+      'label' => 'Oggetto',
+    ),
+    'body_html' => 
+    array (
+      'label' => 'Contenuto HTML',
+    ),
+  ),
+  'actions' => 
+  array (
+    'send' => 
+    array (
+      'label' => 'Invia Email',
+      'success' => 'Email inviata con successo',
+      'error' => 'Errore durante l\'invio dell\'email',
+    ),
+    'preview' => 
+    array (
+      'label' => 'Anteprima',
+    ),
+    'emailFormActions' => 
+    array (
+      'label' => 'emailFormActions',
+    ),
+  ),
+);
+>>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
+=======
+            'label' => 'Invia Email',
+            'success' => 'Email inviata con successo',
+            'error' => 'Errore durante l\'invio dell\'email',
+        ],
+        'preview' => [
+            'label' => 'Anteprima',
+        ],
+    ],
+];
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)

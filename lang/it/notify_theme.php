@@ -1,6 +1,9 @@
 <?php
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 064a54f (.)
 
 return [
     'navigation' => [
@@ -161,7 +164,10 @@ return [
             'message' => 'Il tema è stato impostato come predefinito',
         ],
     ],
+<<<<<<< HEAD
     'model' => [
         'label' => 'Tema Notifica',
     ],
+=======
+>>>>>>> 064a54f (.)
 ];

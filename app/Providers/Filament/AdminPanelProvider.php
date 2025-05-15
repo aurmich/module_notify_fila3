@@ -14,17 +14,51 @@ use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
+<<<<<<< HEAD
 use Filament\SpatieLaravelTranslatablePlugin;
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+use Filament\SpatieLaravelTranslatablePlugin;
+=======
+>>>>>>> a5a128a (.)
+=======
+use Filament\SpatieLaravelTranslatablePlugin;
+>>>>>>> Stashed changes
+=======
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
 
 class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'Notify';
 
     public function panel(Panel $panel): Panel
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> b968ad9 (.)
     { 
         $panel->plugins([
             SpatieLaravelTranslatablePlugin::make(),
         ]);
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+    {
+>>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
+=======
+    {
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
         if (! XotData::make()->disable_database_notifications) {
             DatabaseNotifications::trigger('notify::livewire.database-notifications-trigger');
             // DatabaseNotifications::databaseNotificationsPollingInterval('30s');
@@ -35,9 +69,33 @@ class AdminPanelProvider extends XotBasePanelProvider
             );
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> b968ad9 (.)
        
 
         return parent::panel($panel);
     }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+        return parent::panel($panel);
+    }
+}
+>>>>>>> a5a128a (.)
+=======
+>>>>>>> Stashed changes
+=======
+        return parent::panel($panel);
+    }
+}
+>>>>>>> 064a54f (.)
+>>>>>>> b968ad9 (.)
