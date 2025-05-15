@@ -1,8 +1,8 @@
-# Principi di Utilizzo delle Configurazioni in SaluteOra
+# Principi di Utilizzo delle Configurazioni 
 
 ## Regola Fondamentale
 
-In SaluteOra, tutte le opzioni configurabili **DEVONO** essere definite nei file di configurazione e **MAI** hardcoded direttamente nel codice.
+, tutte le opzioni configurabili **DEVONO** essere definite nei file di configurazione e **MAI** hardcoded direttamente nel codice.
 
 ## Convenzioni per i Driver e le Opzioni
 

@@ -2,7 +2,7 @@
 
 ## Importanza della Connessione Corretta
 
-Quando si utilizzano migrazioni per convertire campi in formato JSON in SaluteOra, è fondamentale considerare le seguenti regole:
+Quando si utilizzano migrazioni per convertire campi in formato JSON , è fondamentale considerare le seguenti regole:
 
 1. **Uso esclusivo dei metodi XotBaseMigration**: 
    - `$this->hasColumn()` anziché `Schema::hasColumn()`

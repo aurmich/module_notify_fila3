@@ -1,4 +1,4 @@
-# Implementazione di Notifiche Multi-Canale in SaluteOra
+# Implementazione di Notifiche Multi-Canale 
 
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di SaluteOra.
 

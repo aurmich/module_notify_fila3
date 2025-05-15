@@ -1,4 +1,4 @@
-# Architettura Filament in SaluteOra: Pattern XotBase
+# Architettura Filament : Pattern XotBase
 
 ## Introduzione
 

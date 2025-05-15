@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 use Filament\Forms;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
@@ -15,25 +13,6 @@ use Filament\Forms\Components\TextInput;
 use Modules\Lang\Filament\Resources\LangBaseResource;
 
 class MailTemplateResource extends LangBaseResource
-=======
-use Modules\Notify\Models\MailTemplate;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-=======
->>>>>>> Stashed changes
-use Filament\Forms;
-use Filament\Forms\Set;
-use Illuminate\Support\Str;
-use Filament\Forms\Components\Group;
-use Modules\Notify\Models\MailTemplate;
-use Filament\Forms\Components\TextInput;
-use Modules\Lang\Filament\Resources\LangBaseResource;
-
-<<<<<<< Updated upstream
-class MailTemplateResource extends XotBaseResource
->>>>>>> a5a128a (.)
-=======
-class MailTemplateResource extends LangBaseResource
->>>>>>> Stashed changes
 {
     protected static ?string $model = MailTemplate::class;
 
@@ -42,8 +21,6 @@ class MailTemplateResource extends LangBaseResource
      *
      * - Array associativo con chiavi stringhe
      * - Campi ricavati da migration/model: id, mailable, subject, html_template, text_template
-<<<<<<< Updated upstream
-<<<<<<< HEAD
      * - Le etichette, i placeholder e i testi di aiuto sono gestiti tramite LangServiceProvider
      * - File di traduzione: Modules/Notify/resources/lang/{locale}/mail_template.php
      */
@@ -86,63 +63,4 @@ class MailTemplateResource extends LangBaseResource
                 ->columnSpanFull(),
         ];
     }
-=======
-     * - Forms\Components\Card deprecato: non usato
-     * - Label secondo convenzione notify::mail.template.fields.<campo>.label
-=======
-     * - Le etichette, i placeholder e i testi di aiuto sono gestiti tramite LangServiceProvider
-     * - File di traduzione: Modules/Notify/resources/lang/{locale}/mail_template.php
->>>>>>> Stashed changes
-     */
-    public static function getFormSchema(): array
-    {
-        return [
-            'mailable' => Forms\Components\TextInput::make('mailable')
-                ->required()
-                ->maxLength(255),
-            //'name' => Forms\Components\TextInput::make('name'),
-            //'slug' => Forms\Components\TextInput::make('slug'),
-            Group::make()
-                ->schema([
-                    TextInput::make('name')
-                        ->label('Nome Template')
-                        ->required()
-                        //->live(debounce: 200)
-                        //->reactive()
-                        ->afterStateUpdated(function (string $state, Set $set) {
-                            $set('slug', Str::slug($state));
-                        }),
-                    TextInput::make('slug')
-                        ->label('Slug')
-                        ->required()
-                        ->unique(ignoreRecord: true)
-                ])
-                ->columns(2),
-                //->columnSpan('full'),
-
-            'subject' => Forms\Components\TextInput::make('subject')
-                ->required()
-                ->maxLength(255),
-
-            'html_template' => Forms\Components\RichEditor::make('html_template')
-                ->required()
-                ->columnSpanFull(),
-
-            'text_template' => Forms\Components\Textarea::make('text_template')
-                ->maxLength(65535)
-                ->columnSpanFull(),
-        ];
-    }
-<<<<<<< Updated upstream
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
-    }
->>>>>>> a5a128a (.)
-=======
->>>>>>> Stashed changes
 }

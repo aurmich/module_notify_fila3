@@ -252,7 +252,7 @@ Struttura del file di traduzione:
 // lang/it/email.php
 return [
     'welcome' => [
-        'title' => 'Benvenuto in SaluteOra',
+        'title' => 'Benvenuto ',
         'subtitle' => 'Ciao :name, siamo felici di averti con noi',
         'cta' => 'ACCEDI AL TUO ACCOUNT',
     ],

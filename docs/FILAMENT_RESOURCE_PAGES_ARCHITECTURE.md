@@ -1,8 +1,8 @@
-# Architettura delle Pagine di Risorse Filament in SaluteOra
+# Architettura delle Pagine di Risorse Filament 
 
 ## Regola Fondamentale
 
-In SaluteOra, **MAI** estendere direttamente le classi di Filament per le pagine di risorse. Utilizzare **SEMPRE** le classi wrapper corrispondenti con prefisso `XotBase` fornite dal modulo `Xot`.
+, **MAI** estendere direttamente le classi di Filament per le pagine di risorse. Utilizzare **SEMPRE** le classi wrapper corrispondenti con prefisso `XotBase` fornite dal modulo `Xot`.
 
 ## Struttura Architetturale
 

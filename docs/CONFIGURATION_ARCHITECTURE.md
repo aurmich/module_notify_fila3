@@ -91,7 +91,7 @@ I termini non sono intercambiabili:
 - **API Key**: Chiave specifica per API, spesso usata in combinazione con altri parametri di autenticazione
 - **Auth Token**: Valore di autorizzazione temporaneo o permanente
 
-## Implementazione Corretta in SaluteOra
+## Implementazione Corretta 
 
 Per moduli riutilizzabili come Notify:
 

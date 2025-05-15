@@ -2,7 +2,7 @@
 
 ## Regola Fondamentale
 
-In SaluteOra, **tutti i collegamenti nei file Markdown devono utilizzare percorsi relativi** e non percorsi assoluti.
+, **tutti i collegamenti nei file Markdown devono utilizzare percorsi relativi** e non percorsi assoluti.
 
 ## Esempi Corretti e Incorretti
 

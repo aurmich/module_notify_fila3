@@ -23,7 +23,7 @@ Il componente è compatibile con l'architettura di SaluteOra e può essere integ
 - Non utilizza componenti UI personalizzati
 - Può essere configurato per restituire array associativi con chiavi stringhe
 - Supporta la localizzazione attraverso file di traduzione
-- Si integra con il pattern di form di Filament utilizzato in SaluteOra
+- Si integra con il pattern di form di Filament utilizzato 
 
 ## Installazione
 

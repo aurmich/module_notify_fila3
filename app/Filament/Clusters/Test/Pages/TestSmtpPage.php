@@ -13,15 +13,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 use Modules\Xot\Filament\Pages\XotBasePage;
-=======
-use Filament\Pages\Page;
->>>>>>> a5a128a (.)
-=======
-use Modules\Xot\Filament\Pages\XotBasePage;
->>>>>>> Stashed changes
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -34,15 +26,7 @@ use Webmozart\Assert\Assert;
 /**
  * @property ComponentContainer $emailForm
  */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 class TestSmtpPage extends XotBasePage implements HasForms
-=======
-class TestSmtpPage extends Page implements HasForms
->>>>>>> a5a128a (.)
-=======
-class TestSmtpPage extends XotBasePage implements HasForms
->>>>>>> Stashed changes
 {
     use InteractsWithForms;
 

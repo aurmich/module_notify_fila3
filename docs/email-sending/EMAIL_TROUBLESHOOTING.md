@@ -1,4 +1,4 @@
-# Risoluzione dei Problemi nelle Email in SaluteOra
+# Risoluzione dei Problemi nelle Email 
 
 Questa documentazione fornisce soluzioni per i problemi comuni che possono verificarsi durante l'invio di email nel modulo Notify.
 

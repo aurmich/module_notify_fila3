@@ -1,4 +1,4 @@
-# Guida all'Implementazione delle Notifiche in SaluteOra
+# Guida all'Implementazione delle Notifiche 
 
 Questa documentazione descrive come implementare correttamente le notifiche utilizzando Laravel Notifications nel modulo Notify.
 

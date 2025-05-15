@@ -1,8 +1,8 @@
-# Pattern per le Azioni SMS in SaluteOra
+# Pattern per le Azioni SMS 
 
 ## Struttura e Convenzioni
 
-In SaluteOra, le azioni di invio SMS seguono un pattern ben definito per garantire coerenza, manutenibilità e estensibilità. Questo documento descrive il pattern corretto da seguire per tutte le azioni SMS.
+, le azioni di invio SMS seguono un pattern ben definito per garantire coerenza, manutenibilità e estensibilità. Questo documento descrive il pattern corretto da seguire per tutte le azioni SMS.
 
 ## Regola Fondamentale: Corrispondenza Driver-Azione
 

@@ -1,8 +1,8 @@
-# Chiarimento sulla Struttura delle Interfacce in SaluteOra
+# Chiarimento sulla Struttura delle Interfacce 
 
 ## Struttura Corretta per le Interfacce SMS
 
-In SaluteOra, le interfacce per le azioni SMS seguono questa struttura:
+, le interfacce per le azioni SMS seguono questa struttura:
 
 ```
 /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
@@ -38,7 +38,7 @@ Si noti che esiste una discrepanza nella documentazione del progetto:
 
 ## Convenzioni di Naming
 
-Indipendentemente dalla posizione, tutte le interfacce in SaluteOra devono seguire queste convenzioni di naming:
+Indipendentemente dalla posizione, tutte le interfacce  devono seguire queste convenzioni di naming:
 
 1. Utilizzare il suffisso `Contract` e non `Interface`
 2. Seguire il pattern PascalCase

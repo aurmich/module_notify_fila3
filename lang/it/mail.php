@@ -1,15 +1,7 @@
 <?php
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> a5a128a (.)
-=======
-declare(strict_types=1);
-
->>>>>>> Stashed changes
 return [
     'template' => [
         'navigation' => [
@@ -24,10 +16,6 @@ return [
             'main' => 'Informazioni Principali',
         ],
         'fields' => [
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
             'name' => [
                 'label' => 'Nome',
                 'placeholder' => 'Inserisci il nome del template',
@@ -38,11 +26,6 @@ return [
                 'placeholder' => 'Seleziona il layout del template',
                 'tooltip' => 'Il layout grafico che verrà utilizzato per l\'email',
             ],
-<<<<<<< Updated upstream
-=======
->>>>>>> a5a128a (.)
-=======
->>>>>>> Stashed changes
             'mailable' => [
                 'label' => 'Classe Mailable',
                 'placeholder' => 'Inserisci il nome della classe Mailable',

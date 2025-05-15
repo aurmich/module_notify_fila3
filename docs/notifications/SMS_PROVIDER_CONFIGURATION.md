@@ -1,4 +1,4 @@
-# Configurazione Provider SMS per le Notifiche in SaluteOra
+# Configurazione Provider SMS per le Notifiche 
 
 Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di SaluteOra, con focus sui diversi provider e sulla loro configurazione.
 

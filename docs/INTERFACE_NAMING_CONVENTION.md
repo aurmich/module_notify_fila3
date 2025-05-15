@@ -1,8 +1,8 @@
-# Convenzione di Naming per le Interfacce in SaluteOra
+# Convenzione di Naming per le Interfacce 
 
 ## Regola Fondamentale
 
-In SaluteOra, tutte le interfacce **DEVONO** utilizzare il suffisso `Contract` e **MAI** il suffisso `Interface`.
+, tutte le interfacce **DEVONO** utilizzare il suffisso `Contract` e **MAI** il suffisso `Interface`.
 
 ## Esempi Corretti e Incorretti
 

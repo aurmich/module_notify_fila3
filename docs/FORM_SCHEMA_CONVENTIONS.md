@@ -1,8 +1,8 @@
-# Convenzioni per i Form Schema in SaluteOra
+# Convenzioni per i Form Schema 
 
 ## Regola Fondamentale per Array di Schema
 
-Tutti i metodi `getXFormSchema()` in SaluteOra **DEVONO** restituire array **associativi** con **chiavi string**, non array sequenziali.
+Tutti i metodi `getXFormSchema()`  **DEVONO** restituire array **associativi** con **chiavi string**, non array sequenziali.
 
 ## Convenzione di Naming
 

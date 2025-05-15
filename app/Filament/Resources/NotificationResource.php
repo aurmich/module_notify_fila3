@@ -5,14 +5,7 @@ namespace Modules\Notify\Filament\Resources;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 use Filament\Forms\Components\Textarea;
-=======
->>>>>>> a5a128a (.)
-=======
-use Filament\Forms\Components\Textarea;
->>>>>>> Stashed changes
 use Modules\Notify\Filament\Resources\NotificationResource\Pages;
 use Modules\Notify\Models\Notification;
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -38,20 +31,8 @@ class NotificationResource extends XotBaseResource
                 ->required()
                 ->numeric()
                 ->label('Notifiable ID'),
-<<<<<<< Updated upstream
-<<<<<<< HEAD
             'data' => Textarea::make('data')
                 ->label('Notification Data')
-=======
-            'data' => KeyValue::make('data')
-                ->label('Notification Data')
-                ->keyLabel('Key')
-                ->valueLabel('Value')
->>>>>>> a5a128a (.)
-=======
-            'data' => Textarea::make('data')
-                ->label('Notification Data')
->>>>>>> Stashed changes
                 ->columnSpanFull(),
 
             'read_at' => DateTimePicker::make('read_at')

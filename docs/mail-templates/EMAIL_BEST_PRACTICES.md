@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Questo documento descrive le best practices per la creazione e gestione di email transazionali in SaluteOra, con particolare attenzione agli aspetti di design, contenuto e tecnici.
+Questo documento descrive le best practices per la creazione e gestione di email transazionali , con particolare attenzione agli aspetti di design, contenuto e tecnici.
 
 ## Design e Contenuto
 
@@ -48,11 +48,11 @@ Questo documento descrive le best practices per la creazione e gestione di email
 - Separare il contenuto dalla presentazione per facilitare le traduzioni
 - Supportare lingue RTL quando necessario
 
-## Template e Layout in SaluteOra
+## Template e Layout 
 
 ### Utilizzo di MailPace Templates
 
-I template di [mailpace/templates](https://github.com/mailpace/templates) integrati in SaluteOra offrono:
+I template di [mailpace/templates](https://github.com/mailpace/templates) integrati  offrono:
 
 - Design moderno e responsive
 - Supporto Dark Mode

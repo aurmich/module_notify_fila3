@@ -1,31 +1,9 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 # Modulo Notify
 
 ## Panoramica
 Il modulo Notify gestisce il sistema di notifiche dell'applicazione, inclusi template e-mail e gestione dei canali di comunicazione.
-=======
-# Documentazione Modulo Notify
 
-> **Backlink:** [Torna alla documentazione globale](../../../../docs/README.md)
-
-## Motivazione architetturale
-Il modulo Notify nasce per fornire un sistema di notifiche scalabile e riusabile, basato su principi DDD (Domain-Driven Design) e su [Spatie QueueableActions](https://github.com/spatie/laravel-queueable-action) per la business logic asincrona. L'adozione di componenti nativi Filament garantisce coerenza visiva e facilità di manutenzione.
-
-Per approfondimenti sulle scelte architetturali e motivazionali consulta la [documentazione globale](../../../../docs/README.md) e la sezione [Architettura e Struttura](./ARCHITECTURE.md) di questo modulo.
-
-
-### Versione HEAD
-
-## Panoramica
->>>>>>> a5a128a (.)
-=======
-# Modulo Notify
-
-## Panoramica
-Il modulo Notify gestisce il sistema di notifiche dell'applicazione, inclusi template e-mail e gestione dei canali di comunicazione.
->>>>>>> Stashed changes
-
+## Struttura
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - Email
 - SMS
@@ -46,52 +24,26 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ### Modelli
 - [BaseModel](./base-model.md)
 - [Modelli](./models.md)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 - [Modifiche Modello MailTemplate](./MODEL_CHANGES.md)
 - [Documentazione Tecnica MailTemplate](./mail-templates/MODEL_MAIL_TEMPLATE_CHANGES.md)
-=======
->>>>>>> a5a128a (.)
-=======
-- [Modifiche Modello MailTemplate](./MODEL_CHANGES.md)
-- [Documentazione Tecnica MailTemplate](./mail-templates/MODEL_MAIL_TEMPLATE_CHANGES.md)
->>>>>>> Stashed changes
 
 ### Filament
 - [Risorse](./filament-resources.md)
 - [Pagine](./filament-pages.md)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 - [Miglioramenti UI/UX](./mail-templates/FILAMENT_UI_ENHANCEMENTS.md)
 - [Analisi Title With Slug](./mail-templates/TITLE_WITH_SLUG_ANALYSIS.md)
 - [Generazione Slug](./mail-templates/FILAMENT_SLUG_GENERATION.md)
-=======
->>>>>>> a5a128a (.)
-=======
-- [Miglioramenti UI/UX](./mail-templates/FILAMENT_UI_ENHANCEMENTS.md)
-- [Analisi Title With Slug](./mail-templates/TITLE_WITH_SLUG_ANALYSIS.md)
-- [Generazione Slug](./mail-templates/FILAMENT_SLUG_GENERATION.md)
->>>>>>> Stashed changes
 
 ### Email
 - [Sistema Email](./database-mail-system.md)
 - [Code Email](./database-mail-queue.md)
 - [Template Email](./improved-email-templates.md)
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 - [Guida all'utilizzo di SpatieEmail](./SPATIE_EMAIL_USAGE_GUIDE.md)
 - [Guida alla Migrazione MailTemplate](./MAIL_TEMPLATE_MIGRATION_GUIDE.md)
 - [Struttura della Migrazione](./mail-templates/MIGRATION_STRUCTURE.md)
 - [Implementazione Campo Slug](./mail-templates/SLUG_FIELD_IMPLEMENTATION.md)
 - [Implementazione Modello con Slug](./mail-templates/MODEL_SLUG_IMPLEMENTATION.md)
 - [Implementazione Risorsa con Slug](./mail-templates/RESOURCE_SLUG_IMPLEMENTATION.md)
-<<<<<<< Updated upstream
-=======
->>>>>>> a5a128a (.)
-=======
->>>>>>> Stashed changes
 - [Editor WYSIWYG](./email-wysiwyg-editor.md)
 - [Test Email](./email-tests.md)
 - [Log Email](./email-logs.md)
@@ -125,10 +77,6 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - [Roadmap](./roadmap.md)
 - [Packages](./packages.md)
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 ### Changelog e Migrazioni
 - [Changelog Migrazioni](./MIGRATIONS_CHANGELOG.md)
 
@@ -140,11 +88,6 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - [Struttura Migrazioni](./migrations.md)
 - [Gestione Conversioni JSON](./mail-templates/MIGRATION_JSON_CONVERSION.md)
 
-<<<<<<< Updated upstream
-=======
->>>>>>> a5a128a (.)
-=======
->>>>>>> Stashed changes
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
@@ -160,19 +103,10 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 
 1. Estendere sempre le classi base appropriate
 2. Non sovrascrivere metodi se non necessario
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 3. Mantenere la documentazione tecnica aggiornata
 4. Seguire le convenzioni di namespace
 5. Utilizzare i file di traduzione per le label
 - [Regole sulle migration e detection colonne](./MIGRATION_RULES.md)
-<<<<<<< Updated upstream
-=======
->>>>>>> a5a128a (.)
-=======
->>>>>>> Stashed changes
 3. Mantenere la documentazione aggiornata
 4. Seguire le convenzioni di namespace
 5. Utilizzare i file di traduzione per le label
@@ -219,8 +153,6 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 ## Struttura del Modulo
 
 ```
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 Notify/
 ├── app/
 │   ├── Models/
@@ -252,46 +184,11 @@ Notify/
 2. Implementare le traduzioni tramite LangServiceProvider
 3. Documentare ogni modifica importante
 4. Mantenere i collegamenti bidirezionali con la documentazione principale
-=======
-Modules/Notify/
-=======
-Notify/
->>>>>>> Stashed changes
-├── app/
-│   ├── Models/
-│   │   ├── BaseModel.php
-│   │   └── NotificationTemplate.php
-│   ├── Filament/
-│   │   └── Resources/
-│   └── Providers/
-├── docs/
-├── config/
-├── resources/
-│   └── lang/
-└── routes/
-```
 
-## Funzionalità Principali
-- Gestione template e-mail
-- Sistema di notifiche multilingua
-- Integrazione con GrapesJS per editor visuale
-- Supporto multi-tenant
-
-## Collegamenti alla Documentazione
-- [Architettura Modulare](../../../docs/architecture/MODULE_STRUCTURE.md)
-- [Convenzioni di Sviluppo](../../../docs/development/CONVENTIONS.md)
-- [Gestione dei Conflitti](../../../docs/development/CONFLICT_RESOLUTION.md)
-
-## Best Practices
-<<<<<<< Updated upstream
->>>>>>> a5a128a (.)
-=======
-1. Utilizzare sempre BaseModel come base per i modelli
-2. Implementare le traduzioni tramite LangServiceProvider
-3. Documentare ogni modifica importante
-4. Mantenere i collegamenti bidirezionali con la documentazione principale
->>>>>>> Stashed changes
-
+## Note di Implementazione
+- Il modulo è in fase di aggiornamento per Laravel 12
+- In corso l'implementazione di best practices per le traduzioni
+- Integrazione in corso con GrapesJS per l'editor visuale
 ### 1. Template
 - Utilizzare Blade per email
 - Mantenere SMS concisi
@@ -442,14 +339,7 @@ La PRIMA SCELTA per i componenti Blade sono SEMPRE i [componenti nativi Filament
 ```php
 Mail::to($user)->send(new Modules\Notify\Mail\WelcomeMail($user));
 ```
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema.
-=======
->>>>>>> a5a128a (.)
-=======
-Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema.
->>>>>>> Stashed changes
 Il modulo Notify gestisce tutte le notifiche e le comunicazioni via email del sistema <nome progetto>.
 
 ## Struttura della Documentazione
@@ -533,10 +423,6 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ---
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 
 # Modulo Notify
 
@@ -612,8 +498,3 @@ Segui SEMPRE le regole sui namespace:
 - Collegamento bidirezionale: vedi anche [links.md nella root](../../../../docs/links.md)
 
 b0005ff (.)
-<<<<<<< Updated upstream
-=======
->>>>>>> a5a128a (.)
-=======
->>>>>>> Stashed changes

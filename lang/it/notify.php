@@ -1,21 +1,11 @@
 <?php
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
     'resource' => [
         'name' => 'Notifica',
     ],
-<<<<<<< Updated upstream
-=======
-return [
->>>>>>> a5a128a (.)
-=======
->>>>>>> Stashed changes
     'navigation' => [
         'name' => 'Notifica',              // Nome singolare
         'plural' => 'Notifiche',           // Nome plurale
@@ -227,12 +217,5 @@ return [
             ],
         ],
     ],
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     'messages' => [],
-=======
->>>>>>> a5a128a (.)
-=======
-    'messages' => [],
->>>>>>> Stashed changes
 ];

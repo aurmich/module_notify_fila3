@@ -13,7 +13,7 @@ Questa documentazione spiega la struttura corretta dell'implementazione di `spat
 
 ## Panoramica dell'Architettura
 
-Il sistema di email in SaluteOra utilizza `spatie/laravel-database-mail-templates` per separare il layout HTML di base dal contenuto dei template, consentendo:
+Il sistema di email  utilizza `spatie/laravel-database-mail-templates` per separare il layout HTML di base dal contenuto dei template, consentendo:
 
 1. **Separazione dei Concetti**: Layout HTML di base vs contenuto specifico
 2. **Modifica tramite Database**: I contenuti dei template sono memorizzati nel database e possono essere modificati senza cambiare il codice
@@ -147,7 +147,7 @@ use Modules\Notify\Models\MailTemplate;
 
 MailTemplate::create([
     'mailable' => WelcomeMail::class,
-    'subject' => 'Benvenuto in SaluteOra',
+    'subject' => 'Benvenuto ',
     'html_template' => '<h1>Benvenuto in {{ $app_name }}, {{ $name }}!</h1>
                         <p>Grazie per esserti registrato.</p>
                         <p>Clicca sul link qui sotto per verificare il tuo account:</p>

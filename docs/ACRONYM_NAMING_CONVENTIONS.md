@@ -1,8 +1,8 @@
-# Convenzioni di Naming per Acronimi in SaluteOra
+# Convenzioni di Naming per Acronimi 
 
 ## Regola Fondamentale
 
-In SaluteOra, gli acronimi nei nomi delle classi e dei file devono utilizzare **PascalCase** e non tutte maiuscole.
+, gli acronimi nei nomi delle classi e dei file devono utilizzare **PascalCase** e non tutte maiuscole.
 
 ## Esempi Corretti vs Errati
 

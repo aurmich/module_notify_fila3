@@ -2,7 +2,7 @@
 
 ## Regola Fondamentale: No Duplicate Declarations
 
-Le classi che estendono altre classi in SaluteOra **NON devono ridichiarare** interfacce, trait o metodi già presenti nella classe genitore, a meno che non ne modifichino il comportamento.
+Le classi che estendono altre classi  **NON devono ridichiarare** interfacce, trait o metodi già presenti nella classe genitore, a meno che non ne modifichino il comportamento.
 
 ## Esempi Corretti vs Errati
 

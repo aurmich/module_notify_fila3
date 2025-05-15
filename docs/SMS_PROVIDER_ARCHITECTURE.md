@@ -1,8 +1,8 @@
-# Architettura dei Provider SMS in SaluteOra
+# Architettura dei Provider SMS 
 
 ## Convenzioni delle Interfacce
 
-In SaluteOra, l'architettura dei provider SMS segue una struttura specifica:
+, l'architettura dei provider SMS segue una struttura specifica:
 
 ### 1. Interfaccia Principale: `SmsActionContract`
 

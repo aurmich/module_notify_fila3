@@ -75,7 +75,7 @@ TextInput::make('slug')
 
 ## Adattamento per MailTemplateResource
 
-Per integrare questa soluzione nel contesto di `MailTemplateResource` in SaluteOra, è necessario:
+Per integrare questa soluzione nel contesto di `MailTemplateResource` , è necessario:
 
 1. Definire quando un template è considerato "pubblicato"
 2. Implementare la logica nei componenti del form

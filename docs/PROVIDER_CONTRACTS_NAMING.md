@@ -1,4 +1,4 @@
-# Convenzioni di Naming per i Contracts in SaluteOra
+# Convenzioni di Naming per i Contracts 
 
 ## Regola Fondamentale
 

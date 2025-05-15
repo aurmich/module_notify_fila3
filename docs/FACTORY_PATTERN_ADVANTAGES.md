@@ -1,6 +1,6 @@
 # Analisi del Pattern Factory per la Selezione dei Provider SMS
 
-Questo documento analizza il pattern Factory attualmente implementato in SaluteOra per la selezione dei provider SMS, confrontandolo con l'alternativa di integrare la selezione nel DTO `SmsData`.
+Questo documento analizza il pattern Factory attualmente implementato  per la selezione dei provider SMS, confrontandolo con l'alternativa di integrare la selezione nel DTO `SmsData`.
 
 ## Soluzione Attuale: Pattern Factory
 
@@ -100,7 +100,7 @@ Il pattern Factory offre numerosi vantaggi che superano di gran lunga i suoi sva
 
 ## Conclusione
 
-Il pattern Factory attualmente implementato in SaluteOra per la selezione dei provider SMS è la soluzione ottimale. Offre vantaggi significativi in termini di:
+Il pattern Factory attualmente implementato  per la selezione dei provider SMS è la soluzione ottimale. Offre vantaggi significativi in termini di:
 
 - **Separazione delle Responsabilità**: Ogni componente fa una cosa e la fa bene
 - **Testabilità**: Facilita i test unitari e di integrazione

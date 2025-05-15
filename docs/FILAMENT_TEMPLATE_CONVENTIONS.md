@@ -1,8 +1,8 @@
-# Convenzioni per Template Blade di Filament in SaluteOra
+# Convenzioni per Template Blade di Filament 
 
 ## Struttura Standard dei Template di Pagina
 
-Ogni template di pagina Filament in SaluteOra **DEVE** seguire questa struttura standardizzata per garantire coerenza nell'interfaccia utente e nelle funzionalità.
+Ogni template di pagina Filament  **DEVE** seguire questa struttura standardizzata per garantire coerenza nell'interfaccia utente e nelle funzionalità.
 
 ## Elementi Obbligatori
 

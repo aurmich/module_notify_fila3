@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 <x-filament-panels::page>
     <x-filament::section>
         <x-slot name="heading">
@@ -11,7 +7,6 @@
         <x-slot name="description">
             Utilizza questo form per testare l'invio di notifiche push ai dispositivi mobili tramite diversi servizi.
         </x-slot>
-<<<<<<< Updated upstream
 
         {{ $this->notificationForm }}
 
@@ -27,32 +22,3 @@
         </x-slot>
     </x-filament::section>
 </x-filament-panels::page>
-=======
-<x-filament::page>
-=======
->>>>>>> Stashed changes
-
-        {{ $this->notificationForm }}
-
-<<<<<<< Updated upstream
-        <x-filament-panels::form.actions :actions="$this->getNotificationFormActions()" />
-
-        <x-filament::loading-indicator class="h-5 w-5" wire:loading wire:target="sendNotification()" />
-
-    </x-filament-panels::form>
-</x-filament::page>
->>>>>>> a5a128a (.)
-=======
-        <x-slot name="footer">
-            <div class="flex items-center justify-between gap-x-3">
-                <div>
-                    <x-filament::loading-indicator class="h-5 w-5" wire:loading wire:target="sendNotification()" />
-                </div>
-                <div>
-                    <x-filament-panels::form.actions :actions="$this->getNotificationFormActions()" />
-                </div>
-            </div>
-        </x-slot>
-    </x-filament::section>
-</x-filament-panels::page>
->>>>>>> Stashed changes

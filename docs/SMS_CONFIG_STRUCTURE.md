@@ -1,4 +1,4 @@
-# Struttura della Configurazione SMS in SaluteOra
+# Struttura della Configurazione SMS 
 
 ## Introduzione
 

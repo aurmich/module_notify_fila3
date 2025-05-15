@@ -1,4 +1,4 @@
-# Pattern di Estensione per Componenti Filament in SaluteOra
+# Pattern di Estensione per Componenti Filament 
 
 Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema SaluteOra, con particolare attenzione al principio di non estendere mai direttamente le classi Filament.
 
@@ -117,4 +117,4 @@ Prima di ogni commit, verificare che:
 
 ## Conclusione
 
-Il pattern di estensione XotBase è fondamentale per la manutenibilità e la coerenza del codice in SaluteOra. Seguire questo pattern garantisce che l'applicazione possa evolversi in modo controllato e che le personalizzazioni siano gestite in modo centralizzato.
+Il pattern di estensione XotBase è fondamentale per la manutenibilità e la coerenza del codice . Seguire questo pattern garantisce che l'applicazione possa evolversi in modo controllato e che le personalizzazioni siano gestite in modo centralizzato.

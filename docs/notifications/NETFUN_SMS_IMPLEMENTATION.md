@@ -1,4 +1,4 @@
-# Implementazione Netfun SMS in SaluteOra
+# Implementazione Netfun SMS 
 
 ## Introduzione
 

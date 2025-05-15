@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Questo documento illustra le best practices per l'utilizzo di `XotBaseMigration` in SaluteOra, con particolare focus su come gestire correttamente le verifiche di colonne e tabelle durante le migrazioni.
+Questo documento illustra le best practices per l'utilizzo di `XotBaseMigration` , con particolare focus su come gestire correttamente le verifiche di colonne e tabelle durante le migrazioni.
 
 ## Errori comuni
 

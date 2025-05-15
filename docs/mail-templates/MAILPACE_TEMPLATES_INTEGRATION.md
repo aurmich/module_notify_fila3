@@ -23,7 +23,7 @@ MailPace offre i seguenti template transazionali:
 - **Performance** - Ottimizzati per caricamento veloce
 - **Personalizzazione** - Facilmente personalizzabili con Maizzle
 
-## Integrazione in SaluteOra
+## Integrazione 
 
 ### Struttura della Directory
 

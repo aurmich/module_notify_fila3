@@ -1,6 +1,6 @@
 # Analisi del Pattern Factory per le Notifiche
 
-Questo documento analizza l'implementazione del pattern Factory per la gestione delle notifiche in SaluteOra, confrontando l'approccio originale con quello basato su Factory.
+Questo documento analizza l'implementazione del pattern Factory per la gestione delle notifiche , confrontando l'approccio originale con quello basato su Factory.
 
 ## Confronto tra Pattern Architetturali
 

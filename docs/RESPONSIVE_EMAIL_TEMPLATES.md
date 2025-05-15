@@ -129,7 +129,7 @@ I principali client email supportano diversi insiemi di funzionalità HTML/CSS:
 
 Il package `spatie/laravel-database-mail-templates` permette di archiviare e gestire template HTML nel database:
 
-### Implementazione in SaluteOra
+### Implementazione 
 
 ```php
 // Nel modello MailTemplate

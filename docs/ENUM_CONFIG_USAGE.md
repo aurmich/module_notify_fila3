@@ -1,4 +1,4 @@
-# Utilizzo di Enum e Config in SaluteOra
+# Utilizzo di Enum e Config 
 
 Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema SaluteOra, con particolare attenzione alla gestione delle opzioni nei componenti Filament.
 
@@ -135,9 +135,9 @@ return [
 - I valori sono specifici dell'applicazione e non del dominio
 - Hai bisogno di valori diversi in produzione, staging, test, ecc.
 
-## Implementazione in SaluteOra
+## Implementazione 
 
-Per standardizzare l'approccio in SaluteOra, si raccomanda di:
+Per standardizzare l'approccio , si raccomanda di:
 
 1. **Creare Enum** per tutti i tipi di dati enumerabili del dominio
 2. **Utilizzare Config** per valori configurabili specifici dell'applicazione

@@ -1,4 +1,4 @@
-# Convenzioni sui Percorsi in SaluteOra
+# Convenzioni sui Percorsi 
 
 ## Regole Fondamentali
 
@@ -43,7 +43,7 @@
 
 ## Riferimento PSR-4 nel composer.json
 
-I moduli in SaluteOra definiscono il proprio mapping PSR-4 nel file `composer.json`:
+I moduli  definiscono il proprio mapping PSR-4 nel file `composer.json`:
 
 ```json
 "autoload": {

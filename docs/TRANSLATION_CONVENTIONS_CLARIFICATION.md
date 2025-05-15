@@ -2,7 +2,7 @@
 
 ## Identificazione di Convenzioni Contrastanti
 
-In SaluteOra sono state identificate convenzioni contrastanti per le traduzioni:
+ sono state identificate convenzioni contrastanti per le traduzioni:
 
 ### Convenzioni Generali (Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
 

@@ -1,8 +1,8 @@
-# Configurazione Corretta dei Provider SMS in SaluteOra
+# Configurazione Corretta dei Provider SMS 
 
 ## Regola Fondamentale
 
-In SaluteOra, tutte le configurazioni relative ai provider SMS **DEVONO** essere gestite esclusivamente attraverso il file `config/sms.php` e non tramite il file `config/services.php`.
+, tutte le configurazioni relative ai provider SMS **DEVONO** essere gestite esclusivamente attraverso il file `config/sms.php` e non tramite il file `config/services.php`.
 
 ## Struttura Corretta
 

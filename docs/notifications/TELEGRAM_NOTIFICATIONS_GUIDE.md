@@ -1,4 +1,4 @@
-# Notifiche Telegram in SaluteOra
+# Notifiche Telegram 
 
 Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di SaluteOra.
 

@@ -1,6 +1,6 @@
-# Implementazione SMS in SaluteOra: Guida Dettagliata
+# Implementazione SMS : Guida Dettagliata
 
-Questa documentazione fornisce una guida dettagliata all'implementazione delle notifiche SMS in SaluteOra, con confronto tra diversi provider e best practices specifiche per il contesto italiano.
+Questa documentazione fornisce una guida dettagliata all'implementazione delle notifiche SMS , con confronto tra diversi provider e best practices specifiche per il contesto italiano.
 
 ## Indice
 
