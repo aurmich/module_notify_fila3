@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> a5a128a (.)
 return [
     'resource' => [
         'name' => 'Contact',
@@ -187,5 +190,8 @@ return [
             'message' => 'Impossibile verificare il contatto: :error',
         ],
     ],
+<<<<<<< HEAD
     'messages' => [],
+=======
+>>>>>>> a5a128a (.)
 ];

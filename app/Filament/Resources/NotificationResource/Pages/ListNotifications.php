@@ -16,7 +16,11 @@ class ListNotifications extends XotBaseListRecords
 {
     protected static string $resource = NotificationResource::class;
 
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> a5a128a (.)
     {
         return [
             'id' => TextColumn::make('id')

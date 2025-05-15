@@ -22,7 +22,11 @@ class ListNotifyThemes extends XotBaseListRecords
 {
     protected static string $resource = NotifyThemeResource::class;
 
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> a5a128a (.)
     {
         return [
             'id' => Columns\TextColumn::make('id')
