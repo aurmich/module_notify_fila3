@@ -3,9 +3,6 @@
 ## Panoramica
 Il modulo Notify gestisce il sistema di notifiche dell'applicazione, inclusi template e-mail e gestione dei canali di comunicazione.
 
-<<<<<<< HEAD
-## Struttura
-=======
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - Email
 - SMS
@@ -154,7 +151,6 @@ Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 
 ## Struttura del Modulo
 
->>>>>>> 38698b4d9 (fix collisioni sync)
 ```
 Notify/
 ├── app/
@@ -188,12 +184,6 @@ Notify/
 3. Documentare ogni modifica importante
 4. Mantenere i collegamenti bidirezionali con la documentazione principale
 
-<<<<<<< HEAD
-## Note di Implementazione
-- Il modulo è in fase di aggiornamento per Laravel 12
-- In corso l'implementazione di best practices per le traduzioni
-- Integrazione in corso con GrapesJS per l'editor visuale
-=======
 ### 1. Template
 - Utilizzare Blade per email
 - Mantenere SMS concisi
@@ -503,4 +493,3 @@ Segui SEMPRE le regole sui namespace:
 - Collegamento bidirezionale: vedi anche [links.md nella root](../../../../docs/links.md)
 
 b0005ff (.)
->>>>>>> 38698b4d9 (fix collisioni sync)
