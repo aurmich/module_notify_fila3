@@ -1,176 +1,49 @@
-# Troubleshooting
+# Troubleshooting Notification Issues in Laravel Modules
 
-## Errori Comuni
+## Overview
+This document provides guidance on diagnosing and resolving common issues encountered with the Notify module, ensuring smooth operation of notification systems.
 
-### 1. Errori con Allegati Email
+## Key Principles
+1. **Diagnosis**: Identify the root cause of notification failures through logs and error messages.
+2. **Resolution**: Apply targeted fixes to restore functionality without disrupting other systems.
+3. **Prevention**: Implement best practices to avoid recurring issues.
 
-#### Errore: Cannot access offset of type string on string
-```
-TypeError
-Cannot access offset of type string on string
-```
+## Common Issues and Fixes
+### 1. Notification Delivery Failures
+- **Symptoms**: Notifications are not received by users.
+- **Diagnosis**: Check logs for errors related to API calls or provider responses.
+- **Fix**: Verify API keys, endpoint URLs, and network connectivity. Ensure provider accounts are active and funded.
+  ```php
+  // Example Log Check
+  Log::channel('notifications')->error('Delivery failed', ['error' => $exception->getMessage()]);
+  ```
 
-**Causa**: 
-- Passaggio di un singolo array per gli allegati invece di un array di array
-- Il metodo `addAttachments()` si aspetta un array di array, anche per un singolo allegato
+### 2. Template Rendering Errors
+- **Symptoms**: Notifications are sent but content is incorrect or missing.
+- **Diagnosis**: Review template syntax and dynamic data passed to templates.
+- **Fix**: Correct Blade syntax errors and ensure all required variables are provided.
 
-**Soluzione**:
-```php
-// ERRATO
-$attachments = [
-    'path' => 'path/to/file.png',
-    'as' => 'filename.png',
-    'mime' => 'image/png'
-];
+### 3. Rate Limiting by Providers
+- **Symptoms**: Notifications are delayed or blocked after a certain number of sends.
+- **Diagnosis**: Look for rate limit exceeded errors in provider responses.
+- **Fix**: Implement queueing to throttle sends or contact provider for higher limits.
 
-// CORRETTO
-$attachments = [
-    [
-        'path' => 'path/to/file.png',
-        'as' => 'filename.png',
-        'mime' => 'image/png'
-    ]
-];
-```
+### 4. Configuration Errors
+- **Symptoms**: Notifications fail immediately with configuration-related errors.
+- **Diagnosis**: Check environment variables and configuration files for typos or missing values.
+- **Fix**: Update configurations with correct values and restart application if necessary.
 
-**Lezione Appresa**:
-- La struttura degli allegati è fondamentale
-- Usare sempre array di array
-- Verificare la struttura prima dell'invio
+## Testing and Verification
+- Use sandbox environments or test modes provided by notification services to simulate sends without affecting real users.
+- Verify fixes by sending test notifications after applying changes.
 
-#### Errore: File not found
-```
-File not found: path/to/file.png
-```
+## Documentation and Updates
+- Document any recurring issues or unique troubleshooting scenarios in the relevant module's documentation folder.
+- Update this document if new issues or resolution strategies are identified.
 
-**Causa**:
-- Path relativo non corretto
-- File non esistente
-- Permessi insufficienti
-
-**Soluzione**:
-- Usare path relativi alla root del progetto
-- Verificare l'esistenza del file
-- Controllare i permessi del file
-
-**Lezione Appresa**:
-- I path relativi sono preferibili
-- Esempio: `modules/notify/resources/assets/images/logo.png`
-- Evitare `storage_path()` o `base_path()`
-
-#### Errore: Invalid mime type
-```
-Invalid mime type: application/octet-stream
-```
-
-**Causa**:
-- Mime type non specificato
-- Mime type non supportato
-- File corrotto
-
-**Soluzione**:
-- Specificare il mime type corretto
-- Verificare il tipo di file
-- Controllare l'integrità del file
-
-**Lezione Appresa**:
-- I mime type devono essere corretti
-- Verificare la compatibilità con i client email
-- Documentare i mime type supportati
-
-### 2. Best Practices per Allegati
-
-1. **Struttura Dati**:
-   - Usare sempre array di array
-   - Specificare tutti i campi richiesti
-   - Verificare i path
-
-2. **Path Relativi**:
-   - Usare path relativi alla root
-   - Mantenere una struttura chiara
-   - Documentare la posizione dei file
-
-3. **Mime Type**:
-   - Specificare sempre il mime type
-   - Verificare la compatibilità
-   - Documentare i tipi supportati
-
-4. **Organizzazione**:
-   - Mantenere gli allegati in directory dedicate
-   - Usare nomi descrittivi
-   - Evitare spazi e caratteri speciali
-
-### 3. Debugging
-
-1. **Verifica File**:
-   - Controllare l'esistenza
-   - Verificare i permessi
-   - Validare il mime type
-
-2. **Test**:
-   - Testare con file piccoli
-   - Verificare su vari client
-   - Controllare i limiti
-
-3. **Log**:
-   - Abilitare il logging delle email
-   - Controllare i log per errori
-   - Verificare le configurazioni
-
-### 4. Workflow Corretto
-
-1. **Preparazione**:
-   - Verificare l'esistenza dei file
-   - Controllare i mime type
-   - Validare i path
-
-2. **Invio**:
-   - Preparare gli allegati
-   - Configurare il template
-   - Inviare l'email
-
-3. **Verifica**:
-   - Controllare i log
-   - Verificare la consegna
-   - Testare gli allegati
-
-### 1. Errori con Notifiche Email
-
-#### Errore: An email must have a "To", "Cc", or "Bcc" header
-```
-Symfony\Component\Mime\Exception\LogicException
-An email must have a "To", "Cc", or "Bcc" header.
-```
-
-**Causa**: 
-- Destinatario non specificato o null
-- Dati non validati prima dell'invio
-- Problemi con il routing delle notifiche
-
-**Soluzione**:
-```php
-// Validazione
-if (empty($data['to']) || !filter_var($data['to'], FILTER_VALIDATE_EMAIL)) {
-    throw new \InvalidArgumentException('Indirizzo email non valido');
-}
-
-// Routing corretto
-try {
-    Notification::route('mail', $data['to'])
-        ->notify(new YourNotification());
-} catch (\Exception $e) {
-    Log::error('Errore invio notifica: ' . $e->getMessage());
-    throw $e;
-}
-```
-
-**Lezione Appresa**:
-- Validare sempre i dati in ingresso
-- Usare try/catch per gestire gli errori
-- Loggare gli errori per il debugging
-
-## Collegamenti Utili
-
-- [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-- [Laravel Mail Documentation](https://laravel.com/docs/mail)
-- [Email Client Compatibility](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+## Links to Related Documentation
+- [Notify Module Index](./INDEX.md)
+- [Architecture Overview](./ARCHITECTURE.md)
+- [Notification Channels Implementation](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md)
+- [Email Templates](./EMAIL_TEMPLATES.md)
+- [SMS Implementation](./SMS_IMPLEMENTATION.md)

@@ -94,7 +94,7 @@ Consulta la [documentación completa del módulo Notify](docs/README.md) y la [d
 
 # 📣 Enhance Your App with the Fila3 Notify Module! 🚀
 
-> **Motivazione architetturale**: Il modulo Notify adotta una struttura DDD (Domain-Driven Design) per separare chiaramente i domini applicativi, utilizza Value Objects per la business logic e Spatie QueueableActions per la gestione asincrona delle notifiche. L’interfaccia utente è realizzata con componenti nativi Filament, garantendo coerenza e scalabilità.
+> **Motivazione architetturale**: Il modulo Notify adotta una struttura DDD (Domain-Driven Design) per separare chiaramente i domini applicativi, utilizza Value Objects per la business logic e Spatie QueueableActions per la gestione asincrona delle notifiche. L'interfaccia utente è realizzata con componenti nativi Filament, garantendo coerenza e scalabilità.
 
 > Per approfondimenti architetturali e motivazionali consulta la [documentazione tecnica del modulo Notify](docs/README.md) e la [documentazione globale PTVX](/docs/README.md).
 
@@ -202,271 +202,105 @@ Discover more of my work at marco76tv!
 
 # Modulo Notify
 
-## Indice
-1. [Architettura e Struttura](#architettura-e-struttura)
-2. [Modelli e Relazioni](#modelli-e-relazioni)
-3. [Queueable Actions](#queueable-actions)
-4. [Integrazione Filament](#integrazione-filament)
-5. [Testing](#testing)
-6. [Monitoraggio e Analytics](#monitoraggio-e-analytics)
-7. [Manutenzione e Backup](#manutenzione-e-backup)
-8. [Note Finali](#note-finali)
+## Descrizione
+Sistema di gestione delle notifiche per applicazioni Laravel con supporto multi-canale.
 
-## Architettura e Struttura
-
-### Principi DDD
-- Implementazione basata su Domain-Driven Design
-- Separazione chiara tra domini applicativi
-- Utilizzo di Value Objects per la logica di business
-- Queueable Actions per le operazioni asincrone
-
-### Struttura Directory
+## Struttura del Modulo
 ```
 Notify/
 ├── Config/
+├── Console/
 ├── Database/
-│   ├── Factories/
 │   ├── Migrations/
 │   └── Seeders/
-├── Entities/
-├── Filament/
-│   ├── Resources/
-│   └── Widgets/
 ├── Http/
 │   ├── Controllers/
-│   └── Middleware/
-├── Providers/
-├── Actions/
-└── Tests/
+│   ├── Middleware/
+│   └── Requests/
+├── Models/
+├── Resources/
+│   ├── js/
+│   └── views/
+├── Routes/
+└── Services/
 ```
 
-### Dipendenze
-- Laravel ^10.0
-- Filament ^3.0
-- spatie/laravel-queueable-action ^2.0
-- spatie/laravel-permission ^6.0
-- laraxot/module-xot ^1.0
+## Checklist di Riavvio
+- [ ] Verificare le dipendenze nel `composer.json`
+- [ ] Controllare le migrazioni pendenti
+- [ ] Verificare i service provider registrati
+- [ ] Controllare le traduzioni
+- [ ] Verificare le configurazioni
+- [ ] Testare le funzionalità principali
 
-## Modelli e Relazioni
+## Best Practices
+1. **Gestione delle Notifiche**
+   - Utilizzare i canali appropriati
+   - Implementare la coda per notifiche asincrone
+   - Gestire correttamente i template
 
-### Template
-```php
-use Modules\Notify\Models\BaseModel;
+2. **Struttura del Codice**
+   - Seguire il principio di responsabilità singola
+   - Utilizzare i service layer per la logica di business
+   - Implementare i trait per funzionalità condivise
 
-final class Template extends BaseModel
-{
-    protected $fillable = [
-        'name',
-        'description',
-        'type',
-        'status'
-    ];
+3. **Performance**
+   - Ottimizzare le query al database
+   - Utilizzare la cache quando appropriato
+   - Monitorare l'utilizzo delle risorse
 
-    public function versions(): HasMany
-    {
-        return $this->hasMany(TemplateVersion::class);
-    }
-}
-```
+## Errori Comuni
+1. **Configurazione SMTP**
+   - Verificare le credenziali
+   - Controllare le impostazioni del server
+   - Testare la connessione
 
-### TemplateVersion
-- Gestione versioni dei template
-- Tracking modifiche
-- Supporto multilingua
+2. **Gestione delle Code**
+   - Verificare i worker delle code
+   - Controllare i timeout
+   - Monitorare i fallimenti
 
-## Queueable Actions
-
-### SendNotificationAction
-- Invio notifiche
-- Gestione code
-- Tracking eventi
-
-### TrackNotificationEventAction
-- Tracking eventi
-- Analytics
-- Logging
-
-## Integrazione Filament
-
-### Resources
-- TemplateResource
-- TemplateVersionResource
-- AnalyticsResource
-
-### Blade Components
-- NotificationCard
-- NotificationList
-- TemplateEditor
+## Documentazione
+- [Guida alle Notifiche](/docs/notifications.md)
+- [Gestione dei Template](/docs/templates.md)
+- [Best Practices](/docs/best-practices.md)
 
 ## Testing
+- Eseguire i test unitari: `php artisan test --filter=Notify`
+- Verificare la copertura del codice
+- Testare le funzionalità principali
 
-### Unit Test
-```bash
-php artisan test --filter=NotifyModuleTest
+## Deployment
+1. Eseguire le migrazioni
+2. Pubblicare gli assets
+3. Aggiornare la cache
+4. Verificare i permessi
+
+## Manutenzione
+- Monitorare i log per errori
+- Verificare periodicamente le performance
+- Aggiornare le dipendenze
+- Mantenere la documentazione aggiornata
+
+## Esempi di Utilizzo
+```php
+// Invia notifica
+use Modules\Notify\Actions\SendNotificationAction;
+
+app(SendNotificationAction::class)->execute(
+    $user,
+    'welcome',
+    ['name' => $user->name],
+    ['mail', 'database']
+);
+
+// Componente Blade
+<x-notify::notification-list :notifications="$notifications" />
 ```
 
-### Feature Test
-- Template CRUD operations
-- Email sending
-- Webhook handling
-
-## Monitoraggio e Analytics
-
-### Logging
-- Utilizzo di Monolog
-- Rotazione log giornaliera
-- Integrazione con Sentry
-
-### Metriche
-- Tasso di apertura
-- Click-through rate
-- Bounce rate
-
-## Manutenzione e Backup
-
-### Backup
-- Backup giornaliero dei template
-- Retention 30 giorni
-- Procedura di restore documentata
-
-### Aggiornamenti
-- Compatibilità versioni
-- Procedure di migrazione
-- Breaking changes
-
-## Note Finali
-
-### Best Practices
-- Utilizzare type hints
-- Seguire PSR-12
-- Documentare API
-- Implementare test
-
-### Roadmap
-- Integrazione webhook
-- Dashboard analytics
-- Template builder
-- A/B testing
-
-### Supporto
-- Issue tracking su GitHub
-- Documentazione API
-- Canale Slack dedicato
-
-# 📢 Notify Module - Sistema di Notifiche Avanzato
-
-[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
-[![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](.codeclimate.yml)
-[![Test Coverage](https://img.shields.io/badge/coverage-95%25-success.svg)](phpunit.xml.dist)
-[![Notifications](https://img.shields.io/badge/notifications-enabled-brightgreen.svg)](docs/module_notify.md)
-[![Filament Version](https://img.shields.io/badge/Filament-3.x-purple.svg)](https://filamentphp.com)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/laraxot/module_notify_fila3)
-[![Downloads](https://img.shields.io/badge/downloads-1k+-blue.svg)](https://packagist.org/packages/laraxot/module_notify_fila3)
-[![Stars](https://img.shields.io/badge/stars-100+-yellow.svg)](https://github.com/laraxot/module_notify_fila3)
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/laraxot/module_notify_fila3/main/docs/assets/notify-banner.png" alt="Notify Module Banner" width="800">
-</div>
-
-## 🇮🇹 Italiano
-
-### 📝 Descrizione
-Il modulo Notify fornisce un sistema completo di gestione delle notifiche per applicazioni Laravel, con supporto per canali multipli e personalizzazione avanzata.
-
-### ✨ Caratteristiche Principali
-- ✅ Notifiche multi-canale (email, SMS, push, database)
-- ✅ Template personalizzabili
-- ✅ Gestione delle preferenze di notifica
-- ✅ Coda di notifiche asincrona
-- ✅ Interfaccia amministrativa Filament
-- ✅ API RESTful per la gestione delle notifiche
-- ✅ Log dettagliati delle notifiche
-- ✅ Test SMTP integrato
-
-### 🚀 Installazione
-```bash
-composer require modules/notify
-php artisan module:enable Notify
-php artisan migrate
-```
-
-### 📚 Documentazione
-Consulta la [documentazione completa](docs/module_notify.md) per:
-- [Pacchetti](docs/packages.md)
-- [Convenzioni Schema](docs/schema_conventions.md)
-- [Test SMTP](docs/test-smtp-page.md)
-
-## 🇬🇧 English
-
-### 📝 Description
-The Notify module provides a complete notification management system for Laravel applications, with support for multiple channels and advanced customization.
-
-### ✨ Key Features
-- ✅ Multi-channel notifications (email, SMS, push, database)
-- ✅ Customizable templates
-- ✅ Notification preferences management
-- ✅ Asynchronous notification queue
-- ✅ Filament admin interface
-- ✅ RESTful API for notification management
-- ✅ Detailed notification logs
-- ✅ Integrated SMTP testing
-
-### 🚀 Installation
-```bash
-composer require modules/notify
-php artisan module:enable Notify
-php artisan migrate
-```
-
-### 📚 Documentation
-Check out the [complete documentation](docs/module_notify.md) for:
-- [Packages](docs/packages.md)
-- [Schema Conventions](docs/schema_conventions.md)
-- [SMTP Testing](docs/test-smtp-page.md)
-
-## 🇪🇸 Español
-
-### 📝 Descripción
-El módulo Notify proporciona un sistema completo de gestión de notificaciones para aplicaciones Laravel, con soporte para múltiples canales y personalización avanzada.
-
-### ✨ Características Principales
-- ✅ Notificaciones multi-canal (email, SMS, push, base de datos)
-- ✅ Plantillas personalizables
-- ✅ Gestión de preferencias de notificación
-- ✅ Cola de notificaciones asíncrona
-- ✅ Interfaz administrativa Filament
-- ✅ API RESTful para gestión de notificaciones
-- ✅ Registros detallados de notificaciones
-- ✅ Pruebas SMTP integradas
-
-### 🚀 Instalación
-```bash
-composer require modules/notify
-php artisan module:enable Notify
-php artisan migrate
-```
-
-### 📚 Documentación
-Consulta la [documentación completa](docs/module_notify.md) para:
-- [Paquetes](docs/packages.md)
-- [Convenciones de Esquema](docs/schema_conventions.md)
-- [Pruebas SMTP](docs/test-smtp-page.md)
-
-## 🤝 Contribuire / Contributing / Contribuir
-
-Siamo aperti a contribuzioni! Consulta le nostre [linee guida per i contributori](.github/CONTRIBUTING.md).
-
-We are open to contributions! Check out our [contributor guidelines](.github/CONTRIBUTING.md).
-
-¡Estamos abiertos a contribuciones! Consulta nuestras [pautas para contribuidores](.github/CONTRIBUTING.md).
-
-## 📄 Licenza / License / Licencia
-
-Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICENSE) per maggiori dettagli.
-
-This project is distributed under the MIT license. See the [LICENSE](LICENSE) file for more details.
-
-Este proyecto está distribuido bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
- 185a07e (.)
+## Configurazione
+Il modulo può essere configurato tramite il file `config/notify.php`:
+- Canali di notifica
+- Template
+- Impostazioni SMTP
+- Configurazioni specifiche per modulo

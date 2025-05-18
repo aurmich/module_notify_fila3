@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 namespace Modules\Notify\Notifications;
 
 use Modules\Notify\Datas\SmsData;

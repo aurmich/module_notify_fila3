@@ -30,6 +30,24 @@ Questo documento definisce il pattern di estensione standardizzato per i compone
 
 5. **Consistenza del Codice**: Garantisce che tutti i componenti Filament nell'applicazione seguano lo stesso pattern di implementazione.
 
+## Linee Guida Specifiche per XotBaseResource
+
+Quando si estende `XotBaseResource`, è importante seguire queste regole per evitare errori comuni:
+
+1. **Non ridefinire proprietà gestite dalla classe base**:
+   - `protected static ?string $navigationIcon`
+   - `protected static ?string $navigationGroup`
+   - `protected static ?string $translationPrefix`
+
+2. **Non ridefinire metodi standard a meno che non sia necessario**:
+   - `public static function table(Table $table): Table`
+   - `public static function getListTableColumns(): array`
+
+Queste proprietà e metodi sono già configurati in `XotBaseResource` per garantire coerenza e centralizzazione della logica. Ridefinirli può portare a comportamenti imprevisti e aumentare la complessità del codice.
+
+**Collegamenti correlati**:
+- [Linee Guida XotBaseResource](../Modules/Patient/docs/xot-base-resource-guidelines.md)
+
 ## Esempio di Implementazione Corretta
 
 ```php

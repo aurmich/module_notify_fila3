@@ -3,10 +3,7 @@
 ## Panoramica
 Il modulo Notify gestisce il sistema di notifiche dell'applicazione, inclusi template e-mail e gestione dei canali di comunicazione.
 
-<<<<<<< Updated upstream
 ## Struttura
-=======
->>>>>>> Stashed changes
 Il modulo Notify gestisce tutte le notifiche del sistema, inclusi:
 - Email
 - SMS
@@ -188,13 +185,10 @@ Notify/
 3. Documentare ogni modifica importante
 4. Mantenere i collegamenti bidirezionali con la documentazione principale
 
-<<<<<<< Updated upstream
 ## Note di Implementazione
 - Il modulo è in fase di aggiornamento per Laravel 12
 - In corso l'implementazione di best practices per le traduzioni
 - Integrazione in corso con GrapesJS per l'editor visuale
-=======
->>>>>>> Stashed changes
 ### 1. Template
 - Utilizzare Blade per email
 - Mantenere SMS concisi
