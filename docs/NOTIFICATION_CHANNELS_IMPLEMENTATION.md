@@ -145,31 +145,12 @@ L'architettura implementata facilita la manutenibilità:
 ## Conclusione
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
->>>>>>> 2386404 (.)
-=======
->>>>>>> 5834ed3 (.)
-=======
->>>>>>> 7002345 (.)
 
-## Collegamenti a Documentazione Correlata
-- [Modulo di Notifica](./INDEX.md)
-- [Panoramica dell'Architettura](./ARCHITECTURE.md)
-- [Modelli di Email](./EMAIL_TEMPLATES.md)
-- [Implementazione SMS](./SMS_IMPLEMENTATION.md)
-- [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 2386404 (.)
-=======
->>>>>>> 5834ed3 (.)
-=======
->>>>>>> 7002345 (.)
+## Collegamenti e Note di Manutenzione
+- Questo file è stato oggetto di risoluzione manuale di conflitti git, mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
+- Per approfondimenti e standard architetturali, vedi anche: [INDEX.md](./INDEX.md) e la doc globale [../../../../docs/README.md](../../../../docs/README.md)
+- Collegamenti correlati:
+  - [Panoramica dell'Architettura](./ARCHITECTURE.md)
+  - [Modelli di Email](./EMAIL_TEMPLATES.md)
+  - [Implementazione SMS](./SMS_IMPLEMENTATION.md)
+  - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
