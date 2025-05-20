@@ -1,8 +1,13 @@
 <?php
+<<<<<<< HEAD
 // Risoluzione conflitto git: mantenuta sintassi PSR-12, strict_types, array short syntax, solo chiavi effettive.
 // Vedi docs: ../../docs/INDEX.md e ../../../../docs/README.md
 
 declare(strict_types=1);
+=======
+declare(strict_types=1);
+
+>>>>>>> 170dab6 (.)
 
 return [
     'navigation' => [
