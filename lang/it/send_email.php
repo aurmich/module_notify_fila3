@@ -1,11 +1,17 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
     'resource' => [
         'name' => 'Invio Email',
         'plural' => 'Invio Email',
+=======
+return [
+    'resource' => [
+        'name' => 'Invio Email',
+>>>>>>> c57e89d (.)
     ],
     'navigation' => [
         'name' => 'Invio Email',
@@ -19,6 +25,7 @@ return [
         'sort' => 49,
     ],
     'fields' => [
+<<<<<<< HEAD
         'object' => [
             'description' => 'Oggetto della email',
             'placeholder' => 'Inserisci l\'oggetto',
@@ -43,10 +50,21 @@ return [
             'description' => 'Parametri del template',
             'placeholder' => 'Inserisci i parametri',
             'label' => 'Parametri',
+=======
+        'to' => [
+            'label' => 'Destinatario',
+        ],
+        'subject' => [
+            'label' => 'Oggetto',
+        ],
+        'body_html' => [
+            'label' => 'Contenuto HTML',
+>>>>>>> c57e89d (.)
         ],
     ],
     'actions' => [
         'send' => [
+<<<<<<< HEAD
             'label' => 'Invia',
             'tooltip' => 'Invia l\'email al destinatario',
             'success_message' => 'Email inviata con successo',
@@ -64,4 +82,14 @@ return [
         'error' => 'Si è verificato un errore durante l\'invio dell\'email',
         'confirmation' => 'Sei sicuro di voler inviare questa email?',
     ],
+=======
+            'label' => 'Invia Email',
+            'success' => 'Email inviata con successo',
+            'error' => 'Errore durante l\'invio dell\'email',
+        ],
+        'preview' => [
+            'label' => 'Anteprima',
+        ],
+    ],
+>>>>>>> c57e89d (.)
 ];
