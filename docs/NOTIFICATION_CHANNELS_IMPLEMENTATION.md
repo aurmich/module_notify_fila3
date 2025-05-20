@@ -147,11 +147,14 @@ L'architettura implementata facilita la manutenibilità:
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> 2386404 (.)
 =======
 >>>>>>> 5834ed3 (.)
+=======
+>>>>>>> 7002345 (.)
 
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./INDEX.md)
@@ -161,9 +164,12 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
 =======
 >>>>>>> 2386404 (.)
 =======
 >>>>>>> 5834ed3 (.)
+=======
+>>>>>>> 7002345 (.)
