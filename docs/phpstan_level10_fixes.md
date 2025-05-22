@@ -194,6 +194,7 @@ Fino ad ora, abbiamo risolto la maggior parte degli errori di livello 10 in entr
 4. Estendere le correzioni ad altri moduli utilizzando i pattern stabiliti
 
 5. Aggiornare le linee guida di sviluppo per prevenire errori simili in futuro 
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di PHPSTAN_LEVEL10_FIXES.md
 * [PHPSTAN_LEVEL10_FIXES.md](docs/PHPSTAN_LEVEL10_FIXES.md)
@@ -210,3 +211,5 @@ Fino ad ora, abbiamo risolto la maggior parte degli errori di livello 10 in entr
 * [phpstan_level10_fixes.md](../../Job/docs/phpstan_level10_fixes.md)
 * [phpstan_level10_fixes.md](../../Media/docs/phpstan_level10_fixes.md)
 
+=======
+>>>>>>> c3e9536 (.)

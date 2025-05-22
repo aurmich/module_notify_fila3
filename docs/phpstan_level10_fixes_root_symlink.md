@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
 PHPSTAN_LEVEL10_FIXES.md
@@ -16,3 +17,6 @@ PHPSTAN_LEVEL10_FIXES.md
 
 ---
 
+=======
+PHPSTAN_LEVEL10_FIXES.md
+>>>>>>> c3e9536 (.)

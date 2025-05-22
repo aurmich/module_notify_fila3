@@ -10,7 +10,11 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+<<<<<<< HEAD
 use Modules\Dental\Models\Appointment;
+=======
+use Modules\SaluteOra\Models\Appointment;
+>>>>>>> c3e9536 (.)
 
 class AppointmentNotificationMail extends Mailable implements ShouldQueue
 {
