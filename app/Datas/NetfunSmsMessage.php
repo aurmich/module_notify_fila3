@@ -16,7 +16,7 @@ class NetfunSmsMessage extends Data
         public ?string $scheduled_date = null
     ) {
     }
-
+    /*
     public static function fromArray(array $data): self
     {
         return new self(
@@ -27,4 +27,5 @@ class NetfunSmsMessage extends Data
             scheduled_date: $data['scheduled_date'] ?? null
         );
     }
+        */
 }
