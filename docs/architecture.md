@@ -1,148 +1,170 @@
 # Architettura del Modulo Notify
 
-## Panoramica
+## Domain-Driven Design
 
-Il modulo Notify è stato riprogettato per utilizzare due pattern architetturali principali:
+### Bounded Context
+Il modulo Notify rappresenta un bounded context dedicato alla gestione delle notifiche all'interno dell'applicazione. Include:
 
-1. Laravel Queueable Actions (spatie/laravel-queueable-action) per la logica di business
-2. Filament Blade Components per l'interfaccia utente
+- Gestione template
+- Invio notifiche
+- Tracking eventi
+- Analytics
 
-## Queueable Actions
+### Value Objects
+```php
+final class EmailAddress
+{
+    private string $value;
 
-### Struttura
-Le Actions sostituiscono i precedenti Services e sono organizzate nelle seguenti categorie:
+    public function __construct(string $email)
+    {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new InvalidArgumentException('Email non valida');
+        }
+        $this->value = $email;
+    }
 
+    public function toString(): string
+    {
+        return $this->value;
+    }
+}
 ```
-app/Actions/
-├── Notification/
-│   ├── SendNotificationAction.php
-│   ├── CreateNotificationAction.php
-│   └── DeleteNotificationAction.php
-├── Email/
-│   ├── SendEmailAction.php
-│   ├── CreateTemplateAction.php
-│   └── ValidateEmailAction.php
-└── Queue/
-    ├── ProcessQueueAction.php
-    └── MonitorQueueAction.php
-```
 
-### Implementazione
-Ogni Action implementa l'interfaccia `Spatie\QueueableAction\QueueableAction`:
+## Layer Architetturali
 
+### Presentation Layer
+- Controllers REST
+- Filament Resources
+- API Endpoints
+- Blade Components
+
+### Application Layer
+- Queueable Actions
+- Command/Query handlers
+- Event listeners
+
+### Domain Layer
+- Entities
+- Value Objects
+- Domain Services
+- Repository Interfaces
+
+### Infrastructure Layer
+- Repository Implementations
+- External Services Integration
+- Database Access
+
+## Pattern Implementati
+
+### Queueable Actions Pattern
 ```php
 use Spatie\QueueableAction\QueueableAction;
 
-class SendNotificationAction implements QueueableAction
+final class SendNotificationAction extends QueueableAction
 {
-    public function execute(NotificationData $data): void
-    {
-        // Logica di invio notifica
+    public function execute(
+        Model $recipient,
+        string $templateCode,
+        array $data = [],
+        array $channels = [],
+        array $options = []
+    ): NotificationLog {
+        // Implementazione dell'azione
     }
 }
 ```
 
-### Vantaggi
-- Code native Laravel
-- Retry automatico
-- Monitoring dello stato
-- Testing semplificato
-- Singola responsabilità
-
-## Filament Blade Components
-
-### Form Components
-I form utilizzano i componenti Filament invece di componenti custom:
-
-```blade
-<x-filament::card>
-    <x-filament-forms::field-wrapper
-        name="title"
-        label="Titolo"
-        required
-    >
-        <x-filament-forms::text-input
-            wire:model="title"
-            required
-        />
-    </x-filament-forms::field-wrapper>
-</x-filament::card>
-```
-
-### Layout Components
-I layout sono basati sui componenti Filament:
-
-```blade
-<x-filament::layouts.app>
-    <x-filament::header>
-        {{ __('notify::notifications.title') }}
-    </x-filament::header>
-
-    {{ $slot }}
-</x-filament::layouts.app>
-```
-
-### Vantaggi
-- Consistenza UI
-- Componenti testati
-- Responsive design
-- Accessibilità
-- Dark mode
-
-## Testing
-
-### Action Tests
+### Factory Pattern
 ```php
-class SendNotificationActionTest extends TestCase
+final class NotificationFactory
 {
-    public function test_it_sends_notification()
+    public function create(string $type, array $data): NotificationInterface
     {
-        $action = app(SendNotificationAction::class);
-        
-        $result = $action->execute(
-            NotificationData::from([...])
-        );
-        
-        $this->assertTrue($result->sent);
+        return match($type) {
+            'email' => new EmailNotification($data),
+            'sms' => new SmsNotification($data),
+            default => throw new InvalidArgumentException('Tipo non supportato'),
+        };
     }
 }
 ```
 
-### Component Tests
+### Observer Pattern
+- Tracking eventi notifica
+- Aggiornamento analytics
+- Logging attività
+
+## Integrazione con Altri Moduli
+
+### User Module
+- Gestione preferenze utente
+- Permessi e ruoli
+- Configurazioni personali
+
+### Tenant Module
+- Configurazioni per tenant
+- Template personalizzati
+- Analytics separati
+
+### Reporting Module
+- Report di invio
+- Statistiche di apertura
+- Analisi engagement
+
+## Sicurezza
+
+### Autenticazione
+- Middleware auth
+- API token
+- Rate limiting
+
+### Autorizzazione
+- Policy per template
+- Permessi granulari
+- Audit logging
+
+### Validazione
+- Input sanitization
+- CSRF protection
+- XSS prevention
+
+## Performance
+
+### Caching
+- Template compilati
+- Configurazioni
+- Statistiche
+
+### Code
+- Invio asincrono tramite Queueable Actions
+- Retry mechanism
+- Dead letter queue
+
+### Ottimizzazione
+- Eager loading
+- Query optimization
+- Index strategy
+
+## Monitoring
+
+### Logging
 ```php
-class NotificationFormTest extends TestCase
+final class NotifyLogger
 {
-    public function test_it_renders_form()
+    public function logEvent(string $event, array $context): void
     {
-        Livewire::test(NotificationForm::class)
-            ->assertSee('Titolo')
-            ->assertSee('Contenuto');
+        Log::channel('notify')->info($event, $context);
     }
 }
 ```
 
-## Collegamenti
+### Metriche
+- Prometheus integration
+- Custom metrics
+- Alert rules
 
-- [Documentazione Form](tailwind_forms.md)
-- [Documentazione Notifiche](tailwind_notifications.md)
-- [Documentazione Layout](tailwind_layouts.md)
-- [Documentazione Componenti](tailwind_components.md)
-
-## Migrazioni Future
-
-- Implementazione GraphQL API
-- Integrazione WebSocket per notifiche real-time
-- Sistema di template drag-and-drop
-- Analytics avanzate
-
-## Note
-- Tutti i collegamenti sono relativi
-- La documentazione è mantenuta in italiano
-- I collegamenti sono bidirezionali quando appropriato
-- Ogni sezione ha il suo README.md specifico
-
-## Contribuire
-Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../docs/regole_collegamenti_documentazione.md).
-
-## Collegamenti Completi
-Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
+### Tracing
+- Request ID
+- Correlation ID
+- Distributed tracing 

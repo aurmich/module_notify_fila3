@@ -423,65 +423,60 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ---
 
+## Proprietà fondamentali del ServiceProvider (Laraxot/PTVX)
 
-# Modulo Notify
+Tutti i provider dei moduli che estendono XotBaseServiceProvider **devono** dichiarare:
+- `protected string $module_dir = __DIR__;`
+- `protected string $module_ns = __NAMESPACE__;`
+- `public string $name = 'Notify';`
 
-## Introduzione
+Queste proprietà sono necessarie per:
+- La risoluzione automatica dei path delle risorse
+- Il corretto namespace per autoloading e publish
+- L'identificazione del modulo nelle operazioni di asset publish
 
-Il modulo Notify gestisce tutte le funzionalità relative alle notifiche e alle comunicazioni del sistema.
-
-## Funzionalità Principali
-
-- Gestione template email
-- Invio notifiche
-- Gestione preferenze utente
-- Log delle comunicazioni
-
-## Struttura del Modulo
-
-```
-Notify/
-├── app/
-│   ├── Http/
-│   │   ├── Controllers/
-│   │   └── Requests/
-│   ├── Models/
-│   ├── Services/
-│   └── Filament/
-├── database/
-│   └── migrations/
-├── resources/
-│   └── views/
-└── routes/
-    └── web.php
+### Esempio
+```php
+class NotifyServiceProvider extends XotBaseServiceProvider
+{
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+    public string $name = 'Notify';
+}
 ```
 
-## Modifiche Recenti
+**Motivazione:**  
+- Se mancano queste proprietà, alcune risorse potrebbero non essere caricate correttamente.
+- La dichiarazione esplicita garantisce portabilità, manutenibilità e coerenza tra tutti i moduli.
 
-### Migrazione Mail Templates (2024-03-20)
-- Aggiunto supporto per slug univoci
-- Implementato sistema di versioning
-- Migliorata la struttura dei campi JSON
-- Standardizzazione con best practices Laravel
+**Approfondimenti:**  
+- Vedi anche [../../../../docs/PROVIDER_OVERVIEW.md](../../../../docs/PROVIDER_OVERVIEW.md)
 
-Per maggiori dettagli, consultare:
-- [Modifiche Migrazione](./MIGRATION_CHANGES.md)
-- [Regole Migrazioni](./MIGRATION_RULES.md)
-- [Documentazione Template](./EMAIL_TEMPLATES.md)
+## Regola per i file .sh (script shell)
 
-## Collegamenti Correlati
+Tutti i file `.sh` (script shell) devono essere posizionati esclusivamente in una sottocartella dedicata chiamata `bashscripts` (ad esempio `docs/bashscripts/`).
+Non devono mai trovarsi direttamente nella root di `docs/` o in altre sottocartelle generiche.
 
-- [Documentazione API](./api.md)
-- [Documentazione Filament](./filament.md)
-- [Best Practices](./best-practices.md)
+**Motivazione:**
+- Ordine e reperibilità: tutti gli script shell sono facilmente individuabili e gestibili.
+- Sicurezza: si evita l'esecuzione accidentale di script non previsti.
+- Coerenza cross-modulo e tra root/moduli.
 
-## Supporto
+**Esempio di struttura corretta:**
+```
+docs/
+└── bashscripts/
+    ├── deploy.sh
+    ├── clear_cache.sh
+    └── backup_db.sh
+```
 
-Per supporto tecnico:
-- Email: support@example.com
-- Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify
+**Checklist aggiornata:**
+- [x] Nessun file .sh fuori da bashscripts/
+- [x] Documentazione aggiornata
+- [x] Struttura coerente in tutti i moduli
 
+<<<<<<< HEAD
 ## Politica, Filosofia, Religione, Etica, Zen
 
 - **Politica**: Il modulo promuove collaborazione, trasparenza e inclusività, senza discriminazioni.
@@ -498,3 +493,5 @@ Segui SEMPRE le regole sui namespace:
 - Collegamento bidirezionale: vedi anche [links.md nella root](../../../../docs/links.md)
 
 b0005ff (.)
+=======
+>>>>>>> 085d2be (.)
