@@ -476,7 +476,6 @@ docs/
 - [x] Documentazione aggiornata
 - [x] Struttura coerente in tutti i moduli
 
-<<<<<<< HEAD
 ## Politica, Filosofia, Religione, Etica, Zen
 
 - **Politica**: Il modulo promuove collaborazione, trasparenza e inclusività, senza discriminazioni.
@@ -491,7 +490,3 @@ Segui SEMPRE le regole sui namespace:
 - Esempio corretto: `namespace Modules\Notify\Datas;`
 - Consulta la [documentazione dettagliata sulle regole di path e namespace](./PATH_AND_NAMESPACE_RULES.md) e le [regole generali in Xot](../../Xot/docs/NAMESPACE-RULES.md).
 - Collegamento bidirezionale: vedi anche [links.md nella root](../../../../docs/links.md)
-
-b0005ff (.)
-=======
->>>>>>> 085d2be (.)
