@@ -93,14 +93,14 @@ class SendSpatieEmailPage extends XotBasePage
         $user = $this->getUser();
         $attachments = [
             [
-                'path' => '/var/www/html/project/public/images/avatars/default-avatar.svg',
+                'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
                 'as' => 'logo.png',
-                'mime' => 'image/svg+xml',
+                'mime' => 'image/png',
             ],
             [
-                'path' => '/var/www/html/project/public/images/avatars/default-avatar.svg',
+                'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
                 'as' => 'logo.png',
-                'mime' => 'image/svg+xml',
+                'mime' => 'image/png',
             ],
         ];
         //Mail::to($data['to'])->locale('it')->send((new SpatieEmail($user,'due'))->addAttachments($attachments));

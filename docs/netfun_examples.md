@@ -34,7 +34,7 @@ class OtpSmsNotification extends NetfunSmsNotification
 
         parent::__construct(
             message: "Il tuo codice OTP è: {$otp}. Valido fino alle {$this->expiresAt->format('H:i')}.",
-            sender: 'GENERIC'
+            sender: 'SALUTEORA'
         );
     }
 
@@ -200,7 +200,7 @@ class AppointmentReminderNotification extends NetfunSmsNotification
 
         parent::__construct(
             message: $message,
-            sender: 'GENERIC'
+            sender: 'SALUTEORA'
         );
     }
 
@@ -441,7 +441,7 @@ public function sendBulkSms(Request $request)
         $results = SendBulkSmsAction::make(
             users: $users,
             message: $request->message,
-            sender: 'GENERIC',
+            sender: 'SALUTEORA',
             batchSize: 100,
             delayBetweenBatches: 1
         )->onQueue('bulk-sms')->execute();
@@ -733,7 +733,7 @@ class NetfunSmsActionTest extends TestCase
         $action = SendNetfunSmsAction::make(
             to: '+393331234567',
             message: 'Test message',
-            sender: 'GENERIC'
+            sender: 'TEST'
         );
 
         $result = $action->execute();
@@ -746,7 +746,7 @@ class NetfunSmsActionTest extends TestCase
             return $request->url() == config('notify.netfun.endpoint') &&
                    $request['messages'][0]['to'] == '+393331234567' &&
                    $request['messages'][0]['text'] == 'Test message' &&
-                   $request['messages'][0]['from'] == 'GENERIC';
+                   $request['messages'][0]['from'] == 'TEST';
         });
     }
 
@@ -764,7 +764,7 @@ class NetfunSmsActionTest extends TestCase
         $action = SendNetfunSmsAction::make(
             to: 'invalid',
             message: 'Test message',
-            sender: 'GENERIC'
+            sender: 'TEST'
         );
 
         $action->execute();
@@ -775,7 +775,7 @@ class NetfunSmsActionTest extends TestCase
         $action = SendNetfunSmsAction::make(
             to: '+393331234567',
             message: 'Test message',
-            sender: 'GENERIC'
+            sender: 'TEST'
         );
 
         // Simula il raggiungimento del rate limit
@@ -792,7 +792,7 @@ class NetfunSmsActionTest extends TestCase
         $action = new SendNetfunSmsWithRetryAction(
             to: '+393331234567',
             message: 'Test message',
-            sender: 'GENERIC'
+            sender: 'TEST'
         );
 
         // Simula il circuit breaker aperto
@@ -883,7 +883,7 @@ class NetfunNotificationIntegrationTest extends TestCase
         $results = SendBulkSmsAction::make(
             users: $users,
             message: 'Test message',
-            sender: 'GENERIC'
+            sender: 'TEST'
         )->execute();
 
         $this->assertEquals(3, $results['total']);
@@ -898,7 +898,7 @@ class NetfunNotificationIntegrationTest extends TestCase
         $action = new SendNetfunSmsWithMetricsAction(
             to: '+393331234567',
             message: 'Test message',
-            sender: 'GENERIC'
+            sender: 'TEST'
         );
 
         $metrics = $action->recordMetrics(true, 0.5, [

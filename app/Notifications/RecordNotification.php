@@ -6,34 +6,48 @@ use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Emails\SpatieEmail;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Channels\SmsChannel;
+use Modules\Notify\Models\MailTemplate;
 use Illuminate\Notifications\Notification;
 
 class RecordNotification extends Notification
 {
     protected Model $record;
     protected string $slug;
+    public array $data=[];
 
     public function __construct(Model $record, string $slug)
     {
         $this->record = $record;
         $this->slug = $slug;
+
     }
 
     public function via($notifiable): array
     {
-        //return ['mail'];
-        return [SmsChannel::class];
+        $channels = [];
+        if (!method_exists($notifiable, 'routeNotificationFor')){
+            return $channels;
+        }
+        if($notifiable->routeNotificationFor('mail')) {
+            $channels[] = 'mail';
+        }
+        if($notifiable->routeNotificationFor('sms')) {
+            $channels[] = SmsChannel::class;
+        }
+
+        return $channels;
     }
 
     public function toMail($notifiable): SpatieEmail
     {
-
         $email = new SpatieEmail($this->record, $this->slug);
+        $email=$email->mergeData($this->data);
 
         // Importante: garantisci che ci sia sempre un destinatario
         if (method_exists($notifiable, 'routeNotificationFor')) {
             // Ottieni l'email dal notifiable
-            $email->to($notifiable->routeNotificationFor('mail'));
+            $to=$notifiable->routeNotificationFor('mail');
+            $email->to($to);
         }
 
         return $email;
@@ -45,7 +59,7 @@ class RecordNotification extends Notification
      * @param object $notifiable
      * @return SmsData
      */
-    public function toSms(object $notifiable): SmsData
+    public function toSms(object $notifiable): ?SmsData
     {
         $email = new SpatieEmail($this->record, $this->slug);
         /*
@@ -64,10 +78,19 @@ class RecordNotification extends Notification
         if (method_exists($notifiable, 'routeNotificationFor')) {
             $to = $notifiable->routeNotificationFor('sms');
         }
+        //if($to==null){
+        //    return null;
+        //}
 
         $smsData = SmsData::from(['from'=>'Xot','to'=>$to,'body'=>'test']);
 
 
         return $smsData;
+    }
+
+    public function mergeData(array $data): self
+    {
+        $this->data=array_merge($this->data,$data);
+        return $this;
     }
 }

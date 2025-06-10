@@ -22,7 +22,7 @@ interface TelegramProviderActionInterface
 
 1. **Coerenza con Laravel**: Il framework Laravel utilizza il suffisso `Contract` per le sue interfacce (es. `Illuminate\Contracts\Auth\Authenticatable`).
 2. **Chiarezza semantica**: Il termine "Contract" esprime meglio il concetto di un "contratto" che le classi implementatrici devono rispettare.
-3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli <nome progetto>.
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli SaluteOra.
 4. **Integrazione con tooling**: Gli strumenti di analisi statica e generazione di codice sono configurati per questa convenzione.
 
 ## Implementazione
@@ -39,14 +39,14 @@ Per verificare la corretta implementazione:
 
 ```bash
 # Cerca interfacce con naming errato
-grep -r "interface.*Interface" --include="*.php" /var/www/html/<directory progetto>/laravel/Modules
+grep -r "interface.*Interface" --include="*.php" /var/www/html/saluteora/laravel/Modules
 
 # Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/<directory progetto>/laravel/Modules
+grep -r "interface.*Contract" --include="*.php" /var/www/html/saluteora/laravel/Modules
 ```
 
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
-- [<nome progetto> Code Quality Guidelines](/var/www/html/<directory progetto>/laravel/docs/code-quality.md)
-- [Modulo Xot Contracts](/var/www/html/<directory progetto>/laravel/Modules/Xot/app/Contracts/)
+- [SaluteOra Code Quality Guidelines](/var/www/html/saluteora/laravel/docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/saluteora/laravel/Modules/Xot/app/Contracts/)

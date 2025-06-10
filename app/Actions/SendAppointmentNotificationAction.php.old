@@ -6,15 +6,12 @@ namespace Modules\Notify\Actions;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-<<<<<<< HEAD:app/Actions/SendAppointmentNotificationAction.php
 use Modules\Dental\Models\Appointment;
 use Modules\Notify\Mail\AppointmentNotificationMail;
 use Modules\Patient\Models\Patient;
-=======
 use Modules\<nome progetto>\Models\Appointment;
 use Modules\Notify\Mail\AppointmentNotificationMail;
 use Modules\<nome progetto>\Models\Patient;
->>>>>>> bd51d5d (✨ (SendAppointmentNotificationAction.php): add new action to send appointment notifications via email):app/Actions/SendAppointmentNotificationAction.php.old
 use Spatie\QueueableAction\QueueableAction;
 
 class SendAppointmentNotificationAction
