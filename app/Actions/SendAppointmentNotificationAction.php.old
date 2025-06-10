@@ -6,9 +6,15 @@ namespace Modules\Notify\Actions;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+<<<<<<< HEAD:app/Actions/SendAppointmentNotificationAction.php
 use Modules\Dental\Models\Appointment;
 use Modules\Notify\Mail\AppointmentNotificationMail;
 use Modules\Patient\Models\Patient;
+=======
+use Modules\<nome progetto>\Models\Appointment;
+use Modules\Notify\Mail\AppointmentNotificationMail;
+use Modules\<nome progetto>\Models\Patient;
+>>>>>>> bd51d5d (✨ (SendAppointmentNotificationAction.php): add new action to send appointment notifications via email):app/Actions/SendAppointmentNotificationAction.php.old
 use Spatie\QueueableAction\QueueableAction;
 
 class SendAppointmentNotificationAction
@@ -28,7 +34,7 @@ class SendAppointmentNotificationAction
      * @param Appointment $appointment L'appuntamento a cui si riferisce la notifica
      * @param string $type Il tipo di notifica (confermato, annullato, promemoria, ecc.)
      * @param array<string, mixed> $additionalData Dati aggiuntivi per la notifica
-     * 
+     *
      * @return bool
      */
     public function execute(
@@ -39,7 +45,7 @@ class SendAppointmentNotificationAction
         try {
             // Carica il paziente con le relazioni necessarie
             $patient = Patient::with('user')->find($appointment->patient_id);
-            
+
             if (!$patient) {
                 Log::error('Paziente non trovato per l\'invio della notifica di appuntamento', [
                     'appointment_id' => $appointment->id,
@@ -47,7 +53,7 @@ class SendAppointmentNotificationAction
                 ]);
                 return false;
             }
-            
+
             // Prepara i dati per la notifica
             $notificationData = [
                 'appointment' => $appointment,
@@ -55,16 +61,16 @@ class SendAppointmentNotificationAction
                 'type' => $type,
                 'additionalData' => $additionalData,
             ];
-            
+
             // Invia email se disponibile
             if ($patient->user && $patient->user->email) {
                 Mail::to($patient->user->email)
                     ->send(new AppointmentNotificationMail($notificationData));
             }
-            
+
             // Registra la notifica nel database
             $this->recordNotification($appointment, $patient, $type);
-            
+
             // Logga l'invio della notifica
             activity()
                 ->performedOn($appointment)
@@ -74,7 +80,7 @@ class SendAppointmentNotificationAction
                     'patient_id' => $patient->id,
                 ])
                 ->log("Notifica di appuntamento di tipo '{$type}' inviata");
-            
+
             return true;
         } catch (\Exception $e) {
             Log::error('Errore nell\'invio della notifica di appuntamento', [
@@ -83,11 +89,11 @@ class SendAppointmentNotificationAction
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
             ]);
-            
+
             return false;
         }
     }
-    
+
     /**
      * Registra la notifica nel database.
      *

@@ -10,7 +10,11 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+<<<<<<< HEAD
 use Modules\Dental\Models\Appointment;
+=======
+use Modules\<nome progetto>\Models\Appointment;
+>>>>>>> bd51d5d (✨ (SendAppointmentNotificationAction.php): add new action to send appointment notifications via email)
 
 class AppointmentNotificationMail extends Mailable implements ShouldQueue
 {
@@ -40,7 +44,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
     {
         $appointment = $this->notificationData['appointment'];
         $type = $this->notificationData['type'];
-        
+
         $subject = match($type) {
             'confirmed' => 'Conferma Appuntamento',
             'reminder' => 'Promemoria Appuntamento',
@@ -48,11 +52,11 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             'rescheduled' => 'Modifica Appuntamento',
             default => 'Notifica Appuntamento',
         };
-        
+
         if ($appointment instanceof Appointment && $appointment->id) {
             $subject .= ' #' . $appointment->id;
         }
-        
+
         return new Envelope(
             subject: $subject,
             tags: ['appointment', $type],
@@ -69,7 +73,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
     public function content(): Content
     {
         $type = $this->notificationData['type'];
-        
+
         // Determina il template da utilizzare in base al tipo di notifica
         $view = match($type) {
             'confirmed' => 'notify::emails.appointments.confirmed',
@@ -78,7 +82,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             'rescheduled' => 'notify::emails.appointments.rescheduled',
             default => 'notify::emails.appointments.generic',
         };
-        
+
         return new Content(
             view: $view,
             with: [
