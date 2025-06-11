@@ -70,21 +70,31 @@
         
         <x-filament::input.wrapper>
             <x-filament::input.label for="content">
-                {{ __('Contenuto') }}
+                {{ __('Contenuto Template') }}
             </x-filament::input.label>
-            <x-filament::input.textarea
+            <x-filament::input.rich-editor
                 wire:model="content"
                 id="content"
-                rows="10"
                 required
             />
         </x-filament::input.wrapper>
         
-        <div class="flex justify-end">
-            <x-filament::button type="submit">
-                {{ __('Salva') }}
-            </x-filament::button>
-        </div>
+        <x-filament::input.wrapper>
+            <x-filament::input.label for="placeholders">
+                {{ __('Segnaposto Disponibili') }}
+            </x-filament::input.label>
+            <div class="flex flex-wrap gap-2">
+                @foreach($placeholders as $placeholder)
+                    <x-filament::badge>
+                        {{ $placeholder }}
+                    </x-filament::badge>
+                @endforeach
+            </div>
+        </x-filament::input.wrapper>
+        
+        <x-filament::button type="submit">
+            {{ __('Salva Template') }}
+        </x-filament::button>
     </div>
 </x-filament::form>
 ```
@@ -93,34 +103,41 @@
 
 ### TemplateResource
 
+Gestisce i template delle notifiche.
+
 ```php
-final class TemplateResource extends XotBaseResource
+namespace Modules\Notify\Filament\Resources;
+
+use Filament\Forms\Components\KeyValue;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Notifications\Notification;
+use Filament\Resources\Resource;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Modules\Notify\Actions\SendNotificationAction;
+use Modules\Notify\Filament\Resources\TemplateResource\Pages;
+use Modules\Notify\Models\Template;
+
+class TemplateResource extends Resource
 {
     protected static ?string $model = Template::class;
-    protected static ?string $navigationGroup = 'Notifiche';
+
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Card::make()
-                    ->schema([
-                        TextInput::make('name')
-                            ->required()
-                            ->maxLength(255),
-                        TextInput::make('description')
-                            ->maxLength(255),
-                        Select::make('type')
-                            ->options(TemplateType::class)
-                            ->required(),
-                        Select::make('status')
-                            ->options(TemplateStatus::class)
-                            ->required(),
-                        MarkdownEditor::make('content')
-                            ->required()
-                            ->columnSpan('full'),
-                    ])
-                    ->columns(2),
+                TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                RichEditor::make('content')
+                    ->required(),
             ]);
     }
 
@@ -129,36 +146,24 @@ final class TemplateResource extends XotBaseResource
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable()
-                    ->sortable(),
-                TextColumn::make('type')
-                    ->badge(),
-                TextColumn::make('status')
-                    ->badge(),
+                    ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
             ])
-            ->filters([
-                SelectFilter::make('type')
-                    ->options(TemplateType::class),
-                SelectFilter::make('status')
-                    ->options(TemplateStatus::class),
-            ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                EditAction::make(),
+                self::getSendTestNotificationAction(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                DeleteBulkAction::make(),
             ]);
     }
 
     public static function getRelations(): array
     {
         return [
-            VersionsRelationManager::class,
-            AnalyticsRelationManager::class,
+            //
         ];
     }
 
@@ -170,28 +175,73 @@ final class TemplateResource extends XotBaseResource
             'edit' => Pages\EditTemplate::route('/{record}/edit'),
         ];
     }
+
+    protected static function getSendTestNotificationAction(): Action
+    {
+        return Action::make('sendTestNotification')
+            ->label(__('Invia Test'))
+            ->icon('heroicon-o-paper-airplane')
+            ->color('primary')
+            ->modalHeading(__('Invia Notifica di Test'))
+            ->action(function (Template $record, array $data): void {
+                app(SendNotificationAction::class)->execute(
+                    $data['recipient'],
+                    $record->code,
+                    $data['test_data'] ?? [],
+                    ['mail']
+                );
+
+                Notification::make()
+                    ->title(__('Notifica di test inviata'))
+                    ->success()
+                    ->send();
+            })
+            ->form([
+                TextInput::make('recipient')
+                    ->email()
+                    ->required(),
+                KeyValue::make('test_data')
+                    ->label(__('Dati di Test')),
+            ]);
+    }
 }
 ```
 
-### Relation Managers
+### NotificationResource
 
-#### VersionsRelationManager
+Visualizza le notifiche inviate.
 
 ```php
-final class VersionsRelationManager extends RelationManager
+namespace Modules\Notify\Filament\Resources;
+
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages;
+use Modules\Notify\Models\Notification as NotificationModel;
+
+class NotificationResource extends Resource
 {
-    protected static string $relationship = 'versions';
-    protected static ?string $recordTitleAttribute = 'version';
+    protected static ?string $model = NotificationModel::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-bell';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                MarkdownEditor::make('content')
-                    ->required()
-                    ->columnSpan('full'),
-                KeyValue::make('metadata')
-                    ->columnSpan('full'),
+                TextInput::make('recipient')
+                    ->required(),
+                TextInput::make('channel')
+                    ->required(),
+                Textarea::make('content')
+                    ->required(),
+                DateTimePicker::make('sent_at'),
             ]);
     }
 
@@ -199,196 +249,181 @@ final class VersionsRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                TextColumn::make('version')
+                TextColumn::make('recipient')
+                    ->searchable(),
+                TextColumn::make('channel'),
+                TextColumn::make('sent_at')
+                    ->dateTime()
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime(),
-            ])
-            ->filters([
-                //
-            ])
-            ->headerActions([
-                Tables\Actions\CreateAction::make(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                ViewAction::make(),
             ])
-            ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]);
+            ->defaultSort('sent_at', 'desc');
     }
-}
-```
 
-#### AnalyticsRelationManager
-
-```php
-final class AnalyticsRelationManager extends RelationManager
-{
-    protected static string $relationship = 'analytics';
-
-    public static function table(Table $table): Table
+    public static function getRelations(): array
     {
-        return $table
-            ->columns([
-                TextColumn::make('event_type')
-                    ->badge(),
-                TextColumn::make('occurred_at')
-                    ->dateTime(),
-                TextColumn::make('event_data')
-                    ->json(),
-            ])
-            ->filters([
-                SelectFilter::make('event_type')
-                    ->options([
-                        'sent' => 'Inviato',
-                        'delivered' => 'Consegnato',
-                        'opened' => 'Aperto',
-                        'clicked' => 'Cliccato',
-                        'bounced' => 'Respinto',
-                    ]),
-            ])
-            ->headerActions([
-                //
-            ])
-            ->actions([
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]);
-    }
-}
-```
-
-## Widgets
-
-### NotificationStatsWidget
-```php
-<x-filament::widget>
-    <x-filament::card>
-        <div class="grid grid-cols-3 gap-4">
-            <x-filament::stats-card
-                :label="__('Inviati')"
-                :value="$sent"
-                icon="heroicon-o-paper-airplane"
-            />
-            
-            <x-filament::stats-card
-                :label="__('Aperture')"
-                :value="$open_rate . '%'"
-                icon="heroicon-o-eye"
-            />
-            
-            <x-filament::stats-card
-                :label="__('Click')"
-                :value="$click_rate . '%'"
-                icon="heroicon-o-cursor-click"
-            />
-        </div>
-    </x-filament::card>
-</x-filament::widget>
-```
-
-### EmailActivityWidget
-
-```php
-final class EmailActivityWidget extends Widget
-{
-    protected static string $view = 'notify::widgets.email-activity';
-    protected int|string|array $columnSpan = 'full';
-
-    protected function getViewData(): array
-    {
-        $analytics = app(AnalyticsService::class);
-        
         return [
-            'chart' => [
-                'type' => 'line',
-                'data' => $analytics->getActivityChartData(
-                    now()->subDays(30),
-                    now()
-                ),
-            ],
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListNotifications::route('/'),
+            'view' => Pages\ViewNotification::route('/{record}'),
         ];
     }
 }
 ```
 
-## Views
-
-### Template Stats Widget View
-
-```blade
-<x-filament::widget>
-    <x-filament::card>
-        <div class="space-y-4">
-            <div class="grid grid-cols-3 gap-4">
-                <x-filament::stats-card
-                    :label="__('Inviati')"
-                    :value="$sent"
-                    icon="heroicon-o-paper-airplane"
-                />
-                
-                <x-filament::stats-card
-                    :label="__('Aperture')"
-                    :value="$open_rate . '%'"
-                    icon="heroicon-o-eye"
-                />
-                
-                <x-filament::stats-card
-                    :label="__('Click')"
-                    :value="$click_rate . '%'"
-                    icon="heroicon-o-cursor-click"
-                />
-            </div>
-        </div>
-    </x-filament::card>
-</x-filament::widget>
-```
-
-### Email Activity Widget View
-
-```blade
-<x-filament::widget>
-    <x-filament::card>
-        <div class="h-80">
-            <div
-                x-data="{
-                    chart: null,
-                    init() {
-                        this.chart = new ApexCharts($refs.chart, @js($chart))
-                        this.chart.render()
-                    }
-                }"
-            >
-                <div x-ref="chart"></div>
-            </div>
-        </div>
-    </x-filament::card>
-</x-filament::widget>
-```
-
 ## Actions
 
-### SendTestNotificationAction
+### SendTestNotification
+
+Azione per inviare una notifica di test da un template.
 
 ```php
-final class SendTestNotificationAction extends Action
+namespace Modules\Notify\Actions;
+
+use Filament\Notifications\Notification;
+use Modules\Notify\Models\Template;
+use Spatie\QueueableAction\QueueableAction;
+
+class SendTestNotification
 {
-    public static function getDefaultName(): ?string
+    use QueueableAction;
+
+    public function execute(string $recipient, string $templateCode, array $data, array $channels): void
     {
-        return 'send_test';
+        // Logica per inviare la notifica di test
+        // ...
+
+        Notification::make()
+            ->title('Notifica di test inviata con successo')
+            ->success()
+            ->send();
+    }
+}
+```
+
+## Pages
+
+### Dashboard
+
+Pagina principale del modulo Notify.
+
+```php
+namespace Modules\Notify\Filament\Pages;
+
+use Filament\Pages\Page;
+
+class Dashboard extends Page
+{
+    protected static ?string $navigationIcon = 'heroicon-o-home';
+
+    protected static string $view = 'notify::filament.pages.dashboard';
+}
+```
+
+## Widgets
+
+### LatestNotificationsWidget
+
+Mostra le ultime notifiche.
+
+```php
+namespace Modules\Notify\Filament\Widgets;
+
+use Filament\Widgets\Widget;
+use Illuminate\Support\Facades\Auth;
+use Modules\Notify\Models\Notification as NotificationModel;
+
+class LatestNotificationsWidget extends Widget
+{
+    protected static string $view = 'notify::filament.widgets.latest-notifications';
+
+    protected int | string | array $columnSpan = 'full';
+
+    public function getNotificationsProperty()
+    {
+        return NotificationModel::where('recipient_id', Auth::id())
+            ->latest()
+            ->take(5)
+            ->get();
+    }
+}
+```
+
+### StatsOverviewWidget
+
+Mostra statistiche sulle notifiche.
+
+```php
+namespace Modules\Notify\Filament\Widgets;
+
+use Filament\Widgets\StatsOverviewWidget as BaseWidget;
+use Filament\Widgets\StatsOverviewWidget\Stat;
+use Modules\Notify\Models\Notification as NotificationModel;
+use Modules\Notify\Models\Template;
+
+class StatsOverviewWidget extends BaseWidget
+{
+    protected function getStats(): array
+    {
+        return [
+            Stat::make('Total Templates', Template::count())
+                ->description('Numero totale di template')
+                ->icon('heroicon-o-document-text'),
+            Stat::make('Total Notifications Sent', NotificationModel::count())
+                ->description('Numero totale di notifiche inviate')
+                ->icon('heroicon-o-bell'),
+            Stat::make('Notifications Sent Today', NotificationModel::whereDate('sent_at', today())->count())
+                ->description('Notifiche inviate oggi')
+                ->icon('heroicon-o-calendar'),
+        ];
+    }
+}
+```
+
+## Custom Actions in Resource
+
+Esempio di come aggiungere un'azione custom a `TemplateResource` per inviare una notifica di test.
+
+```php
+// In TemplateResource.php
+
+use Filament\Forms\Components\KeyValue;
+use Filament\Notifications\Notification;
+use Filament\Tables\Actions\Action;
+use Modules\Notify\Actions\SendNotificationAction;
+use Modules\Notify\Models\Template;
+
+// ... (altri use)
+
+class TemplateResource extends Resource
+{
+    // ... (altre proprietà e metodi)
+
+    public static function table(Table $table): Table
+    {
+        return $table
+            // ... (altre configurazioni della tabella)
+            ->actions([
+                EditAction::make(),
+                self::getSendTestNotificationAction(), // Azione custom aggiunta qui
+            ]);
     }
 
-    protected function setUp(): void
+    protected static function getSendTestNotificationAction(): Action
     {
-        parent::setUp();
-
-        $this
+        return Action::make('sendTestNotification')
             ->label(__('Invia Test'))
             ->icon('heroicon-o-paper-airplane')
+            ->color('primary')
+            ->modalHeading(__('Invia Notifica di Test'))
             ->action(function (Template $record, array $data): void {
                 app(SendNotificationAction::class)->execute(
                     $data['recipient'],
@@ -430,8 +465,8 @@ final class NotifyPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->discoverResources(in: module_path('Notify', 'Filament/Resources'), for: 'Modules\\Notify\\Filament\\Resources')
-            ->discoverPages(in: module_path('Notify', 'Filament/Pages'), for: 'Modules\\Notify\\Filament\\Pages')
+            ->discoverResources(in: module_path('Notify', 'Filament/Resources'), for: 'Modules\Notify\Filament\Resources')
+            ->discoverPages(in: module_path('Notify', 'Filament/Pages'), for: 'Modules\Notify\Filament\Pages')
             ->pages([
                 Pages\Dashboard::class,
             ])
@@ -454,3 +489,21 @@ final class NotifyPanelProvider extends PanelProvider
             ]);
     }
 }
+```
+
+## Relation Managers
+
+Qualora si necessiti di implementare `RelationManager` all'interno del modulo Notify (ad esempio, per visualizzare notifiche correlate a un'altra risorsa, o viceversa), è fondamentale seguire le linee guida centralizzate fornite dal modulo Xot.
+
+Tutti i `RelationManager` devono estendere `Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager`.
+
+Per dettagli completi su come:
+- Estendere `XotBaseRelationManager`
+- Definire lo schema del form (`getFormSchema()`)
+- Configurare le colonne della tabella (`getCustomColumns()`)
+- Gestire azioni, filtri e traduzioni
+
+Si prega di consultare la documentazione principale:
+-   **[Linee Guida per RelationManager e Tabelle Personalizzate Xot in Filament](../../Xot/docs/filament_relationmanager_e_tabelle_xot.md)**
+
+Questo assicura coerenza, riutilizzo del codice e aderenza agli standard del progetto Laraxot.

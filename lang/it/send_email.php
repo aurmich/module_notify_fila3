@@ -51,6 +51,14 @@ return array (
       'placeholder' => 'Inserisci i parametri',
       'label' => 'Parametri',
     ),
+<<<<<<< HEAD
+=======
+    'body_html' => 
+    array (
+      'description' => 'body_html',
+      'helper_text' => 'body_html',
+    ),
+>>>>>>> c62e297 (.)
   ),
   'actions' => 
   array (
