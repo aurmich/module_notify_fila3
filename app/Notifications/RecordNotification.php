@@ -1,21 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Modules\Notify\Notifications;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notification;
-use Modules\Notify\Channels\SmsChannel;
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Emails\SpatieEmail;
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Channels\SmsChannel;
 use Modules\Notify\Models\MailTemplate;
 use Illuminate\Notifications\Notification;
-=======
->>>>>>> c62e297 (.)
 
 class RecordNotification extends Notification
 {
@@ -32,7 +24,6 @@ class RecordNotification extends Notification
 
     public function via($notifiable): array
     {
-<<<<<<< HEAD
         $channels = [];
         if (!method_exists($notifiable, 'routeNotificationFor')){
             return $channels;
@@ -45,10 +36,6 @@ class RecordNotification extends Notification
         }
 
         return $channels;
-=======
-        // return ['mail'];
-        return [SmsChannel::class];
->>>>>>> c62e297 (.)
     }
 
     public function toMail($notifiable): SpatieEmail
@@ -68,6 +55,9 @@ class RecordNotification extends Notification
 
     /**
      * Get the SMS representation of the notification.
+     *
+     * @param object $notifiable
+     * @return SmsData
      */
     public function toSms(object $notifiable): ?SmsData
     {
@@ -83,7 +73,7 @@ class RecordNotification extends Notification
         */
         // If the notifiable entity has a routeNotificationForSms method,
         // we'll use that to get the destination phone number
-        // dddx($notifiable);//Illuminate\Notifications\AnonymousNotifiable
+        //dddx($notifiable);//Illuminate\Notifications\AnonymousNotifiable
 
         if (method_exists($notifiable, 'routeNotificationFor')) {
             $to = $notifiable->routeNotificationFor('sms');
@@ -92,11 +82,11 @@ class RecordNotification extends Notification
         //    return null;
         //}
 
-        $smsData = SmsData::from(['from' => 'Xot', 'to' => $to, 'body' => 'test']);
+        $smsData = SmsData::from(['from'=>'Xot','to'=>$to,'body'=>'test']);
+
 
         return $smsData;
     }
-<<<<<<< HEAD
 
     public function mergeData(array $data): self
     {
@@ -104,6 +94,3 @@ class RecordNotification extends Notification
         return $this;
     }
 }
-=======
-}
->>>>>>> c62e297 (.)
