@@ -51,6 +51,20 @@ return array (
       'placeholder' => 'Inserisci i parametri',
       'label' => 'Parametri',
     ),
+<<<<<<< HEAD
+=======
+    'body_html' => 
+    array (
+      'description' => 'body_html',
+      'helper_text' => 'body_html',
+      'placeholder' => 'body_html',
+      'label' => 'body_html',
+    ),
+    'subject' => 
+    array (
+      'description' => 'subject',
+    ),
+>>>>>>> 86996d7 (.)
   ),
   'actions' => 
   array (
