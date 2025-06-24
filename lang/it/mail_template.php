@@ -39,7 +39,11 @@ return array (
       'label' => 'Classe Mailable',
       'helper_text' => 'Classe PHP che gestisce l\'invio dell\'email',
       'placeholder' => 'es: App\\Mail\\WelcomeEmail',
+<<<<<<< HEAD
       'description' => 'mailable'
+=======
+      'description' => 'mailable',
+>>>>>>> c895250 (.)
     ),
     'subject' => 
     array (
