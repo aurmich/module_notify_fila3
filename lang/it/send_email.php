@@ -60,16 +60,10 @@ return array (
     ),
     'subject' => 
     array (
-<<<<<<< HEAD
       'description' => 'Oggetto email',
       'helper_text' => 'Inserisci l\'oggetto dell\'email',
       'label' => 'Oggetto',
     )
-=======
-      'description' => 'subject',
-      'helper_text' => 'subject',
-    ),
->>>>>>> f28f6e4 (.)
   ),
   'actions' => 
   array (
