@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+<<<<<<< HEAD
+=======
+//use Modules\Tenant\Models\Traits\HasTenant;
+>>>>>>> f28f6e4 (.)
 use Modules\Xot\Traits\Updater;
 use Modules\User\Models\Traits\HasTenants;
 /**
@@ -16,7 +20,11 @@ use Modules\User\Models\Traits\HasTenants;
 class NotificationLog extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
     use HasTenants;
+=======
+    //use HasTenant;
+>>>>>>> f28f6e4 (.)
     use Updater;
 
     public const STATUS_PENDING = 'pending';
