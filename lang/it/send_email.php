@@ -53,9 +53,12 @@ return array (
     ),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 484b1fe (.)
+=======
+>>>>>>> 27f3b42 (.)
     'body_html' => 
     array (
       'description' => 'body_html',
@@ -68,11 +71,14 @@ return array (
       'description' => 'subject',
 <<<<<<< HEAD
     ),
+<<<<<<< HEAD
 >>>>>>> 86996d7 (.)
 =======
       'helper_text' => 'subject',
     ),
 >>>>>>> 484b1fe (.)
+=======
+>>>>>>> 27f3b42 (.)
   ),
   'actions' => 
   array (

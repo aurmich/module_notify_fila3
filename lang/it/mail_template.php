@@ -41,12 +41,16 @@ return array (
       'placeholder' => 'es: App\\Mail\\WelcomeEmail',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       'description' => 'mailable',
 >>>>>>> 86996d7 (.)
 =======
       'description' => 'mailable',
 >>>>>>> 484b1fe (.)
+=======
+      'description' => 'mailable',
+>>>>>>> 27f3b42 (.)
     ),
     'subject' => 
     array (
@@ -137,9 +141,12 @@ return array (
       'description' => 'slug',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 484b1fe (.)
+=======
+>>>>>>> 27f3b42 (.)
       'helper_text' => 'slug',
       'placeholder' => 'slug',
     ),
@@ -150,9 +157,12 @@ return array (
       'placeholder' => 'name',
       'label' => 'name',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 86996d7 (.)
 =======
 >>>>>>> 484b1fe (.)
+=======
+>>>>>>> 27f3b42 (.)
     ),
   ),
   'actions' => 
