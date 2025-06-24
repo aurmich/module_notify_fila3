@@ -39,18 +39,7 @@ return array (
       'label' => 'Classe Mailable',
       'helper_text' => 'Classe PHP che gestisce l\'invio dell\'email',
       'placeholder' => 'es: App\\Mail\\WelcomeEmail',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'description' => 'mailable',
->>>>>>> 86996d7 (.)
-=======
-      'description' => 'mailable',
->>>>>>> 484b1fe (.)
-=======
-      'description' => 'mailable',
->>>>>>> 27f3b42 (.)
+      'description' => 'mailable'
     ),
     'subject' => 
     array (
@@ -139,14 +128,6 @@ return array (
     array (
       'label' => 'slug',
       'description' => 'slug',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 484b1fe (.)
-=======
->>>>>>> 27f3b42 (.)
       'helper_text' => 'slug',
       'placeholder' => 'slug',
     ),
@@ -156,13 +137,6 @@ return array (
       'helper_text' => 'name',
       'placeholder' => 'name',
       'label' => 'name',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 86996d7 (.)
-=======
->>>>>>> 484b1fe (.)
-=======
->>>>>>> 27f3b42 (.)
     ),
   ),
   'actions' => 

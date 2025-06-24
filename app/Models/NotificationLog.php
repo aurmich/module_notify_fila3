@@ -8,47 +8,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-//use Modules\Tenant\Models\Traits\HasTenant;
->>>>>>> 86996d7 (.)
-=======
->>>>>>> df9cf7c (.)
-=======
->>>>>>> 27f3b42 (.)
 use Modules\Xot\Traits\Updater;
 use Modules\User\Models\Traits\HasTenants;
-=======
-//use Modules\Tenant\Models\Traits\HasTenant;
-use Modules\Xot\Traits\Updater;
-
->>>>>>> 484b1fe (.)
 /**
  * Modello per il logging delle notifiche inviate.
  */
 class NotificationLog extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     use HasTenants;
-=======
-    //use HasTenant;
->>>>>>> 86996d7 (.)
-=======
-    use HasTenants;
->>>>>>> df9cf7c (.)
-=======
-    //use HasTenant;
->>>>>>> 484b1fe (.)
-=======
-    use HasTenants;
->>>>>>> 27f3b42 (.)
     use Updater;
 
     public const STATUS_PENDING = 'pending';
