@@ -60,15 +60,10 @@ return array (
     ),
     'subject' => 
     array (
-<<<<<<< HEAD
       'description' => 'Oggetto email',
       'helper_text' => 'Inserisci l\'oggetto dell\'email',
       'label' => 'Oggetto',
     )
-=======
-      'description' => 'subject',
-    ),
->>>>>>> c895250 (.)
   ),
   'actions' => 
   array (
