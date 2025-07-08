@@ -53,11 +53,19 @@ return array (
     'subject' => 
     array (
       'label' => 'subject',
+      'description' => 'subject',
+      'helper_text' => 'subject',
+      'placeholder' => 'subject',
     ),
     'body_html' => 
     array (
       'label' => 'body_html',
       'description' => 'body_html',
+<<<<<<< HEAD
+=======
+      'helper_text' => 'body_html',
+      'placeholder' => 'body_html',
+>>>>>>> 5219942 (.)
     ),
   ),
   'actions' => 

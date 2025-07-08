@@ -54,6 +54,7 @@ return array (
     ),
     'body_html' => 
     array (
+<<<<<<< HEAD
       'description' => 'Contenuto HTML',
       'helper_text' => 'Contenuto HTML dell\'email',
       'placeholder' => 'Inserisci il contenuto HTML',
@@ -65,6 +66,19 @@ return array (
       'helper_text' => 'Inserisci l\'oggetto dell\'email',
       'label' => 'Oggetto',
       'placeholder' => 'Inserisci l\'oggetto dell\'email',
+=======
+      'description' => 'body_html',
+      'helper_text' => 'body_html',
+      'placeholder' => 'body_html',
+      'label' => 'body_html',
+    ),
+    'subject' => 
+    array (
+      'description' => 'subject',
+      'helper_text' => 'subject',
+      'placeholder' => 'subject',
+      'label' => 'subject',
+>>>>>>> 5219942 (.)
     ),
   ),
   'actions' => 
