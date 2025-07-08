@@ -5,13 +5,17 @@ declare(strict_types=1);
 namespace Modules\Notify\Emails;
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Modules\Xot\Datas\XotData;
 use Modules\Xot\Datas\MetatagData;
 use Illuminate\Support\Facades\File;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Models\MailTemplate;
 use Illuminate\Mail\Mailables\Attachment;
-use Modules\Xot\Datas\XotData;
 use Spatie\MailTemplates\TemplateMailable;
+use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
+
+use function Safe\file_get_contents;
 
 /**
  * @see https://github.com/spatie/laravel-database-mail-templates
@@ -19,27 +23,37 @@ use Spatie\MailTemplates\TemplateMailable;
 class SpatieEmail extends TemplateMailable
 {
     // use our custom mail template model
-    protected static $templateModelClass = MailTemplate::class;
+    /** @var class-string<MailTemplateInterface> */
+    protected static  $templateModelClass = MailTemplate::class;
     public string $slug;
      /** @var array<int, Attachment> */
     protected array $customAttachments = [];
 
     public array $data=[];
 
+    
+
     public function __construct(Model $record, string $slug)
     {
+        $this->slug = Str::slug($slug);
+        
         MailTemplate::firstOrCreate([
             'mailable' => SpatieEmail::class,
-            'slug' => $slug,
+            'slug' => $this->slug,
         ],[
             'subject' => 'Benvenuto, {{ first_name }}',
             'html_template' => '<p>Gentile {{ first_name }} {{ last_name }},</p><p>La tua registrazione  è in attesa di approvazione. Ti contatteremo presto.</p>',
             'text_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.'
         ]);
+        
         $data=$record->toArray();
+        $this->data['login_url']=route('login');
+        $this->data['site_url']=url('/');
+
+        $this->data['logo_header']=MetatagData::make()->getBrandLogo();
         $this->data=array_merge($this->data,$data);
         $this->setAdditionalData($this->data);
-        $this->slug = $slug;
+        
 
     }
 
@@ -47,7 +61,8 @@ class SpatieEmail extends TemplateMailable
     {
         $this->data=array_merge($this->data,$data);
         $this->setAdditionalData($this->data);
-
+        $params=implode(',',array_keys($this->data));
+        MailTemplate::where(['slug'=>$this->slug,'mailable'=>SpatieEmail::class])->update(['params'=>$params]);
         return $this;
     }
 

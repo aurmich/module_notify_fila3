@@ -58,6 +58,8 @@ use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
  * @method static Builder<static>|MailTemplate whereTextTemplate($value)
  * @method static Builder<static>|MailTemplate whereUpdatedAt($value)
  * @method static Builder<static>|MailTemplate whereUpdatedBy($value)
+ * @property string|null $params
+ * @method static Builder<static>|MailTemplate whereParams($value)
  * @mixin \Eloquent
  */
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
@@ -81,6 +83,7 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         'html_template',
         'text_template',
         //'version',  //under development
+        'params',
     ];
 
     /**
@@ -109,10 +112,13 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 
     public function scopeForMailable(Builder $query, Mailable $mailable): Builder
     {
-
+        if(!method_exists($mailable, 'getSlug')){
+            throw new \Exception('Il metodo getSlug() non è definito nella classe '.$mailable::class);
+        }
+        $slug=$mailable->getSlug();
         return $query
             ->where('mailable', get_class($mailable))
-            ->where('slug', $mailable->getSlug());
+            ->where('slug', $slug);
     }
 
 

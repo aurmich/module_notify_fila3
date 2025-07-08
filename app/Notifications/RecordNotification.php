@@ -2,6 +2,7 @@
 
 namespace Modules\Notify\Notifications;
 
+use Illuminate\Support\Str;
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Emails\SpatieEmail;
 use Illuminate\Database\Eloquent\Model;
@@ -18,10 +19,14 @@ class RecordNotification extends Notification
     public function __construct(Model $record, string $slug)
     {
         $this->record = $record;
-        $this->slug = $slug;
+        $this->slug = Str::slug($slug);
+        
 
     }
-
+    /** 
+     * @param object $notifiable
+     * @return array<string|class-string>
+     */
     public function via($notifiable): array
     {
         $channels = [];
@@ -38,6 +43,10 @@ class RecordNotification extends Notification
         return $channels;
     }
 
+    /**
+     * @param object $notifiable
+     * @return SpatieEmail
+     */
     public function toMail($notifiable): SpatieEmail
     {
         $email = new SpatieEmail($this->record, $this->slug);
@@ -74,13 +83,13 @@ class RecordNotification extends Notification
         // If the notifiable entity has a routeNotificationForSms method,
         // we'll use that to get the destination phone number
         //dddx($notifiable);//Illuminate\Notifications\AnonymousNotifiable
-
+        $to=null;
         if (method_exists($notifiable, 'routeNotificationFor')) {
             $to = $notifiable->routeNotificationFor('sms');
         }
-        //if($to==null){
-        //    return null;
-        //}
+        if($to==null){
+            return null;
+        }
 
         $smsData = SmsData::from(['from'=>'Xot','to'=>$to,'body'=>'test']);
 
