@@ -1,38 +1,28 @@
 <?php
 
 return [
+    'resource' => [
+        'name' => 'Template Notifiche',
+        'plural' => 'Template Notifiche',
+    ],
+    'navigation' => [
+        'name' => 'Template Notifiche',
+        'plural' => 'Template Notifiche',
+        'group' => [
+            'name' => 'Sistema',
+            'description' => 'Gestione dei modelli per le notifiche',
+        ],
+        'label' => 'Template Notifiche',
+        'icon' => 'notify-template-animated',
+        'sort' => '48',
+    ],
     'fields' => [
         'name' => [
-            'label' => 'Name',
-            'placeholder' => 'Enter template name',
-            'help' => 'The identifying name of the template',
-            'tooltip' => 'This field is required',
+            'label' => 'Nome',
+            'tooltip' => 'Nome identificativo del template',
+            'placeholder' => 'es: Notifica Scadenza',
             'helper_text' => 'Inserisci un nome descrittivo per il template',
-        ],
-        'subject' => [
-            'label' => 'Subject',
-            'placeholder' => 'Enter notification subject',
-            'help' => 'The subject that will appear in the notification',
-            'tooltip' => 'This field is required',
-            'helper_text' => 'Oggetto visualizzato nella notifica (es. oggetto email)',
-        ],
-        'body_text' => [
-            'label' => 'Text',
-            'placeholder' => 'Enter notification text',
-            'help' => 'The text content of the notification',
-            'tooltip' => 'This field is required',
-        ],
-        'body_html' => [
-            'label' => 'HTML',
-            'placeholder' => 'Enter notification HTML content',
-            'help' => 'The HTML content of the notification',
-            'tooltip' => 'This field is required',
-        ],
-        'preview_data' => [
-            'label' => 'Preview Data',
-            'placeholder' => 'Enter preview data',
-            'help' => 'The data used to display the preview',
-            'tooltip' => 'JSON format',
+            'help' => 'Inserisci un nome descrittivo per il template',
         ],
         'description' => [
             'label' => 'Descrizione',
@@ -52,6 +42,12 @@ return [
                 'telegram' => 'Telegram',
                 'whatsapp' => 'WhatsApp',
             ],
+        ],
+        'subject' => [
+            'label' => 'Oggetto',
+            'tooltip' => 'Oggetto della notifica',
+            'placeholder' => 'es: Promemoria appuntamento',
+            'helper_text' => 'Oggetto visualizzato nella notifica (es. oggetto email)',
         ],
         'content' => [
             'label' => 'Contenuto',
@@ -79,37 +75,6 @@ return [
             'tooltip' => 'Data dell\'ultima modifica del template',
         ],
     ],
-    'navigation' => [
-        'label' => 'Notification Templates',
-        'group' => [
-            'name' => 'Sistema',
-            'description' => 'Gestione dei modelli per le notifiche',
-        ],
-        'icon' => 'heroicon-o-bell',
-        'name' => 'Template Notifiche',
-        'plural' => 'Template Notifiche',
-        'sort' => '48',
-    ],
-    'messages' => [
-        'success' => [
-            'created' => 'Template created successfully',
-            'updated' => 'Template updated successfully',
-            'deleted' => 'Template deleted successfully',
-        ],
-        'errors' => [
-            'not_found' => 'Template not found',
-            'unauthorized' => 'Unauthorized',
-        ],
-        'error' => 'Si è verificato un errore durante l\'operazione',
-        'confirmation' => 'Sei sicuro di voler procedere con questa operazione?',
-        'template_created' => 'Il template è stato creato con successo',
-        'template_updated' => 'Il template è stato aggiornato con successo',
-        'template_deleted' => 'Il template è stato eliminato con successo',
-    ],
-    'resource' => [
-        'name' => 'Template Notifiche',
-        'plural' => 'Template Notifiche',
-    ],
     'actions' => [
         'preview' => [
             'label' => 'Anteprima',
@@ -132,5 +97,13 @@ return [
             'success_message' => 'Notifica di test inviata con successo',
             'error_message' => 'Errore nell\'invio della notifica di test',
         ],
+    ],
+    'messages' => [
+        'success' => 'Operazione completata con successo',
+        'error' => 'Si è verificato un errore durante l\'operazione',
+        'confirmation' => 'Sei sicuro di voler procedere con questa operazione?',
+        'template_created' => 'Il template è stato creato con successo',
+        'template_updated' => 'Il template è stato aggiornato con successo',
+        'template_deleted' => 'Il template è stato eliminato con successo',
     ],
 ];
