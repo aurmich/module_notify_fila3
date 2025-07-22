@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'navigation' => [
         'label' => 'Invio Email',
@@ -8,6 +9,8 @@ return [
             'label' => 'Sistema',
             'description' => 'Funzionalità per l\'invio di email attraverso il sistema di notifiche',
 =======
+=======
+>>>>>>> 2b89f0e (.)
 declare(strict_types=1);
 
 return [
@@ -16,13 +19,17 @@ return [
         'group' => [
             'label' => 'System',
             'description' => 'Functionality for sending emails through the notification system',
+<<<<<<< HEAD
 >>>>>>> a280387 (.)
+=======
+>>>>>>> 2b89f0e (.)
         ],
         'icon' => 'heroicon-o-envelope',
         'sort' => '49',
     ],
     'fields' => [
         'subject' => [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'label' => 'Oggetto',
             'placeholder' => 'Inserisci l\'oggetto dell\'email',
@@ -77,6 +84,8 @@ return [
                 'high' => 'Alta',
                 'urgent' => 'Urgente',
 =======
+=======
+>>>>>>> 2b89f0e (.)
             'label' => 'Subject',
             'placeholder' => 'Enter email subject',
             'help' => 'Subject that will appear in the email header',
@@ -113,7 +122,11 @@ return [
         ],
         'parameters' => [
             'label' => 'Template Parameters',
+<<<<<<< HEAD
             'placeholder' => '{\"name\": \"John\", \"surname\": \"Doe\"}',
+=======
+            'placeholder' => '{"name": "John", "surname": "Doe"}',
+>>>>>>> 2b89f0e (.)
             'help' => 'JSON parameters to customize the selected template',
         ],
         'attachments' => [
@@ -129,12 +142,16 @@ return [
                 'normal' => 'Normal',
                 'high' => 'High',
                 'urgent' => 'Urgent',
+<<<<<<< HEAD
 >>>>>>> a280387 (.)
+=======
+>>>>>>> 2b89f0e (.)
             ],
         ],
     ],
     'actions' => [
         'send' => [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'label' => 'Invia Email',
             'success' => 'Email inviata con successo al destinatario',
@@ -183,6 +200,8 @@ return [
         'parameters_json' => 'I parametri devono essere in formato JSON valido',
         'priority_valid' => 'La priorità deve essere una delle opzioni disponibili',
 =======
+=======
+>>>>>>> 2b89f0e (.)
             'label' => 'Send Email',
             'success' => 'Email sent successfully to the recipient',
             'error' => 'Error sending email. Check the configuration.',
@@ -209,7 +228,11 @@ return [
         ],
     ],
     'messages' => [
+<<<<<<< HEAD
         'success' => 'Email sent successfully! Check the recipient\'s email inbox.',
+=======
+        'success' => "Email sent successfully! Check the recipient's email inbox.",
+>>>>>>> 2b89f0e (.)
         'error' => 'An error occurred while sending the email. Check the SMTP configuration.',
         'draft_saved' => 'Draft saved correctly. You can retrieve it from the Drafts section.',
         'scheduled' => 'Email scheduled for sending. You will receive a notification when it is sent.',
@@ -229,6 +252,9 @@ return [
         'template_exists' => 'Selected template does not exist',
         'parameters_json' => 'Parameters must be in valid JSON format',
         'priority_valid' => 'Priority must be one of the available options',
+<<<<<<< HEAD
 >>>>>>> a280387 (.)
+=======
+>>>>>>> 2b89f0e (.)
     ],
 ];

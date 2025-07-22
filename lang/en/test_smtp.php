@@ -1,12 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'navigation' => [
         'label' => 'Test SMTP',
         'group' => [
             'label' => 'Invia',
 =======
+=======
+>>>>>>> 2b89f0e (.)
 declare(strict_types=1);
 
 return [
@@ -14,6 +17,7 @@ return [
         'label' => 'SMTP Test',
         'group' => [
             'label' => 'Send',
+<<<<<<< HEAD
 >>>>>>> a280387 (.)
         ],
         'icon' => 'heroicon-o-envelope',
@@ -36,6 +40,14 @@ return [
             'placeholder' => 'Inserisci lo username per l\'autenticazione',
             'help' => 'Username per l\'autenticazione SMTP (spesso l\'indirizzo email)',
 =======
+=======
+        ],
+        'icon' => 'heroicon-o-envelope',
+        'sort' => 50,
+    ],
+    'fields' => [
+        'host' => [
+>>>>>>> 2b89f0e (.)
             'label' => 'SMTP Host',
             'placeholder' => 'Enter SMTP host (e.g. smtp.gmail.com)',
             'help' => 'SMTP server address for sending emails',
@@ -49,6 +61,7 @@ return [
             'label' => 'Username',
             'placeholder' => 'Enter username for authentication',
             'help' => 'Username for SMTP authentication (often the email address)',
+<<<<<<< HEAD
 >>>>>>> a280387 (.)
         ],
         'password' => [
@@ -92,6 +105,12 @@ return [
             'placeholder' => '<h1>Test SMTP</h1><p>Questa è una email di test per verificare la configurazione SMTP.</p>',
             'help' => 'Contenuto HTML della email di test (opzionale)',
 =======
+=======
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => '********',
+>>>>>>> 2b89f0e (.)
             'help' => 'Password for SMTP authentication (can be an app-specific password)',
         ],
         'encryption' => [
@@ -128,11 +147,15 @@ return [
             'label' => 'HTML Content',
             'placeholder' => '<h1>SMTP Test</h1><p>This is a test email to verify the SMTP configuration.</p>',
             'help' => 'HTML content of the test email (optional)',
+<<<<<<< HEAD
 >>>>>>> a280387 (.)
+=======
+>>>>>>> 2b89f0e (.)
         ],
     ],
     'actions' => [
         'send' => [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'label' => 'Invia Test SMTP',
             'success' => 'Test SMTP inviato con successo! La configurazione è corretta.',
@@ -168,6 +191,8 @@ return [
         'to_valid' => 'L\'email destinatario deve essere un indirizzo valido',
         'subject_required' => 'L\'oggetto della email è obbligatorio',
 =======
+=======
+>>>>>>> 2b89f0e (.)
             'label' => 'Send SMTP Test',
             'success' => 'SMTP test sent successfully! The configuration is correct.',
             'error' => 'Error sending SMTP test. Check the configuration.',
@@ -201,6 +226,9 @@ return [
         'to_required' => 'Recipient email is required',
         'to_valid' => 'Recipient email must be a valid address',
         'subject_required' => 'Email subject is required',
+<<<<<<< HEAD
 >>>>>>> a280387 (.)
+=======
+>>>>>>> 2b89f0e (.)
     ],
 ];

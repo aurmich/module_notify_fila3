@@ -2,6 +2,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2b89f0e (.)
 declare(strict_types=1);
 
 return [
@@ -116,6 +119,7 @@ return [
         'priority_valid' => 'La priorità deve essere una delle opzioni disponibili',
     ],
 ];
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 852dfcb (.)
@@ -576,3 +580,5 @@ return array (
   ),
 );
 >>>>>>> 852dfcb (.)
+=======
+>>>>>>> 2b89f0e (.)

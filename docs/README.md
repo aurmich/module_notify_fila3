@@ -2,6 +2,9 @@
 
 ## Panoramica
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2b89f0e (.)
 Il modulo Notify gestisce il sistema di notifiche dell'applicazione, inclusi template e-mail e gestione dei canali di comunicazione.
 
 ## Struttura
@@ -169,9 +172,13 @@ Notify/
 │   └── lang/
 └── routes/
 ```
+<<<<<<< HEAD
 =======
 Il modulo Notify gestisce l'invio di notifiche email, SMS e push attraverso il sistema Laraxot.
 >>>>>>> a280387 (.)
+=======
+Il modulo Notify gestisce l'invio di notifiche email, SMS e push attraverso il sistema Laraxot.
+>>>>>>> 2b89f0e (.)
 
 ## Funzionalità Principali
 - Invio email con template personalizzabili
@@ -188,6 +195,9 @@ Il modulo Notify gestisce l'invio di notifiche email, SMS e push attraverso il s
 - `send_email.php` - **FIX COMPLETATO**: Traduzioni per l'invio email con regola tooltip/helper_text
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2b89f0e (.)
 ## Modifiche Recenti
 
 ### Gennaio 2025 - Aggiornamento File di Traduzione ⭐ **NUOVO**
@@ -219,11 +229,17 @@ Vedi [Translation Files Update 2025](../Lang/docs/translation_files_update_2025.
 - Mantenere SMS concisi
 - Supportare multilingua
 - Gestire variabili
+<<<<<<< HEAD
 =======
 ### Fix Implementati
 - [Fix Traduzioni Send Email](send_email_translation_fix.md) - **REGOLA CRITICA**: tooltip e helper_text per ogni campo
 - [Miglioramento Traduzioni](send_email_translation_improvement.md) - Documentazione precedente
 >>>>>>> a280387 (.)
+=======
+### Fix Implementati
+- [Fix Traduzioni Send Email](send_email_translation_fix.md) - **REGOLA CRITICA**: tooltip e helper_text per ogni campo
+- [Miglioramento Traduzioni](send_email_translation_improvement.md) - Documentazione precedente
+>>>>>>> 2b89f0e (.)
 
 ## Regole Critiche per Traduzioni
 
@@ -251,6 +267,9 @@ Vedi [Translation Files Update 2025](../Lang/docs/translation_files_update_2025.
 - [Best Practices Filament](../../../docs/filament_translation_best_practices.md)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2b89f0e (.)
 ## Dipendenze Principali
 
 ### Moduli
@@ -469,6 +488,10 @@ Per problemi relativi all'invio email tramite le pagine Filament (es. SendEmail)
 - [Come far funzionare la pagina SendEmail e test SMTP](./test_smtp.md)
 
 Questa guida spiega le differenze architetturali tra TestSmtpPage e SendEmail, le cause più comuni di errore e le best practice per la configurazione SMTP.
+<<<<<<< HEAD
 =======
 *Ultimo aggiornamento: 2025-01-06*
 >>>>>>> a280387 (.)
+=======
+*Ultimo aggiornamento: 2025-01-06*
+>>>>>>> 2b89f0e (.)
