@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -116,6 +117,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> 852dfcb (.)
 return array (
   'navigation' => 
   array (
@@ -128,6 +131,7 @@ return array (
     'icon' => 'heroicon-o-envelope',
     'sort' => 49,
   ),
+<<<<<<< HEAD
   'sections' => 
   array (
     'email_details' => 
@@ -161,6 +165,8 @@ return array (
       'description' => 'Opzioni avanzate per l\'invio',
     ),
   ),
+=======
+>>>>>>> 852dfcb (.)
   'fields' => 
   array (
     'subject' => 
@@ -168,40 +174,57 @@ return array (
       'label' => 'Oggetto',
       'placeholder' => 'Inserisci l\'oggetto dell\'email',
       'help' => 'Oggetto che apparirà nell\'intestazione dell\'email',
+<<<<<<< HEAD
       'description' => 'Oggetto dell\'email da inviare',
       'tooltip' => 'L\'oggetto è la prima cosa che il destinatario vedrà',
       'helper_text' => '',
+=======
+>>>>>>> 852dfcb (.)
     ),
     'template_id' => 
     array (
       'label' => 'Template Email',
       'placeholder' => 'Seleziona il template email da utilizzare',
       'help' => 'Template predefinito per l\'email (opzionale)',
+<<<<<<< HEAD
       'description' => 'Template email da utilizzare per il contenuto',
       'tooltip' => 'I template permettono di standardizzare il formato delle email',
       'helper_text' => '',
+=======
+>>>>>>> 852dfcb (.)
     ),
     'to' => 
     array (
       'label' => 'Destinatario',
+<<<<<<< HEAD
       'placeholder' => 'destinatario@esempio.com',
       'help' => 'Indirizzo email del destinatario principale',
       'description' => 'Indirizzo email del destinatario principale',
       'tooltip' => 'Il destinatario principale riceverà l\'email direttamente',
       'helper_text' => '',
+=======
+      'placeholder' => 'destinatario@dominio.com',
+      'help' => 'Indirizzo email del destinatario',
+>>>>>>> 852dfcb (.)
     ),
     'cc' => 
     array (
       'label' => 'Copia Conoscenza (CC)',
+<<<<<<< HEAD
       'placeholder' => 'cc@esempio.com (opzionale)',
       'help' => 'Indirizzi email in copia conoscenza, separati da virgola',
       'description' => 'Indirizzi email in copia conoscenza',
       'tooltip' => 'I destinatari in CC vedranno tutti gli altri indirizzi',
       'helper_text' => '',
+=======
+      'placeholder' => 'cc@dominio.com (opzionale)',
+      'help' => 'Indirizzi email in copia conoscenza, separati da virgole',
+>>>>>>> 852dfcb (.)
     ),
     'bcc' => 
     array (
       'label' => 'Copia Nascosta (BCC)',
+<<<<<<< HEAD
       'placeholder' => 'bcc@esempio.com (opzionale)',
       'help' => 'Indirizzi email in copia nascosta, separati da virgola',
       'description' => 'Indirizzi email in copia nascosta',
@@ -225,47 +248,68 @@ return array (
       'description' => 'Nome visualizzato del mittente personalizzato',
       'tooltip' => 'Il nome del mittente apparirà accanto all\'email',
       'helper_text' => '',
+=======
+      'placeholder' => 'bcc@dominio.com (opzionale)',
+      'help' => 'Indirizzi email in copia nascosta, separati da virgole',
+>>>>>>> 852dfcb (.)
     ),
     'content' => 
     array (
       'label' => 'Contenuto Testo',
       'placeholder' => 'Inserisci il contenuto testuale dell\'email',
+<<<<<<< HEAD
       'help' => 'Contenuto testuale dell\'email (versione solo testo)',
       'description' => 'Contenuto testuale dell\'email',
       'tooltip' => 'Il contenuto testuale è la versione plain text dell\'email',
       'helper_text' => '',
+=======
+      'help' => 'Contenuto testuale dell\'email (versione plain text)',
+>>>>>>> 852dfcb (.)
     ),
     'body_html' => 
     array (
       'label' => 'Contenuto HTML',
       'placeholder' => '<h1>Titolo</h1><p>Contenuto dell\'email in formato HTML</p>',
+<<<<<<< HEAD
       'help' => 'Contenuto HTML formattato dell\'email (opzionale)',
       'description' => 'Contenuto HTML formattato dell\'email',
       'tooltip' => 'Il contenuto HTML permette formattazione avanzata',
       'helper_text' => '',
+=======
+      'help' => 'Contenuto HTML dell\'email da inviare (opzionale)',
+>>>>>>> 852dfcb (.)
     ),
     'parameters' => 
     array (
       'label' => 'Parametri Template',
       'placeholder' => '{"nome": "Mario", "cognome": "Rossi"}',
+<<<<<<< HEAD
       'help' => 'Parametri in formato JSON per personalizzare il template selezionato',
       'description' => 'Parametri per personalizzare il template',
       'tooltip' => 'I parametri sostituiscono i placeholder nel template',
       'helper_text' => '',
+=======
+      'help' => 'Parametri JSON per personalizzare il template selezionato',
+>>>>>>> 852dfcb (.)
     ),
     'attachments' => 
     array (
       'label' => 'Allegati',
       'placeholder' => 'Seleziona i file da allegare',
+<<<<<<< HEAD
       'help' => 'File da allegare all\'email (opzionale, max 10MB per file)',
       'description' => 'File da allegare all\'email',
       'tooltip' => 'Gli allegati verranno inviati insieme all\'email',
       'helper_text' => '',
+=======
+      'help' => 'File da allegare all\'email (opzionale)',
+>>>>>>> 852dfcb (.)
     ),
     'priority' => 
     array (
       'label' => 'Priorità',
       'placeholder' => 'Seleziona la priorità dell\'email',
+<<<<<<< HEAD
       'help' => 'Imposta la priorità di invio dell\'email',
       'description' => 'Livello di priorità per l\'invio dell\'email',
       'tooltip' => 'La priorità influenza l\'ordine di invio delle email',
@@ -311,6 +355,9 @@ return array (
       'description' => 'Abilita il tracking per monitorare l\'engagement',
       'tooltip' => 'Il tracking permette di monitorare l\'apertura e i click',
       'helper_text' => '',
+=======
+      'help' => 'Priorità dell\'email (normale, alta, urgente)',
+>>>>>>> 852dfcb (.)
     ),
   ),
   'actions' => 
@@ -322,6 +369,7 @@ return array (
       'error' => 'Errore nell\'invio dell\'email. Verifica la configurazione.',
       'confirmation' => 'Sei sicuro di voler inviare questa email?',
       'tooltip' => 'Invia l\'email al destinatario specificato',
+<<<<<<< HEAD
       'modal' => 
       array (
         'heading' => 'Conferma Invio Email',
@@ -329,6 +377,8 @@ return array (
         'confirm' => 'Invia Email',
         'cancel' => 'Annulla',
       ),
+=======
+>>>>>>> 852dfcb (.)
     ),
     'preview' => 
     array (
@@ -336,12 +386,15 @@ return array (
       'success' => 'Anteprima dell\'email generata correttamente',
       'error' => 'Errore nella generazione dell\'anteprima',
       'tooltip' => 'Visualizza l\'anteprima dell\'email prima dell\'invio',
+<<<<<<< HEAD
       'modal' => 
       array (
         'heading' => 'Anteprima Email',
         'description' => 'Visualizza come apparirà l\'email al destinatario',
         'close' => 'Chiudi',
       ),
+=======
+>>>>>>> 852dfcb (.)
     ),
     'save_draft' => 
     array (
@@ -349,6 +402,7 @@ return array (
       'success' => 'Bozza salvata correttamente',
       'error' => 'Errore nel salvataggio della bozza',
       'tooltip' => 'Salva l\'email come bozza per inviarla successivamente',
+<<<<<<< HEAD
       'modal' => 
       array (
         'heading' => 'Salva Bozza',
@@ -356,6 +410,8 @@ return array (
         'confirm' => 'Salva Bozza',
         'cancel' => 'Annulla',
       ),
+=======
+>>>>>>> 852dfcb (.)
     ),
     'schedule' => 
     array (
@@ -363,6 +419,7 @@ return array (
       'success' => 'Email programmata per l\'invio',
       'error' => 'Errore nella programmazione dell\'invio',
       'tooltip' => 'Programma l\'invio dell\'email per una data e ora specifiche',
+<<<<<<< HEAD
       'modal' => 
       array (
         'heading' => 'Programma Invio Email',
@@ -386,6 +443,8 @@ return array (
         'confirm' => 'Esegui Test',
         'cancel' => 'Annulla',
       ),
+=======
+>>>>>>> 852dfcb (.)
     ),
     'emailFormActions' => 
     array (
@@ -403,6 +462,7 @@ return array (
     'invalid_parameters' => 'Parametri del template non validi. Verifica il formato JSON.',
     'no_recipients' => 'Nessun destinatario specificato. Inserisci almeno un indirizzo email.',
     'smtp_error' => 'Errore di configurazione SMTP. Verifica le impostazioni del server.',
+<<<<<<< HEAD
     'validation_error' => 'Si sono verificati errori di validazione. Controlla i campi evidenziati.',
     'file_too_large' => 'Il file allegato è troppo grande. Dimensione massima consentita: :max_size',
     'invalid_file_type' => 'Tipo di file non supportato. Tipi consentiti: :allowed_types',
@@ -411,10 +471,13 @@ return array (
     'scheduled_time_passed' => 'L\'orario programmato deve essere successivo all\'orario corrente',
     'test_smtp_success' => 'Test SMTP completato con successo. La configurazione è corretta.',
     'test_smtp_failed' => 'Test SMTP fallito. Verifica la configurazione SMTP.',
+=======
+>>>>>>> 852dfcb (.)
   ),
   'validation' => 
   array (
     'subject_required' => 'L\'oggetto dell\'email è obbligatorio',
+<<<<<<< HEAD
     'subject_max' => 'L\'oggetto non può superare i 255 caratteri',
     'to_required' => 'Il destinatario è obbligatorio',
     'to_valid' => 'Il destinatario deve essere un indirizzo email valido',
@@ -501,3 +564,15 @@ return array (
   ),
 );
 >>>>>>> a280387 (.)
+=======
+    'to_required' => 'Il destinatario è obbligatorio',
+    'to_valid' => 'Il destinatario deve essere un indirizzo email valido',
+    'cc_valid' => 'Gli indirizzi in CC devono essere email valide',
+    'bcc_valid' => 'Gli indirizzi in BCC devono essere email valide',
+    'content_required' => 'Il contenuto dell\'email è obbligatorio',
+    'template_exists' => 'Il template selezionato non esiste',
+    'parameters_json' => 'I parametri devono essere in formato JSON valido',
+    'priority_valid' => 'La priorità deve essere una delle opzioni disponibili',
+  ),
+);
+>>>>>>> 852dfcb (.)
