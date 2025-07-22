@@ -1,6 +1,7 @@
-# Modulo Notify
+# Modulo Notify - Documentazione
 
 ## Panoramica
+<<<<<<< HEAD
 Il modulo Notify gestisce il sistema di notifiche dell'applicazione, inclusi template e-mail e gestione dei canali di comunicazione.
 
 ## Struttura
@@ -168,24 +169,25 @@ Notify/
 │   └── lang/
 └── routes/
 ```
+=======
+Il modulo Notify gestisce l'invio di notifiche email, SMS e push attraverso il sistema Laraxot.
+>>>>>>> a280387 (.)
 
 ## Funzionalità Principali
-- Gestione template e-mail
-- Sistema di notifiche multilingua
-- Integrazione con GrapesJS per editor visuale
-- Supporto multi-tenant
+- Invio email con template personalizzabili
+- Notifiche SMS
+- Notifiche push
+- Gestione code di invio
+- Tracking e analytics
 
-## Collegamenti alla Documentazione
-- [Architettura Modulare](../../../docs/architecture/MODULE_STRUCTURE.md)
-- [Convenzioni di Sviluppo](../../../docs/development/CONVENTIONS.md)
-- [Gestione dei Conflitti](../../../docs/development/CONFLICT_RESOLUTION.md)
+## File di Traduzione
 
-## Best Practices
-1. Utilizzare sempre BaseModel come base per i modelli
-2. Implementare le traduzioni tramite LangServiceProvider
-3. Documentare ogni modifica importante
-4. Mantenere i collegamenti bidirezionali con la documentazione principale
+### Traduzioni Principali
+- `notification.php` - Traduzioni generali per le notifiche
+- `contact.php` - Traduzioni per il modulo contatti
+- `send_email.php` - **FIX COMPLETATO**: Traduzioni per l'invio email con regola tooltip/helper_text
 
+<<<<<<< HEAD
 ## Modifiche Recenti
 
 ### Gennaio 2025 - Aggiornamento File di Traduzione ⭐ **NUOVO**
@@ -217,25 +219,38 @@ Vedi [Translation Files Update 2025](../Lang/docs/translation_files_update_2025.
 - Mantenere SMS concisi
 - Supportare multilingua
 - Gestire variabili
+=======
+### Fix Implementati
+- [Fix Traduzioni Send Email](send_email_translation_fix.md) - **REGOLA CRITICA**: tooltip e helper_text per ogni campo
+- [Miglioramento Traduzioni](send_email_translation_improvement.md) - Documentazione precedente
+>>>>>>> a280387 (.)
 
-### 2. Canali
+## Regole Critiche per Traduzioni
+
+### Regola Tooltip e Helper Text
+**OGNI CAMPO** con `label` e `placeholder` deve avere:
 ```php
-// ❌ NON FARE QUESTO
-$user->notify(new WelcomeNotification());
-
-// ✅ FARE QUESTO
-Notify::send($user, new WelcomeNotification(), ['mail', 'sms']);
+'field_name' => [
+    'label' => 'Etichetta',
+    'placeholder' => 'Placeholder diverso',
+    'help' => 'Aiuto specifico',
+    'description' => 'Descrizione campo',
+    'tooltip' => 'Tooltip informativo', // OBBLIGATORIO
+    'helper_text' => '', // Vuoto se diverso da placeholder
+],
 ```
 
-### 3. Eventi
-```php
-// ❌ NON FARE QUESTO
-event(new UserRegistered($user));
+### Struttura Espansa Obbligatoria
+- Tutti i campi devono avere struttura espansa completa
+- MAI usare struttura semplificata
+- MAI usare `->label()` nei componenti Filament
 
-// ✅ FARE QUESTO
-Notify::event('user.registered', $user);
-```
+## Collegamenti
+- [Documentazione Root](../../../docs/translation_standards_links.md)
+- [Regole Helper Text](../../../docs/translation-helper-text-standards.md)
+- [Best Practices Filament](../../../docs/filament_translation_best_practices.md)
 
+<<<<<<< HEAD
 ## Dipendenze Principali
 
 ### Moduli
@@ -454,3 +469,6 @@ Per problemi relativi all'invio email tramite le pagine Filament (es. SendEmail)
 - [Come far funzionare la pagina SendEmail e test SMTP](./test_smtp.md)
 
 Questa guida spiega le differenze architetturali tra TestSmtpPage e SendEmail, le cause più comuni di errore e le best practice per la configurazione SMTP.
+=======
+*Ultimo aggiornamento: 2025-01-06*
+>>>>>>> a280387 (.)
