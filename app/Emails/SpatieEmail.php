@@ -49,14 +49,9 @@ class SpatieEmail extends TemplateMailable
             'slug' => $this->slug,
         ],[
             'subject' => 'Benvenuto, {{ first_name }}',
-<<<<<<< HEAD
             'html_template' => '<p>Gentile {{ first_name }} {{ last_name }},</p><p>La tua registrazione  è in attesa di approvazione. Ti contatteremo presto.</p>['.$this->slug.']',
             'text_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.$this->slug.']',
             'sms_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.$this->slug.']'
-=======
-            'html_template' => '<p>Gentile {{ first_name }} {{ last_name }},</p><p>La tua registrazione  è in attesa di approvazione. Ti contatteremo presto.</p>',
-            'text_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.'
->>>>>>> 7a7d33c (.)
         ]);
         
         $data=$record->toArray();
@@ -180,7 +175,6 @@ class SpatieEmail extends TemplateMailable
     {
         return $this->customAttachments;
     }
-<<<<<<< HEAD
 
 
     public function buildSms():string{
@@ -195,6 +189,4 @@ class SpatieEmail extends TemplateMailable
         
         return $sms;
     }
-=======
->>>>>>> 7a7d33c (.)
 }
