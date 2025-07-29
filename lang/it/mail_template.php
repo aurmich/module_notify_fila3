@@ -154,10 +154,7 @@ return array (
       'description' => 'sms_template',
       'helper_text' => 'sms_template',
       'placeholder' => 'sms_template',
-<<<<<<< HEAD
-=======
       'label' => 'sms_template',
->>>>>>> 0e489ec (.)
     ),
     'edit' => 
     array (
@@ -167,8 +164,6 @@ return array (
     array (
       'label' => 'view',
     ),
-<<<<<<< HEAD
-=======
     'create' => 
     array (
       'label' => 'create',
@@ -177,7 +172,6 @@ return array (
     array (
       'label' => 'counter',
     ),
->>>>>>> 0e489ec (.)
   ),
   'actions' => 
   array (
