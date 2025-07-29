@@ -7,14 +7,20 @@ namespace Modules\Notify\Filament\Clusters\Test\Pages;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Actions\Action;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+>>>>>>> 7a7d33c (.)
 use Filament\Facades\Filament;
 use Modules\Notify\Datas\SmsData;
 use Illuminate\Support\Facades\Log;
 use Filament\Forms\ComponentContainer;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Enums\SmsDriverEnum;
+<<<<<<< HEAD
 use Modules\Notify\Models\MailTemplate;
+=======
+>>>>>>> 7a7d33c (.)
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Illuminate\Support\Facades\Notification;
@@ -81,6 +87,7 @@ class SendSmsPage extends XotBasePage
                 ->maxLength(160)
                 ->helperText(__('notify::sms.fields.message.helper_text')),
             'driver' => Forms\Components\Select::make('driver')
+<<<<<<< HEAD
                 ->options(\Modules\Notify\Enums\SmsDriverEnum::class)
                 ->default(config('sms.default'))
                 ->required()
@@ -88,6 +95,12 @@ class SendSmsPage extends XotBasePage
             'template_slug'=> Forms\Components\Select::make('template_slug')
                 ->options(MailTemplate::all()->pluck('slug', 'slug'))
                 ->required(),
+=======
+                ->options(\Modules\Notify\Enums\SmsDriverEnum::labels())
+                ->default(config('sms.default'))
+                ->required()
+                ->helperText(__('notify::sms.fields.driver.helper_text')),
+>>>>>>> 7a7d33c (.)
         ];
     }
 
@@ -102,6 +115,7 @@ class SendSmsPage extends XotBasePage
                     'driver' => $data['driver']
                 ]));
             */
+<<<<<<< HEAD
             Assert::string($template_slug=$data['template_slug']);
             $notify=(new RecordNotification($user,$template_slug))->mergeData($data);
 
@@ -113,6 +127,18 @@ class SendSmsPage extends XotBasePage
 
 
             
+=======
+            Notification::route('sms', $data['to'])
+                //->locale('it')
+                ->notify(new RecordNotification($user,'due'));
+
+
+            FilamentNotification::make()
+            ->success()
+            // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
+            ->title(__('check your email client'))
+            ->send();
+>>>>>>> 7a7d33c (.)
 
             FilamentNotification::make()
                 ->success()

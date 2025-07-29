@@ -145,6 +145,7 @@ return array (
       'placeholder' => 'name, email, date, company',
       'description' => 'Parametri disponibili per il template email',
     ),
+<<<<<<< HEAD
     'delete' => 
     array (
       'label' => 'delete',
@@ -163,6 +164,8 @@ return array (
     array (
       'label' => 'view',
     ),
+=======
+>>>>>>> 7a7d33c (.)
   ),
   'actions' => 
   array (

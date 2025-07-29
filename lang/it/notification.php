@@ -175,6 +175,13 @@ return array (
     array (
       'label' => 'applyFilters',
     ),
+<<<<<<< HEAD
+=======
+    'toggleColumns' => 
+    array (
+      'label' => 'toggleColumns',
+    ),
+>>>>>>> 7a7d33c (.)
   ),
   'actions' => 
   array (

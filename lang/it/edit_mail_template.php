@@ -7,6 +7,7 @@ return array (
     array (
       'label' => 'delete',
     ),
+<<<<<<< HEAD
     'cancel' => 
     array (
       'label' => 'cancel',
@@ -19,5 +20,7 @@ return array (
     array (
       'label' => 'activeLocale',
     ),
+=======
+>>>>>>> 7a7d33c (.)
   ),
 );
