@@ -154,6 +154,10 @@ return array (
       'description' => 'sms_template',
       'helper_text' => 'sms_template',
       'placeholder' => 'sms_template',
+<<<<<<< HEAD
+=======
+      'label' => 'sms_template',
+>>>>>>> 0e489ec (.)
     ),
     'edit' => 
     array (
@@ -163,6 +167,17 @@ return array (
     array (
       'label' => 'view',
     ),
+<<<<<<< HEAD
+=======
+    'create' => 
+    array (
+      'label' => 'create',
+    ),
+    'counter' => 
+    array (
+      'label' => 'counter',
+    ),
+>>>>>>> 0e489ec (.)
   ),
   'actions' => 
   array (
@@ -200,6 +215,10 @@ return array (
       'tooltip' => 'Importa un template da un file JSON',
       'success_message' => 'Template importato con successo',
       'error_message' => 'Errore nell\'importazione del template',
+    ),
+    'activeLocale' => 
+    array (
+      'label' => 'activeLocale',
     ),
   ),
   'messages' => 
