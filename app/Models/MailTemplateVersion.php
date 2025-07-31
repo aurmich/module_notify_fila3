@@ -72,20 +72,13 @@ class MailTemplateVersion extends BaseModel
         'change_notes',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'metadata' => 'array',
-            'created_at' => 'datetime',
-            'updated_at' => 'datetime',
-            'deleted_at' => 'datetime',
-        ];
-    }
+    /** @var array<string, string> */
+    protected $casts = [
+        'metadata' => 'array',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+    ];
 
     public function template(): BelongsTo
     {

@@ -311,12 +311,9 @@ php artisan tinker
 - [Notification Channels Implementation](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md)
 - [SMS Implementation](./SMS_IMPLEMENTATION.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
-<<<<<<< HEAD:docs/email_templates.md
 
 ---
 
 **Ultimo aggiornamento**: 26 Giugno 2025  
 **Status**: Aggiornato per errore critico MissingMailTemplate  
 **Priorità**: URGENT - Fix sistema registrazione
-=======
->>>>>>> 8c4f4cb (.):docs/EMAIL_TEMPLATES.md

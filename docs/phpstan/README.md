@@ -7,6 +7,66 @@ Data: Wed Apr 23 10:44:20 CEST 2025
 | Livello | Stato | Errori |
 |---------|-------|--------|
 | 1 | ❌ Errore | Errore di esecuzione |
+
+## Correzioni PHPStan Applicate
+
+### Data: 2025-01-16
+
+#### File Corretti
+
+**1. GenericNotification.php - Cast sicuri**
+- **Problema**: `Cannot cast mixed to string` per `action_text` e `action_url`
+- **Soluzione**: Utilizzato `SafeStringCastAction::execute()` per cast sicuri
+- **Motivazione**: Gestione sicura dei cast da `mixed` a `string` per dati di notifica
+
+```php
+$mail->action(
+    app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($this->data['action_text']),
+    app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($this->data['action_url'])
+);
+```
+
+**2. SmsNotification.php - Cast sicuri**
+- **Problema**: `Cannot cast mixed to string` per `to` e `from`
+- **Soluzione**: Utilizzato controlli `is_string()` prima del cast
+- **Motivazione**: Gestione sicura dei parametri SMS
+
+```php
+$this->smsData = new SmsData();
+$this->smsData->body = $content;
+$this->smsData->to = is_string($to) ? $to : (string) $to;
+$this->smsData->from = is_string($from) ? $from : (string) $from;
+```
+
+**3. WhatsAppNotification.php - Cast sicuri**
+- **Problema**: `Cannot cast mixed to string` per `to` e `from`
+- **Soluzione**: Utilizzato controlli `is_string()` prima del cast
+- **Motivazione**: Gestione sicura dei parametri WhatsApp
+
+```php
+$this->whatsappData = new WhatsAppData(
+    to: is_string($to) ? $to : (string) $to,
+    body: $content,
+    from: $from !== null ? (is_string($from) ? $from : (string) $from) : null
+);
+```
+
+**4. mail.php - Config sicuro**
+- **Problema**: `Binary operation "." between 'Welcome to ' and mixed results in an error`
+- **Soluzione**: Utilizzato controllo `is_string()` per `config('app.name')`
+- **Motivazione**: Gestione sicura della configurazione dell'app
+
+```php
+'title' => 'Welcome to ' . (is_string(config('app.name')) ? config('app.name') : 'SaluteOra'),
+```
+
+#### Pattern di Correzione Utilizzati
+
+1. **SafeStringCastAction**: Per cast sicuri da `mixed` a `string`
+2. **Controlli is_string()**: Per validazione prima del cast
+3. **Config sicura**: Per gestione della configurazione dell'app
+4. **Null coalescing**: Per gestione di valori null
+
 ## Collegamenti
 
 - [Report Generale](/docs/phpstan/README.md)

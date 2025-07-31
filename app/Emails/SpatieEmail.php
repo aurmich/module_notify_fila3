@@ -18,7 +18,6 @@ use Modules\Notify\Models\MailTemplate;
 use Illuminate\Mail\Mailables\Attachment;
 
 use Spatie\MailTemplates\TemplateMailable;
-use Modules\Xot\Actions\Model\GetSicureArrayByModelAction;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 
 /**
@@ -58,7 +57,7 @@ class SpatieEmail extends TemplateMailable
 
         $tpl->increment('counter');
         
-        $data=app(GetSicureArrayByModelAction::class)->execute($record);
+        $data=$record->toArray();
         $this->data['login_url']=route('login');
         $this->data['site_url']=url('/');
 
