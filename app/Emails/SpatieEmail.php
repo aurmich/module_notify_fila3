@@ -58,11 +58,7 @@ class SpatieEmail extends TemplateMailable
 
         $tpl->increment('counter');
         
-<<<<<<< HEAD
-        $data=$record->toArray();
-=======
-        $data=app(GetSicureArrayByModelAction::class)->execute($record);
->>>>>>> 40c4115 (.)
+        $data = app(GetSicureArrayByModelAction::class)->execute($record);
         $this->data['login_url']=route('login');
         $this->data['site_url']=url('/');
 
