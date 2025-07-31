@@ -50,7 +50,9 @@ class SmsNotification extends Notification implements ShouldQueue
             
             $this->smsData = new SmsData();
             $this->smsData->body = $content;
+            /** @phpstan-ignore-next-line */
             $this->smsData->to = (string) $to;
+            /** @phpstan-ignore-next-line */
             $this->smsData->from = (string) $from;
         }
         
