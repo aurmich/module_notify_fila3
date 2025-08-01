@@ -84,6 +84,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
         'type',
     ];
 
+<<<<<<< HEAD
     /**
      * Get the attributes that should be cast.
      *
@@ -104,6 +105,20 @@ class NotificationTemplate extends BaseModel implements HasMedia
             'grapesjs_data' => 'array',
         ];
     }
+=======
+    protected $casts = [
+        'type' => NotificationTypeEnum::class,
+        'preview_data' => 'array',
+        'body_html' => 'string',
+        'body_text' => 'string',
+        'channels' => 'array',
+        'variables' => 'array',
+        'conditions' => 'array',
+        'metadata' => 'array',
+        'is_active' => 'boolean',
+        'grapesjs_data' => 'array',
+    ];
+>>>>>>> dbc5e8f (.)
 
     public array $translatable = [
         'subject',
