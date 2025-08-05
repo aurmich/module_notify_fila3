@@ -170,7 +170,10 @@ case NUOVO_DRIVER = 'nuovo_driver';
 Per verificare che tutte le traduzioni siano presenti:
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9508e1f (.)
 # Verifica sintassi PHP
 php -l laravel/Modules/Notify/lang/it/sms_driver_enum.php
 php -l laravel/Modules/Notify/lang/en/sms_driver_enum.php
@@ -186,3 +189,7 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 
 ---
 
+<<<<<<< HEAD
+=======
+**Ultimo aggiornamento**: 2025-01-06 
+>>>>>>> 9508e1f (.)

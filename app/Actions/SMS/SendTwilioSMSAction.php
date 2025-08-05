@@ -11,15 +11,29 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
+<<<<<<< HEAD
 use Modules\Notify\Datas\SMS\TwilioData;
+=======
+>>>>>>> 9508e1f (.)
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendTwilioSMSAction implements SmsActionContract
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /** @var TwilioData */
     private TwilioData $twilioData;
+=======
+    /** @var string */
+    private string $accountSid;
+
+    /** @var string */
+    private string $authToken;
+
+    /** @var string */
+    private string $baseUrl = 'https://api.twilio.com/2010-04-01';
+>>>>>>> 9508e1f (.)
 
     /** @var array<string, mixed> */
     private array $vars = [];
@@ -27,6 +41,12 @@ final class SendTwilioSMSAction implements SmsActionContract
     /** @var bool */
     protected bool $debug;
 
+<<<<<<< HEAD
+=======
+    /** @var int */
+    protected int $timeout;
+
+>>>>>>> 9508e1f (.)
     /** @var string|null */
     protected ?string $defaultSender = null;
 
@@ -35,6 +55,7 @@ final class SendTwilioSMSAction implements SmsActionContract
      */
     public function __construct()
     {
+<<<<<<< HEAD
         $this->twilioData = TwilioData::make();
         
         if (!$this->twilioData->account_sid) {
@@ -42,6 +63,20 @@ final class SendTwilioSMSAction implements SmsActionContract
         }
 
         if (!$this->twilioData->auth_token) {
+=======
+        $config = config('sms.drivers.twilio');
+        if (!is_array($config)) {
+            throw new Exception('Configurazione Twilio non trovata in sms.php');
+        }
+
+        $this->accountSid = $config['account_sid'] ?? null;
+        if (!is_string($this->accountSid)) {
+            throw new Exception('Account SID Twilio non configurato in sms.php');
+        }
+
+        $this->authToken = $config['auth_token'] ?? null;
+        if (!is_string($this->authToken)) {
+>>>>>>> 9508e1f (.)
             throw new Exception('Auth Token Twilio non configurato in sms.php');
         }
 
@@ -49,6 +84,10 @@ final class SendTwilioSMSAction implements SmsActionContract
         $sender = config('sms.from');
         $this->defaultSender = is_string($sender) ? $sender : null;
         $this->debug = (bool) config('sms.debug', false);
+<<<<<<< HEAD
+=======
+        $this->timeout = (int) config('sms.timeout', 30);
+>>>>>>> 9508e1f (.)
     }
 
     /**
@@ -74,11 +113,19 @@ final class SendTwilioSMSAction implements SmsActionContract
 
         // Twilio richiede l'autenticazione Basic
         $client = new Client([
+<<<<<<< HEAD
             'timeout' => $this->twilioData->getTimeout(),
             'auth' => [$this->twilioData->account_sid, $this->twilioData->auth_token]
         ]);
 
         $endpoint = $this->twilioData->getBaseUrl() . '/2010-04-01/Accounts/' . $this->twilioData->account_sid . '/Messages.json';
+=======
+            'timeout' => $this->timeout,
+            'auth' => [$this->accountSid, $this->authToken]
+        ]);
+
+        $endpoint = $this->baseUrl . '/Accounts/' . $this->accountSid . '/Messages.json';
+>>>>>>> 9508e1f (.)
 
         try {
             $response = $client->post($endpoint, [

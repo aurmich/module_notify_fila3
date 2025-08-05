@@ -89,7 +89,10 @@ composer require laravel-notification-channels/twilio
 ```
 
 ```dotenv
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9508e1f (.)
 # .env
 TWILIO_ACCOUNT_SID=AC123...
 TWILIO_AUTH_TOKEN=abc123...

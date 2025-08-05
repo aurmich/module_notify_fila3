@@ -17,6 +17,11 @@ use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
 
 /**
+<<<<<<< HEAD
+=======
+ * 
+ *
+>>>>>>> 9508e1f (.)
  * @property int $id
  * @property string $mailable
  * @property string|null $subject
@@ -58,10 +63,13 @@ use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
  * @method static Builder<static>|MailTemplate whereUpdatedBy($value)
  * @property string|null $params
  * @method static Builder<static>|MailTemplate whereParams($value)
+<<<<<<< HEAD
  * @property array<array-key, mixed>|null $sms_template
  * @property int $counter
  * @method static Builder<static>|MailTemplate whereCounter($value)
  * @method static Builder<static>|MailTemplate whereSmsTemplate($value)
+=======
+>>>>>>> 9508e1f (.)
  * @mixin \Eloquent
  */
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
@@ -87,7 +95,10 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         'sms_template',
         //'version',  //under development
         'params',
+<<<<<<< HEAD
         'counter',
+=======
+>>>>>>> 9508e1f (.)
     ];
 
     /**

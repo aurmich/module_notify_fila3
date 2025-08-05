@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
+<<<<<<< HEAD
 use Modules\Notify\Datas\SMS\GammuData;
+=======
+>>>>>>> 9508e1f (.)
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Process\Process;
 use function Safe\tempnam;
@@ -20,8 +23,16 @@ final class SendGammuSMSAction implements SmsActionContract
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /** @var GammuData */
     private GammuData $gammuData;
+=======
+    /** @var string */
+    private string $path;
+
+    /** @var string */
+    private string $config;
+>>>>>>> 9508e1f (.)
 
     /** @var array<string, mixed> */
     private array $vars = [];
@@ -29,6 +40,12 @@ final class SendGammuSMSAction implements SmsActionContract
     /** @var bool */
     protected bool $debug;
 
+<<<<<<< HEAD
+=======
+    /** @var int */
+    protected int $timeout;
+
+>>>>>>> 9508e1f (.)
     /** @var string|null */
     protected ?string $defaultSender = null;
 
@@ -37,6 +54,7 @@ final class SendGammuSMSAction implements SmsActionContract
      */
     public function __construct()
     {
+<<<<<<< HEAD
         $this->gammuData = GammuData::make();
         
         if (!$this->gammuData->path) {
@@ -44,6 +62,20 @@ final class SendGammuSMSAction implements SmsActionContract
         }
 
         if (!$this->gammuData->config) {
+=======
+        $config = config('sms.drivers.gammu');
+        if (!is_array($config)) {
+            throw new Exception('Configurazione Gammu non trovata in sms.php');
+        }
+
+        $this->path = $config['path'] ?? '/usr/bin/gammu';
+        if (!is_string($this->path)) {
+            throw new Exception('Path Gammu non configurato in sms.php');
+        }
+
+        $this->config = $config['config'] ?? '/etc/gammurc';
+        if (!is_string($this->config)) {
+>>>>>>> 9508e1f (.)
             throw new Exception('Config Gammu non configurato in sms.php');
         }
 
@@ -51,6 +83,10 @@ final class SendGammuSMSAction implements SmsActionContract
         $sender = config('sms.from');
         $this->defaultSender = is_string($sender) ? $sender : null;
         $this->debug = (bool) config('sms.debug', false);
+<<<<<<< HEAD
+=======
+        $this->timeout = (int) config('sms.timeout', 30);
+>>>>>>> 9508e1f (.)
     }
 
     /**
@@ -78,8 +114,13 @@ final class SendGammuSMSAction implements SmsActionContract
 
         // Esegue il comando Gammu per inviare l'SMS
         $process = new Process([
+<<<<<<< HEAD
             $this->gammuData->getPath(),
             '-c', $this->gammuData->getConfig(),
+=======
+            $this->path,
+            '-c', $this->config,
+>>>>>>> 9508e1f (.)
             'sendsms',
             'TEXT',
             $to,
@@ -87,7 +128,11 @@ final class SendGammuSMSAction implements SmsActionContract
             $tempFile
         ]);
 
+<<<<<<< HEAD
         $process->setTimeout($this->gammuData->getTimeout());
+=======
+        $process->setTimeout($this->timeout);
+>>>>>>> 9508e1f (.)
 
         try {
             $process->run();

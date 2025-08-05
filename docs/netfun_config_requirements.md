@@ -56,7 +56,10 @@ La configurazione di Netfun segue la struttura standardizzata con parametri glob
 Le seguenti variabili d'ambiente devono essere configurate nel file `.env` dell'applicazione:
 
 ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9508e1f (.)
 # Parametri globali
 SMS_FROM=YourSender
 SMS_DEBUG=false
@@ -98,7 +101,10 @@ Per problemi di configurazione o domande sull'integrazione con Netfun, consultar
 NETFUN_TOKEN=la_tua_api_key
 NETFUN_SENDER=MittenteSMS
 NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9508e1f (.)
 # NETFUN_CALLBACK_URL=https://tuodominio.it/sms/callback
 ```
 

@@ -28,4 +28,8 @@ class EditNotificationTemplate extends XotBaseEditRecord
         return $data;
     }
     */
+<<<<<<< HEAD
 } 
+=======
+} 
+>>>>>>> 9508e1f (.)

@@ -377,7 +377,10 @@ class ProcessDoctorModerationAction
 
 ```html
 <x-mail::message>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9508e1f (.)
 # Registrazione Approvata
 
 Gentile {{ $doctor->name }},
@@ -435,3 +438,7 @@ Cordiali saluti,<br>
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [TinyMCE](https://www.tiny.cloud)
+<<<<<<< HEAD
+=======
+- [Filament Forms](https://filamentphp.com/docs/forms) 
+>>>>>>> 9508e1f (.)

@@ -6,6 +6,7 @@ namespace Modules\Notify\Emails;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Datas\MetatagData;
@@ -21,6 +22,21 @@ use Spatie\MailTemplates\TemplateMailable;
 use Modules\Xot\Actions\Model\GetSicureArrayByModelAction;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 
+=======
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Datas\MetatagData;
+use Illuminate\Support\Facades\File;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Notify\Models\MailTemplate;
+use Illuminate\Mail\Mailables\Attachment;
+use Illuminate\Mail\Mailables\Address;
+use Illuminate\Mail\Mailables\Envelope;
+use Spatie\MailTemplates\TemplateMailable;
+use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
+
+use function Safe\file_get_contents;
+
+>>>>>>> 9508e1f (.)
 /**
  * @see https://github.com/spatie/laravel-database-mail-templates
  */
@@ -46,7 +62,11 @@ class SpatieEmail extends TemplateMailable
     {
         $this->slug = Str::slug($slug);
         
+<<<<<<< HEAD
         $tpl=MailTemplate::firstOrCreate([
+=======
+        MailTemplate::firstOrCreate([
+>>>>>>> 9508e1f (.)
             'mailable' => SpatieEmail::class,
             'slug' => $this->slug,
         ],[
@@ -55,16 +75,24 @@ class SpatieEmail extends TemplateMailable
             'text_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.$this->slug.']',
             'sms_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.$this->slug.']'
         ]);
+<<<<<<< HEAD
 
         $tpl->increment('counter');
         
         $data = app(GetSicureArrayByModelAction::class)->execute($record);
+=======
+        
+        $data=$record->toArray();
+>>>>>>> 9508e1f (.)
         $this->data['login_url']=route('login');
         $this->data['site_url']=url('/');
 
         $this->data['logo_header']=MetatagData::make()->getBrandLogo();
+<<<<<<< HEAD
         $this->data['logo_header_base64']=MetatagData::make()->getBrandLogoBase64();
         
+=======
+>>>>>>> 9508e1f (.)
         $this->data=array_merge($this->data,$data);
         $this->setAdditionalData($this->data);
         
@@ -139,6 +167,7 @@ class SpatieEmail extends TemplateMailable
         return $this->slug;
     }
 
+<<<<<<< HEAD
 
     public function getAttachmentFromPath(array $attachment): Attachment
     {
@@ -175,6 +204,8 @@ class SpatieEmail extends TemplateMailable
         return $res;
     }
 
+=======
+>>>>>>> 9508e1f (.)
     /**
      * Add attachments to the email
      *
@@ -183,6 +214,7 @@ class SpatieEmail extends TemplateMailable
      */
     public function addAttachments(array $attachments): self
     {
+<<<<<<< HEAD
         
         $attachmentObjects = [];
 
@@ -203,6 +235,29 @@ class SpatieEmail extends TemplateMailable
 
         $this->customAttachments = $attachmentObjects;
         
+=======
+        $attachmentObjects = [];
+
+        foreach ($attachments as $item) {
+            if (!isset($item['path']) || !file_exists($item['path'])) {
+                continue;
+            }
+
+            $attachment = Attachment::fromPath($item['path']);
+
+            if (isset($item['as'])) {
+                $attachment = $attachment->as($item['as']);
+            }
+
+            if (isset($item['mime'])) {
+                $attachment = $attachment->withMime($item['mime']);
+            }
+
+            $attachmentObjects[] = $attachment;
+        }
+
+        $this->customAttachments = $attachmentObjects;
+>>>>>>> 9508e1f (.)
 
         return $this;
     }
@@ -214,7 +269,10 @@ class SpatieEmail extends TemplateMailable
      */
     public function attachments(): array
     {
+<<<<<<< HEAD
         
+=======
+>>>>>>> 9508e1f (.)
         return $this->customAttachments;
     }
 

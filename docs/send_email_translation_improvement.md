@@ -254,7 +254,10 @@ return [
 ```bash
 cd /var/www/html/_bases/base_saluteora/laravel
 php -l Modules/Notify/lang/it/send_email.php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9508e1f (.)
 # Output: No syntax errors detected
 ```
 
@@ -304,3 +307,7 @@ php -l Modules/Notify/lang/it/send_email.php
 
 **Ultimo aggiornamento**: Gennaio 2025  
 **Autore**: Sistema di miglioramento automatico  
+<<<<<<< HEAD
+=======
+**Stato**: ✅ COMPLETATO 
+>>>>>>> 9508e1f (.)

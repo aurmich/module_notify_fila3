@@ -248,4 +248,8 @@ class AnalyzeTranslationFiles extends Command
 
         $table->render();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9508e1f (.)

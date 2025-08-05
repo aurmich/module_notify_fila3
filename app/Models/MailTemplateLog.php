@@ -8,12 +8,22 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 /**
+<<<<<<< HEAD
  * @property-read \Modules\User\Models\Profile|null $creator
+=======
+ * 
+ *
+ * @property-read \Modules\SaluteOra\Models\Profile|null $creator
+>>>>>>> 9508e1f (.)
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $mailable
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
  * @property-read \Modules\Notify\Models\MailTemplate|null $template
+<<<<<<< HEAD
  * @property-read \Modules\User\Models\Profile|null $updater
+=======
+ * @property-read \Modules\SaluteOra\Models\Profile|null $updater
+>>>>>>> 9508e1f (.)
  * @method static \Modules\Notify\Database\Factories\MailTemplateLogFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateLog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateLog newQuery()
@@ -37,6 +47,7 @@ class MailTemplateLog extends BaseModel
         'clicked_at',
     ];
 
+<<<<<<< HEAD
     /**
      * Get the attributes that should be cast.
      *
@@ -54,6 +65,17 @@ class MailTemplateLog extends BaseModel
             'clicked_at' => 'datetime',
         ];
     }
+=======
+    protected $casts = [
+        'data' => 'array',
+        'metadata' => 'array',
+        'sent_at' => 'datetime',
+        'delivered_at' => 'datetime',
+        'failed_at' => 'datetime',
+        'opened_at' => 'datetime',
+        'clicked_at' => 'datetime',
+    ];
+>>>>>>> 9508e1f (.)
 
     public function template(): BelongsTo
     {
