@@ -83,6 +83,10 @@ This document serves as the central index for the Notify module, providing guida
 - **Configuration**: Offers flexible configuration options for different notification providers.
 
 ## Implementation Guidelines
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56ca120 (.)
 ### 1. Module Structure
 - The Notify module follows a standard structure with directories for models, services, providers, and templates to ensure clarity and maintainability.
 
