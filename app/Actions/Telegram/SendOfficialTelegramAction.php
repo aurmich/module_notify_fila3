@@ -44,11 +44,7 @@ final class SendOfficialTelegramAction
         $parseMode = config('telegram.parse_mode');
         $this->parseMode = $parseMode;
         $this->debug = (bool) config('telegram.debug', false);
-<<<<<<< HEAD
         $this->timeout = app(\Modules\Xot\Actions\Cast\SafeIntCastAction::class)->execute(config('telegram.timeout'), 30);
-=======
-        $this->timeout = (int) config('telegram.timeout', 30);
->>>>>>> 9508e1f (.)
     }
 
     /**

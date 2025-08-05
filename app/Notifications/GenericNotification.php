@@ -79,10 +79,7 @@ class GenericNotification extends Notification implements ShouldQueue
 
         // Aggiungi eventuali azioni se specificate nei dati
         if (isset($this->data['action_text']) && isset($this->data['action_url'])) {
-<<<<<<< HEAD
             /** @phpstan-ignore-next-line */
-=======
->>>>>>> 9508e1f (.)
             $mail->action((string) $this->data['action_text'], (string) $this->data['action_url']);
         }
 
@@ -115,12 +112,8 @@ class GenericNotification extends Notification implements ShouldQueue
         // TODO: Implementare TwilioSmsMessage quando disponibile
         $to = '';
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForTwilio')) {
-<<<<<<< HEAD
             $routeResult = $notifiable->routeNotificationForTwilio($this);
             $to = (string) ($routeResult ?? '');
-=======
-            $to = (string) $notifiable->routeNotificationForTwilio($this);
->>>>>>> 9508e1f (.)
         }
         
         return [
@@ -159,7 +152,6 @@ class GenericNotification extends Notification implements ShouldQueue
         }
         
         if (is_object($notifiable) && property_exists($notifiable, 'full_name') && $notifiable->full_name) {
-<<<<<<< HEAD
             return (string) ($notifiable->full_name ?? '');
         }
         
@@ -169,17 +161,6 @@ class GenericNotification extends Notification implements ShouldQueue
         
         if (is_object($notifiable) && property_exists($notifiable, 'name') && $notifiable->name) {
             return (string) ($notifiable->name ?? '');
-=======
-            return (string) $notifiable->full_name;
-        }
-        
-        if (is_object($notifiable) && property_exists($notifiable, 'first_name') && $notifiable->first_name) {
-            return (string) $notifiable->first_name;
-        }
-        
-        if (is_object($notifiable) && property_exists($notifiable, 'name') && $notifiable->name) {
-            return (string) $notifiable->name;
->>>>>>> 9508e1f (.)
         }
         
         return 'Utente';

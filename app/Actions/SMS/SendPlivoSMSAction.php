@@ -11,29 +11,15 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
-<<<<<<< HEAD
 use Modules\Notify\Datas\SMS\PlivoData;
-=======
->>>>>>> 9508e1f (.)
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendPlivoSMSAction implements SmsActionContract
 {
     use QueueableAction;
 
-<<<<<<< HEAD
     /** @var PlivoData */
     private PlivoData $plivoData;
-=======
-    /** @var string */
-    private string $authId;
-
-    /** @var string */
-    private string $authToken;
-
-    /** @var string */
-    private string $baseUrl = 'https://api.plivo.com/v1/Account/';
->>>>>>> 9508e1f (.)
 
     /** @var array<string, mixed> */
     private array $vars = [];
@@ -41,12 +27,6 @@ final class SendPlivoSMSAction implements SmsActionContract
     /** @var bool */
     protected bool $debug;
 
-<<<<<<< HEAD
-=======
-    /** @var int */
-    protected int $timeout;
-
->>>>>>> 9508e1f (.)
     /** @var string|null */
     protected ?string $defaultSender = null;
 
@@ -55,7 +35,6 @@ final class SendPlivoSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-<<<<<<< HEAD
         $this->plivoData = PlivoData::make();
         
         if (!$this->plivoData->auth_id) {
@@ -63,20 +42,6 @@ final class SendPlivoSMSAction implements SmsActionContract
         }
 
         if (!$this->plivoData->auth_token) {
-=======
-        $config = config('sms.drivers.plivo');
-        if (!is_array($config)) {
-            throw new Exception('Configurazione Plivo non trovata in sms.php');
-        }
-
-        $this->authId = $config['auth_id'] ?? null;
-        if (!is_string($this->authId)) {
-            throw new Exception('Auth ID Plivo non configurato in sms.php');
-        }
-
-        $this->authToken = $config['auth_token'] ?? null;
-        if (!is_string($this->authToken)) {
->>>>>>> 9508e1f (.)
             throw new Exception('Auth Token Plivo non configurato in sms.php');
         }
 
@@ -84,10 +49,6 @@ final class SendPlivoSMSAction implements SmsActionContract
         $sender = config('sms.from');
         $this->defaultSender = is_string($sender) ? $sender : null;
         $this->debug = (bool) config('sms.debug', false);
-<<<<<<< HEAD
-=======
-        $this->timeout = (int) config('sms.timeout', 30);
->>>>>>> 9508e1f (.)
     }
 
     /**
@@ -113,23 +74,14 @@ final class SendPlivoSMSAction implements SmsActionContract
 
         // Plivo richiede l'autenticazione Basic
         $client = new Client([
-<<<<<<< HEAD
             'timeout' => $this->plivoData->getTimeout(),
             'auth' => [$this->plivoData->auth_id, $this->plivoData->auth_token],
-=======
-            'timeout' => $this->timeout,
-            'auth' => [$this->authId, $this->authToken],
->>>>>>> 9508e1f (.)
             'headers' => [
                 'Content-Type' => 'application/json',
             ]
         ]);
 
-<<<<<<< HEAD
         $endpoint = $this->plivoData->getBaseUrl() . '/v1/Account/' . $this->plivoData->auth_id . '/Message/';
-=======
-        $endpoint = $this->baseUrl . $this->authId . '/Message/';
->>>>>>> 9508e1f (.)
 
         try {
             $response = $client->post($endpoint, [

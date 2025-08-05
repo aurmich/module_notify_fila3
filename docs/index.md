@@ -83,10 +83,6 @@ This document serves as the central index for the Notify module, providing guida
 - **Configuration**: Offers flexible configuration options for different notification providers.
 
 ## Implementation Guidelines
-<<<<<<< HEAD
-
-=======
->>>>>>> 9508e1f (.)
 ### 1. Module Structure
 - The Notify module follows a standard structure with directories for models, services, providers, and templates to ensure clarity and maintainability.
 
@@ -123,12 +119,3 @@ This document serves as the central index for the Notify module, providing guida
 - [Email Templates](./EMAIL_TEMPLATES.md)
 - [SMS Implementation](./SMS_IMPLEMENTATION.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
-<<<<<<< HEAD
-=======
-
-## Risoluzione conflitti e standard
-- Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
-- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
-- Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 9508e1f (.)

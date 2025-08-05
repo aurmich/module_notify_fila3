@@ -15,10 +15,7 @@ class RecordNotification extends Notification
     protected Model $record;
     protected string $slug;
     public array $data=[];
-<<<<<<< HEAD
     public array $attachments=[];
-=======
->>>>>>> 9508e1f (.)
 
     public function __construct(Model $record, string $slug)
     {
@@ -53,18 +50,12 @@ class RecordNotification extends Notification
      */
     public function toMail($notifiable): SpatieEmail
     {
-<<<<<<< HEAD
         
         $email = new SpatieEmail($this->record, $this->slug);
         $email=$email->mergeData($this->data);
         
         $email=$email->addAttachments($this->attachments);
         
-=======
-        $email = new SpatieEmail($this->record, $this->slug);
-        $email=$email->mergeData($this->data);
-
->>>>>>> 9508e1f (.)
         // Importante: garantisci che ci sia sempre un destinatario
         if (method_exists($notifiable, 'routeNotificationFor')) {
             // Ottieni l'email dal notifiable
@@ -74,11 +65,7 @@ class RecordNotification extends Notification
                 $email->setRecipient($to);
             }
         }
-<<<<<<< HEAD
         
-=======
-
->>>>>>> 9508e1f (.)
         return $email;
     }
 
@@ -120,7 +107,6 @@ class RecordNotification extends Notification
         $this->data=array_merge($this->data,$data);
         return $this;
     }
-<<<<<<< HEAD
 
     public function addAttachments(array $attachments): self
     {
@@ -128,6 +114,3 @@ class RecordNotification extends Notification
         return $this;
     }
 }
-=======
-}
->>>>>>> 9508e1f (.)

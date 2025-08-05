@@ -5,21 +5,13 @@ namespace Modules\Notify\Models;
 use Modules\Xot\Models\BaseModel;
 
 /**
-<<<<<<< HEAD
  * Notification model for the Notify module.
-=======
- * 
->>>>>>> 9508e1f (.)
  *
  * @property string $id
  * @property string $type
  * @property string $notifiable_type
  * @property int $notifiable_id
-<<<<<<< HEAD
  * @property array<string, mixed>|string $data
-=======
- * @property string $data
->>>>>>> 9508e1f (.)
  * @property \Illuminate\Support\Carbon|null $read_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -27,7 +19,6 @@ use Modules\Xot\Models\BaseModel;
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property string|null $deleted_by
-<<<<<<< HEAD
  * @property int|null $tenant_id
  * @property int|null $user_id
  * @property string|null $subject_type
@@ -35,8 +26,6 @@ use Modules\Xot\Models\BaseModel;
  * @property array<string>|string|null $channels
  * @property string|null $status
  * @property \Illuminate\Support\Carbon|null $sent_at
-=======
->>>>>>> 9508e1f (.)
  * @property-read \Illuminate\Database\Eloquent\Model|null $creator
  * @property-read \Illuminate\Database\Eloquent\Model|null $updater
  * @method static \Modules\Notify\Database\Factories\NotificationFactory factory($count = null, $state = [])
@@ -59,15 +48,11 @@ use Modules\Xot\Models\BaseModel;
  */
 class Notification extends BaseModel
 {
-<<<<<<< HEAD
     /** @var list<string> */
-=======
->>>>>>> 9508e1f (.)
     protected $fillable = [
         'message',
         'type',
         'read_at',
-<<<<<<< HEAD
         'tenant_id',
         'user_id',
         'subject_type',
@@ -95,11 +80,4 @@ class Notification extends BaseModel
             'deleted_at' => 'datetime',
         ];
     }
-=======
-    ];
-
-    protected $casts = [
-        'read_at' => 'datetime',
-    ];
->>>>>>> 9508e1f (.)
 }

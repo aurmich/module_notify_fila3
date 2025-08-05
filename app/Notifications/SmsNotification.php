@@ -50,13 +50,9 @@ class SmsNotification extends Notification implements ShouldQueue
             
             $this->smsData = new SmsData();
             $this->smsData->body = $content;
-<<<<<<< HEAD
             /** @phpstan-ignore-next-line */
             $this->smsData->to = (string) $to;
             /** @phpstan-ignore-next-line */
-=======
-            $this->smsData->to = (string) $to;
->>>>>>> 9508e1f (.)
             $this->smsData->from = (string) $from;
         }
         
@@ -86,12 +82,8 @@ class SmsNotification extends Notification implements ShouldQueue
         // If the notifiable entity has a routeNotificationForSms method,
         // we'll use that to get the destination phone number
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForSms')) {
-<<<<<<< HEAD
             $routeResult = $notifiable->routeNotificationForSms($this);
             $this->smsData->to = (string) ($routeResult ?? '');
-=======
-            $this->smsData->to = (string) $notifiable->routeNotificationForSms($this);
->>>>>>> 9508e1f (.)
         }
 
         return $this->smsData;

@@ -33,8 +33,4 @@ class PreviewMailTemplate extends Page
                 ->url(fn () => MailTemplateResource::getUrl('edit', ['record' => $this->record])),
         ];
     }
-<<<<<<< HEAD
 } 
-=======
-} 
->>>>>>> 9508e1f (.)
