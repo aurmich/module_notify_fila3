@@ -5,12 +5,9 @@ declare(strict_types=1);
 namespace Modules\Notify\Providers;
 
 // use Illuminate\Support\Facades\Notification;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Mail;
 use Modules\Tenant\Services\TenantService;
->>>>>>> 1e9bb27 (.)
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 class NotifyServiceProvider extends XotBaseServiceProvider
@@ -24,8 +21,6 @@ class NotifyServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-<<<<<<< HEAD
-=======
         if (! app()->environment('production')) {
             $mail=TenantService::config('mail');
             $fallback_to=Arr::get($mail,'fallback_to',null);
@@ -33,6 +28,5 @@ class NotifyServiceProvider extends XotBaseServiceProvider
                 Mail::alwaysTo($fallback_to);
             }
         }
->>>>>>> 1e9bb27 (.)
     }
 }
