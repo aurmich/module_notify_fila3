@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Indice della Documentazione - Modulo Notify
 
 ## Collegamenti Correlati
@@ -79,6 +80,8 @@ Ultimo aggiornamento: 14 Maggio 2025
 >>>>>>> 8d56fc4 (.)
 =======
 >>>>>>> 550f79f (.)
+=======
+>>>>>>> 1497f29 (.)
 # Notify Module Documentation
 
 ## Overview
@@ -99,6 +102,7 @@ This document serves as the central index for the Notify module, providing guida
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 56ca120 (.)
@@ -113,6 +117,9 @@ This document serves as the central index for the Notify module, providing guida
 
 >>>>>>> 56ca120 (.)
 >>>>>>> 550f79f (.)
+=======
+
+>>>>>>> 1497f29 (.)
 ### 1. Module Structure
 - The Notify module follows a standard structure with directories for models, services, providers, and templates to ensure clarity and maintainability.
 
@@ -153,6 +160,7 @@ This document serves as the central index for the Notify module, providing guida
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 413785e1 (.)
@@ -160,6 +168,8 @@ This document serves as the central index for the Notify module, providing guida
 >>>>>>> 8d56fc4 (.)
 =======
 >>>>>>> 550f79f (.)
+=======
+>>>>>>> 1497f29 (.)
 
 ## Sottocartelle
 
@@ -183,6 +193,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1e9bb27 (.)
 =======
 >>>>>>> 413785e1 (.)
@@ -190,3 +201,5 @@ Ultimo aggiornamento: 14 Maggio 2025
 >>>>>>> 8d56fc4 (.)
 =======
 >>>>>>> 550f79f (.)
+=======
+>>>>>>> 1497f29 (.)
