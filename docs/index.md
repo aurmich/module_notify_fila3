@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Indice della Documentazione - Modulo Notify
 
 ## Collegamenti Correlati
@@ -70,6 +71,8 @@ Ultimo aggiornamento: 14 Maggio 2025
 
 =======
 >>>>>>> 1e9bb27 (.)
+=======
+>>>>>>> 413785e1 (.)
 # Notify Module Documentation
 
 ## Overview
@@ -88,12 +91,16 @@ This document serves as the central index for the Notify module, providing guida
 ## Implementation Guidelines
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 56ca120 (.)
 =======
 
 >>>>>>> 1e9bb27 (.)
+=======
+
+>>>>>>> 413785e1 (.)
 ### 1. Module Structure
 - The Notify module follows a standard structure with directories for models, services, providers, and templates to ensure clarity and maintainability.
 
@@ -131,7 +138,10 @@ This document serves as the central index for the Notify module, providing guida
 - [SMS Implementation](./SMS_IMPLEMENTATION.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 413785e1 (.)
 
 ## Sottocartelle
 
@@ -152,4 +162,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+<<<<<<< HEAD
 >>>>>>> 1e9bb27 (.)
+=======
+>>>>>>> 413785e1 (.)
