@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Indice della Documentazione - Modulo Notify
 
 ## Collegamenti Correlati
@@ -73,6 +74,8 @@ Ultimo aggiornamento: 14 Maggio 2025
 >>>>>>> 1e9bb27 (.)
 =======
 >>>>>>> 413785e1 (.)
+=======
+>>>>>>> 8d56fc4 (.)
 # Notify Module Documentation
 
 ## Overview
@@ -139,9 +142,12 @@ This document serves as the central index for the Notify module, providing guida
 - [Troubleshooting](./TROUBLESHOOTING.md)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 413785e1 (.)
+=======
+>>>>>>> 8d56fc4 (.)
 
 ## Sottocartelle
 
@@ -163,6 +169,9 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1e9bb27 (.)
 =======
 >>>>>>> 413785e1 (.)
+=======
+>>>>>>> 8d56fc4 (.)
