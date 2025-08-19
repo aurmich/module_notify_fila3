@@ -1,20 +1,13 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 # Analisi e Miglioramenti Modulo Notify
 =======
 # Analisi e Miglioramenti del Modulo Notify
 >>>>>>> 1e9bb27 (.)
-=======
-# Analisi e Miglioramenti Modulo Notify
->>>>>>> 550f79f (.)
 
 ## Analisi delle Soluzioni Esistenti
 
 ### 1. Editor Visuale
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 550f79f (.)
 #### GrapesJS
 - **Vantaggi**:
   - Editor WYSIWYG completo
@@ -25,7 +18,6 @@
   - Curva di apprendimento
   - Overhead performance
   - Complessità manutenzione
-<<<<<<< HEAD
 
 #### Laravel Mail Editor
 - **Vantaggi**:
@@ -115,113 +107,24 @@ class TemplateService
 class EmailTemplateResource extends Resource
 =======
 Dall'analisi di [Laravel Mail Editor](https://github.com/Qoraiche/laravel-mail-editor) e [Visual Builder Email Templates](https://filamentphp.com/plugins/visual-builder-email-templates), possiamo implementare:
-=======
->>>>>>> 550f79f (.)
 
-#### Laravel Mail Editor
-- **Vantaggi**:
-  - Integrazione nativa Laravel
-  - Interfaccia semplice
-  - Preview email
-  - Gestione template
-- **Svantaggi**:
-  - Funzionalità limitate
-  - Personalizzazione complessa
-  - Dipendenza da pacchetti
-
-### 2. Template System
-#### Database Templates
-- **Vantaggi**:
-  - Versioning template
-  - Gestione multilingua
-  - Modifica runtime
-  - Cache support
-- **Svantaggi**:
-  - Overhead database
-  - Complessità query
-  - Performance impact
-
-#### File Templates
-- **Vantaggi**:
-  - Performance migliore
-  - Versioning Git
-  - Sviluppo locale
-  - Testing semplice
-- **Svantaggi**:
-  - Modifica richiede deploy
-  - No modifica runtime
-  - Gestione multilingua complessa
-
-### 3. Servizi Email
-#### Mailgun
-- **Vantaggi**:
-  - Analytics avanzate
-  - A/B testing
-  - Template system
-  - API robusta
-- **Svantaggi**:
-  - Costi
-  - Dipendenza esterna
-  - Configurazione complessa
-
-#### Mailtrap
-- **Vantaggi**:
-  - Testing locale
-  - Preview email
-  - Debug facile
-  - Integrazione semplice
-- **Svantaggi**:
-  - Solo sviluppo
-  - Funzionalità limitate
-  - No produzione
-
-## Miglioramenti Proposti
-
-### 1. Sistema Template
 ```php
-// app/Services/TemplateService.php
-class TemplateService
-{
-    public function render($template, $data)
-    {
-        // 1. Cache template
-        // 2. Sostituzione variabili
-        // 3. Validazione output
-        // 4. Logging modifiche
-    }
+namespace Modules\Notify\Filament\Resources;
 
-    public function version($template)
-    {
-        // 1. Versioning automatico
-        // 2. Backup template
-        // 3. Rollback support
-        // 4. Audit log
-    }
-}
-```
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Builder;
 
-<<<<<<< HEAD
 class TemplateResource extends Resource
 >>>>>>> 1e9bb27 (.)
-=======
-### 2. Editor Visuale
-```php
-// app/Filament/Resources/EmailTemplateResource.php
-class EmailTemplateResource extends Resource
->>>>>>> 550f79f (.)
 {
     public static function form(Form $form): Form
     {
         return $form->schema([
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 550f79f (.)
             // 1. Editor visuale migliorato
             // 2. Preview real-time
             // 3. Validazione template
             // 4. Test invio
-<<<<<<< HEAD
 =======
             Builder::make('content')
                 ->blocks([
@@ -237,14 +140,11 @@ class EmailTemplateResource extends Resource
                         ])
                 ])
 >>>>>>> 1e9bb27 (.)
-=======
->>>>>>> 550f79f (.)
         ]);
     }
 }
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ### 3. Sistema Notifiche
 ```php
@@ -261,16 +161,13 @@ class BaseNotification extends Notification
 ### 2. Preview in Browser
 Basato su [How to Render Emails in Browser](https://how.dev/answers/how-to-render-emails-in-browser-using-laravel):
 
-=======
-### 3. Sistema Notifiche
->>>>>>> 550f79f (.)
 ```php
-// app/Notifications/BaseNotification.php
-class BaseNotification extends Notification
+namespace Modules\Notify\Http\Controllers;
+
+class PreviewController extends Controller
 {
-    public function via($notifiable)
+    public function preview($template)
     {
-<<<<<<< HEAD
         $rendered = $this->templateService->render($template, [
             'preview' => true,
             'data' => $this->getPreviewData()
@@ -280,17 +177,10 @@ class BaseNotification extends Notification
             'content' => $rendered
         ]);
 >>>>>>> 1e9bb27 (.)
-=======
-        // 1. Canali multipli
-        // 2. Fallback automatico
-        // 3. Rate limiting
-        // 4. Retry policy
->>>>>>> 550f79f (.)
     }
 }
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ## Roadmap Miglioramenti
 
@@ -346,58 +236,63 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 =======
 ### 3. Responsive Design con MJML
 Dall'analisi di [MJML](https://mjml.io/), implementiamo:
-=======
-## Roadmap Miglioramenti
->>>>>>> 550f79f (.)
 
-### Fase 1: Ottimizzazione Template
-1. Implementare cache template
-2. Migliorare versioning
-3. Aggiungere validazione
-4. Ottimizzare performance
+```php
+namespace Modules\Notify\Services;
 
-### Fase 2: Editor Visuale
-1. Migliorare UI/UX
-2. Aggiungere preview
-3. Implementare test
-4. Ottimizzare performance
+class MjmlService
+{
+    public function compile($template)
+    {
+        $mjml = $this->convertToMjml($template);
+        return $this->compileMjml($mjml);
+    }
 
-### Fase 3: Sistema Notifiche
-1. Migliorare gestione code
-2. Implementare analytics
-3. Aggiungere monitoraggio
-4. Ottimizzare delivery
+    protected function convertToMjml($template)
+    {
+        // Conversione del template in MJML
+        return view('notify::mjml.wrapper', [
+            'content' => $template
+        ])->render();
+    }
+}
+```
 
-## Best Practices
+## Miglioramenti Strutturali
 
-### 1. Template
-- Utilizzare cache
-- Implementare versioning
-- Validare output
-- Testare su client
+### 1. Sistema di Versioning
+```php
+namespace Modules\Notify\Models;
 
-### 2. Editor
-- Preview real-time
-- Validazione input
-- Test template
-- Backup automatico
+class TemplateVersion extends Model
+{
+    protected $fillable = [
+        'template_id',
+        'version',
+        'content',
+        'created_by'
+    ];
 
-### 3. Notifiche
-- Rate limiting
-- Retry policy
-- Monitoraggio
-- Logging dettagliato
+    public function template()
+    {
+        return $this->belongsTo(Template::class);
+    }
+}
+```
 
-## Note
-- Tutti i collegamenti sono relativi
-- La documentazione è mantenuta in italiano
-- I collegamenti sono bidirezionali quando appropriato
-- Ogni sezione ha il suo README.md specifico
+### 2. Gestione Multilingua Avanzata
+```php
+namespace Modules\Notify\Services;
 
-## Contribuire
-Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../docs/regole_collegamenti_documentazione.md).
+class LocalizationService
+{
+    public function translate($template, $locale)
+    {
+        return $template->translations()
+            ->where('locale', $locale)
+            ->first();
+    }
 
-<<<<<<< HEAD
     public function syncTranslations($template, $locales)
     {
         foreach ($locales as $locale) {
@@ -575,7 +470,3 @@ class TemplatePreview extends Component
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Laravel Mail Documentation](https://laravel.com/docs/mail) 
 >>>>>>> 1e9bb27 (.)
-=======
-## Collegamenti Completi
-Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
->>>>>>> 550f79f (.)

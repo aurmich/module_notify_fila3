@@ -3,6 +3,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Indice della Documentazione - Modulo Notify
 
 ## Collegamenti Correlati
@@ -76,12 +79,15 @@ Ultimo aggiornamento: 14 Maggio 2025
 >>>>>>> 1e9bb27 (.)
 =======
 >>>>>>> 413785e1 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 8d56fc4 (.)
 =======
 >>>>>>> 550f79f (.)
 =======
 >>>>>>> 1497f29 (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 # Notify Module Documentation
 
 ## Overview
@@ -103,6 +109,9 @@ This document serves as the central index for the Notify module, providing guida
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 =======
 
 >>>>>>> 56ca120 (.)
@@ -112,6 +121,7 @@ This document serves as the central index for the Notify module, providing guida
 =======
 
 >>>>>>> 413785e1 (.)
+<<<<<<< HEAD
 =======
 =======
 
@@ -120,6 +130,8 @@ This document serves as the central index for the Notify module, providing guida
 =======
 
 >>>>>>> 1497f29 (.)
+=======
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ### 1. Module Structure
 - The Notify module follows a standard structure with directories for models, services, providers, and templates to ensure clarity and maintainability.
 
@@ -161,6 +173,7 @@ This document serves as the central index for the Notify module, providing guida
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 413785e1 (.)
@@ -170,6 +183,11 @@ This document serves as the central index for the Notify module, providing guida
 >>>>>>> 550f79f (.)
 =======
 >>>>>>> 1497f29 (.)
+=======
+=======
+=======
+>>>>>>> 413785e1 (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 
 ## Sottocartelle
 
@@ -194,6 +212,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1e9bb27 (.)
 =======
 >>>>>>> 413785e1 (.)
@@ -203,3 +222,8 @@ Ultimo aggiornamento: 14 Maggio 2025
 >>>>>>> 550f79f (.)
 =======
 >>>>>>> 1497f29 (.)
+=======
+>>>>>>> 1e9bb27 (.)
+=======
+>>>>>>> 413785e1 (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)

@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 # Best Practices Implementazione
 
 ## Template Email
@@ -9,26 +8,18 @@
 // resources/views/vendor/notifications/email/base.blade.php
 =======
 # Best Practices e Raccomandazioni
-=======
-# Best Practices Implementazione
->>>>>>> 550f79f (.)
 
-## Template Email
+## 1. Design e Layout
 
-### 1. Struttura Template
+### 1.1 Responsive Design
 ```php
-<<<<<<< HEAD
 // resources/views/notify/layouts/responsive.blade.php
 >>>>>>> 1e9bb27 (.)
-=======
-// resources/views/vendor/notifications/email/base.blade.php
->>>>>>> 550f79f (.)
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 <<<<<<< HEAD
     <title>{{ config('app.name') }}</title>
     <style>
@@ -57,20 +48,10 @@
             }
         }
 >>>>>>> 1e9bb27 (.)
-=======
-    <title>{{ config('app.name') }}</title>
-    <style>
-        /* Stili inline per compatibilità */
-        .container { max-width: 600px; margin: 0 auto; }
-        .header { text-align: center; padding: 20px; }
-        .content { padding: 20px; }
-        .footer { text-align: center; padding: 20px; font-size: 12px; }
->>>>>>> 550f79f (.)
     </style>
 </head>
 <body>
     <div class="container">
-<<<<<<< HEAD
 <<<<<<< HEAD
         @yield('content')
 =======
@@ -80,15 +61,11 @@
         </div>
         @include('notify::partials.footer')
 >>>>>>> 1e9bb27 (.)
-=======
-        @yield('content')
->>>>>>> 550f79f (.)
     </div>
 </body>
 </html>
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ### 2. Gestione Variabili
 ```php
@@ -111,24 +88,34 @@ class TemplateVariableService
         // 4. Cache risultato
 =======
 ### 1.2 Compatibilità
-=======
-### 2. Gestione Variabili
->>>>>>> 550f79f (.)
 ```php
-// app/Services/TemplateVariableService.php
-class TemplateVariableService
+namespace Modules\Notify\Services;
+
+class CompatibilityService
 {
-    public function validate($template, $variables)
+    protected $supportedClients = [
+        'gmail' => ['version' => 'latest'],
+        'outlook' => ['version' => '2016+'],
+        'apple-mail' => ['version' => 'latest'],
+        'yahoo' => ['version' => 'latest']
+    ];
+
+    public function validate($template)
     {
-        // 1. Verifica variabili richieste
-        // 2. Validazione tipi
-        // 3. Sanitizzazione
-        // 4. Logging errori
+        $issues = [];
+
+        foreach ($this->supportedClients as $client => $requirements) {
+            $clientIssues = $this->checkClientCompatibility($template, $client);
+            if (!empty($clientIssues)) {
+                $issues[$client] = $clientIssues;
+            }
+        }
+
+        return $issues;
     }
 
-    public function replace($template, $variables)
+    protected function checkClientCompatibility($template, $client)
     {
-<<<<<<< HEAD
         $issues = [];
 
         // Verifica CSS supportato
@@ -143,17 +130,10 @@ class TemplateVariableService
 
         return $issues;
 >>>>>>> 1e9bb27 (.)
-=======
-        // 1. Sostituzione sicura
-        // 2. Escape HTML
-        // 3. Gestione fallback
-        // 4. Cache risultato
->>>>>>> 550f79f (.)
     }
 }
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ## Sistema Notifiche
 
@@ -174,25 +154,22 @@ class QueuedNotification extends Notification implements ShouldQueue
         return [60, 180, 360];
 =======
 ### 1.3 Performance
-=======
-## Sistema Notifiche
-
-### 1. Gestione Code
->>>>>>> 550f79f (.)
 ```php
-// app/Notifications/QueuedNotification.php
-class QueuedNotification extends Notification implements ShouldQueue
-{
-    use Queueable;
+namespace Modules\Notify\Services;
 
-    public function retryUntil()
+class PerformanceOptimizer
+{
+    protected $cache;
+    protected $imageOptimizer;
+
+    public function __construct()
     {
-        return now()->addHours(24);
+        $this->cache = app('cache');
+        $this->imageOptimizer = new ImageOptimizer();
     }
 
-    public function backoff()
+    public function optimize($template)
     {
-<<<<<<< HEAD
         // Ottimizza immagini
         $template->content = $this->optimizeImages($template->content);
 
@@ -228,14 +205,10 @@ class QueuedNotification extends Notification implements ShouldQueue
 
         return trim($css);
 >>>>>>> 1e9bb27 (.)
-=======
-        return [60, 180, 360];
->>>>>>> 550f79f (.)
     }
 }
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ### 2. Rate Limiting
 ```php
@@ -251,30 +224,28 @@ class NotificationServiceProvider extends ServiceProvider
 ## 2. Struttura del Codice
 
 ### 2.1 Organizzazione
-=======
-### 2. Rate Limiting
->>>>>>> 550f79f (.)
 ```php
-// app/Providers/NotificationServiceProvider.php
-class NotificationServiceProvider extends ServiceProvider
+namespace Modules\Notify;
+
+class ModuleServiceProvider extends ServiceProvider
 {
+    public function register()
+    {
+        $this->app->singleton(TemplateService::class);
+        $this->app->singleton(MjmlService::class);
+        $this->app->singleton(MailgunService::class);
+    }
+
     public function boot()
     {
-<<<<<<< HEAD
         $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
         $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
         $this->loadViewsFrom(__DIR__.'/Resources/views', 'notify');
 >>>>>>> 1e9bb27 (.)
-=======
-        RateLimiter::for('notifications', function ($job) {
-            return Limit::perMinute(60)->by($job->user->id);
-        });
->>>>>>> 550f79f (.)
     }
 }
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ## Editor Visuale
 
@@ -304,18 +275,14 @@ class EmailTemplateResource extends Resource
                 ]),
 =======
 ### 2.2 Convenzioni di Naming
-=======
-## Editor Visuale
-
-### 1. Validazione Input
->>>>>>> 550f79f (.)
 ```php
-// app/Filament/Resources/EmailTemplateResource.php
-class EmailTemplateResource extends Resource
+namespace Modules\Notify\Services;
+
+class TemplateService
 {
-    public static function form(Form $form): Form
+    // Nomi metodi chiari e descrittivi
+    public function createTemplate(array $data)
     {
-<<<<<<< HEAD
         return $this->template->create($data);
     }
 
@@ -671,31 +638,11 @@ class TemplateLogger
             'user_id' => auth()->id(),
             'data' => $data
 >>>>>>> 1e9bb27 (.)
-=======
-        return $form->schema([
-            Forms\Components\Builder::make('content')
-                ->blocks([
-                    Builder\Block::make('text')
-                        ->schema([
-                            Forms\Components\RichEditor::make('content')
-                                ->required()
-                                ->rules([
-                                    'required',
-                                    'string',
-                                    'max:10000',
-                                    function ($attribute, $value, $fail) {
-                                        // Validazione personalizzata
-                                    },
-                                ]),
-                        ]),
-                ]),
->>>>>>> 550f79f (.)
         ]);
     }
 }
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ### 2. Preview Template
 ```php
@@ -710,16 +657,111 @@ class PreviewAction extends Action
         // 4. Log errori
 =======
 ### 6.2 Analytics
-=======
-### 2. Preview Template
->>>>>>> 550f79f (.)
 ```php
-// app/Filament/Resources/EmailTemplateResource/Actions/PreviewAction.php
-class PreviewAction extends Action
+namespace Modules\Notify\Services;
+
+class TemplateAnalytics
 {
+    protected $metrics;
+
+    public function __construct()
+    {
+        $this->metrics = new MetricsCollector();
+    }
+
+    public function track($template, $event)
+    {
+        return $this->metrics->record([
+            'template_id' => $template->id,
+            'event' => $event,
+            'timestamp' => now(),
+            'user_id' => auth()->id(),
+            'metadata' => [
+                'user_agent' => request()->userAgent(),
+                'ip' => request()->ip()
+            ]
+        ]);
+    }
+
+    public function getMetrics($template, $period = 'daily')
+    {
+        return $this->metrics->get($template, $period);
+    }
+}
+```
+
+## 7. Manutenzione
+
+### 7.1 Versioning
+```php
+namespace Modules\Notify\Services;
+
+class VersionManager
+{
+    protected $template;
+
+    public function __construct(Template $template)
+    {
+        $this->template = $template;
+    }
+
+    public function createVersion($content)
+    {
+        $version = $this->template->versions()->count() + 1;
+
+        return $this->template->versions()->create([
+            'version' => $version,
+            'content' => $content,
+            'created_by' => auth()->id(),
+            'changes' => $this->getChanges($content)
+        ]);
+    }
+
+    public function rollback($version)
+    {
+        $oldVersion = $this->template->versions()
+            ->where('version', $version)
+            ->first();
+
+        if (!$oldVersion) {
+            throw new VersionNotFoundException("Version {$version} not found");
+        }
+
+        $this->template->update([
+            'content' => $oldVersion->content
+        ]);
+
+        return $this->createVersion($oldVersion->content);
+    }
+
+    protected function getChanges($content)
+    {
+        $previousVersion = $this->template->versions()->latest()->first();
+
+        if (!$previousVersion) {
+            return null;
+        }
+
+        return [
+            'added' => $this->getAddedLines($previousVersion->content, $content),
+            'removed' => $this->getRemovedLines($previousVersion->content, $content),
+            'modified' => $this->getModifiedLines($previousVersion->content, $content)
+        ];
+    }
+}
+```
+
+### 7.2 Backup
+```php
+namespace Modules\Notify\Console\Commands;
+
+class BackupTemplates extends Command
+{
+    protected $signature = 'notify:backup-templates';
+    protected $description = 'Backup all email templates';
+
     public function handle()
     {
-<<<<<<< HEAD
         $templates = Template::with(['translations', 'versions'])->get();
 
         $backup = [
@@ -736,17 +778,10 @@ class PreviewAction extends Action
 
         $this->info("Backup created: {$filename}");
 >>>>>>> 1e9bb27 (.)
-=======
-        // 1. Genera preview
-        // 2. Valida template
-        // 3. Test rendering
-        // 4. Log errori
->>>>>>> 550f79f (.)
     }
 }
 ```
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ## Integrazioni
 
@@ -826,89 +861,39 @@ Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/line
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
 =======
 ## 8. Note Finali
-=======
-## Integrazioni
->>>>>>> 550f79f (.)
 
-### 1. Mailgun
-```php
-// app/Services/MailgunService.php
-class MailgunService
-{
-    public function send($template, $data)
-    {
-        try {
-            // 1. Validazione input
-            // 2. Preparazione payload
-            // 3. Invio email
-            // 4. Logging risultato
-        } catch (Exception $e) {
-            // 1. Log errore
-            // 2. Notifica admin
-            // 3. Retry policy
-            // 4. Fallback
-        }
-    }
-}
-```
+1. **Documentazione**
+   - Mantenere documentazione aggiornata
+   - Documentare tutte le API
+   - Mantenere changelog
 
-### 2. Mailtrap
-```php
-// app/Services/MailtrapService.php
-class MailtrapService
-{
-    public function test($template, $data)
-    {
-        // 1. Validazione ambiente
-        // 2. Preparazione test
-        // 3. Invio test
-        // 4. Verifica risultato
-    }
-}
-```
+2. **Logging**
+   - Implementare logging dettagliato
+   - Monitorare errori
+   - Tracciare performance
 
-## Best Practices Generali
+3. **Testing**
+   - Eseguire test regolarmente
+   - Testare su vari client
+   - Verificare performance
 
-### 1. Performance
-- Utilizzare cache template
-- Implementare lazy loading
-- Ottimizzare query database
-- Minimizzare dipendenze
+4. **Performance**
+   - Monitorare metriche
+   - Ottimizzare query
+   - Implementare caching
 
-### 2. Sicurezza
-- Validare input
-- Sanitizzare output
-- Implementare rate limiting
-- Logging accessi
+5. **Backup**
+   - Eseguire backup regolari
+   - Verificare backup
+   - Testare ripristino
 
-### 3. Manutenibilità
-- Documentazione completa
-- Test unitari
-- Test integrazione
-- Code review
+6. **Code Review**
+   - Revisionare codice
+   - Verificare standard
+   - Controllare sicurezza
 
-<<<<<<< HEAD
 7. **Sicurezza**
    - Aggiornare dipendenze
    - Scansionare vulnerabilità
    - Implementare best practices 
 >>>>>>> 1e9bb27 (.)
-=======
-### 4. Monitoraggio
-- Logging dettagliato
-- Metriche performance
-- Alert errori
-- Report utilizzo
-
-## Note
-- Tutti i collegamenti sono relativi
-- La documentazione è mantenuta in italiano
-- I collegamenti sono bidirezionali quando appropriato
-- Ogni sezione ha il suo README.md specifico
-
-## Contribuire
-Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../docs/regole_collegamenti_documentazione.md).
-
-## Collegamenti Completi
-Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
->>>>>>> 550f79f (.)
