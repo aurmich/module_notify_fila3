@@ -130,8 +130,8 @@ if (!is_string($url)) {
 $fullName = $item->profile->full_name;
 
 // Dopo
-if (!is_object($item) || !property_exists($item, 'profile') || 
-    !is_object($item->profile) || !property_exists($item->profile, 'full_name')) {
+if (!is_object($item) || !isset($item->profile) || 
+    !is_object($item->profile) || !isset($item->profile->full_name)) {
     return [];
 }
 $fullName = $item->profile->full_name;

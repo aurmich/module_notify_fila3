@@ -70,27 +70,27 @@ class SendPushNotification extends Page implements HasForms
             }
             
             // Verifichiamo che $item abbia le proprietà necessarie
-            if (!$item->profile || !property_exists($item->profile, 'full_name')) {
+            if (!$item->profile || !isset($item->profile->full_name)) {
                 return [];
             }
             
             // Otteniamo il token
-            $token = $item->push_notifications_token;
-            if (!$token) {
+            $token = isset($item->push_notifications_token) ? $item->push_notifications_token : null;
+            if (! $token) {
                 return [];
             }
             
             // Otteniamo il nome completo
-            $fullName = $item->profile->full_name;
-            if (!is_string($fullName)) {
+            $fullName = isset($item->profile->full_name) ? $item->profile->full_name : null;
+            if (! is_string($fullName)) {
                 $fullName = 'Utente';
             }
             
             // Otteniamo il robot
             $robot = '';
-            if ($item->device && 
-                property_exists($item->device, 'robot') &&
-                is_string($item->device->robot)) {
+            if (isset($item->device)
+                && isset($item->device->robot)
+                && is_string($item->device->robot)) {
                 $robot = $item->device->robot;
             } else {
                 $robot = null;
