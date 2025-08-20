@@ -31,22 +31,9 @@ return new class () extends XotBaseMigration {
          // -- UPDATE --
          $this->tableUpdate(
             function (Blueprint $table): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
                 $this->updateTimestamps(table: $table, hasSoftDeletes: true);
-=======
-                $this->updateTimestamps(table: $table, softDeletes: true);
->>>>>>> 413785e1 (.)
-<<<<<<< HEAD
-=======
-                $this->updateTimestamps(table: $table, softDeletes: true);
->>>>>>> 1497f29 (.)
-=======
->>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
             }
         );
     }
 };
+
