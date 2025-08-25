@@ -64,11 +64,12 @@ class SendPushNotification extends Page implements HasForms
          * Callback per mappare i dispositivi in opzioni per il select.
          */
         $callback = function ($item) {
-            // Verifichiamo che $item sia un oggetto
-            if (!$item) {
+            /** @var mixed $item */
+            if (!is_object($item)) {
                 return [];
             }
             
+<<<<<<< HEAD
             // Verifichiamo che $item abbia le proprietà necessarie
             if (!$item->profile || !isset($item->profile->full_name)) {
                 return [];
@@ -95,18 +96,41 @@ class SendPushNotification extends Page implements HasForms
             } else {
                 $robot = null;
             }
+=======
+            // Relations & attributes in a Laravel-safe way
+            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
+            if (!is_object($profile)) {
+                return [];
+            }
+            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
+
+            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
+            $token = is_string($tokenAttr) ? $tokenAttr : '';
+            if ($token === '' || $token === 'unknown') {
+                return [];
+            }
+
+            $device = method_exists($item, 'getRelationValue') ? $item->getRelationValue('device') : null;
+            $robotVal = data_get($device, 'robot');
+            $robot = is_string($robotVal) ? $robotVal : null;
+>>>>>>> 247bd86 (.)
             
             // Creiamo la label con gli ultimi 5 caratteri del token
             $tokenSuffix = mb_substr($token, -5);
+            $label = $fullName.' ('.($robot ?? '').') '.$tokenSuffix;
             
-            return [$token => $fullName.' ('.$robot.') '.$tokenSuffix];
+            return [$token => $label];
         };
 
         /**
          * Callback per filtrare i dispositivi.
          */
         $filterCallback = function ($item): bool {
-            return $item && $item->profile !== null;
+            if (!is_object($item)) {
+                return false;
+            }
+            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
+            return is_object($profile);
         };
 
         $to = $devices

@@ -18,7 +18,7 @@ use Modules\Notify\Models\MailTemplate;
 use Illuminate\Mail\Mailables\Attachment;
 
 use Spatie\MailTemplates\TemplateMailable;
-use Modules\Xot\Actions\Model\GetSicureArrayByModelAction;
+use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 
 /**
@@ -58,7 +58,11 @@ class SpatieEmail extends TemplateMailable
 
         $tpl->increment('counter');
         $lang=app()->getLocale();
+<<<<<<< HEAD
         $data = app(GetSicureArrayByModelAction::class)->execute($record);
+=======
+        $data = app(SafeArrayByModelCastAction::class)->execute($record);
+>>>>>>> 247bd86 (.)
         $this->data['lang']=$lang;
         $this->data['login_url']=route('login');
         $this->data['site_url']=url('/'.$lang);

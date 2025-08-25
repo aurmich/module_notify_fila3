@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications;
 
+use Modules\Xot\Actions\Cast\SafeAttributeCastAction;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -141,6 +143,7 @@ class GenericNotification extends Notification implements ShouldQueue
         if (is_object($notifiable) && method_exists($notifiable, 'getFullName')) {
             return $notifiable->getFullName();
         }
+<<<<<<< HEAD
 
         if (is_object($notifiable) && isset($notifiable->full_name) && $notifiable->full_name) {
             return (string) $notifiable->full_name;
@@ -152,6 +155,21 @@ class GenericNotification extends Notification implements ShouldQueue
 
         if (is_object($notifiable) && isset($notifiable->name) && $notifiable->name) {
             return (string) $notifiable->name;
+=======
+        
+        if (is_object($notifiable) && $notifiable instanceof \Illuminate\Database\Eloquent\Model) {
+            if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'full_name')) {
+                return SafeAttributeCastAction::getString($notifiable, 'full_name', 'Utente');
+            }
+            
+            if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'first_name')) {
+                return SafeAttributeCastAction::getString($notifiable, 'first_name', 'Utente');
+            }
+            
+            if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'name')) {
+                return SafeAttributeCastAction::getString($notifiable, 'name', 'Utente');
+            }
+>>>>>>> 247bd86 (.)
         }
 
         return 'Utente';

@@ -1,12 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Analisi e Miglioramenti Modulo Notify
 =======
 # Analisi e Miglioramenti del Modulo Notify
 >>>>>>> bf9590e (.)
+=======
+# Analisi e Miglioramenti del Modulo Notify
+>>>>>>> 247bd86 (.)
 
 ## Analisi delle Soluzioni Esistenti
 
 ### 1. Editor Visuale
+<<<<<<< HEAD
 <<<<<<< HEAD
 #### GrapesJS
 - **Vantaggi**:
@@ -106,6 +111,8 @@ class TemplateService
 // app/Filament/Resources/EmailTemplateResource.php
 class EmailTemplateResource extends Resource
 =======
+=======
+>>>>>>> 247bd86 (.)
 Dall'analisi di [Laravel Mail Editor](https://github.com/Qoraiche/laravel-mail-editor) e [Visual Builder Email Templates](https://filamentphp.com/plugins/visual-builder-email-templates), possiamo implementare:
 
 ```php
@@ -115,17 +122,23 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\Builder;
 
 class TemplateResource extends Resource
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
 {
     public static function form(Form $form): Form
     {
         return $form->schema([
+<<<<<<< HEAD
 <<<<<<< HEAD
             // 1. Editor visuale migliorato
             // 2. Preview real-time
             // 3. Validazione template
             // 4. Test invio
 =======
+=======
+>>>>>>> 247bd86 (.)
             Builder::make('content')
                 ->blocks([
                     Builder\Block::make('text')
@@ -139,12 +152,16 @@ class TemplateResource extends Resource
                                 ->required()
                         ])
                 ])
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
         ]);
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ### 3. Sistema Notifiche
 ```php
@@ -158,6 +175,8 @@ class BaseNotification extends Notification
         // 3. Rate limiting
         // 4. Retry policy
 =======
+=======
+>>>>>>> 247bd86 (.)
 ### 2. Preview in Browser
 Basato su [How to Render Emails in Browser](https://how.dev/answers/how-to-render-emails-in-browser-using-laravel):
 
@@ -176,11 +195,15 @@ class PreviewController extends Controller
         return response()->view('notify::preview', [
             'content' => $rendered
         ]);
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Roadmap Miglioramenti
 
@@ -234,6 +257,8 @@ Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/line
 ## Collegamenti Completi
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
 =======
+=======
+>>>>>>> 247bd86 (.)
 ### 3. Responsive Design con MJML
 Dall'analisi di [MJML](https://mjml.io/), implementiamo:
 
@@ -469,4 +494,7 @@ class TemplatePreview extends Component
 - [Mailgun API](https://documentation.mailgun.com/en/latest/api_reference.html)
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Laravel Mail Documentation](https://laravel.com/docs/mail) 
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)

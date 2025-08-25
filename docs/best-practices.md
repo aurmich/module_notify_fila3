@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Best Practices Implementazione
 
 ## Template Email
@@ -7,6 +8,8 @@
 ```php
 // resources/views/vendor/notifications/email/base.blade.php
 =======
+=======
+>>>>>>> 247bd86 (.)
 # Best Practices e Raccomandazioni
 
 ## 1. Design e Layout
@@ -14,12 +17,16 @@
 ### 1.1 Responsive Design
 ```php
 // resources/views/notify/layouts/responsive.blade.php
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <title>{{ config('app.name') }}</title>
     <style>
@@ -29,6 +36,8 @@
         .content { padding: 20px; }
         .footer { text-align: center; padding: 20px; font-size: 12px; }
 =======
+=======
+>>>>>>> 247bd86 (.)
     <title>{{ $subject }}</title>
     <style>
         /* Responsive styles */
@@ -47,25 +56,35 @@
                 font-size: 10px !important;
             }
         }
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     </style>
 </head>
 <body>
     <div class="container">
 <<<<<<< HEAD
+<<<<<<< HEAD
         @yield('content')
 =======
+=======
+>>>>>>> 247bd86 (.)
         @include('notify::partials.header')
         <div class="content">
             {{ $slot }}
         </div>
         @include('notify::partials.footer')
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     </div>
 </body>
 </html>
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ### 2. Gestione Variabili
 ```php
@@ -87,6 +106,8 @@ class TemplateVariableService
         // 3. Gestione fallback
         // 4. Cache risultato
 =======
+=======
+>>>>>>> 247bd86 (.)
 ### 1.2 Compatibilità
 ```php
 namespace Modules\Notify\Services;
@@ -129,11 +150,15 @@ class CompatibilityService
         }
 
         return $issues;
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Sistema Notifiche
 
@@ -153,6 +178,8 @@ class QueuedNotification extends Notification implements ShouldQueue
     {
         return [60, 180, 360];
 =======
+=======
+>>>>>>> 247bd86 (.)
 ### 1.3 Performance
 ```php
 namespace Modules\Notify\Services;
@@ -204,11 +231,15 @@ class PerformanceOptimizer
         $css = preg_replace('/\s+/', ' ', $css);
 
         return trim($css);
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ### 2. Rate Limiting
 ```php
@@ -221,6 +252,8 @@ class NotificationServiceProvider extends ServiceProvider
             return Limit::perMinute(60)->by($job->user->id);
         });
 =======
+=======
+>>>>>>> 247bd86 (.)
 ## 2. Struttura del Codice
 
 ### 2.1 Organizzazione
@@ -241,11 +274,15 @@ class ModuleServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
         $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
         $this->loadViewsFrom(__DIR__.'/Resources/views', 'notify');
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Editor Visuale
 
@@ -274,6 +311,8 @@ class EmailTemplateResource extends Resource
                         ]),
                 ]),
 =======
+=======
+>>>>>>> 247bd86 (.)
 ### 2.2 Convenzioni di Naming
 ```php
 namespace Modules\Notify\Services;
@@ -637,12 +676,16 @@ class TemplateLogger
             'timestamp' => now(),
             'user_id' => auth()->id(),
             'data' => $data
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
         ]);
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ### 2. Preview Template
 ```php
@@ -656,6 +699,8 @@ class PreviewAction extends Action
         // 3. Test rendering
         // 4. Log errori
 =======
+=======
+>>>>>>> 247bd86 (.)
 ### 6.2 Analytics
 ```php
 namespace Modules\Notify\Services;
@@ -686,11 +731,15 @@ class TemplateAnalytics
     public function getMetrics($template, $period = 'daily')
     {
         return $this->metrics->get($template, $period);
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Integrazioni
 
@@ -728,6 +777,8 @@ class MailtrapService
         // 3. Invio test
         // 4. Verifica risultato
 =======
+=======
+>>>>>>> 247bd86 (.)
 ## 7. Manutenzione
 
 ### 7.1 Versioning
@@ -785,11 +836,15 @@ class VersionManager
             'removed' => $this->getRemovedLines($previousVersion->content, $content),
             'modified' => $this->getModifiedLines($previousVersion->content, $content)
         ];
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Best Practices Generali
 
@@ -829,6 +884,8 @@ Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/line
 ## Collegamenti Completi
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
 =======
+=======
+>>>>>>> 247bd86 (.)
 ### 7.2 Backup
 ```php
 namespace Modules\Notify\Console\Commands;
@@ -895,4 +952,7 @@ class BackupTemplates extends Command
    - Aggiornare dipendenze
    - Scansionare vulnerabilità
    - Implementare best practices 
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)

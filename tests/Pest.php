@@ -16,7 +16,10 @@ use Modules\Notify\Tests\TestCase;
 */
 
 pest()->extend(TestCase::class)
+<<<<<<< HEAD
     ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+=======
+>>>>>>> 247bd86 (.)
     ->in('Feature', 'Unit');
 
 /*

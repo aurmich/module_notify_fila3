@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Analisi Approfondita: Email Templates in Laravel per <nome progetto>
 
 ## 1. Panoramica Soluzioni Analizzate
@@ -126,6 +127,8 @@ Sono state analizzate le principali soluzioni open source, best practice e patte
 
 _Analisi aggiornata al 2025-05-05. Per dettagli e approfondimenti, consultare i README specifici delle soluzioni nella cartella email-templates._
 =======
+=======
+>>>>>>> 247bd86 (.)
 # Analisi dei Template Email in Laravel
 
 ## Panoramica
@@ -312,4 +315,7 @@ public static function form(Form $form): Form
 - Testare su diversi client email
 - Monitorare le performance
 - Implementare logging appropriato 
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
