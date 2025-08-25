@@ -60,6 +60,7 @@ class SendPushNotificationPage extends XotBasePage
          */
         $callback = function ($item) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Verifichiamo che $item sia un oggetto
             if (! $item) {
                 return [];
@@ -115,6 +116,26 @@ class SendPushNotificationPage extends XotBasePage
                 return [];
             }
 
+=======
+            /** @var mixed $item */
+            if (!is_object($item)) {
+                return [];
+            }
+            
+            // Relations & attributes (Laravel-safe)
+            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
+            if (!is_object($profile)) {
+                return [];
+            }
+            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
+
+            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
+            $token = is_string($tokenAttr) ? $tokenAttr : '';
+            if ($token === '' || $token === 'unknown') {
+                return [];
+            }
+
+>>>>>>> aa7cd13 (.)
             $device = method_exists($item, 'getRelationValue') ? $item->getRelationValue('device') : null;
             $robotVal = data_get($device, 'robot');
             $robot = is_string($robotVal) ? $robotVal : null;
@@ -124,7 +145,10 @@ class SendPushNotificationPage extends XotBasePage
             $label = $fullName.' ('.($robot ?? '').') '.$tokenSuffix;
             
             return [$token => $label];
+<<<<<<< HEAD
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> aa7cd13 (.)
         };
 
         /**
@@ -132,14 +156,20 @@ class SendPushNotificationPage extends XotBasePage
          */
         $filterCallback = function ($item): bool {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $item && null !== $item->profile;
 =======
+=======
+>>>>>>> aa7cd13 (.)
             if (!is_object($item)) {
                 return false;
             }
             $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
             return is_object($profile);
+<<<<<<< HEAD
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> aa7cd13 (.)
         };
 
         $to = $devices

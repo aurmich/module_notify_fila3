@@ -144,6 +144,7 @@ class GenericNotification extends Notification implements ShouldQueue
             return $notifiable->getFullName();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (is_object($notifiable) && isset($notifiable->full_name) && $notifiable->full_name) {
             return (string) $notifiable->full_name;
@@ -156,6 +157,8 @@ class GenericNotification extends Notification implements ShouldQueue
         if (is_object($notifiable) && isset($notifiable->name) && $notifiable->name) {
             return (string) $notifiable->name;
 =======
+=======
+>>>>>>> aa7cd13 (.)
         
         if (is_object($notifiable) && $notifiable instanceof \Illuminate\Database\Eloquent\Model) {
             if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'full_name')) {
@@ -169,7 +172,10 @@ class GenericNotification extends Notification implements ShouldQueue
             if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'name')) {
                 return SafeAttributeCastAction::getString($notifiable, 'name', 'Utente');
             }
+<<<<<<< HEAD
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> aa7cd13 (.)
         }
 
         return 'Utente';

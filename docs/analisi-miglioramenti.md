@@ -4,9 +4,12 @@
 =======
 # Analisi e Miglioramenti del Modulo Notify
 >>>>>>> bf9590e (.)
+<<<<<<< HEAD
 =======
 # Analisi e Miglioramenti del Modulo Notify
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> aa7cd13 (.)
 
 ## Analisi delle Soluzioni Esistenti
 
@@ -123,9 +126,13 @@ use Filament\Forms\Components\Builder;
 
 class TemplateResource extends Resource
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
 {
     public static function form(Form $form): Form
     {
@@ -153,9 +160,13 @@ class TemplateResource extends Resource
                         ])
                 ])
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
         ]);
     }
 }
@@ -196,9 +207,13 @@ class PreviewController extends Controller
             'content' => $rendered
         ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     }
 }
 ```
@@ -495,6 +510,10 @@ class TemplatePreview extends Component
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Laravel Mail Documentation](https://laravel.com/docs/mail) 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)

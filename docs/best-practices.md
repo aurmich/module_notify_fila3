@@ -18,9 +18,13 @@
 ```php
 // resources/views/notify/layouts/responsive.blade.php
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,9 +61,13 @@
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     </style>
 </head>
 <body>
@@ -76,9 +84,13 @@
         </div>
         @include('notify::partials.footer')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     </div>
 </body>
 </html>
@@ -151,9 +163,13 @@ class CompatibilityService
 
         return $issues;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     }
 }
 ```
@@ -232,9 +248,13 @@ class PerformanceOptimizer
 
         return trim($css);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     }
 }
 ```
@@ -275,9 +295,13 @@ class ModuleServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
         $this->loadViewsFrom(__DIR__.'/Resources/views', 'notify');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     }
 }
 ```
@@ -677,9 +701,13 @@ class TemplateLogger
             'user_id' => auth()->id(),
             'data' => $data
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
         ]);
     }
 }
@@ -732,15 +760,22 @@ class TemplateAnalytics
     {
         return $this->metrics->get($template, $period);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     }
 }
 ```
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> aa7cd13 (.)
 ## Integrazioni
 
 ### 1. Mailgun
@@ -777,8 +812,11 @@ class MailtrapService
         // 3. Invio test
         // 4. Verifica risultato
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> aa7cd13 (.)
 ## 7. Manutenzione
 
 ### 7.1 Versioning
@@ -837,15 +875,22 @@ class VersionManager
             'modified' => $this->getModifiedLines($previousVersion->content, $content)
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
     }
 }
 ```
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> aa7cd13 (.)
 ## Best Practices Generali
 
 ### 1. Performance
@@ -884,8 +929,11 @@ Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/line
 ## Collegamenti Completi
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> aa7cd13 (.)
 ### 7.2 Backup
 ```php
 namespace Modules\Notify\Console\Commands;
@@ -953,6 +1001,10 @@ class BackupTemplates extends Command
    - Scansionare vulnerabilità
    - Implementare best practices 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)

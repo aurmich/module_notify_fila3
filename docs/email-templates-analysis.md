@@ -316,6 +316,10 @@ public static function form(Form $form): Form
 - Monitorare le performance
 - Implementare logging appropriato 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
+=======
+>>>>>>> bf9590e (.)
+>>>>>>> aa7cd13 (.)
