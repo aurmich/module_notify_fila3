@@ -60,6 +60,7 @@ class SpatieEmail extends TemplateMailable
         $lang=app()->getLocale();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $data = app(GetSicureArrayByModelAction::class)->execute($record);
 =======
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
@@ -67,6 +68,9 @@ class SpatieEmail extends TemplateMailable
 =======
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
 >>>>>>> aa7cd13 (.)
+=======
+        $data = app(SafeArrayByModelCastAction::class)->execute($record);
+>>>>>>> 04b0ffb (.)
         $this->data['lang']=$lang;
         $this->data['login_url']=route('login');
         $this->data['site_url']=url('/'.$lang);
