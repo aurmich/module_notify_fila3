@@ -69,44 +69,6 @@ class SendPushNotification extends Page implements HasForms
                 return [];
             }
             
-<<<<<<< HEAD
-            // Relations & attributes in a Laravel-safe way
-            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
-            if (!is_object($profile)) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // Verifichiamo che $item abbia le proprietà necessarie
-            if (!$item->profile || !isset($item->profile->full_name)) {
->>>>>>> 2449170 (.)
-                return [];
-            }
-            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
-
-            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
-            $token = is_string($tokenAttr) ? $tokenAttr : '';
-            if ($token === '' || $token === 'unknown') {
-                return [];
-            }
-<<<<<<< HEAD
-=======
-            
-            // Otteniamo il nome completo
-            $fullName = isset($item->profile->full_name) ? $item->profile->full_name : null;
-            if (! is_string($fullName)) {
-                $fullName = 'Utente';
-            }
-            
-            // Otteniamo il robot
-            $robot = '';
-            if (isset($item->device)
-                && isset($item->device->robot)
-                && is_string($item->device->robot)) {
-                $robot = $item->device->robot;
-            } else {
-                $robot = null;
-            }
-=======
             // Relations & attributes in a Laravel-safe way
             $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
             if (!is_object($profile)) {
@@ -119,32 +81,10 @@ class SendPushNotification extends Page implements HasForms
             if ($token === '' || $token === 'unknown') {
                 return [];
             }
-=======
-            // Relations & attributes in a Laravel-safe way
-            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
-            if (!is_object($profile)) {
-                return [];
-            }
-            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
-
-            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
-            $token = is_string($tokenAttr) ? $tokenAttr : '';
-            if ($token === '' || $token === 'unknown') {
-                return [];
-            }
->>>>>>> aa7cd13 (.)
->>>>>>> 2449170 (.)
 
             $device = method_exists($item, 'getRelationValue') ? $item->getRelationValue('device') : null;
             $robotVal = data_get($device, 'robot');
             $robot = is_string($robotVal) ? $robotVal : null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 247bd86 (.)
-=======
->>>>>>> aa7cd13 (.)
->>>>>>> 2449170 (.)
             
             // Creiamo la label con gli ultimi 5 caratteri del token
             $tokenSuffix = mb_substr($token, -5);
