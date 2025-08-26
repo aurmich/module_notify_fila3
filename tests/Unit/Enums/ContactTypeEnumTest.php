@@ -87,3 +87,7 @@ class ContactTypeEnumTest extends TestCase
         $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca7ea20 (.)

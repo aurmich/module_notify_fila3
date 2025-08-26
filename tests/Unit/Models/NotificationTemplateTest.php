@@ -152,3 +152,7 @@ class NotificationTemplateTest extends TestCase
         $this->assertContains('Illuminate\Database\Eloquent\Concerns\HasUuids', $traits);
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca7ea20 (.)

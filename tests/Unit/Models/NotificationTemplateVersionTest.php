@@ -155,3 +155,7 @@ class NotificationTemplateVersionTest extends TestCase
         $this->assertTrue(method_exists($version, 'media'));
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca7ea20 (.)

@@ -153,3 +153,7 @@ class NotificationManagerTest extends TestCase
         $this->assertIsArray($result);
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca7ea20 (.)

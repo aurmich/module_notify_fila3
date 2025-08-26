@@ -168,3 +168,7 @@ class NotifyThemeTest extends TestCase
         $this->assertEquals('Illuminate\Database\Eloquent\Relations\MorphTo', $returnType->getName());
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca7ea20 (.)

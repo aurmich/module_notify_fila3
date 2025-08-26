@@ -96,3 +96,7 @@ class MediaTypeEnumTest extends TestCase
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca7ea20 (.)
