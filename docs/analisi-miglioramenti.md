@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f3a81e (.)
 # Analisi e Miglioramenti Modulo Notify
 =======
 # Analisi e Miglioramenti del Modulo Notify
 >>>>>>> bf9590e (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 # Analisi e Miglioramenti del Modulo Notify
@@ -14,6 +18,11 @@
 =======
 # Analisi e Miglioramenti del Modulo Notify
 >>>>>>> 04b0ffb (.)
+=======
+=======
+# Analisi e Miglioramenti del Modulo Notify
+>>>>>>> 247bd86 (.)
+>>>>>>> 8f3a81e (.)
 
 ## Analisi delle Soluzioni Esistenti
 
@@ -21,6 +30,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f3a81e (.)
 #### GrapesJS
 - **Vantaggi**:
   - Editor WYSIWYG completo
@@ -121,8 +133,11 @@ class EmailTemplateResource extends Resource
 =======
 =======
 >>>>>>> 247bd86 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
 Dall'analisi di [Laravel Mail Editor](https://github.com/Qoraiche/laravel-mail-editor) e [Visual Builder Email Templates](https://filamentphp.com/plugins/visual-builder-email-templates), possiamo implementare:
 
 ```php
@@ -135,6 +150,7 @@ class TemplateResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
@@ -143,6 +159,11 @@ class TemplateResource extends Resource
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
+>>>>>>> 8f3a81e (.)
 {
     public static function form(Form $form): Form
     {
@@ -150,6 +171,9 @@ class TemplateResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f3a81e (.)
             // 1. Editor visuale migliorato
             // 2. Preview real-time
             // 3. Validazione template
@@ -157,8 +181,11 @@ class TemplateResource extends Resource
 =======
 =======
 >>>>>>> 247bd86 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
             Builder::make('content')
                 ->blocks([
                     Builder\Block::make('text')
@@ -175,6 +202,7 @@ class TemplateResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
@@ -183,6 +211,11 @@ class TemplateResource extends Resource
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
+>>>>>>> 8f3a81e (.)
         ]);
     }
 }
@@ -191,6 +224,9 @@ class TemplateResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f3a81e (.)
 ### 3. Sistema Notifiche
 ```php
 // app/Notifications/BaseNotification.php
@@ -205,8 +241,11 @@ class BaseNotification extends Notification
 =======
 =======
 >>>>>>> 247bd86 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
 ### 2. Preview in Browser
 Basato su [How to Render Emails in Browser](https://how.dev/answers/how-to-render-emails-in-browser-using-laravel):
 
@@ -228,6 +267,7 @@ class PreviewController extends Controller
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
@@ -236,6 +276,11 @@ class PreviewController extends Controller
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
+>>>>>>> 8f3a81e (.)
     }
 }
 ```
@@ -243,6 +288,9 @@ class PreviewController extends Controller
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f3a81e (.)
 ## Roadmap Miglioramenti
 
 ### Fase 1: Ottimizzazione Template
@@ -297,8 +345,11 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 =======
 =======
 >>>>>>> 247bd86 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
 ### 3. Responsive Design con MJML
 Dall'analisi di [MJML](https://mjml.io/), implementiamo:
 
@@ -537,6 +588,7 @@ class TemplatePreview extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bf9590e (.)
 =======
 >>>>>>> 247bd86 (.)
@@ -545,3 +597,8 @@ class TemplatePreview extends Component
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> bf9590e (.)
+=======
+>>>>>>> 247bd86 (.)
+>>>>>>> 8f3a81e (.)

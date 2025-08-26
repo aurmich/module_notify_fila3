@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Best Practices Implementazione
 
 ## Template Email
@@ -14,6 +15,9 @@
 =======
 >>>>>>> 04b0ffb (.)
 # Best Practices e Raccomandazioni
+=======
+# Best Practices e Raccomandazioni - Modulo Notify
+>>>>>>> 8f3a81e (.)
 
 ## 1. Design e Layout
 
@@ -117,6 +121,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### 2. Gestione Variabili
 ```php
 // app/Services/TemplateVariableService.php
@@ -142,20 +147,43 @@ class TemplateVariableService
 =======
 >>>>>>> 04b0ffb (.)
 ### 1.2 Compatibilità
+=======
+### 1.2 Struttura Template Base
+>>>>>>> 8f3a81e (.)
 ```php
-namespace Modules\Notify\Services;
+// resources/views/vendor/notifications/email/base.blade.php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config('app.name') }}</title>
+    <style>
+        /* Stili inline per compatibilità */
+        .container { max-width: 600px; margin: 0 auto; }
+        .header { text-align: center; padding: 20px; }
+        .content { padding: 20px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        @yield('content')
+    </div>
+</body>
+</html>
+```
 
-class CompatibilityService
+## 2. Gestione Variabili e Template
+
+### 2.1 Servizio Validazione Variabili
+```php
+// app/Services/TemplateVariableService.php
+class TemplateVariableService
 {
-    protected $supportedClients = [
-        'gmail' => ['version' => 'latest'],
-        'outlook' => ['version' => '2016+'],
-        'apple-mail' => ['version' => 'latest'],
-        'yahoo' => ['version' => 'latest']
-    ];
-
-    public function validate($template)
+    public function validate($template, $variables)
     {
+<<<<<<< HEAD
         $issues = [];
 
         foreach ($this->supportedClients as $client => $requirements) {
@@ -194,10 +222,17 @@ class CompatibilityService
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+        // 1. Verifica variabili richieste
+        // 2. Validazione tipi
+        // 3. Sanitizzazione
+        // 4. Logging errori
+>>>>>>> 8f3a81e (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -380,85 +415,60 @@ class EmailTemplateResource extends Resource
 ```php
 namespace Modules\Notify\Services;
 
+=======
+### 2.2 Gestione Template Dinamici
+```php
+// app/Services/TemplateService.php
+>>>>>>> 8f3a81e (.)
 class TemplateService
 {
-    // Nomi metodi chiari e descrittivi
-    public function createTemplate(array $data)
+    public function render($template, $data = [])
     {
-        return $this->template->create($data);
-    }
-
-    public function updateTemplate(Template $template, array $data)
-    {
-        return $this->template->update($data);
-    }
-
-    public function deleteTemplate(Template $template)
-    {
-        return $this->template->delete();
-    }
-
-    // Nomi variabili significativi
-    protected function processTemplateContent($rawContent)
-    {
-        $processedContent = $this->sanitizeContent($rawContent);
-        $validatedContent = $this->validateContent($processedContent);
-        return $validatedContent;
+        // Validazione template
+        $this->validateTemplate($template);
+        
+        // Sanitizzazione dati
+        $sanitizedData = $this->sanitizeData($data);
+        
+        // Rendering template
+        return view($template, $sanitizedData);
     }
 }
 ```
 
-### 2.3 Documentazione
+## 3. Notifiche e Invio
+
+### 3.1 Configurazione Canali
 ```php
-namespace Modules\Notify\Services;
-
-/**
- * Servizio per la gestione dei template email
- *
- * @package Modules\Notify\Services
- */
-class TemplateService
-{
-    /**
-     * Crea un nuovo template
-     *
-     * @param array $data Dati del template
-     * @return Template
-     * @throws TemplateException
-     */
-    public function create(array $data)
-    {
-        // Implementazione
-    }
-
-    /**
-     * Aggiorna un template esistente
-     *
-     * @param Template $template Template da aggiornare
-     * @param array $data Dati di aggiornamento
-     * @return Template
-     * @throws TemplateException
-     */
-    public function update(Template $template, array $data)
-    {
-        // Implementazione
-    }
-}
+// config/notify.php
+return [
+    'channels' => [
+        'mail' => [
+            'driver' => 'smtp',
+            'host' => env('MAIL_HOST'),
+            'port' => env('MAIL_PORT'),
+            'encryption' => env('MAIL_ENCRYPTION'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+        ],
+        'database' => [
+            'table' => 'notifications',
+        ],
+        'broadcast' => [
+            'driver' => 'pusher',
+        ],
+    ],
+];
 ```
 
-## 3. Sicurezza
-
-### 3.1 Sanitizzazione
+### 3.2 Classe Notifica Base
 ```php
-namespace Modules\Notify\Services;
-
-class TemplateSanitizer
+// app/Notifications/BaseNotification.php
+abstract class BaseNotification extends Notification
 {
-    protected $allowedTags = [
-        'p', 'br', 'strong', 'em', 'a', 'img',
-        'table', 'tr', 'td', 'th', 'thead', 'tbody'
-    ];
+    use Queueable;
 
+<<<<<<< HEAD
     protected $allowedAttributes = [
         'src', 'alt', 'href', 'class', 'style'
     ];
@@ -870,44 +880,31 @@ namespace Modules\Notify\Services;
 
 class VersionManager
 {
+=======
+    protected $data;
+>>>>>>> 8f3a81e (.)
     protected $template;
 
-    public function __construct(Template $template)
+    public function __construct($data = [])
     {
-        $this->template = $template;
+        $this->data = $data;
     }
 
-    public function createVersion($content)
+    public function via($notifiable)
     {
-        $version = $this->template->versions()->count() + 1;
-
-        return $this->template->versions()->create([
-            'version' => $version,
-            'content' => $content,
-            'created_by' => auth()->id(),
-            'changes' => $this->getChanges($content)
-        ]);
+        return ['mail', 'database'];
     }
 
-    public function rollback($version)
+    public function toMail($notifiable)
     {
-        $oldVersion = $this->template->versions()
-            ->where('version', $version)
-            ->first();
-
-        if (!$oldVersion) {
-            throw new VersionNotFoundException("Version {$version} not found");
-        }
-
-        $this->template->update([
-            'content' => $oldVersion->content
-        ]);
-
-        return $this->createVersion($oldVersion->content);
+        return (new MailMessage)
+            ->subject($this->getSubject())
+            ->view($this->template, $this->data);
     }
 
-    protected function getChanges($content)
+    public function toDatabase($notifiable)
     {
+<<<<<<< HEAD
         $previousVersion = $this->template->versions()->latest()->first();
 
         if (!$previousVersion) {
@@ -929,25 +926,31 @@ class VersionManager
 >>>>>>> bf9590e (.)
 >>>>>>> aa7cd13 (.)
 =======
+=======
+        return $this->data;
+>>>>>>> 8f3a81e (.)
     }
+
+    abstract protected function getSubject(): string;
 }
 ```
 
-### 7.2 Backup
+## 4. Gestione Errori e Logging
+
+### 4.1 Logging Notifiche
 ```php
-namespace Modules\Notify\Console\Commands;
-
-class BackupTemplates extends Command
+// app/Services/NotificationLogService.php
+class NotificationLogService
 {
-    protected $signature = 'notify:backup-templates';
-    protected $description = 'Backup all email templates';
-
-    public function handle()
+    public function log($notification, $recipient, $status, $error = null)
     {
-        $templates = Template::with(['translations', 'versions'])->get();
-
-        $backup = [
+        Log::info('Notification sent', [
+            'notification' => get_class($notification),
+            'recipient' => $recipient,
+            'status' => $status,
+            'error' => $error,
             'timestamp' => now(),
+<<<<<<< HEAD
             'templates' => $templates->toArray()
         ];
 
@@ -960,10 +963,14 @@ class BackupTemplates extends Command
 
         $this->info("Backup created: {$filename}");
 >>>>>>> 04b0ffb (.)
+=======
+        ]);
+>>>>>>> 8f3a81e (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1046,37 +1053,69 @@ class BackupTemplates extends Command
 =======
 >>>>>>> 04b0ffb (.)
 ## 8. Note Finali
+=======
+### 4.2 Gestione Fallback
+```php
+// app/Services/NotificationFallbackService.php
+class NotificationFallbackService
+{
+    public function sendWithFallback($notification, $recipient)
+    {
+        try {
+            // Prova canale primario
+            $recipient->notify($notification);
+        } catch (Exception $e) {
+            // Fallback su canale secondario
+            $this->sendFallback($notification, $recipient, $e);
+        }
+    }
+}
+```
+>>>>>>> 8f3a81e (.)
 
-1. **Documentazione**
-   - Mantenere documentazione aggiornata
-   - Documentare tutte le API
-   - Mantenere changelog
+## 5. Performance e Ottimizzazione
 
-2. **Logging**
-   - Implementare logging dettagliato
-   - Monitorare errori
-   - Tracciare performance
+### 5.1 Caching Template
+```php
+// app/Services/TemplateCacheService.php
+class TemplateCacheService
+{
+    public function getCachedTemplate($template, $data)
+    {
+        $cacheKey = $this->generateCacheKey($template, $data);
+        
+        return Cache::remember($cacheKey, 3600, function () use ($template, $data) {
+            return view($template, $data)->render();
+        });
+    }
+}
+```
 
-3. **Testing**
-   - Eseguire test regolarmente
-   - Testare su vari client
-   - Verificare performance
+### 5.2 Queue per Notifiche
+```php
+// app/Notifications/HeavyNotification.php
+class HeavyNotification extends BaseNotification
+{
+    public $tries = 3;
+    public $timeout = 120;
 
-4. **Performance**
-   - Monitorare metriche
-   - Ottimizzare query
-   - Implementare caching
+    public function via($notifiable)
+    {
+        return ['mail'];
+    }
 
-5. **Backup**
-   - Eseguire backup regolari
-   - Verificare backup
-   - Testare ripristino
+    public function toMail($notifiable)
+    {
+        return (new MailMessage)
+            ->subject('Notifica Importante')
+            ->view('notifications.heavy', $this->data);
+    }
+}
+```
 
-6. **Code Review**
-   - Revisionare codice
-   - Verificare standard
-   - Controllare sicurezza
+## 6. Testing e Qualità
 
+<<<<<<< HEAD
 7. **Sicurezza**
    - Aggiornare dipendenze
    - Scansionare vulnerabilità
@@ -1092,3 +1131,168 @@ class BackupTemplates extends Command
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+### 6.1 Test Notifiche
+```php
+// tests/Feature/NotificationTest.php
+class NotificationTest extends TestCase
+{
+    use RefreshDatabase;
+
+    public function test_notification_can_be_sent()
+    {
+        $user = User::factory()->create();
+        $notification = new TestNotification();
+
+        Notification::fake();
+        
+        $user->notify($notification);
+
+        Notification::assertSentTo($user, TestNotification::class);
+    }
+}
+```
+
+### 6.2 Test Template
+```php
+// tests/Feature/TemplateTest.php
+class TemplateTest extends TestCase
+{
+    public function test_template_renders_correctly()
+    {
+        $data = ['name' => 'Test User'];
+        
+        $rendered = view('notifications.test', $data)->render();
+        
+        $this->assertStringContainsString('Test User', $rendered);
+    }
+}
+```
+
+## 7. Sicurezza e Privacy
+
+### 7.1 Sanitizzazione Dati
+```php
+// app/Services/DataSanitizationService.php
+class DataSanitizationService
+{
+    public function sanitize($data)
+    {
+        return array_map(function ($value) {
+            if (is_string($value)) {
+                return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+            }
+            return $value;
+        }, $data);
+    }
+}
+```
+
+### 7.2 Validazione Input
+```php
+// app/Http/Requests/NotificationRequest.php
+class NotificationRequest extends FormRequest
+{
+    public function rules()
+    {
+        return [
+            'template' => 'required|string|exists:notification_templates,name',
+            'recipients' => 'required|array|min:1',
+            'recipients.*' => 'required|email',
+            'data' => 'array',
+        ];
+    }
+}
+```
+
+## 8. Monitoraggio e Metriche
+
+### 8.1 Metriche Invio
+```php
+// app/Services/NotificationMetricsService.php
+class NotificationMetricsService
+{
+    public function trackDelivery($notification, $recipient, $status)
+    {
+        $metrics = [
+            'notification_type' => get_class($notification),
+            'recipient_type' => get_class($recipient),
+            'status' => $status,
+            'timestamp' => now(),
+        ];
+
+        // Salva metriche per analisi
+        NotificationMetric::create($metrics);
+    }
+}
+```
+
+### 8.2 Dashboard Monitoraggio
+```php
+// app/Http/Controllers/NotificationDashboardController.php
+class NotificationDashboardController extends Controller
+{
+    public function index()
+    {
+        $metrics = [
+            'total_sent' => NotificationMetric::count(),
+            'success_rate' => $this->calculateSuccessRate(),
+            'delivery_time' => $this->calculateAverageDeliveryTime(),
+        ];
+
+        return view('notifications.dashboard', compact('metrics'));
+    }
+}
+```
+
+## 9. Best Practices Generali
+
+### 9.1 Struttura File
+- Mantenere template in `resources/views/notifications/`
+- Separare logica business da presentazione
+- Utilizzare partial per componenti riutilizzabili
+- Documentare tutti i template e le variabili
+
+### 9.2 Naming Convention
+- Template: `kebab-case.blade.php`
+- Classi: `PascalCase`
+- Metodi: `camelCase`
+- Variabili: `snake_case`
+
+### 9.3 Gestione Configurazione
+- Utilizzare file di configurazione per impostazioni
+- Evitare valori hardcoded
+- Utilizzare variabili d'ambiente per dati sensibili
+- Documentare tutte le opzioni di configurazione
+
+## 10. Troubleshooting
+
+### 10.1 Problemi Comuni
+1. **Template non trovato**: Verificare percorso e namespace
+2. **Variabili mancanti**: Controllare passaggio dati
+3. **Errore invio**: Verificare configurazione canali
+4. **Performance lente**: Abilitare caching e queue
+
+### 10.2 Debug e Logging
+```php
+// Abilitare logging dettagliato
+Log::channel('notifications')->info('Debug info', [
+    'template' => $template,
+    'data' => $data,
+    'recipient' => $recipient,
+]);
+```
+
+## 11. Riferimenti e Documentazione
+
+- [Laravel Notifications](https://laravel.com/docs/notifications)
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Laravel Queue](https://laravel.com/docs/queues)
+- [Laravel Testing](https://laravel.com/docs/testing)
+
+---
+
+*Ultimo aggiornamento: Giugno 2025*
+*Versione: 2.0.0*
+*Autore: Team Laraxot*
+>>>>>>> 8f3a81e (.)

@@ -61,6 +61,7 @@ class SpatieEmail extends TemplateMailable
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $data = app(GetSicureArrayByModelAction::class)->execute($record);
 =======
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
@@ -71,6 +72,9 @@ class SpatieEmail extends TemplateMailable
 =======
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
 >>>>>>> 04b0ffb (.)
+=======
+        $data = app(SafeArrayByModelCastAction::class)->execute($record);
+>>>>>>> 8f3a81e (.)
         $this->data['lang']=$lang;
         $this->data['login_url']=route('login');
         $this->data['site_url']=url('/'.$lang);
@@ -136,6 +140,7 @@ class SpatieEmail extends TemplateMailable
 
     /**
      * Get the message envelope.
+<<<<<<< HEAD
      *
      * @return Envelope
      */
@@ -149,6 +154,18 @@ class SpatieEmail extends TemplateMailable
         }
         
         return $envelope;
+=======
+     */
+    public function envelope(): Envelope
+    {
+        $to = [];
+        if (is_string($this->recipient) && $this->recipient !== '') {
+            $to = [new Address($this->recipient)];
+        }
+        return new Envelope(
+            to: $to,
+        );
+>>>>>>> 8f3a81e (.)
     }
 
     public function getHtmlLayout(): string

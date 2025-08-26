@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 8f3a81e (.)
 # Indice della Documentazione - Modulo Notify
 
 ## Collegamenti Correlati
@@ -57,6 +60,10 @@
 ### Testing e Qualità
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
 - [Testing](./TESTING.md) - Strategie e approcci per il testing
+<<<<<<< HEAD
+=======
+- [Strategia Testing](./testing-strategy.md) - Strategia completa di testing del modulo
+>>>>>>> 8f3a81e (.)
 
 ## Sottocartelle
 
@@ -71,6 +78,7 @@
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
 Ultimo aggiornamento: 14 Maggio 2025
+<<<<<<< HEAD
 
 =======
 >>>>>>> 1e9bb27 (.)
@@ -188,3 +196,5 @@ Ultimo aggiornamento: 14 Maggio 2025
 =======
 >>>>>>> 8d56fc4 (.)
 >>>>>>> bf9590e (.)
+=======
+>>>>>>> 8f3a81e (.)

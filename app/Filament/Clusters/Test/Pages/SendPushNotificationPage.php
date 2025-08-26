@@ -62,6 +62,7 @@ class SendPushNotificationPage extends XotBasePage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Verifichiamo che $item sia un oggetto
             if (! $item) {
                 return [];
@@ -99,6 +100,8 @@ class SendPushNotificationPage extends XotBasePage
 
             return [$token => $fullName.' ('.$robot.') '.$tokenSuffix];
 =======
+=======
+>>>>>>> 8f3a81e (.)
             /** @var mixed $item */
             if (!is_object($item)) {
                 return [];
@@ -117,6 +120,7 @@ class SendPushNotificationPage extends XotBasePage
                 return [];
             }
 
+<<<<<<< HEAD
 =======
             /** @var mixed $item */
             if (!is_object($item)) {
@@ -157,6 +161,8 @@ class SendPushNotificationPage extends XotBasePage
             }
 
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
             $device = method_exists($item, 'getRelationValue') ? $item->getRelationValue('device') : null;
             $robotVal = data_get($device, 'robot');
             $robot = is_string($robotVal) ? $robotVal : null;
@@ -168,11 +174,14 @@ class SendPushNotificationPage extends XotBasePage
             return [$token => $label];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 247bd86 (.)
 =======
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
         };
 
         /**
@@ -182,12 +191,15 @@ class SendPushNotificationPage extends XotBasePage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $item && null !== $item->profile;
 =======
 =======
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
             if (!is_object($item)) {
                 return false;
             }
@@ -195,11 +207,14 @@ class SendPushNotificationPage extends XotBasePage
             return is_object($profile);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 247bd86 (.)
 =======
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
         };
 
         $to = $devices

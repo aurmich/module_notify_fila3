@@ -72,6 +72,7 @@ class SendPushNotification extends Page implements HasForms
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Verifichiamo che $item abbia le proprietà necessarie
             if (!$item->profile || !isset($item->profile->full_name)) {
                 return [];
@@ -139,10 +140,25 @@ class SendPushNotification extends Page implements HasForms
                 return [];
             }
 >>>>>>> 04b0ffb (.)
+=======
+            // Relations & attributes in a Laravel-safe way
+            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
+            if (!is_object($profile)) {
+                return [];
+            }
+            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
+
+            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
+            $token = is_string($tokenAttr) ? $tokenAttr : '';
+            if ($token === '' || $token === 'unknown') {
+                return [];
+            }
+>>>>>>> 8f3a81e (.)
 
             $device = method_exists($item, 'getRelationValue') ? $item->getRelationValue('device') : null;
             $robotVal = data_get($device, 'robot');
             $robot = is_string($robotVal) ? $robotVal : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 247bd86 (.)
@@ -150,6 +166,8 @@ class SendPushNotification extends Page implements HasForms
 >>>>>>> aa7cd13 (.)
 =======
 >>>>>>> 04b0ffb (.)
+=======
+>>>>>>> 8f3a81e (.)
             
             // Creiamo la label con gli ultimi 5 caratteri del token
             $tokenSuffix = mb_substr($token, -5);
