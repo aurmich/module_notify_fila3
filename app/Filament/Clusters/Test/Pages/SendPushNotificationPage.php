@@ -69,26 +69,26 @@ class SendPushNotificationPage extends XotBasePage
             }
 
             // Verifichiamo che $item abbia le proprietà necessarie
-            if (! $item->profile || ! isset($item->profile->full_name)) {
+            if (!$item->profile || ($item->profile->full_name ?? null) === null) {
                 return [];
             }
-
+            
             // Otteniamo il token
-            $token = isset($item->push_notifications_token) ? $item->push_notifications_token : null;
-            if (! $token) {
+            $token = $item->push_notifications_token ?? null;
+            if (!$token) {
                 return [];
             }
-
+            
             // Otteniamo il nome completo
-            $fullName = isset($item->profile->full_name) ? $item->profile->full_name : null;
-            if (! is_string($fullName)) {
+            $fullName = $item->profile->full_name ?? null;
+            if (!is_string($fullName)) {
                 $fullName = 'Utente';
             }
-
+            
             // Otteniamo il robot
             $robot = '';
-            if (isset($item->device)
-                && isset($item->device->robot)
+            if (($item->device ?? null) !== null
+                && ($item->device->robot ?? null) !== null
                 && is_string($item->device->robot)) {
                 $robot = $item->device->robot;
             } else {

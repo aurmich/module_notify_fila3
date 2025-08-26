@@ -139,8 +139,13 @@ class GenericNotification extends Notification implements ShouldQueue
      */
     protected function getRecipientName($notifiable): string
     {
-        // Tenta di ottenere il nome dal destinatario in vari modi
-        if (is_object($notifiable) && method_exists($notifiable, 'getFullName')) {
+        // Soluzione più robusta e KISS: usa null coalescing e early return
+        if (!is_object($notifiable)) {
+            return 'Utente';
+        }
+
+        // Prova prima il metodo dedicato
+        if (method_exists($notifiable, 'getFullName')) {
             return $notifiable->getFullName();
         }
 <<<<<<< HEAD
@@ -148,6 +153,7 @@ class GenericNotification extends Notification implements ShouldQueue
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         if (is_object($notifiable) && isset($notifiable->full_name) && $notifiable->full_name) {
             return (string) $notifiable->full_name;
         }
@@ -203,5 +209,9 @@ class GenericNotification extends Notification implements ShouldQueue
 
 >>>>>>> 8f3a81e (.)
         return 'Utente';
+=======
+        // Prova le proprietà in ordine di priorità usando null coalescing
+        return $notifiable->full_name ?? $notifiable->first_name ?? $notifiable->name ?? 'Utente';
+>>>>>>> 0e7f3cc (.)
     }
 }

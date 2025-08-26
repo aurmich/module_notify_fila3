@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0e7f3cc (.)
 # notify module documentation optimization analysis
 
 ## current state analysis
@@ -108,6 +111,7 @@ docs/
 - **improved maintainability**: manageable documentation set
 - **better usability**: clear navigation by notification type
 - **consistent quality**: uniform documentation standards
+<<<<<<< HEAD
 - **faster onboarding**: streamlined learning path
 =======
 # Analisi di Ottimizzazione - Modulo Notify
@@ -180,3 +184,6 @@ class NotificationTemplateCache
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
 
 >>>>>>> 04b0ffb (.)
+=======
+- **faster onboarding**: streamlined learning path
+>>>>>>> 0e7f3cc (.)
