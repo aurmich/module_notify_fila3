@@ -69,35 +69,30 @@ class SendPushNotification extends Page implements HasForms
                 return [];
             }
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // Verifichiamo che $item abbia le proprietà necessarie
-            if (!$item->profile || ($item->profile->full_name ?? null) === null) {
+            // Relations & attributes in a Laravel-safe way
+            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
+            if (!is_object($profile)) {
                 return [];
             }
-            
-            // Otteniamo il token
-            $token = $item->push_notifications_token ?? null;
-            if (!$token) {
+            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
+
+            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
+            $token = is_string($tokenAttr) ? $tokenAttr : '';
+            if ($token === '' || $token === 'unknown') {
                 return [];
             }
-            
-            // Otteniamo il nome completo
-            $fullName = $item->profile->full_name ?? null;
-            if (!is_string($fullName)) {
-                $fullName = 'Utente';
+=======
+            // Relations & attributes in a Laravel-safe way
+            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
+            if (!is_object($profile)) {
+                return [];
             }
-            
-            // Otteniamo il robot
-            $robot = '';
-            if (($item->device ?? null) !== null
-                && ($item->device->robot ?? null) !== null
-                && is_string($item->device->robot)) {
-                $robot = $item->device->robot;
-            } else {
-                $robot = null;
+            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
+
+            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
+            $token = is_string($tokenAttr) ? $tokenAttr : '';
+            if ($token === '' || $token === 'unknown') {
+                return [];
             }
 =======
             // Relations & attributes in a Laravel-safe way
@@ -125,49 +120,12 @@ class SendPushNotification extends Page implements HasForms
             if ($token === '' || $token === 'unknown') {
                 return [];
             }
->>>>>>> aa7cd13 (.)
-=======
-            // Relations & attributes in a Laravel-safe way
-            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
-            if (!is_object($profile)) {
-                return [];
-            }
-            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
-
-            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
-            $token = is_string($tokenAttr) ? $tokenAttr : '';
-            if ($token === '' || $token === 'unknown') {
-                return [];
-            }
->>>>>>> 04b0ffb (.)
-=======
-            // Relations & attributes in a Laravel-safe way
-            $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
-            if (!is_object($profile)) {
-                return [];
-            }
-            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
-
-            $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
-            $token = is_string($tokenAttr) ? $tokenAttr : '';
-            if ($token === '' || $token === 'unknown') {
-                return [];
-            }
->>>>>>> 8f3a81e (.)
 
             $device = method_exists($item, 'getRelationValue') ? $item->getRelationValue('device') : null;
             $robotVal = data_get($device, 'robot');
             $robot = is_string($robotVal) ? $robotVal : null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 247bd86 (.)
 =======
->>>>>>> aa7cd13 (.)
 =======
->>>>>>> 04b0ffb (.)
-=======
->>>>>>> 8f3a81e (.)
             
             // Creiamo la label con gli ultimi 5 caratteri del token
             $tokenSuffix = mb_substr($token, -5);

@@ -45,11 +45,7 @@ return new class () extends XotBaseMigration {
                 $table->json('sms_template')->nullable();
             }
 
-<<<<<<< HEAD
-            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
-=======
             $this->updateTimestamps($table, true);
->>>>>>> 8f3a81e (.)
         });
     }
 

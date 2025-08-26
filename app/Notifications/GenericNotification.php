@@ -148,27 +148,8 @@ class GenericNotification extends Notification implements ShouldQueue
         if (method_exists($notifiable, 'getFullName')) {
             return $notifiable->getFullName();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        if (is_object($notifiable) && isset($notifiable->full_name) && $notifiable->full_name) {
-            return (string) $notifiable->full_name;
-        }
-
-        if (is_object($notifiable) && isset($notifiable->first_name) && $notifiable->first_name) {
-            return (string) $notifiable->first_name;
-        }
-
-        if (is_object($notifiable) && isset($notifiable->name) && $notifiable->name) {
-            return (string) $notifiable->name;
 =======
 =======
->>>>>>> aa7cd13 (.)
-=======
->>>>>>> 04b0ffb (.)
         
         if (is_object($notifiable) && $notifiable instanceof \Illuminate\Database\Eloquent\Model) {
             if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'full_name')) {
@@ -182,13 +163,7 @@ class GenericNotification extends Notification implements ShouldQueue
             if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'name')) {
                 return SafeAttributeCastAction::getString($notifiable, 'name', 'Utente');
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 247bd86 (.)
 =======
->>>>>>> aa7cd13 (.)
-=======
->>>>>>> 04b0ffb (.)
         }
 
 =======
@@ -207,11 +182,9 @@ class GenericNotification extends Notification implements ShouldQueue
             }
         }
 
->>>>>>> 8f3a81e (.)
         return 'Utente';
 =======
         // Prova le proprietà in ordine di priorità usando null coalescing
         return $notifiable->full_name ?? $notifiable->first_name ?? $notifiable->name ?? 'Utente';
->>>>>>> 0e7f3cc (.)
     }
 }
