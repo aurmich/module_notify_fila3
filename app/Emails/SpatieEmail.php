@@ -58,7 +58,19 @@ class SpatieEmail extends TemplateMailable
 
         $tpl->increment('counter');
         $lang=app()->getLocale();
+<<<<<<< HEAD
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        $data = app(GetSicureArrayByModelAction::class)->execute($record);
+=======
+        $data = app(SafeArrayByModelCastAction::class)->execute($record);
+>>>>>>> 247bd86 (.)
+=======
+        $data = app(SafeArrayByModelCastAction::class)->execute($record);
+>>>>>>> aa7cd13 (.)
+>>>>>>> 2449170 (.)
         $this->data['lang']=$lang;
         $this->data['login_url']=route('login');
         $this->data['site_url']=url('/'.$lang);

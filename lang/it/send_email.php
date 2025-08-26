@@ -47,7 +47,10 @@ return array (
     'empty' => 
     array (
       'heading' => 'empty',
+<<<<<<< HEAD
       'label' => 'empty',
+=======
+>>>>>>> 2449170 (.)
     ),
   ),
   'fields' => 
