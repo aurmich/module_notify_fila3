@@ -99,7 +99,3 @@ class TelegramDriverEnumTest extends TestCase
         }
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ca7ea20 (.)

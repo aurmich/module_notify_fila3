@@ -92,7 +92,3 @@ class SmsDriverEnumTest extends TestCase
         }
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ca7ea20 (.)

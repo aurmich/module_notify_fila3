@@ -103,7 +103,3 @@ class WhatsAppDriverEnumTest extends TestCase
         }
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ca7ea20 (.)

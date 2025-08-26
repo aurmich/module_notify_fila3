@@ -75,7 +75,3 @@ class NotificationTypeEnumTest extends TestCase
         }
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ca7ea20 (.)

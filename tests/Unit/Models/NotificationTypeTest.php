@@ -87,7 +87,3 @@ class NotificationTypeTest extends TestCase
         $this->assertStringContainsString('declare(strict_types=1);', $fileContents);
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ca7ea20 (.)
