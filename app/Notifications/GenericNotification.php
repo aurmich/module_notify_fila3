@@ -162,8 +162,13 @@ class GenericNotification extends Notification implements ShouldQueue
                 return SafeAttributeCastAction::getString($notifiable, 'name', 'Utente');
             }
         }
+<<<<<<< HEAD
 
         // Prova le proprietà in ordine di priorità usando null coalescing
         return $notifiable->full_name ?? $notifiable->first_name ?? $notifiable->name ?? 'Utente';
+=======
+        
+        return 'Utente';
+>>>>>>> 54ed7a8 (.)
     }
 }
