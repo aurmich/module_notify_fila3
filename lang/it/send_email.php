@@ -46,7 +46,11 @@ return array (
     ),
     'empty' => 
     array (
+<<<<<<< HEAD
       'heading' => '',
+=======
+      'heading' => 'empty',
+>>>>>>> b558bf4 (.)
       'label' => 'empty',
     ),
   ),
