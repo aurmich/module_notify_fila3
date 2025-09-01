@@ -379,16 +379,7 @@ class NotifyThemeableTest extends TestCase
         $this->assertEquals(2, $todayThemeables[0]->model_id);
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e3f70eb4 (.)
 
 
 
 
-<<<<<<< HEAD
->>>>>>> 9356272 (.)
-=======
->>>>>>> e3f70eb4 (.)

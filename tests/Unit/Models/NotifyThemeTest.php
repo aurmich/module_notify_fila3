@@ -641,16 +641,7 @@ class NotifyThemeTest extends TestCase
         $this->assertFalse($theme->view_params['features']['animations']);
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e3f70eb4 (.)
 
 
 
 
-<<<<<<< HEAD
->>>>>>> 9356272 (.)
-=======
->>>>>>> e3f70eb4 (.)

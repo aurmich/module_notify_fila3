@@ -656,16 +656,7 @@ class ContactTest extends TestCase
         $this->assertEquals(3, $orderedContacts[2]->order_column);
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e3f70eb4 (.)
 
 
 
 
-<<<<<<< HEAD
->>>>>>> 9356272 (.)
-=======
->>>>>>> e3f70eb4 (.)

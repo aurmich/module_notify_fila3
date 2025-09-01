@@ -622,16 +622,7 @@ class MailTemplateLogTest extends TestCase
         $this->assertEmpty($log->metadata);
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e3f70eb4 (.)
 
 
 
 
-<<<<<<< HEAD
->>>>>>> 9356272 (.)
-=======
->>>>>>> e3f70eb4 (.)
