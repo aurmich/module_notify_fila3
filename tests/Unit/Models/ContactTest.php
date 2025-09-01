@@ -656,3 +656,10 @@ class ContactTest extends TestCase
         expect(3, $orderedContacts[2]->order_column);
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 9356272 (.)

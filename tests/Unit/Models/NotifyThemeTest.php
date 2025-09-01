@@ -641,3 +641,10 @@ class NotifyThemeTest extends TestCase
         expect($theme->view_params['features']['animations']);
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 9356272 (.)
