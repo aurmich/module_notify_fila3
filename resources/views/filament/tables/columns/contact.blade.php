@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-@php
-    $record = $getRecord();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-@php
-    $record = $getRecord();
-=======
 {{--
 /**
  * Template ViewColumn per contatti modulo Notify
@@ -24,100 +15,86 @@
 @php
     $record = $getRecord();
     $hasContacts = $record->value || $record->email || $record->mobile_phone;
->>>>>>> dadaf1e668 (.)
-=======
-@php
-    $record = $getRecord();
->>>>>>> bacc5f3d98 (.)
->>>>>>> 46c02bc (.)
 @endphp
 
 <div class="flex flex-col space-y-1">
     {{-- Nome completo --}}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bacc5f3d98 (.)
->>>>>>> 46c02bc (.)
-    @foreach($contact_types as $contact_type)
-    @php
-    $contact_value = $record->{$contact_type->value};
-    @endphp
-    @if($contact_value)
-    <div class="flex items-center space-x-2">
-        <x-filament::icon
-        :icon="$contact_type->getIcon()"
-        :label="$contact_type->getLabel()"
-        :color="$contact_type->getColor()"
-        class="w-4 h-4 flex-shrink-0"
-    />
-    <span class="text-sm font-medium">{{ $contact_value }}</span>
-    </div>    
-    @endif    
-    @endforeach
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     @if($record->first_name || $record->last_name)
         <div class="font-medium text-gray-900">
             {{ trim($record->first_name . ' ' . $record->last_name) }}
         </div>
     @endif
     
-    {{-- Contatto con icona --}}
-    @if($hasContacts)
-        @php
-            $contactType = $record->contact_type ?? 'unknown';
-            $value = $record->value ?? $record->email ?? $record->mobile_phone;
+    {{-- Contatti usando contact_types se disponibile --}}
+    @if(isset($contact_types))
+        @foreach($contact_types as $contact_type)
+            @php
+                $contact_value = $record->{$contact_type->value};
+            @endphp
+            @if($contact_value)
+                <div class="flex items-center space-x-2">
+                    <x-filament::icon
+                        :icon="$contact_type->getIcon()"
+                        :label="$contact_type->getLabel()"
+                        :color="$contact_type->getColor()"
+                        class="w-4 h-4 flex-shrink-0"
+                    />
+                    <span class="text-sm font-medium">{{ $contact_value }}</span>
+                </div>    
+            @endif    
+        @endforeach
+    @else
+        {{-- Fallback: Contatto con icona usando logica tradizionale --}}
+        @if($hasContacts)
+            @php
+                $contactType = $record->contact_type ?? 'unknown';
+                $value = $record->value ?? $record->email ?? $record->mobile_phone;
+                
+                $iconClass = match($contactType) {
+                    'email' => 'heroicon-o-envelope',
+                    'phone' => 'heroicon-o-phone',
+                    'mobile' => 'heroicon-o-phone',
+                    'mobile_phone' => 'heroicon-o-device-phone-mobile',
+                    'whatsapp' => 'heroicon-o-chat-bubble-left-right',
+                    'telegram' => 'heroicon-o-chat-bubble-left-right',
+                    'sms' => 'heroicon-o-chat-bubble-left-right',
+                    default => 'heroicon-o-user',
+                };
+                
+                $colorClass = match($contactType) {
+                    'email' => 'text-blue-600',
+                    'phone' => 'text-green-600',
+                    'mobile' => 'text-green-600',
+                    'mobile_phone' => 'text-purple-600',
+                    'whatsapp' => 'text-green-600',
+                    'telegram' => 'text-blue-500',
+                    'sms' => 'text-orange-600',
+                    default => 'text-gray-600',
+                };
+                
+                $href = match($contactType) {
+                    'email' => 'mailto:' . $value,
+                    'phone', 'mobile', 'mobile_phone' => 'tel:' . $value,
+                    'whatsapp' => 'https://wa.me/' . preg_replace('/[^0-9+]/', '', $value),
+                    default => null,
+                };
+            @endphp
             
-            $iconClass = match($contactType) {
-                'email' => 'heroicon-o-envelope',
-                'phone' => 'heroicon-o-phone',
-                'mobile' => 'heroicon-o-phone',
-                'mobile_phone' => 'heroicon-o-device-phone-mobile',
-                'whatsapp' => 'heroicon-o-chat-bubble-left-right',
-                'telegram' => 'heroicon-o-chat-bubble-left-right',
-                'sms' => 'heroicon-o-chat-bubble-left-right',
-                default => 'heroicon-o-user',
-            };
-            
-            $colorClass = match($contactType) {
-                'email' => 'text-blue-600',
-                'phone' => 'text-green-600',
-                'mobile' => 'text-green-600',
-                'mobile_phone' => 'text-purple-600',
-                'whatsapp' => 'text-green-600',
-                'telegram' => 'text-blue-500',
-                'sms' => 'text-orange-600',
-                default => 'text-gray-600',
-            };
-            
-            $href = match($contactType) {
-                'email' => 'mailto:' . $value,
-                'phone', 'mobile', 'mobile_phone' => 'tel:' . $value,
-                'whatsapp' => 'https://wa.me/' . preg_replace('/[^0-9+]/', '', $value),
-                default => null,
-            };
-        @endphp
-        
-        <div class="flex items-center text-sm {{ $colorClass }}">
-            @if($href)
-                <a href="{{ $href }}" class="flex items-center hover:underline" 
-                   @if($contactType === 'whatsapp') target="_blank" rel="noopener" @endif>
-                    <x-dynamic-component :component="$iconClass" class="w-4 h-4 mr-1 flex-shrink-0" />
-                    <span class="truncate">{{ $value }}</span>
-                </a>
-            @else
-                <div class="flex items-center">
-                    <x-dynamic-component :component="$iconClass" class="w-4 h-4 mr-1 flex-shrink-0" />
-                    <span class="truncate">{{ $value }}</span>
-                </div>
-            @endif
-        </div>
+            <div class="flex items-center text-sm {{ $colorClass }}">
+                @if($href)
+                    <a href="{{ $href }}" class="flex items-center hover:underline" 
+                       @if($contactType === 'whatsapp') target="_blank" rel="noopener" @endif>
+                        <x-dynamic-component :component="$iconClass" class="w-4 h-4 mr-1 flex-shrink-0" />
+                        <span class="truncate">{{ $value }}</span>
+                    </a>
+                @else
+                    <div class="flex items-center">
+                        <x-dynamic-component :component="$iconClass" class="w-4 h-4 mr-1 flex-shrink-0" />
+                        <span class="truncate">{{ $value }}</span>
+                    </div>
+                @endif
+            </div>
+        @endif
     @endif
     
     {{-- Stato verifica --}}
@@ -151,8 +128,4 @@
     @if(!$hasContacts && !$record->first_name && !$record->last_name)
         <span class="text-gray-400 text-xs italic">Nessun contatto</span>
     @endif
->>>>>>> dadaf1e668 (.)
-=======
->>>>>>> bacc5f3d98 (.)
->>>>>>> 46c02bc (.)
 </div>
