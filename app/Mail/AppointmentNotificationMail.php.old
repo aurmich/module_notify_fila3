@@ -11,10 +11,14 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Generic appointment model - use project-specific implementation
 =======
 use Modules\SaluteOra\Models\Appointment;
 >>>>>>> 9fd314be (.)
+=======
+// Generic appointment model - use project-specific implementation
+>>>>>>> 72669496 (.)
 
 class AppointmentNotificationMail extends Mailable implements ShouldQueue
 {
@@ -54,10 +58,14 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
         };
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_object($appointment) && isset($appointment->id) && $appointment->id) {
 =======
         if ($appointment instanceof Appointment && $appointment->id) {
 >>>>>>> 9fd314be (.)
+=======
+        if (is_object($appointment) && isset($appointment->id) && $appointment->id) {
+>>>>>>> 72669496 (.)
             $subject .= ' #' . $appointment->id;
         }
         
@@ -66,10 +74,14 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             tags: ['appointment', $type],
             metadata: [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'appointment_id' => is_object($appointment) && isset($appointment->id) ? $appointment->id : null,
 =======
                 'appointment_id' => $appointment instanceof Appointment ? $appointment->id : null,
 >>>>>>> 9fd314be (.)
+=======
+                'appointment_id' => is_object($appointment) && isset($appointment->id) ? $appointment->id : null,
+>>>>>>> 72669496 (.)
                 'type' => $type,
             ],
         );
