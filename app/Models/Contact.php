@@ -103,7 +103,10 @@ use Illuminate\Support\Carbon;
  * @property string|null $deleted_by
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Contact whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Contact whereDeletedBy($value)
+<<<<<<< HEAD
  * @mixin IdeHelperContact
+=======
+>>>>>>> 9fd314be (.)
  * @mixin \Eloquent
  */
 class Contact extends BaseModel

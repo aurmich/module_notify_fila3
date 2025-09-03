@@ -44,11 +44,14 @@ return array (
       'label' => 'Avanzate',
       'description' => 'Opzioni avanzate per l\'invio',
     ),
+<<<<<<< HEAD
     'empty' => 
     array (
       'heading' => '',
       'label' => 'empty',
     ),
+=======
+>>>>>>> 9fd314be (.)
   ),
   'fields' => 
   array (

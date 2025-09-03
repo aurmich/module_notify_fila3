@@ -3,7 +3,11 @@
 ## Problemi Identificati
 
 ### 1. Conflitti di Merge Non Risolti
+<<<<<<< HEAD
 - Presenza di marcatori git  nel file
+=======
+- Presenza di marcatori `<<<<<<<`, `=======`, `>>>>>>>` nel file
+>>>>>>> 9fd314be (.)
 - Codice duplicato e inconsistente
 
 ### 2. Sintassi Obsoleta

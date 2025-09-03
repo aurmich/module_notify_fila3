@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+<<<<<<< HEAD
 <<<<<<<< HEAD:app/Models/NotificationLog.php.old
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -49,6 +50,21 @@ class NotificationLog extends BaseModel
     use HasTenants;
 ========
 >>>>>>>> 8f3a81e (.):app/Models/notificationlog.php.up
+=======
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Modules\Tenant\Models\Traits\HasTenant;
+use Modules\Xot\Traits\Updater;
+
+/**
+ * Modello per il logging delle notifiche inviate.
+ */
+class NotificationLog extends Model
+{
+    use HasFactory;
+    use HasTenant;
+>>>>>>> 9fd314be (.)
     use Updater;
 
     public const STATUS_PENDING = 'pending';
@@ -59,7 +75,10 @@ class NotificationLog extends BaseModel
     public const STATUS_OPENED = 'opened';
     public const STATUS_CLICKED = 'clicked';
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:app/Models/NotificationLog.php.old
+=======
+>>>>>>> 9fd314be (.)
     /**
      * Tabella associata al modello.
      *
@@ -70,6 +89,7 @@ class NotificationLog extends BaseModel
     /**
      * Gli attributi che sono assegnabili in massa.
      *
+<<<<<<< HEAD
      * @var list<string>
      */
 ========
@@ -78,6 +98,10 @@ class NotificationLog extends BaseModel
 
     /** @var array<int, string> */
 >>>>>>>> 8f3a81e (.):app/Models/notificationlog.php.up
+=======
+     * @var array<int, string>
+     */
+>>>>>>> 9fd314be (.)
     protected $fillable = [
         'template_id',
         'notifiable_type',
@@ -94,8 +118,17 @@ class NotificationLog extends BaseModel
         'clicked_at',
         'tenant_id',
     ];
+<<<<<<< HEAD
 
     /** @var array<string, string> */
+=======
+    
+    /**
+     * Gli attributi da castare.
+     *
+     * @var array<string, string>
+     */
+>>>>>>> 9fd314be (.)
     protected $casts = [
         'data' => 'array',
         'metadata' => 'array',
@@ -105,18 +138,31 @@ class NotificationLog extends BaseModel
         'opened_at' => 'datetime',
         'clicked_at' => 'datetime',
     ];
+<<<<<<< HEAD
 
+=======
+    
+    /**
+     * Ottiene l'entità notificabile.
+     *
+     * @return MorphTo
+     */
+>>>>>>> 9fd314be (.)
     public function notifiable(): MorphTo
     {
         return $this->morphTo();
     }
+<<<<<<< HEAD
 <<<<<<<< HEAD:app/Models/NotificationLog.php.old
+=======
+>>>>>>> 9fd314be (.)
     
     /**
      * Ottiene il template della notifica.
      *
      * @return BelongsTo
      */
+<<<<<<< HEAD
 ========
 
 >>>>>>>> 8f3a81e (.):app/Models/notificationlog.php.up
@@ -132,6 +178,12 @@ class NotificationLog extends BaseModel
         return $this->belongsTo(NotificationTemplate::class, 'template_id');
     }
 <<<<<<<< HEAD:app/Models/NotificationLog.php.old
+=======
+    public function template(): BelongsTo
+    {
+        return $this->belongsTo(NotificationTemplate::class, 'template_id');
+    }
+>>>>>>> 9fd314be (.)
     
     /**
      * Scope per filtrare per stato.
@@ -140,14 +192,20 @@ class NotificationLog extends BaseModel
      * @param string $status
      * @return \Illuminate\Database\Eloquent\Builder
      */
+<<<<<<< HEAD
 ========
 
 >>>>>>>> 8f3a81e (.):app/Models/notificationlog.php.up
+=======
+>>>>>>> 9fd314be (.)
     public function scopeWithStatus($query, string $status)
     {
         return $query->where('status', $status);
     }
+<<<<<<< HEAD
 <<<<<<<< HEAD:app/Models/NotificationLog.php.old
+=======
+>>>>>>> 9fd314be (.)
     
     /**
      * Scope per filtrare per canale.
@@ -156,25 +214,37 @@ class NotificationLog extends BaseModel
      * @param string $channel
      * @return \Illuminate\Database\Eloquent\Builder
      */
+<<<<<<< HEAD
 ========
 
 >>>>>>>> 8f3a81e (.):app/Models/notificationlog.php.up
+=======
+>>>>>>> 9fd314be (.)
     public function scopeForChannel($query, string $channel)
     {
         return $query->where('channel', $channel);
     }
+<<<<<<< HEAD
 <<<<<<<< HEAD:app/Models/NotificationLog.php.old
+=======
+>>>>>>> 9fd314be (.)
     
     /**
      * Scope per filtrare per tipo di notificabile.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
+<<<<<<< HEAD
      * @param Model $notifiable
      * @return \Illuminate\Database\Eloquent\Builder
      */
 ========
 
 >>>>>>>> 8f3a81e (.):app/Models/notificationlog.php.up
+=======
+     * @param string $type
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+>>>>>>> 9fd314be (.)
     public function scopeForNotifiable($query, Model $notifiable)
     {
         return $query->where('notifiable_type', get_class($notifiable))
@@ -201,7 +271,11 @@ class NotificationLog extends BaseModel
         return $this;
     }
 
+<<<<<<< HEAD
     public function markAsFailed(?string $message = null): self
+=======
+    public function markAsFailed(string $message = null): self
+>>>>>>> 9fd314be (.)
     {
         $this->update([
             'status' => self::STATUS_FAILED,

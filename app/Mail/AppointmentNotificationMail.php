@@ -49,7 +49,11 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             default => 'Notifica Appuntamento',
         };
         
+<<<<<<< HEAD
         if (is_object($appointment) && isset($appointment->id) && $appointment->id) {
+=======
+        if (is_object($appointment) && property_exists($appointment, 'id') && $appointment->id) {
+>>>>>>> 9fd314be (.)
             $subject .= ' #' . $appointment->id;
         }
         
@@ -57,7 +61,11 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             subject: $subject,
             tags: ['appointment', $type],
             metadata: [
+<<<<<<< HEAD
                 'appointment_id' => is_object($appointment) && isset($appointment->id) ? $appointment->id : null,
+=======
+                'appointment_id' => is_object($appointment) && property_exists($appointment, 'id') ? $appointment->id : null,
+>>>>>>> 9fd314be (.)
                 'type' => $type,
             ],
         );

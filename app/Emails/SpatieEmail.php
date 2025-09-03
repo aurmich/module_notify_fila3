@@ -18,7 +18,11 @@ use Modules\Notify\Models\MailTemplate;
 use Illuminate\Mail\Mailables\Attachment;
 
 use Spatie\MailTemplates\TemplateMailable;
+<<<<<<< HEAD
 use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
+=======
+use Modules\Xot\Actions\Model\GetSicureArrayByModelAction;
+>>>>>>> 9fd314be (.)
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 
 /**
@@ -57,6 +61,7 @@ class SpatieEmail extends TemplateMailable
         ]);
 
         $tpl->increment('counter');
+<<<<<<< HEAD
         $lang=app()->getLocale();
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
         $this->data['lang']=$lang;
@@ -72,10 +77,23 @@ class SpatieEmail extends TemplateMailable
 
         $logoPath=MetatagData::make()->getBrandLogoPath();
         $this->embedLogo($logoPath, 'logo_header');
+=======
+        
+        $data = app(GetSicureArrayByModelAction::class)->execute($record);
+        $this->data['login_url']=route('login');
+        $this->data['site_url']=url('/');
+
+        $this->data['logo_header']=MetatagData::make()->getBrandLogo();
+        $this->data['logo_header_base64']=MetatagData::make()->getBrandLogoBase64();
+        
+        $this->data=array_merge($this->data,$data);
+        $this->setAdditionalData($this->data);
+>>>>>>> 9fd314be (.)
         
 
     }
 
+<<<<<<< HEAD
 
     public function embedLogo(string $path, string $cid = 'logo_header'): self
     {
@@ -101,6 +119,8 @@ class SpatieEmail extends TemplateMailable
         return $this;
     }
 
+=======
+>>>>>>> 9fd314be (.)
     public function mergeData(array $data): self
     {
         $this->data=array_merge($this->data,$data);

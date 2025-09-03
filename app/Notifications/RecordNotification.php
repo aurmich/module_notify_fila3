@@ -88,10 +88,13 @@ class RecordNotification extends Notification
         if (method_exists($notifiable, 'routeNotificationFor')) {
             $to = $notifiable->routeNotificationFor('sms');
         }
+<<<<<<< HEAD
         $fallback_to=config('sms.fallback_to');
         if(is_string($fallback_to)){
             $to=$fallback_to;
         }
+=======
+>>>>>>> 9fd314be (.)
         if($to==null){
             return null;
         }

@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -35,3 +36,12 @@ return [
         ],
     ],
 ];
+=======
+return array (
+  'navigation' => 
+  array (
+    'label' => 'send whats app.navigation',
+    'group' => 'send whats app.navigation',
+  ),
+);
+>>>>>>> 9fd314be (.)

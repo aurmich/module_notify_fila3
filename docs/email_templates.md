@@ -18,7 +18,10 @@ Il modulo Notify implementa un sistema avanzato di gestione delle email template
 Per risolvere immediatamente il problema di registrazione:
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fd314be (.)
 # 1. Creare seeder per template critici
 php artisan make:seeder CriticalMailTemplatesSeeder
 
@@ -283,7 +286,10 @@ MailTemplate::create([
 ### Comandi Utili per Debug
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fd314be (.)
 # Verifica template esistenti
 php artisan tinker
 >>> \Modules\Notify\Models\MailTemplate::where('mailable', 'like', '%SpatieEmail%')->get(['id', 'slug', 'subject'])
@@ -313,9 +319,18 @@ php artisan tinker
 - [Notification Channels Implementation](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md)
 - [SMS Implementation](./SMS_IMPLEMENTATION.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9fd314be (.)
 
 ---
 
 **Ultimo aggiornamento**: 26 Giugno 2025  
 **Status**: Aggiornato per errore critico MissingMailTemplate  
 **Priorità**: URGENT - Fix sistema registrazione
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a6a762f (.)
+>>>>>>> 9fd314be (.)

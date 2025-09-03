@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Xot\Traits\Updater;
 
 // BaseModel in same namespace provides common behaviors
+<<<<<<< HEAD
 /**
  * 
  *
@@ -25,6 +26,11 @@ use Modules\Xot\Traits\Updater;
 class NotificationTemplateVersion extends BaseModel
 {
     
+=======
+class NotificationTemplateVersion extends BaseModel
+{
+    use Updater;
+>>>>>>> 9fd314be (.)
 
     protected $fillable = [
         'template_id',
@@ -53,9 +59,13 @@ class NotificationTemplateVersion extends BaseModel
     public function restore(): NotificationTemplate
     {
         $template = $this->template;
+<<<<<<< HEAD
         if ($template === null) {
             throw new \RuntimeException('Template non trovato per questa versione');
         }
+=======
+        
+>>>>>>> 9fd314be (.)
         $template->update([
             'subject' => $this->subject,
             'body_html' => $this->body_html,

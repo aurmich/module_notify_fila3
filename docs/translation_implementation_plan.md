@@ -68,7 +68,10 @@ Dall'analisi dei file di traduzione esistenti, sono stati identificati i seguent
 ### Script di Pulizia
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fd314be (.)
 # Rimozione dei file senza nome
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/.php
 

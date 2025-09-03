@@ -44,7 +44,10 @@ use Modules\Xot\Models\BaseModel;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereUpdatedBy($value)
+<<<<<<< HEAD
  * @mixin IdeHelperNotification
+=======
+>>>>>>> 9fd314be (.)
  * @mixin \Eloquent
  */
 class Notification extends BaseModel

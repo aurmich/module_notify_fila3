@@ -6,12 +6,18 @@ namespace Modules\Notify\Actions;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+<<<<<<< HEAD
 use Modules\Dental\Models\Appointment;
 use Modules\Notify\Mail\AppointmentNotificationMail;
 use Modules\Patient\Models\Patient;
 use Modules\<nome progetto>\Models\Appointment;
 use Modules\Notify\Mail\AppointmentNotificationMail;
 use Modules\<nome progetto>\Models\Patient;
+=======
+use Modules\SaluteOra\Models\Appointment;
+use Modules\Notify\Mail\AppointmentNotificationMail;
+use Modules\SaluteOra\Models\Patient;
+>>>>>>> 9fd314be (.)
 use Spatie\QueueableAction\QueueableAction;
 
 class SendAppointmentNotificationAction
@@ -31,7 +37,11 @@ class SendAppointmentNotificationAction
      * @param Appointment $appointment L'appuntamento a cui si riferisce la notifica
      * @param string $type Il tipo di notifica (confermato, annullato, promemoria, ecc.)
      * @param array<string, mixed> $additionalData Dati aggiuntivi per la notifica
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 9fd314be (.)
      * @return bool
      */
     public function execute(
@@ -42,6 +52,10 @@ class SendAppointmentNotificationAction
         try {
             // Carica il paziente con le relazioni necessarie
             $patient = Patient::with('user')->find($appointment->patient_id);
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 9fd314be (.)
             if (!$patient) {
                 Log::error('Paziente non trovato per l\'invio della notifica di appuntamento', [
                     'appointment_id' => $appointment->id,
@@ -49,6 +63,10 @@ class SendAppointmentNotificationAction
                 ]);
                 return false;
             }
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 9fd314be (.)
             // Prepara i dati per la notifica
             $notificationData = [
                 'appointment' => $appointment,
@@ -56,15 +74,26 @@ class SendAppointmentNotificationAction
                 'type' => $type,
                 'additionalData' => $additionalData,
             ];
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 9fd314be (.)
             // Invia email se disponibile
             if ($patient->user && $patient->user->email) {
                 Mail::to($patient->user->email)
                     ->send(new AppointmentNotificationMail($notificationData));
             }
+<<<<<<< HEAD
 
             // Registra la notifica nel database
             $this->recordNotification($appointment, $patient, $type);
 
+=======
+            
+            // Registra la notifica nel database
+            $this->recordNotification($appointment, $patient, $type);
+            
+>>>>>>> 9fd314be (.)
             // Logga l'invio della notifica
             activity()
                 ->performedOn($appointment)
@@ -74,6 +103,10 @@ class SendAppointmentNotificationAction
                     'patient_id' => $patient->id,
                 ])
                 ->log("Notifica di appuntamento di tipo '{$type}' inviata");
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 9fd314be (.)
             return true;
         } catch (\Exception $e) {
             Log::error('Errore nell\'invio della notifica di appuntamento', [
@@ -82,11 +115,19 @@ class SendAppointmentNotificationAction
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
             ]);
+<<<<<<< HEAD
 
             return false;
         }
     }
 
+=======
+            
+            return false;
+        }
+    }
+    
+>>>>>>> 9fd314be (.)
     /**
      * Registra la notifica nel database.
      *
@@ -113,7 +154,11 @@ class SendAppointmentNotificationAction
                 'appointment_id' => $appointment->id,
                 'patient_id' => $patient->id,
                 'date' => $appointment->date->format('Y-m-d'),
+<<<<<<< HEAD
                 'time' => $appointment->starts_at?->format('H:i'),
+=======
+                'time' => $appointment->start_time?->format('H:i'),
+>>>>>>> 9fd314be (.)
             ];
             $notification->sent_at = now();
             $notification->save();

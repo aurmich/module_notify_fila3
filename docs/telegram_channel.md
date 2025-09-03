@@ -106,7 +106,10 @@ return [
 
 ### 2.2 Environment Variables
 ```env
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fd314be (.)
 # Telegram Bot
 TELEGRAM_BOT_TOKEN=your_bot_token
 TELEGRAM_BOT_USERNAME=your_bot_username

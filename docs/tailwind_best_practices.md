@@ -277,7 +277,10 @@ module.exports = {
 ### 7.2 Esempi e Pattern
 ```php
 // docs/examples/button-variants.md
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fd314be (.)
 # Varianti Bottoni
 
 ## Primario

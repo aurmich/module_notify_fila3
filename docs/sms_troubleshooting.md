@@ -125,7 +125,10 @@
 
 ### 1. Comandi Artisan
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fd314be (.)
 # Test connessione provider
 php artisan sms:test-connection
 

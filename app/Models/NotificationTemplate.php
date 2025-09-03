@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Notify\Enums\NotificationTypeEnum;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Traits\HasFactory;
+>>>>>>> 9fd314be (.)
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Translatable\HasTranslations;
@@ -56,7 +60,10 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate whereLocales(string $column, array $locales)
+<<<<<<< HEAD
  * @mixin IdeHelperNotificationTemplate
+=======
+>>>>>>> 9fd314be (.)
  * @mixin \Eloquent
  */
 class NotificationTemplate extends BaseModel implements HasMedia
