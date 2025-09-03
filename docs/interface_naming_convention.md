@@ -39,9 +39,13 @@ Per verificare la corretta implementazione:
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Cerca interfacce con naming errato
 grep -r "interface.*Interface" --include="*.php" /var/www/html/saluteora/laravel/Modules
 

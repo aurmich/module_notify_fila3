@@ -155,9 +155,13 @@ Per testare le email in ambiente locale senza inviarle realmente:
 
 ```dotenv
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # .env per test con Mailtrap
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.mailtrap.io

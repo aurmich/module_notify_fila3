@@ -278,9 +278,13 @@ module.exports = {
 ```php
 // docs/examples/button-variants.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Varianti Bottoni
 
 ## Primario

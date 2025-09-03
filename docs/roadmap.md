@@ -76,9 +76,13 @@ Overall Module Completion: 60%
    - Cache implementation
    - Priority: High
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 ### Versione HEAD
 
 

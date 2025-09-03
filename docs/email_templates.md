@@ -19,9 +19,13 @@ Per risolvere immediatamente il problema di registrazione:
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # 1. Creare seeder per template critici
 php artisan make:seeder CriticalMailTemplatesSeeder
 
@@ -287,9 +291,13 @@ MailTemplate::create([
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Verifica template esistenti
 php artisan tinker
 >>> \Modules\Notify\Models\MailTemplate::where('mailable', 'like', '%SpatieEmail%')->get(['id', 'slug', 'subject'])

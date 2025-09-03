@@ -171,9 +171,13 @@ Per verificare che tutte le traduzioni siano presenti:
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Verifica sintassi PHP
 php -l laravel/Modules/Notify/lang/it/sms_driver_enum.php
 php -l laravel/Modules/Notify/lang/en/sms_driver_enum.php
@@ -190,6 +194,9 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 **Ultimo aggiornamento**: 2025-01-06 
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> 6d763b05 (.)

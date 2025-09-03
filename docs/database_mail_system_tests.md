@@ -345,9 +345,13 @@ class MailTemplateSecurityTest extends TestCase
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Esegui tutti i test
 php artisan test --filter=MailTemplate
 
@@ -385,6 +389,9 @@ php artisan test --coverage --filter=MailTemplate
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [PHPUnit Documentation](https://phpunit.de/documentation.html)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Pest PHP](https://pestphp.com/docs) 
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> 6d763b05 (.)

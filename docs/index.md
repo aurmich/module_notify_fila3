@@ -87,9 +87,13 @@ This document serves as the central index for the Notify module, providing guida
 
 ## Implementation Guidelines
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 ### 1. Module Structure
 - The Notify module follows a standard structure with directories for models, services, providers, and templates to ensure clarity and maintainability.
 

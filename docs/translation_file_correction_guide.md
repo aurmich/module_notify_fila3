@@ -17,17 +17,25 @@ Se il file ha un nome non conforme:
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # 1. Creare un nuovo file con il nome corretto
 touch /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_corretto.php
 
 # 2. Copiare e correggere il contenuto
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # (vedere Passo 3 per la struttura corretta)
 
 # 3. Verificare che non ci siano riferimenti al vecchio file
@@ -80,17 +88,25 @@ Dopo aver corretto un file in italiano, verificare e aggiornare la versione ingl
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # 1. Controllare se esiste il file inglese
 ls /var/www/html/saluteora/laravel/Modules/Notify/lang/en/nome_file.php
 
 # 2. Se esiste, aggiornarlo con la stessa struttura
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # 3. Se non esiste, crearlo con la traduzione inglese dei messaggi italiani
 ```
 

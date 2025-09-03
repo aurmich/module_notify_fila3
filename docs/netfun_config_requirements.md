@@ -57,9 +57,13 @@ Le seguenti variabili d'ambiente devono essere configurate nel file `.env` dell'
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Parametri globali
 SMS_FROM=YourSender
 SMS_DEBUG=false
@@ -102,9 +106,13 @@ NETFUN_TOKEN=la_tua_api_key
 NETFUN_SENDER=MittenteSMS
 NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # NETFUN_CALLBACK_URL=https://tuodominio.it/sms/callback
 ```
 

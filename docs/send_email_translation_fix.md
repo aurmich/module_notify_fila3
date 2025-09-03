@@ -4,10 +4,14 @@
 
 ### 1. Conflitti di Merge Non Risolti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Presenza di marcatori git  nel file
 =======
 - Presenza di marcatori `<<<<<<<`, `=======`, `>>>>>>>` nel file
 >>>>>>> 9fd314be (.)
+=======
+- Presenza di marcatori git  nel file
+>>>>>>> 6d763b05 (.)
 - Codice duplicato e inconsistente
 
 ### 2. Sintassi Obsoleta

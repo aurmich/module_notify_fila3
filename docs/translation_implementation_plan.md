@@ -69,9 +69,13 @@ Dall'analisi dei file di traduzione esistenti, sono stati identificati i seguent
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Rimozione dei file senza nome
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/.php
 

@@ -15,9 +15,13 @@ Il sistema di template permette di:
 ```html
 <x-mail::message>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # {{ $title }}
 
 {{ $content }}
@@ -235,9 +239,13 @@ p {
 ```html
 <x-mail::message>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Benvenuto {{ $user->name }}!
 
 Grazie per esserti registrato su {{ config('app.name') }}.
@@ -257,9 +265,13 @@ Cordiali saluti,<br>
 ```html
 <x-mail::message>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Ordine Confermato
 
 Grazie per il tuo ordine #{{ $order->number }}.
@@ -293,9 +305,13 @@ Grazie per aver scelto {{ config('app.name') }}!
 ```html
 <x-mail::message>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Reset Password
 
 Hai richiesto il reset della password per il tuo account.
@@ -346,6 +362,9 @@ Se hai problemi con il bottone, copia e incolla questo link nel tuo browser: {{ 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Markdown Mail](https://laravel.com/docs/mail#markdown-mailables)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Database Mail](database-mail.md) 
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> 6d763b05 (.)

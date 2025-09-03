@@ -96,9 +96,13 @@ Quando configuri il file `.env`, utilizza questi nomi di variabili:
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 6d763b05 (.)
 # Configurazione generale SMS
 SMS_FROM=SaluteOra
 SMS_RETRY_ATTEMPTS=3
