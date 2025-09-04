@@ -11,4 +11,4 @@ Il conflitto è stato risolto mantenendo:
 La soluzione garantisce compatibilità con l'architettura a servizi, estendibilità e coerenza di stile.
 
 ## Collegamento alla doc root
-Vedi `/docs/notify_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.
+Vedi `/project_docs/notify_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.

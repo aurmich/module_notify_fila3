@@ -210,9 +210,9 @@ Implementare ContactColumn che:
 
 ## 🔗 **COLLEGAMENTI**
 
-- [Analisi Errori Root](../../docs/contactcolumn-critical-errors-analysis.md)
+- [Analisi Errori Root](../../project_docs/contactcolumn-critical-errors-analysis.md)
 - [ContactTypeEnum](../app/Enums/ContactTypeEnum.php)
-- [Pattern ViewColumn Filament](https://filamentphp.com/docs/3.x/tables/columns/view)
+- [Pattern ViewColumn Filament](https://filamentphp.com/project_docs/3.x/tables/columns/view)
 - [Accessibilità WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
 
 ---

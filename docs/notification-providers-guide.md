@@ -120,7 +120,7 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 3. **Creare le Azioni Provider** in `/app/Actions/{Type}/`
 4. **Creare la Configurazione** in `/config/{type}.php`
 5. **Creare il Canale** in `/app/Channels/`
-6. **Documentare** in `/docs/`
+6. **Documentare** in `/project_docs/`
 
 ## Conclusioni e Migliori Pratiche
 

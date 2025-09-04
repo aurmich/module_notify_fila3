@@ -77,6 +77,6 @@ public function via($notifiable)
 
 ## Related Documentation
 
-- [Laravel Notification Channels](https://laravel.com/docs/notifications#specifying-delivery-channels)
-- [Laravel Notification Routing](https://laravel.com/docs/notifications#routing-notifications)
+- [Laravel Notification Channels](https://laravel.com/project_docs/notifications#specifying-delivery-channels)
+- [Laravel Notification Routing](https://laravel.com/project_docs/notifications#routing-notifications)
 - [Notification Best Practices](best-practices.md)

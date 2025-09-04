@@ -210,13 +210,13 @@ Questo pattern può essere applicato a:
 - [Best Practices](best_practices.md)
 
 ### Root Documentation
-- [Filament Table Columns Best Practices](../../../docs/filament-table-columns-best-practices.md)
-- [Composite Columns Pattern](../../../docs/composite-columns-pattern.md)
-- [UI/UX Standards](../../../docs/ui-ux-standards.md)
+- [Filament Table Columns Best Practices](../../../project_docs/filament-table-columns-best-practices.md)
+- [Composite Columns Pattern](../../../project_docs/composite-columns-pattern.md)
+- [UI/UX Standards](../../../project_docs/ui-ux-standards.md)
 
 ### Altri Moduli
-- [TechPlanner Contacts Column](../../TechPlanner/docs/contacts-column-implementation-complete.md)
-- [UI Components](../../UI/docs/components.md)
+- [TechPlanner Contacts Column](../../TechPlanner/project_docs/contacts-column-implementation-complete.md)
+- [UI Components](../../UI/project_docs/components.md)
 
 ## Changelog
 

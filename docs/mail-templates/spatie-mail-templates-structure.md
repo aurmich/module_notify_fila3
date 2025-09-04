@@ -178,5 +178,5 @@ Mail::to($user->email)->send(new WelcomeMail($user->name, $verificationUrl));
 ## Riferimenti
 
 - [Documentazione ufficiale spatie/laravel-database-mail-templates](https://github.com/spatie/laravel-database-mail-templates)
-- [Laravel Mail](https://laravel.com/docs/10.x/mail)
+- [Laravel Mail](https://laravel.com/project_docs/10.x/mail)
 - [Spatie Translatable](https://github.com/spatie/laravel-translatable)

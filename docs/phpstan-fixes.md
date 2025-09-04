@@ -179,8 +179,8 @@ private static function processArray(array $data): array
 
 ## 📚 **Riferimenti**
 
-- [PHPStan Level 10 Guidelines](../../Xot/docs/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
-- [Laraxot Type Safety Rules](../../Xot/docs/TYPE_SAFETY_RULES.md)
+- [PHPStan Level 10 Guidelines](../../Xot/project_docs/PHPSTAN_LIVELLO10_LINEE_GUIDA.md)
+- [Laraxot Type Safety Rules](../../Xot/project_docs/TYPE_SAFETY_RULES.md)
 - `docs/phpstan-level7-guide.md`: Guida completa PHPStan Level 7
 - `docs/phpstan/safe-casting-patterns.md`: Pattern di casting sicuro
 - `\Modules\Xot\Actions\Cast\SafeStringCastAction`: Action per casting sicuro

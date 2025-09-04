@@ -158,7 +158,7 @@ class YourNotification extends Notification
 
 ## 5. Collegamenti Utili
 
-- [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
-- [Documentazione Laravel Mail](https://laravel.com/docs/mail)
+- [Documentazione Laravel Notifications](https://laravel.com/project_docs/notifications)
+- [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
 - [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 

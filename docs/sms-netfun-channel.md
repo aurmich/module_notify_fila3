@@ -361,7 +361,7 @@ Notification::assertSentTo($user, OrderShipped::class);
 ## 9. Riferimenti
 - [Netfun SMS API](https://www.netfunitalia.it/)
 - [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action)
-- [Laravel Notifications](https://laravel.com/docs/notifications) 
+- [Laravel Notifications](https://laravel.com/project_docs/notifications) 
 
 ---
 

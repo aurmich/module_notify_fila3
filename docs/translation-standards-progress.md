@@ -24,8 +24,8 @@
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
-   - Creato `/var/www/html/saluteora/laravel/Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `/var/www/html/saluteora/laravel/Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `/var/www/html/saluteora/laravel/Modules/Notify/project_docs/TRANSLATION_FILE_NAMING_RULES.md`
+   - Creato `/var/www/html/saluteora/laravel/Modules/Notify/project_docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
 
 2. **File Corretti**
    - Creato `/var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
@@ -46,8 +46,8 @@
 ## Documentazione di Riferimento
 
 1. **Standard di Traduzione**
-   - [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-   - [Best Practices per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+   - [Regole Generali per le Traduzioni](../../Lang/project_docs/TRANSLATION_KEYS_RULES.md)
+   - [Best Practices per le Traduzioni](../../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 
 2. **Guide Specifiche per Notify**
    - [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)

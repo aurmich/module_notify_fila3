@@ -58,5 +58,5 @@ find /var/www/html/saluteora/laravel/Modules -path "*/Filament/*/Pages/*.php" | 
 
 ## Riferimenti
 
-- [Filament Documentation](https://filamentphp.com/docs/3.x/panels/pages/getting-started)
+- [Filament Documentation](https://filamentphp.com/project_docs/3.x/panels/pages/getting-started)
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)

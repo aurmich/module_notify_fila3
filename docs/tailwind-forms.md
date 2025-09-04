@@ -263,7 +263,7 @@ class NotificationForm extends Component implements HasForms
 
 ## Collegamenti
 
-- [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/installation)
+- [Documentazione Filament Forms](https://filamentphp.com/project_docs/3.x/forms/installation)
 - [Documentazione Layout](tailwind_layouts.md)
 - [Documentazione Componenti](tailwind_components.md)
 - [Architettura](architecture.md)

@@ -236,4 +236,4 @@ TextInput::make('name')
 ## Collegamenti
 - [Laravel News Article](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
 - [Filament Documentation](https://filamentphp.com/docs)
-- [Laravel Str Helper](https://laravel.com/docs/helpers#method-str-slug) 
+- [Laravel Str Helper](https://laravel.com/project_docs/helpers#method-str-slug) 

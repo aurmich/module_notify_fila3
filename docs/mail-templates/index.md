@@ -5,8 +5,8 @@
 - [README Modulo Notify](../README.md)
 - [Sistema Email](../database-mail-system.md)
 - [Template Email](../EMAIL_TEMPLATES.md)
-- [Documentazione Generale SaluteOra](../../../../../docs/README.md)
-- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
+- [Documentazione Generale SaluteOra](../../../../../project_docs/README.md)
+- [Collegamenti Documentazione](../../../../../project_docs/collegamenti-documentazione.md)
 
 ## Struttura e Architettura
 - [Struttura Layout](./LAYOUT_STRUCTURE.md) - Struttura dei layout email

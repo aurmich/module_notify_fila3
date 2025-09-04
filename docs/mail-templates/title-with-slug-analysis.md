@@ -183,8 +183,8 @@ TitleWithSlugInput::make()
 
 ### 3. Risorse
 - [Documentazione Ufficiale](https://github.com/camya/filament-title-with-slug)
-- [Filament Forms](https://filamentphp.com/docs/3.x/forms/installation)
-- [Laravel Validation](https://laravel.com/docs/validation)
+- [Filament Forms](https://filamentphp.com/project_docs/3.x/forms/installation)
+- [Laravel Validation](https://laravel.com/project_docs/validation)
 
 ## Note di Implementazione
 

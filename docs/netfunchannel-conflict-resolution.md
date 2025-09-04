@@ -7,4 +7,4 @@ Il conflitto era dovuto a merge multipli che hanno duplicato blocchi identici ne
 - Nessuna logica è stata alterata rispetto alle versioni in conflitto.
 
 ## Collegamento alla doc root
-Vedi `/docs/notify_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.
+Vedi `/project_docs/notify_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.

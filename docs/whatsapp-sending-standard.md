@@ -186,9 +186,9 @@ $action->onQueue('whatsapp')->execute($data);
 
 ## 8. Provider Supportati e Link Utili
 
-- [Twilio WhatsApp API](https://www.twilio.com/docs/whatsapp)
+- [Twilio WhatsApp API](https://www.twilio.com/project_docs/whatsapp)
 - [Vonage WhatsApp API](https://developer.vonage.com/en/messages/whatsapp/overview)
-- [WhatsApp Business API Facebook](https://developers.facebook.com/docs/whatsapp)
+- [WhatsApp Business API Facebook](https://developers.facebook.com/project_docs/whatsapp)
 - [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action)
 - [Esempi community](https://laracasts.com/discuss/channels/laravel/send-whatsapp-message-with-laravel)
 - [Altri pacchetti open source](https://github.com/netflie/laravel-notification-whatsapp), [MissaelAnda/laravel-whatsapp](https://github.com/MissaelAnda/laravel-whatsapp), [xaamin/whatsapi](https://github.com/xaamin/whatsapi), [cipto-hd/laravel-whatsapp-notification](https://github.com/cipto-hd/laravel-whatsapp-notification), [7span/laravel-whatsapp](https://github.com/7span/laravel-whatsapp), [sawirricardo/laravel-whatsapp](https://github.com/sawirricardo/laravel-whatsapp)

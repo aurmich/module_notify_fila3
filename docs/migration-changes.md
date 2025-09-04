@@ -91,5 +91,5 @@
 
 - [Regole Migrazioni](./MIGRATION_RULES.md)
 - [Documentazione Template](./EMAIL_TEMPLATES.md)
-- [Best Practices Database](../../../docs/best-practices/database.md)
+- [Best Practices Database](../../../project_docs/best-practices/database.md)
 - [Proposta Slug Template](./EMAIL_TEMPLATE_SLUG_PROPOSAL.md) 

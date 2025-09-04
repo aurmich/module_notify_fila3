@@ -115,8 +115,8 @@ private function formatContacts(Client $record): string
 - [MEMORY 4b9bd23e]: Regole architetturali Filament
 
 ### Pattern Corretti
-- [TechPlanner ContactsColumn](../../TechPlanner/docs/contacts-column-implementation-complete.md)
-- [Filament Best Practices](../../../docs/filament-best-practices.md)
+- [TechPlanner ContactsColumn](../../TechPlanner/project_docs/contacts-column-implementation-complete.md)
+- [Filament Best Practices](../../../project_docs/filament-best-practices.md)
 
 ## AZIONI CORRETTIVE
 
