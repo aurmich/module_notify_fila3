@@ -4,4 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Policies;
 
+<<<<<<< HEAD
 class NotificationPolicy extends NotifyBasePolicy {}
+=======
+use Modules\Notify\Models\Notification;
+use Modules\Xot\Contracts\UserContract;
+
+class NotificationPolicy extends NotifyBasePolicy
+{
+    
+}
+>>>>>>> 2e1287d (.)
