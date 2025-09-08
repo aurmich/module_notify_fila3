@@ -116,7 +116,7 @@ La sintassi `@svg()` utilizzata nella view Blade non è compatibile con il siste
 ### **Documentazione Correlata**
 - [contact-column-implementation.md](./contact-column-implementation.md)
 - [contactcolumn-errors-and-antipatterns.md](./contactcolumn-errors-and-antipatterns.md)
-- [Filament Icons Documentation](https://filamentphp.com/project_docs/3.x/support/icons)
+- [Filament Icons Documentation](https://filamentphp.com/docs/3.x/support/icons)
 
 ### **File Coinvolti**
 - `ContactColumn.php` - Classe principale

@@ -208,6 +208,6 @@ private function convertColumnToJson($table, $column)
 - Monitorare performance
 
 ## Collegamenti
-- [Laravel Migrations](https://laravel.com/project_docs/migrations)
+- [Laravel Migrations](https://laravel.com/docs/migrations)
 - [MySQL JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)
-- [PostgreSQL JSON](https://www.postgresql.org/project_docs/current/datatype-json.html) 
+- [PostgreSQL JSON](https://www.postgresql.org/docs/current/datatype-json.html) 

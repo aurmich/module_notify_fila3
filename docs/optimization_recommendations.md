@@ -57,7 +57,7 @@ $testDb = config('database.default') . '_test'
 
 #### Struttura Target Proposta
 ```
-Notify/project_docs/
+Notify/docs/
 ├── README.md (overview, max 50 righe)
 ├── core/
 │   ├── architecture.md
@@ -222,7 +222,7 @@ php artisan notify:benchmark
 ## Collegamenti
 
 - [Linee Guida Riusabilità](reusability_guidelines.md)
-- [Piano Implementazione](../../../project_docs/module_reusability_implementation_plan.md)
+- [Piano Implementazione](../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 
 *Ultimo aggiornamento: gennaio 2025*

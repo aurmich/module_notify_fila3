@@ -101,6 +101,6 @@ Nei template Blade, le azioni dei form **DEVONO** essere richiamate dai metodi P
 
 ## Riferimenti
 
-- [Laravel Configuration](https://laravel.com/project_docs/configuration)
+- [Laravel Configuration](https://laravel.com/docs/configuration)
 - [PHP 8.1 Enums](https://www.php.net/manual/en/language.enumerations.php)
-- [Filament Forms Actions](https://filamentphp.com/project_docs/forms/actions)
+- [Filament Forms Actions](https://filamentphp.com/docs/forms/actions)

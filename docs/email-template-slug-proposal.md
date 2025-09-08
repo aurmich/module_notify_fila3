@@ -236,5 +236,5 @@ MailTemplate::all()->each(function ($template) {
 ## Collegamenti Correlati
 
 - [Documentazione Email Template](./EMAIL_TEMPLATES.md)
-- [Gestione Traduzioni](../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Configurazione Email](../../../project_docs/email-configuration.md) 
+- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Configurazione Email](../../../docs/email-configuration.md) 

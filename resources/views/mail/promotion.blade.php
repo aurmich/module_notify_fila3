@@ -8,7 +8,7 @@
     </div>
 
     <h1 style="color: #2D3748; font-size: 28px; text-align: center; margin-bottom: 20px;">
-        {{ $title ?? (string) __('notify::mail.promotion.title') }}
+        {{ $title ?? __('notify::mail.promotion.title') }}
     </h1>
 
     @if(isset($subtitle))
@@ -19,7 +19,7 @@
 
     <div style="background-color: #EBF8FF; border-radius: 8px; padding: 20px; margin: 20px 0;">
         <h2 style="color: #2B6CB0; font-size: 24px; margin-bottom: 15px;">
-            {{ $highlight_title ?? (string) __('notify::mail.promotion.highlight') }}
+            {{ $highlight_title ?? __('notify::mail.promotion.highlight') }}
         </h2>
         <p style="color: #4A5568; font-size: 16px; line-height: 1.6;">
             {{ $highlight_text }}
@@ -42,7 +42,7 @@
     @if(isset($action_url))
         <div style="text-align: center; margin: 30px 0;">
             <a href="{{ $action_url }}" class="button" style="background-color: #4299E1; color: white; padding: 15px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block;">
-                {{ $action_text ?? (string) __('notify::mail.promotion.action') }}
+                {{ $action_text ?? __('notify::mail.promotion.action') }}
             </a>
         </div>
     @endif
@@ -55,7 +55,7 @@
 
     <div style="border-top: 1px solid #E2E8F0; margin-top: 30px; padding-top: 20px;">
         <p style="color: #718096; font-size: 14px; text-align: center;">
-            {{ (string) __('notify::mail.promotion.terms') }}
+            {{ __('notify::mail.promotion.terms') }}
         </p>
     </div>
 @endsection

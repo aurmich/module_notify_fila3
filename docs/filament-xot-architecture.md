@@ -140,7 +140,7 @@ protected function getFormSchema(): array
 ## Riferimenti
 
 - [Filament Documentation](https://filamentphp.com/docs)
-- [Laravel Architecture Patterns](https://laravel.com/project_docs/10.x/architecture)
+- [Laravel Architecture Patterns](https://laravel.com/docs/10.x/architecture)
 - [DRY Principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 - [Wrapper Pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 

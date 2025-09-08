@@ -197,6 +197,6 @@ class AppointmentReminder extends Notification
 
 ## Riferimenti
 
-- [Documentazione Netfun API](https://www.netfun.it/project_docs/api)
+- [Documentazione Netfun API](https://www.netfun.it/docs/api)
 - [Spatie Laravel Data](https://github.com/spatie/laravel-data)
 - [Spatie Queueable Actions](https://github.com/spatie/laravel-queueable-action)

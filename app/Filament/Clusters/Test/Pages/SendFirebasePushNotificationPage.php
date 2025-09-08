@@ -4,38 +4,38 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
+use Filament\Forms;
+use Filament\Forms\Form;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
-use Filament\Forms;
-use Filament\Forms\ComponentContainer;
-use Filament\Forms\Form;
-use Filament\Notifications\Notification as FilamentNotification;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Notification;
-use Modules\Notify\Datas\FirebaseNotificationData;
+use Filament\Forms\ComponentContainer;
+use Filament\Forms\Contracts\HasForms;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Filament\Clusters\Test;
-use Modules\Notify\Notifications\PushNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Modules\Notify\Datas\FirebaseNotificationData;
+use Modules\Notify\Notifications\PushNotification;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Filament\Notifications\Notification as FilamentNotification;
 
 /**
  * @property ComponentContainer $pushForm
  */
 class SendFirebasePushNotificationPage extends XotBasePage
 {
+    
     public ?array $pushData = [];
-<<<<<<< HEAD
     
     protected static ?string $navigationIcon = 'heroicon-o-bell-alert';
     
-=======
-
->>>>>>> 9b82f1c (.)
     protected static string $view = 'notify::filament.pages.send-push';
-
+    
     protected static ?string $cluster = Test::class;
-
+    
     public function mount(): void
     {
         $this->fillForms();
@@ -65,23 +65,23 @@ class SendFirebasePushNotificationPage extends XotBasePage
     {
         return [
             Forms\Components\TextInput::make('token')
-                ->label((string) __('notify::push.form.token.label'))
+                ->label(__('notify::push.form.token.label'))
                 ->required()
-                ->helperText((string) __('notify::push.form.token.helper')),
+                ->helperText(__('notify::push.form.token.helper')),
             Forms\Components\TextInput::make('title')
-                ->label((string) __('notify::push.form.title.label'))
+                ->label(__('notify::push.form.title.label'))
                 ->required()
                 ->maxLength(100),
             Forms\Components\Textarea::make('body')
-                ->label((string) __('notify::push.form.body.label'))
+                ->label(__('notify::push.form.body.label'))
                 ->required()
                 ->rows(3),
             Forms\Components\TextInput::make('image_url')
-                ->label((string) __('notify::push.form.image_url.label'))
+                ->label(__('notify::push.form.image_url.label'))
                 ->url()
-                ->helperText((string) __('notify::push.form.image_url.helper')),
+                ->helperText(__('notify::push.form.image_url.helper')),
             Forms\Components\Select::make('notification_type')
-                ->label((string) __('notify::push.form.notification_type.label'))
+                ->label(__('notify::push.form.notification_type.label'))
                 ->options([
                     'message' => 'Message',
                     'alert' => 'Alert',
@@ -91,21 +91,21 @@ class SendFirebasePushNotificationPage extends XotBasePage
                 ->default('message')
                 ->required(),
             Forms\Components\Toggle::make('high_priority')
-                ->label((string) __('notify::push.form.high_priority.label'))
+                ->label(__('notify::push.form.high_priority.label'))
                 ->default(false)
-                ->helperText((string) __('notify::push.form.high_priority.helper')),
+                ->helperText(__('notify::push.form.high_priority.helper')),
             Forms\Components\KeyValue::make('custom_data')
-                ->label((string) __('notify::push.form.custom_data.label'))
-                ->keyLabel((string) __('notify::push.form.custom_data.key_label'))
-                ->valueLabel((string) __('notify::push.form.custom_data.value_label'))
-                ->helperText((string) __('notify::push.form.custom_data.helper')),
+                ->label(__('notify::push.form.custom_data.label'))
+                ->keyLabel(__('notify::push.form.custom_data.key_label'))
+                ->valueLabel(__('notify::push.form.custom_data.value_label'))
+                ->helperText(__('notify::push.form.custom_data.helper')),
         ];
     }
 
     public function sendPushNotification(): void
     {
         $data = $this->pushForm->getState();
-
+        
         try {
             // Creare i dati della notifica Firebase
             $notificationData = FirebaseNotificationData::from([
@@ -114,19 +114,19 @@ class SendFirebasePushNotificationPage extends XotBasePage
                 'body' => $data['body'] ?? '',
                 'data' => $data['custom_data'] ?? [],
             ]);
-
+            
             // TODO: Implementare PushNotification class
             // Inviare la notifica push
             // Notification::route('firebase', $data['token'])
             //     ->notify(new PushNotification($notificationData));
-
+            
             // Notificare il successo
             FilamentNotification::make()
                 ->success()
-                ->title((string) __('notify::push.notifications.sent.title'))
-                ->body((string) __('notify::push.notifications.sent.body'))
+                ->title(__('notify::push.notifications.sent.title'))
+                ->body(__('notify::push.notifications.sent.body'))
                 ->send();
-
+                
             // Loggare l'invio
             Log::info('Notifica push inviata con successo', [
                 'token' => $data['token'],
@@ -139,11 +139,11 @@ class SendFirebasePushNotificationPage extends XotBasePage
                 'error' => $e->getMessage(),
                 'token' => $data['token'],
             ]);
-
+            
             // Notificare l'errore
             FilamentNotification::make()
                 ->danger()
-                ->title((string) __('notify::push.notifications.error.title'))
+                ->title(__('notify::push.notifications.error.title'))
                 ->body($e->getMessage())
                 ->send();
         }
@@ -153,7 +153,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
     {
         return [
             Action::make('sendPushNotification')
-                ->label((string) __('notify::push.actions.send'))
+                ->label(__('notify::push.actions.send'))
                 ->submit('sendPushNotification'),
         ];
     }

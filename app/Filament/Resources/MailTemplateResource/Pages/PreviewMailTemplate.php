@@ -6,8 +6,8 @@ namespace Modules\Notify\Filament\Resources\MailTemplateResource\Pages;
 
 use Filament\Actions\Action;
 use Filament\Resources\Pages\Page;
-use Modules\Notify\Filament\Resources\MailTemplateResource;
 use Modules\Notify\Models\MailTemplate;
+use Modules\Notify\Filament\Resources\MailTemplateResource;
 
 /**
  * @property MailTemplate $record
@@ -20,17 +20,17 @@ class PreviewMailTemplate extends Page
 
     public function getTitle(): string
     {
-        return (string) __('notify::mail.template.preview.title');
+        return __('notify::mail.template.preview.title');
     }
 
     protected function getHeaderActions(): array
     {
         return [
             Action::make('back')
-                ->label((string) __('notify::mail.template.preview.actions.back.label'))
-                ->icon((string) __('notify::mail.template.preview.actions.back.icon'))
-                ->color((string) __('notify::mail.template.preview.actions.back.color'))
+                ->label(__('notify::mail.template.preview.actions.back.label'))
+                ->icon(__('notify::mail.template.preview.actions.back.icon'))
+                ->color(__('notify::mail.template.preview.actions.back.color'))
                 ->url(fn () => MailTemplateResource::getUrl('edit', ['record' => $this->record])),
         ];
     }
-}
+} 

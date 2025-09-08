@@ -59,5 +59,5 @@ interface SmsProviderContract
 
 ## Risorse Correlate
 
-- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
 - [PHP-FIG Interface Naming Conventions](https://www.php-fig.org/psr/psr-1/)

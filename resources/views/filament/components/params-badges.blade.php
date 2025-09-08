@@ -2,7 +2,7 @@
 @if(!empty($params))
     <div class="space-y-2">
         <div class="text-sm font-medium text-gray-900 dark:text-gray-100">
-            {{ (string) __('notify::mail_template.sections.variables') }}
+            {{ __('notify::mail_template.sections.variables') }}
         </div>
         
         <div class="flex flex-wrap gap-2">
@@ -16,7 +16,7 @@
         </div>
         
         <div class="text-xs text-gray-500 dark:text-gray-400">
-            {{ (string) __('notify::mail_template.fields.variables.helper_text') }}
+            {{ __('notify::mail_template.fields.variables.helper_text') }}
         </div>
     </div>
 @endif 

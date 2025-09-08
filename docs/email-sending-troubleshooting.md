@@ -187,6 +187,6 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 ## Riferimenti
 
-- [Documentazione Laravel Mail](https://laravel.com/project_docs/10.x/mail)
+- [Documentazione Laravel Mail](https://laravel.com/docs/10.x/mail)
 - [Documentazione Filament](https://filamentphp.com/docs)
-- [Modulo Xot - XotBasePage](mdc:../../Xot/project_docs/pages.md)
+- [Modulo Xot - XotBasePage](mdc:../../Xot/docs/pages.md)

@@ -8,7 +8,7 @@
     </div>
 
     <h1 style="color: #2D3748; font-size: 28px; text-align: center; margin-bottom: 20px;">
-        {{ $title ?? (string) __('notify::mail.newsletter.title') }}
+        {{ $title ?? __('notify::mail.newsletter.title') }}
     </h1>
 
     @if(isset($summary))
@@ -37,7 +37,7 @@
 
                     @if(isset($article['url']))
                         <a href="{{ $article['url'] }}" style="color: #4299E1; text-decoration: none; font-weight: 500;">
-                            {{ (string) __('notify::mail.newsletter.read_more') }} →
+                            {{ __('notify::mail.newsletter.read_more') }} →
                         </a>
                     @endif
                 </div>
@@ -63,9 +63,9 @@
 
     <div style="border-top: 1px solid #E2E8F0; margin-top: 30px; padding-top: 20px;">
         <p style="color: #718096; font-size: 14px; text-align: center;">
-            {{ (string) __('notify::mail.newsletter.preferences') }}
+            {{ __('notify::mail.newsletter.preferences') }}
             <a href="{{ config('notify.preferences_url') }}" style="color: #4299E1; text-decoration: none;">
-                {{ (string) __('notify::mail.newsletter.update_preferences') }}
+                {{ __('notify::mail.newsletter.update_preferences') }}
             </a>
         </p>
     </div>

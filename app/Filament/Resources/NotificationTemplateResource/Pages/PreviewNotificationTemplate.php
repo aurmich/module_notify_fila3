@@ -15,11 +15,11 @@ class PreviewNotificationTemplate extends Page
 
     public function getTitle(): string
     {
-        return (string) __('notify::template.preview.title');
+        return __('notify::template.preview.title');
     }
 
     public function getSubheading(): string
     {
-        return (string) __('notify::template.preview.subheading');
+        return __('notify::template.preview.subheading');
     }
 }

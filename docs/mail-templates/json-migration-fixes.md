@@ -139,7 +139,7 @@ I problemi più comuni si verificano in migrazioni che coinvolgono campi con tra
 
 ## Riferimenti
 
-- [Laravel Doctrine - Working with JSON columns](https://www.laraveldoctrine.org/project_docs/1.3/orm/working-with-objects/json-objects)
+- [Laravel Doctrine - Working with JSON columns](https://www.laraveldoctrine.org/docs/1.3/orm/working-with-objects/json-objects)
 - [MySQL JSON Functions Reference](https://dev.mysql.com/doc/refman/8.0/en/json-functions.html)
-- [Laravel Migration & Database Guide](https://laravel.com/project_docs/10.x/migrations)
-- [Converting Database Column Types in Laravel](https://laravel.com/project_docs/10.x/migrations#modifying-columns)
+- [Laravel Migration & Database Guide](https://laravel.com/docs/10.x/migrations)
+- [Converting Database Column Types in Laravel](https://laravel.com/docs/10.x/migrations#modifying-columns)

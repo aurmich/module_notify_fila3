@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+use Illuminate\Support\Str;
+use Spatie\Sluggable\HasSlug;
+//use Spatie\LaravelPackageTools\Concerns\Package\HasTranslations;
+use Spatie\Sluggable\SlugOptions;
 use Illuminate\Contracts\Mail\Mailable;
-// use Spatie\LaravelPackageTools\Concerns\Package\HasTranslations;
+use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
-use Spatie\Translatable\HasTranslations;
 
 /**
  * @property int $id
@@ -34,7 +35,6 @@ use Spatie\Translatable\HasTranslations;
  * @property string $slug
  * @property-read array $variables
  * @property-read mixed $translations
- *
  * @method static Builder<static>|MailTemplate forMailable(\Illuminate\Contracts\Mail\Mailable $mailable)
  * @method static Builder<static>|MailTemplate newModelQuery()
  * @method static Builder<static>|MailTemplate newQuery()
@@ -56,38 +56,26 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|MailTemplate whereTextTemplate($value)
  * @method static Builder<static>|MailTemplate whereUpdatedAt($value)
  * @method static Builder<static>|MailTemplate whereUpdatedBy($value)
- *
  * @property string|null $params
- *
  * @method static Builder<static>|MailTemplate whereParams($value)
- *
  * @property array<array-key, mixed>|null $sms_template
  * @property int $counter
- *
  * @method static Builder<static>|MailTemplate whereCounter($value)
  * @method static Builder<static>|MailTemplate whereSmsTemplate($value)
- * @method static MailTemplate|null first()
- * @method static \Illuminate\Database\Eloquent\Collection<int, MailTemplate> get()
- * @method static MailTemplate create(array $attributes = [])
- * @method static MailTemplate firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplate where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplate whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
- * @method static int count(string $columns = '*')
- *
  * @mixin IdeHelperMailTemplate
  * @mixin \Eloquent
  */
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 {
-    use HasSlug;
-    // use SoftDeletes;
+    //use SoftDeletes;
     use HasTranslations;
+    use HasSlug;
 
     /** @var string */
     protected $connection = 'notify';
 
     /** @var list<string> */
-    public array $translatable = ['subject', 'html_template', 'text_template', 'sms_template'];
+    public array $translatable = ['subject', 'html_template', 'text_template','sms_template'];
 
     /** @var list<string> */
     protected $fillable = [
@@ -98,7 +86,7 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         'html_template',
         'text_template',
         'sms_template',
-        // 'version',  //under development
+        //'version',  //under development
         'params',
         'counter',
     ];
@@ -120,7 +108,7 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     /**
      * Get the options for generating the slug.
      */
-    public function getSlugOptions(): SlugOptions
+    public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()
             ->generateSlugsFrom('name')
@@ -129,15 +117,15 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 
     public function scopeForMailable(Builder $query, Mailable $mailable): Builder
     {
-        if (! method_exists($mailable, 'getSlug')) {
+        if(!method_exists($mailable, 'getSlug')){
             throw new \Exception('Il metodo getSlug() non è definito nella classe '.$mailable::class);
         }
-        $slug = $mailable->getSlug();
-
+        $slug=$mailable->getSlug();
         return $query
             ->where('mailable', get_class($mailable))
             ->where('slug', $slug);
     }
+
 
     /*
      * Versioni del template email.
@@ -176,5 +164,6 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         return $this;
     }
     */
+
 
 }

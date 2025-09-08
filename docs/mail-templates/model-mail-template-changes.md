@@ -167,8 +167,8 @@ $template->save();
 
 ## Collegamenti Tecnici
 - [Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-- [Laravel Events](https://laravel.com/project_docs/events)
-- [Laravel Eloquent](https://laravel.com/project_docs/eloquent)
+- [Laravel Events](https://laravel.com/docs/events)
+- [Laravel Eloquent](https://laravel.com/docs/eloquent)
 
 ## Note di Implementazione
 

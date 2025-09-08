@@ -93,7 +93,7 @@ $mailTemplate->send($user->email, [
 
 ## Riferimenti
 
-- [Documentazione Maizzle](https://maizzle.com/project_docs/)
+- [Documentazione Maizzle](https://maizzle.com/docs/)
 - [Repository MailPace Templates](https://github.com/mailpace/templates)
 - [Guida Spatie Email](../SPATIE_EMAIL_USAGE_GUIDE.md)
 - [Implementazione Slug Field](./SLUG_FIELD_IMPLEMENTATION.md)

@@ -126,14 +126,14 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../Xot/project_docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/Modules/Xot/project_docs/NAMESPACE-RULES.md)
-- [Convenzioni di Codice](/laravel/Modules/Xot/project_docs/CODE-CONVENTIONS.md)
-- [Struttura dei Moduli](/laravel/Modules/Xot/project_docs/MODULE-STRUCTURE.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../project_docs/links.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
+- [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
+- [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../docs/links.md)
 
 ### Esempio 5: Console Command
 

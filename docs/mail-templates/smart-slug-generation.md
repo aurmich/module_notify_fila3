@@ -186,7 +186,7 @@ Per il modulo Notify di SaluteOra, questa soluzione rappresenta un equilibrio ot
 ## Riferimenti
 
 - [Articolo Laravel News](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
-- [Documentazione Filament Forms](https://filamentphp.com/project_docs/3.x/forms/advanced)
+- [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/advanced)
 - [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
 - [Componente TitleWithSlug](./TITLE_WITH_SLUG_COMPONENT.md)
 - [Miglioramenti UI/UX per Slug](./UI_UX_ENHANCEMENTS.md)
