@@ -81,8 +81,8 @@ class SendEmail extends Page implements HasForms
 
         Notification::make()
             ->success()
-            // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
-            ->title(__('check your email client'))
+            // ->title((string) __('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
+            ->title((string) __('check your email client'))
             ->send();
     }
 

@@ -4,40 +4,39 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
-use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
-use Modules\Notify\Datas\EmailData;
-use Illuminate\Support\Facades\Mail;
+use Filament\Forms;
 use Filament\Forms\ComponentContainer;
-use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Form;
+use Filament\Notifications\Notification as FilamentNotification;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Mail;
+use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Emails\EmailDataEmail;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Filament\Notifications\Notification as FilamentNotification;
 
 /**
  * @property ComponentContainer $emailForm
  */
 class SendAwsEmailPage extends XotBasePage
 {
-
     public ?array $emailData = [];
 
+<<<<<<< HEAD
     protected static ?string $navigationIcon = 'heroicon-o-envelope';
 
+=======
+>>>>>>> 9b82f1c (.)
     protected static string $view = 'notify::filament.pages.send-email';
 
     protected static ?string $cluster = Test::class;
-    
+
     /**
      * Get the slug of the page
-     * 
+     *
      * This explicit definition ensures consistent URL generation for acronyms
      */
     public static function getSlug(): string
@@ -74,22 +73,22 @@ class SendAwsEmailPage extends XotBasePage
     {
         return [
             Forms\Components\TextInput::make('to')
-                ->label(__('notify::email.form.to.label'))
+                ->label((string) __('notify::email.form.to.label'))
                 ->email()
                 ->required()
-                ->helperText(__('notify::email.form.to.helper')),
+                ->helperText((string) __('notify::email.form.to.helper')),
             Forms\Components\TextInput::make('subject')
-                ->label(__('notify::email.form.subject.label'))
+                ->label((string) __('notify::email.form.subject.label'))
                 ->required()
                 ->maxLength(150),
             Forms\Components\RichEditor::make('body_html')
-                ->label(__('notify::email.form.body_html.label'))
+                ->label((string) __('notify::email.form.body_html.label'))
                 ->required()
                 ->fileAttachmentsDisk('public')
                 ->fileAttachmentsDirectory('uploads/mail-attachments')
-                ->helperText(__('notify::email.form.body_html.helper')),
+                ->helperText((string) __('notify::email.form.body_html.helper')),
             Forms\Components\Select::make('template')
-                ->label(__('notify::email.form.template.label'))
+                ->label((string) __('notify::email.form.template.label'))
                 ->options([
                     'aws-default' => 'AWS Default',
                     'aws-notification' => 'AWS Notification',
@@ -98,11 +97,11 @@ class SendAwsEmailPage extends XotBasePage
                 ])
                 ->default('aws-default')
                 ->required()
-                ->helperText(__('notify::email.form.template.helper')),
+                ->helperText((string) __('notify::email.form.template.helper')),
             Forms\Components\Toggle::make('add_attachments')
-                ->label(__('notify::email.form.add_attachments.label'))
+                ->label((string) __('notify::email.form.add_attachments.label'))
                 ->default(false)
-                ->helperText(__('notify::email.form.add_attachments.helper')),
+                ->helperText((string) __('notify::email.form.add_attachments.helper')),
         ];
     }
 
@@ -130,13 +129,13 @@ class SendAwsEmailPage extends XotBasePage
 
             FilamentNotification::make()
                 ->success()
-                ->title(__('notify::email.notifications.sent.title'))
-                ->body(__('notify::email.notifications.sent.body'))
+                ->title((string) __('notify::email.notifications.sent.title'))
+                ->body((string) __('notify::email.notifications.sent.body'))
                 ->send();
         } catch (\Exception $e) {
             FilamentNotification::make()
                 ->danger()
-                ->title(__('notify::email.notifications.error.title'))
+                ->title((string) __('notify::email.notifications.error.title'))
                 ->body($e->getMessage())
                 ->send();
         }
@@ -146,7 +145,7 @@ class SendAwsEmailPage extends XotBasePage
     {
         return [
             Action::make('sendEmail')
-                ->label(__('notify::email.actions.send'))
+                ->label((string) __('notify::email.actions.send'))
                 ->submit('sendEmail'),
         ];
     }

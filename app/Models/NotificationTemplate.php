@@ -6,8 +6,6 @@ namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Notify\Enums\NotificationTypeEnum;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -45,6 +43,7 @@ use Spatie\Translatable\HasTranslations;
  * @property-read mixed $translations
  * @property-read \Modules\User\Models\Profile|null $updater
  * @property-read int|null $versions_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate active()
  * @method static \Modules\Notify\Database\Factories\NotificationTemplateFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate forCategory(string $category)
@@ -56,6 +55,14 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate whereLocales(string $column, array $locales)
+ * @method static NotificationTemplate|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, NotificationTemplate> get()
+ * @method static NotificationTemplate create(array $attributes = [])
+ * @method static NotificationTemplate firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationTemplate whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperNotificationTemplate
  * @mixin \Eloquent
  */
@@ -116,25 +123,26 @@ class NotificationTemplate extends BaseModel implements HasMedia
         $this->addMediaCollection('attachments')
             ->singleFile();
     }
-/*
-    public function versions(): HasMany
-    {
-        return $this->hasMany(NotificationTemplateVersion::class, 'template_id')
-            ->orderByDesc('version');
-    }
 
-    public function logs(): HasMany
-    {
-        return $this->hasMany(NotificationLog::class, 'template_id');
-    }
-*/
+    /*
+        public function versions(): HasMany
+        {
+            return $this->hasMany(NotificationTemplateVersion::class, 'template_id')
+                ->orderByDesc('version');
+        }
+
+        public function logs(): HasMany
+        {
+            return $this->hasMany(NotificationLog::class, 'template_id');
+        }
+    */
     /*
      * Create a new version of the template.
      *
      * @param string $createdBy The user who created the version
      * @param string|null $notes Optional notes about the changes
      * @return self
-     
+
     public function createNewVersion(string $createdBy, ?string $notes = null): self
     {
         $this->versions()->create([
@@ -156,7 +164,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Compile the template with the given data.
      *
-     * @param array<string, mixed> $data The data to compile the template with
+     * @param  array<string, mixed>  $data  The data to compile the template with
      * @return array{subject: string, body_html: string|null, body_text: string|null}
      */
     public function compile(array $data = []): array
@@ -175,12 +183,11 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Check if the notification should be sent based on conditions.
      *
-     * @param array<string, mixed> $data The data to check conditions against
-     * @return bool
+     * @param  array<string, mixed>  $data  The data to check conditions against
      */
     public function shouldSend(array $data = []): bool
     {
-        if (!$this->conditions) {
+        if (! $this->conditions) {
             return true;
         }
 
@@ -197,13 +204,12 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Compile a string template with the given data.
      *
-     * @param string|null $template The template to compile
-     * @param array<string, mixed> $data The data to compile with
-     * @return string|null
+     * @param  string|null  $template  The template to compile
+     * @param  array<string, mixed>  $data  The data to compile with
      */
     protected function compileString(?string $template, array $data): ?string
     {
-        if (!$template) {
+        if (! $template) {
             return null;
         }
 
@@ -213,7 +219,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Preview the template with the given data.
      *
-     * @param array<string, mixed> $data Additional data to merge with preview data
+     * @param  array<string, mixed>  $data  Additional data to merge with preview data
      * @return array{subject: string, body_html: string|null, body_text: string|null}
      */
     public function preview(array $data = []): array
@@ -227,7 +233,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Scope a query to only include active templates.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeActive($query)
@@ -238,8 +244,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Scope a query to only include templates for a specific channel.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param string $channel
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeForChannel($query, string $channel)
@@ -250,8 +255,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Scope a query to only include templates for a specific category.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param string $category
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeForCategory($query, string $category)
@@ -261,13 +265,11 @@ class NotificationTemplate extends BaseModel implements HasMedia
 
     /**
      * Get the channels label attribute.
-     *
-     * @return string
      */
     public function getChannelsLabelAttribute(): string
     {
         return collect($this->channels)->map(function ($channel) {
-            return __('notify::template.fields.channel.options.' . $channel . '.label');
+            return (string) __('notify::template.fields.channel.options.'.$channel.'.label');
         })->implode(', ');
     }
 
@@ -284,12 +286,12 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Set the GrapesJS data.
      *
-     * @param array<string, mixed> $data
-     * @return self
+     * @param  array<string, mixed>  $data
      */
     public function setGrapesJSData(array $data): self
     {
         $this->grapesjs_data = $data;
+
         return $this;
     }
 
@@ -301,18 +303,21 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function getPreviewSubject(): string
     {
         $result = $this->getTranslation('subject', app()->getLocale());
+
         return is_string($result) ? $result : '';
     }
 
     public function getPreviewBodyText(): string
     {
         $result = $this->getTranslation('body_text', app()->getLocale());
+
         return is_string($result) ? $result : '';
     }
 
     public function getPreviewBodyHtml(): string
     {
         $result = $this->getTranslation('body_html', app()->getLocale());
+
         return is_string($result) ? $result : '';
     }
 }

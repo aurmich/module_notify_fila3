@@ -13,7 +13,6 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
-use Modules\Xot\Filament\Pages\XotBasePage;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -21,6 +20,7 @@ use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Datas\SmtpData;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Pages\XotBasePage;
 use Webmozart\Assert\Assert;
 
 /**
@@ -34,8 +34,11 @@ class TestSmtpPage extends XotBasePage implements HasForms
 
     public ?string $error_message = null;
 
+<<<<<<< HEAD
     protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
 
+=======
+>>>>>>> 9b82f1c (.)
     protected static string $view = 'notify::filament.pages.send-email';
 
     protected static ?string $cluster = Test::class;
@@ -118,7 +121,7 @@ class TestSmtpPage extends XotBasePage implements HasForms
 
         Notification::make()
             ->success()
-            ->title(__('Controlla il tuo client di posta'))
+            ->title((string) __('Controlla il tuo client di posta'))
             ->send();
     }
 
@@ -151,7 +154,7 @@ class TestSmtpPage extends XotBasePage implements HasForms
     {
         Assert::isArray($mail_config = config('mail'));
         Assert::isArray($smtpConfig = Arr::get($mail_config, 'mailers.smtp'));
-        
+
         // Convertiamo l'array generico in un array<string, mixed>
         $typedConfig = [];
         foreach ($smtpConfig as $key => $value) {
@@ -159,7 +162,7 @@ class TestSmtpPage extends XotBasePage implements HasForms
                 $typedConfig[$key] = $value;
             }
         }
-        
+
         $this->emailForm->fill($typedConfig);
     }
 }

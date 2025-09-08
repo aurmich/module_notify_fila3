@@ -28,6 +28,7 @@ use Modules\Xot\Traits\Updater;
  * @property-read int|null $media_count
  * @property-read \Modules\Notify\Models\MailTemplate|null $template
  * @property-read \Modules\User\Models\Profile|null $updater
+ *
  * @method static \Modules\Notify\Database\Factories\MailTemplateVersionFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion newQuery()
@@ -49,6 +50,14 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion whereVersion($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion withoutTrashed()
+ * @method static MailTemplateVersion|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, MailTemplateVersion> get()
+ * @method static MailTemplateVersion create(array $attributes = [])
+ * @method static MailTemplateVersion firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperMailTemplateVersion
  * @mixin \Eloquent
  */

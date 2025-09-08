@@ -12,16 +12,16 @@ enum NotificationTypeEnum: string
 
     public function label(): string
     {
-        return match($this) {
-            self::EMAIL => __('notify::enums.notification_type.email'),
-            self::SMS => __('notify::enums.notification_type.sms'),
-            self::PUSH => __('notify::enums.notification_type.push'),
+        return match ($this) {
+            self::EMAIL => (string) __('notify::enums.notification_type.email'),
+            self::SMS => (string) __('notify::enums.notification_type.sms'),
+            self::PUSH => (string) __('notify::enums.notification_type.push'),
         };
     }
 
     public function icon(): string
     {
-        return match($this) {
+        return match ($this) {
             self::EMAIL => 'heroicon-o-envelope',
             self::SMS => 'heroicon-o-device-phone-mobile',
             self::PUSH => 'heroicon-o-bell',
@@ -30,7 +30,7 @@ enum NotificationTypeEnum: string
 
     public function color(): string
     {
-        return match($this) {
+        return match ($this) {
             self::EMAIL => 'success',
             self::SMS => 'warning',
             self::PUSH => 'info',
