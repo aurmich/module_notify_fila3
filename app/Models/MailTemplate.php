@@ -63,9 +63,13 @@ use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
  * @method static Builder<static>|MailTemplate whereCounter($value)
  * @method static Builder<static>|MailTemplate whereSmsTemplate($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @mixin IdeHelperMailTemplate
 =======
 >>>>>>> 9fd314be (.)
+=======
+ * @mixin IdeHelperMailTemplate
+>>>>>>> c0f200e (.)
  * @mixin \Eloquent
  */
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface

@@ -1,9 +1,12 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
 declare(strict_types=1);
 
 return [
@@ -70,6 +73,7 @@ return [
     ],
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 return array (
@@ -126,3 +130,5 @@ return array (
 );
 >>>>>>> a6a762f (.)
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)

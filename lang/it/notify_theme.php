@@ -1,5 +1,8 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
 declare(strict_types=1);
 
 
@@ -166,6 +169,7 @@ return [
         'label' => 'Tema Notifica',
     ],
 ];
+<<<<<<< HEAD
 =======
 
 return array (
@@ -406,3 +410,5 @@ return array (
   ),
 );
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)

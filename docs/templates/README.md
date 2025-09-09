@@ -29,12 +29,16 @@ Questo documento descrive il sistema di template email utilizzato nel modulo Not
 @component('mail::message')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
 =======
 
 >>>>>>> 6d763b05 (.)
+=======
+
+>>>>>>> c0f200e (.)
 # Benvenuto in {{ config('app.name') }}
 
 Grazie per esserti registrato.

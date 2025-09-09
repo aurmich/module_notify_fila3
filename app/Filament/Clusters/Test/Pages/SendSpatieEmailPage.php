@@ -101,19 +101,27 @@ class SendSpatieEmailPage extends XotBasePage
         $attachments = [
             [
 <<<<<<< HEAD
-                'path' => public_path('images/avatars/default-3.svg'),
-=======
-                'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
->>>>>>> 9fd314be (.)
-                'as' => 'logo.png',
-                'mime' => 'image/png',
-            ],
-            [
 <<<<<<< HEAD
                 'path' => public_path('images/avatars/default-3.svg'),
 =======
                 'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
 >>>>>>> 9fd314be (.)
+=======
+                'path' => public_path('images/avatars/default-3.svg'),
+>>>>>>> c0f200e (.)
+                'as' => 'logo.png',
+                'mime' => 'image/png',
+            ],
+            [
+<<<<<<< HEAD
+<<<<<<< HEAD
+                'path' => public_path('images/avatars/default-3.svg'),
+=======
+                'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
+>>>>>>> 9fd314be (.)
+=======
+                'path' => public_path('images/avatars/default-3.svg'),
+>>>>>>> c0f200e (.)
                 'as' => 'logo.png',
                 'mime' => 'image/png',
             ],

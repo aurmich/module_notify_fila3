@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
 declare(strict_types=1);
 
 return [
@@ -19,6 +22,7 @@ return [
         'webhook_base' => env('WEBHOOK_BASE_URL', 'https://api.example.com'),
         'clinic_name' => env('CLINIC_NAME', 'Default Clinic'),
         'repository_url' => env('REPOSITORY_URL', 'https://github.com/example/repo'),
+<<<<<<< HEAD
 =======
 return [
     /*
@@ -63,11 +67,16 @@ return [
             'connection' => null,
         ],
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
     | Default Test Data
     |--------------------------------------------------------------------------
     |
@@ -85,6 +94,7 @@ return [
         'default_theme_description' => 'Tema professionale per {{company_name}}',
         'default_author' => '{{team_name}}',
         'default_repository' => '{{repository_url}}',
+<<<<<<< HEAD
 =======
     | Canale di Default
     |--------------------------------------------------------------------------
@@ -111,11 +121,16 @@ return [
         'tries' => 3,
         'retry_after' => 60,
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
     | Webhook Configuration
     |--------------------------------------------------------------------------
     |
@@ -126,6 +141,7 @@ return [
         'notification_delivered' => '{{webhook_base}}/webhooks/notification-delivered',
         'notification_bounced' => '{{webhook_base}}/webhooks/notification-bounced',
         'notification_clicked' => '{{webhook_base}}/webhooks/notification-clicked',
+<<<<<<< HEAD
 =======
     | Template
     |--------------------------------------------------------------------------
@@ -148,11 +164,16 @@ return [
             'body' => 'Gentile {patient_name}, il suo ISEE è stato aggiornato. Nuovo valore: {isee_value}.',
         ],
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
     | Email Configuration
     |--------------------------------------------------------------------------
     |
@@ -164,6 +185,7 @@ return [
         'default_from_name' => env('MAIL_FROM_NAME', '{{company_name}}'),
         'default_admin_email' => env('ADMIN_EMAIL', 'admin@{{company_name}}.com'),
         'default_developer_email' => env('DEVELOPER_EMAIL', 'developer@{{company_name}}.com'),
+<<<<<<< HEAD
 =======
     | Rate Limiting
     |--------------------------------------------------------------------------
@@ -177,11 +199,16 @@ return [
         'max_attempts' => 5,
         'decay_minutes' => 1,
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
     | Path Configuration
     |--------------------------------------------------------------------------
     |
@@ -191,6 +218,7 @@ return [
     'paths' => [
         'default_avatar_path' => env('DEFAULT_AVATAR_PATH', '/images/avatars/default.svg'),
         'default_image_path' => env('DEFAULT_IMAGE_PATH', '/images/default.jpg'),
+<<<<<<< HEAD
 =======
     | Tracking
     |--------------------------------------------------------------------------
@@ -210,11 +238,16 @@ return [
             'route' => 'notify.track.click',
         ],
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
     | Template Variables
     |--------------------------------------------------------------------------
     |
@@ -230,6 +263,7 @@ return [
         'user_name' => '{{user_name}}',
         'appointment_date' => '{{appointment_date}}',
         'appointment_time' => '{{appointment_time}}',
+<<<<<<< HEAD
 =======
     | Pulizia Automatica
     |--------------------------------------------------------------------------
@@ -278,5 +312,7 @@ return [
             'components' => true,
         ],
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
     ],
 ]; 

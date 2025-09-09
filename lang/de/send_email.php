@@ -107,12 +107,16 @@ return [
     ],
     'validation' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
         'subject_required' => 'Der Betreff ist erforderlich',
         'to_required' => 'Der Empfänger ist erforderlich',
         'to_valid' => 'Il destinatario deve essere un indirizzo email valido',
         'cc_valid' => 'Gli indirizzi in CC devono essere email valide',
         'bcc_valid' => 'Gli indirizzi in BCC devono essere email valide',
         'content_required' => 'Der Inhalt ist erforderlich',
+<<<<<<< HEAD
 =======
         'subject_required' => 'L\'oggetto dell\'email è obbligatorio',
         'to_required' => 'Il destinatario è obbligatorio',
@@ -121,6 +125,8 @@ return [
         'bcc_valid' => 'Gli indirizzi in BCC devono essere email valide',
         'content_required' => 'Il contenuto dell\'email è obbligatorio',
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
         'template_exists' => 'Il template selezionato non esiste',
         'parameters_json' => 'I parametri devono essere in formato JSON valido',
         'priority_valid' => 'La priorità deve essere una delle opzioni disponibili',

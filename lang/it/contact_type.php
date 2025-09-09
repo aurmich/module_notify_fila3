@@ -8,10 +8,14 @@ return array (
       'label' => 'phone',
       'placeholder' => 'phone',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'helper_text' => '',
 =======
       'helper_text' => 'phone',
 >>>>>>> 9fd314be (.)
+=======
+      'helper_text' => '',
+>>>>>>> c0f200e (.)
       'description' => 'phone',
     ),
     'mobile' => 
@@ -19,10 +23,14 @@ return array (
       'label' => 'mobile',
       'placeholder' => 'mobile',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'helper_text' => '',
 =======
       'helper_text' => 'mobile',
 >>>>>>> 9fd314be (.)
+=======
+      'helper_text' => '',
+>>>>>>> c0f200e (.)
       'description' => 'mobile',
     ),
     'email' => 
@@ -30,10 +38,14 @@ return array (
       'label' => 'email',
       'placeholder' => 'email',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'helper_text' => '',
 =======
       'helper_text' => 'email',
 >>>>>>> 9fd314be (.)
+=======
+      'helper_text' => '',
+>>>>>>> c0f200e (.)
       'description' => 'email',
     ),
     'pec' => 
@@ -41,10 +53,14 @@ return array (
       'label' => 'pec',
       'placeholder' => 'pec',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'helper_text' => '',
 =======
       'helper_text' => 'pec',
 >>>>>>> 9fd314be (.)
+=======
+      'helper_text' => '',
+>>>>>>> c0f200e (.)
       'description' => 'pec',
     ),
     'whatsapp' => 
@@ -52,10 +68,14 @@ return array (
       'label' => 'whatsapp',
       'placeholder' => 'whatsapp',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'helper_text' => '',
 =======
       'helper_text' => 'whatsapp',
 >>>>>>> 9fd314be (.)
+=======
+      'helper_text' => '',
+>>>>>>> c0f200e (.)
       'description' => 'whatsapp',
     ),
     'fax' => 
@@ -63,10 +83,14 @@ return array (
       'label' => 'fax',
       'placeholder' => 'fax',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'helper_text' => '',
 =======
       'helper_text' => 'fax',
 >>>>>>> 9fd314be (.)
+=======
+      'helper_text' => '',
+>>>>>>> c0f200e (.)
       'description' => 'fax',
     ),
   ),

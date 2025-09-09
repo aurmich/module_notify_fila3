@@ -19,9 +19,13 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateLog newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateLog query()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @mixin IdeHelperMailTemplateLog
 =======
 >>>>>>> 9fd314be (.)
+=======
+ * @mixin IdeHelperMailTemplateLog
+>>>>>>> c0f200e (.)
  * @mixin \Eloquent
  */
 class MailTemplateLog extends BaseModel

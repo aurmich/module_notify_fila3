@@ -60,10 +60,14 @@ return [
         'subject' => [
             'label' => 'Subject',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'placeholder' => 'SMTP Configuration Test - {{app_name}}',
 =======
             'placeholder' => 'SMTP Configuration Test - SaluteOra',
 >>>>>>> 9fd314be (.)
+=======
+            'placeholder' => 'SMTP Configuration Test - {{app_name}}',
+>>>>>>> c0f200e (.)
             'help' => 'Subject of the test email to verify the configuration',
         ],
         'body_html' => [

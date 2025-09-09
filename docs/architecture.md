@@ -1,9 +1,12 @@
 # Notify Module Architecture
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
 ## Overview
 This document outlines the architectural design of the Notify module, focusing on its structure and integration points within a Laravel application.
 
@@ -48,6 +51,7 @@ This document outlines the architectural design of the Notify module, focusing o
 - [Email Templates](./EMAIL_TEMPLATES.md)
 - [SMS Implementation](./SMS_IMPLEMENTATION.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -221,3 +225,5 @@ final class NotifyLogger
 - Distributed tracing 
 >>>>>>> a6a762f (.)
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)

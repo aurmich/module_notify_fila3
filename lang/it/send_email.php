@@ -45,13 +45,19 @@ return array (
       'description' => 'Opzioni avanzate per l\'invio',
     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
     'empty' => 
     array (
       'heading' => '',
       'label' => 'empty',
     ),
+<<<<<<< HEAD
 =======
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
   ),
   'fields' => 
   array (

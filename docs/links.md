@@ -103,12 +103,16 @@ $user->notify(new InvoicePaid($invoice));
 ```bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
 =======
 
 >>>>>>> 6d763b05 (.)
+=======
+
+>>>>>>> c0f200e (.)
 # Creare una nuova notifica
 php artisan make:notification InvoicePaid
 

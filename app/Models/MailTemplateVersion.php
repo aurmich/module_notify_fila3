@@ -50,9 +50,13 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MailTemplateVersion withoutTrashed()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @mixin IdeHelperMailTemplateVersion
 =======
 >>>>>>> 9fd314be (.)
+=======
+ * @mixin IdeHelperMailTemplateVersion
+>>>>>>> c0f200e (.)
  * @mixin \Eloquent
  */
 class MailTemplateVersion extends BaseModel

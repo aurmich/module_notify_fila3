@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
 return array (
   'navigation' => 
   array (
@@ -93,6 +96,7 @@ return array (
       'error' => 'Errore nella connessione SMTP',
     ),
     'emailFormActions' => 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 declare(strict_types=1);
@@ -275,11 +279,16 @@ return array (
     ),
     'emailFormActions' =>
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
     array (
       'label' => 'emailFormActions',
     ),
   ),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
   'messages' => 
   array (
     'success' => 'Test SMTP inviato con successo',
@@ -303,7 +312,10 @@ return array (
     'subject_required' => 'L\'oggetto della email è obbligatorio',
   ),
 );
+<<<<<<< HEAD
 =======
 );
 >>>>>>> a6a762f (.)
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)

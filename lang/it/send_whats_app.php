@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0f200e (.)
 declare(strict_types=1);
 
 return [
@@ -36,6 +39,7 @@ return [
         ],
     ],
 ];
+<<<<<<< HEAD
 =======
 return array (
   'navigation' => 
@@ -45,3 +49,5 @@ return array (
   ),
 );
 >>>>>>> 9fd314be (.)
+=======
+>>>>>>> c0f200e (.)
