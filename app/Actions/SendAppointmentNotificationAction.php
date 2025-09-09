@@ -6,24 +6,9 @@ namespace Modules\Notify\Actions;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2b275b1a (.)
-use Modules\Dental\Models\Appointment;
-use Modules\Notify\Mail\AppointmentNotificationMail;
-use Modules\Patient\Models\Patient;
-use Modules\<nome progetto>\Models\Appointment;
-use Modules\Notify\Mail\AppointmentNotificationMail;
-use Modules\<nome progetto>\Models\Patient;
-<<<<<<< HEAD
-=======
 use Modules\SaluteOra\Models\Appointment;
 use Modules\Notify\Mail\AppointmentNotificationMail;
 use Modules\SaluteOra\Models\Patient;
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 2b275b1a (.)
 use Spatie\QueueableAction\QueueableAction;
 
 class SendAppointmentNotificationAction
@@ -43,15 +28,7 @@ class SendAppointmentNotificationAction
      * @param Appointment $appointment L'appuntamento a cui si riferisce la notifica
      * @param string $type Il tipo di notifica (confermato, annullato, promemoria, ecc.)
      * @param array<string, mixed> $additionalData Dati aggiuntivi per la notifica
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 9fd314be (.)
-=======
-     *
->>>>>>> 2b275b1a (.)
      * @return bool
      */
     public function execute(
@@ -62,13 +39,7 @@ class SendAppointmentNotificationAction
         try {
             // Carica il paziente con le relazioni necessarie
             $patient = Patient::with('user')->find($appointment->patient_id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 2b275b1a (.)
             if (!$patient) {
                 Log::error('Paziente non trovato per l\'invio della notifica di appuntamento', [
                     'appointment_id' => $appointment->id,
@@ -76,13 +47,7 @@ class SendAppointmentNotificationAction
                 ]);
                 return false;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 2b275b1a (.)
             // Prepara i dati per la notifica
             $notificationData = [
                 'appointment' => $appointment,
@@ -90,35 +55,16 @@ class SendAppointmentNotificationAction
                 'type' => $type,
                 'additionalData' => $additionalData,
             ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 2b275b1a (.)
             // Invia email se disponibile
             if ($patient->user && $patient->user->email) {
                 Mail::to($patient->user->email)
                     ->send(new AppointmentNotificationMail($notificationData));
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2b275b1a (.)
-
-            // Registra la notifica nel database
-            $this->recordNotification($appointment, $patient, $type);
-
-<<<<<<< HEAD
-=======
             
             // Registra la notifica nel database
             $this->recordNotification($appointment, $patient, $type);
             
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 2b275b1a (.)
             // Logga l'invio della notifica
             activity()
                 ->performedOn($appointment)
@@ -128,13 +74,7 @@ class SendAppointmentNotificationAction
                     'patient_id' => $patient->id,
                 ])
                 ->log("Notifica di appuntamento di tipo '{$type}' inviata");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 2b275b1a (.)
             return true;
         } catch (\Exception $e) {
             Log::error('Errore nell\'invio della notifica di appuntamento', [
@@ -143,25 +83,11 @@ class SendAppointmentNotificationAction
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
             ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2b275b1a (.)
-
-            return false;
-        }
-    }
-
-<<<<<<< HEAD
-=======
             
             return false;
         }
     }
     
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 2b275b1a (.)
     /**
      * Registra la notifica nel database.
      *
@@ -188,15 +114,7 @@ class SendAppointmentNotificationAction
                 'appointment_id' => $appointment->id,
                 'patient_id' => $patient->id,
                 'date' => $appointment->date->format('Y-m-d'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-                'time' => $appointment->starts_at?->format('H:i'),
-=======
                 'time' => $appointment->start_time?->format('H:i'),
->>>>>>> 9fd314be (.)
-=======
-                'time' => $appointment->starts_at?->format('H:i'),
->>>>>>> 2b275b1a (.)
             ];
             $notification->sent_at = now();
             $notification->save();

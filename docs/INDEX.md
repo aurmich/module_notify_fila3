@@ -70,8 +70,12 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
 =======
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 >>>>>>> 0666f472 (.)
+=======
+- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+>>>>>>> 92cdd4f5 (.)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".

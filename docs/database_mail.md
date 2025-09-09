@@ -436,11 +436,15 @@ Cordiali saluti,<br>
 ## Vedi Anche
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Mail](https://laravel.com/project_docs/mail)
 - [Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [TinyMCE](https://www.tiny.cloud)
 =======
 - [Laravel Mail](https://laravel.com/docs/mail)
+=======
+- [Laravel Mail](https://laravel.com/project_docs/mail)
+>>>>>>> 92cdd4f5 (.)
 - [Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [TinyMCE](https://www.tiny.cloud)
 - [Filament Forms](https://filamentphp.com/docs/forms)

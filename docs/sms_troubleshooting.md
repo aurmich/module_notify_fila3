@@ -162,6 +162,7 @@ Log::debug('SMS Debug', [
 
 ### 2. Risorse Utili
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
 - [Laravel Queue](https://laravel.com/project_docs/queues)
 - [Laravel Logging](https://laravel.com/project_docs/logging)
@@ -170,6 +171,11 @@ Log::debug('SMS Debug', [
 - [Laravel Queue](https://laravel.com/docs/queues)
 - [Laravel Logging](https://laravel.com/docs/logging)
 >>>>>>> 0666f472 (.)
+=======
+- [Laravel Notifications](https://laravel.com/project_docs/notifications)
+- [Laravel Queue](https://laravel.com/project_docs/queues)
+- [Laravel Logging](https://laravel.com/project_docs/logging)
+>>>>>>> 92cdd4f5 (.)
 
 ## Supporto
 

@@ -8,14 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\Notify\Models\NotificationLog;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use function Safe\base64_decode;
-=======
->>>>>>> 9fd314be (.)
-=======
-use function Safe\base64_decode;
->>>>>>> 2b275b1a (.)
 
 class NotificationTrackingController extends Controller
 {

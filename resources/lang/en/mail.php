@@ -3,10 +3,14 @@
 return [
     'welcome' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'title' => 'Welcome to '.(is_string(config('app.name')) ? config('app.name') : 'SaluteOra'),
 =======
         'title' => 'Welcome to ' . (is_string(config('app.name')) ? config('app.name') : 'SaluteOra'),
 >>>>>>> 0666f472 (.)
+=======
+        'title' => 'Welcome to '.(is_string(config('app.name')) ? config('app.name') : 'SaluteOra'),
+>>>>>>> 92cdd4f5 (.)
         'greeting' => 'Hello :name,',
         'description' => 'Thank you for joining us. We\'re excited to have you on board!',
         'action' => 'Get Started',
