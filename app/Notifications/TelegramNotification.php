@@ -21,13 +21,9 @@ class TelegramNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-<<<<<<< HEAD
-    /** @var string  */
-=======
     /**
      * @var string
      */
->>>>>>> 0666f472 (.)
     protected string $message;
 
     /**

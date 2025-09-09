@@ -290,12 +290,6 @@ class TemplatePreview extends Component
 - [MJML Documentation](https://mjml.io/documentation/)
 - [Mailgun API](https://documentation.mailgun.com/en/latest/api_reference.html)
 - [Filament Documentation](https://filamentphp.com/docs)
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Laravel Mail Documentation](https://laravel.com/project_docs/mail)
-=======
 - [Laravel Mail Documentation](https://laravel.com/docs/mail)
->>>>>>> 0666f472 (.)
 =======
 - [Laravel Mail Documentation](https://laravel.com/project_docs/mail)
->>>>>>> 92cdd4f5 (.)

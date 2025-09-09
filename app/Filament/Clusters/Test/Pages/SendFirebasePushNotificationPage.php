@@ -4,22 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
-<<<<<<< HEAD
-use Filament\Actions\Action;
-use Filament\Facades\Filament;
-use Filament\Forms;
-use Filament\Forms\ComponentContainer;
-use Filament\Forms\Form;
-use Filament\Notifications\Notification as FilamentNotification;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Notification;
-use Modules\Notify\Datas\FirebaseNotificationData;
-use Modules\Notify\Filament\Clusters\Test;
-use Modules\Notify\Notifications\PushNotification;
-use Modules\Xot\Filament\Pages\XotBasePage;
-=======
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Actions\Action;
@@ -37,23 +21,12 @@ use Modules\Notify\Datas\FirebaseNotificationData;
 use Modules\Notify\Notifications\PushNotification;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Filament\Notifications\Notification as FilamentNotification;
->>>>>>> 0666f472 (.)
 
 /**
  * @property ComponentContainer $pushForm
  */
 class SendFirebasePushNotificationPage extends XotBasePage
 {
-<<<<<<< HEAD
-    public ?array $pushData = [];
-
-    protected static ?string $navigationIcon = 'heroicon-o-bell-alert';
-
-    protected static string $view = 'notify::filament.pages.send-push';
-
-    protected static ?string $cluster = Test::class;
-
-=======
     
     public ?array $pushData = [];
     
@@ -63,7 +36,6 @@ class SendFirebasePushNotificationPage extends XotBasePage
     
     protected static ?string $cluster = Test::class;
     
->>>>>>> 0666f472 (.)
     public function mount(): void
     {
         $this->fillForms();
@@ -133,11 +105,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
     public function sendPushNotification(): void
     {
         $data = $this->pushForm->getState();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 0666f472 (.)
         try {
             // Creare i dati della notifica Firebase
             $notificationData = FirebaseNotificationData::from([
@@ -146,31 +114,19 @@ class SendFirebasePushNotificationPage extends XotBasePage
                 'body' => $data['body'] ?? '',
                 'data' => $data['custom_data'] ?? [],
             ]);
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 0666f472 (.)
             // TODO: Implementare PushNotification class
             // Inviare la notifica push
             // Notification::route('firebase', $data['token'])
             //     ->notify(new PushNotification($notificationData));
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 0666f472 (.)
             // Notificare il successo
             FilamentNotification::make()
                 ->success()
                 ->title(__('notify::push.notifications.sent.title'))
                 ->body(__('notify::push.notifications.sent.body'))
                 ->send();
-<<<<<<< HEAD
-
-=======
                 
->>>>>>> 0666f472 (.)
             // Loggare l'invio
             Log::info('Notifica push inviata con successo', [
                 'token' => $data['token'],
@@ -183,11 +139,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
                 'error' => $e->getMessage(),
                 'token' => $data['token'],
             ]);
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 0666f472 (.)
             // Notificare l'errore
             FilamentNotification::make()
                 ->danger()

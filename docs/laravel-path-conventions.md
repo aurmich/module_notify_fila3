@@ -63,11 +63,6 @@ Per verificare che tutti i path siano corretti:
 
 ## Riferimenti
 
-<<<<<<< HEAD
-- [Struttura delle Cartelle in Laravel](https://laravel.com/project_docs/structure)
-- [Laravel Blade Templates](https://laravel.com/project_docs/blade)
-=======
 - [Struttura delle Cartelle in Laravel](https://laravel.com/docs/structure)
 - [Laravel Blade Templates](https://laravel.com/docs/blade)
->>>>>>> 0666f472 (.)
 - [Laravel Modules](https://docs.laravelmodules.com/)

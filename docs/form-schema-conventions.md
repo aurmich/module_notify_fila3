@@ -100,9 +100,5 @@ find /var/www/html/saluteora/laravel/Modules -type f -name "*.php" -exec grep -l
 
 ## Riferimenti
 
-<<<<<<< HEAD
-- [Filament Form Schemas](https://filamentphp.com/project_docs/forms/defining-a-form)
-=======
 - [Filament Form Schemas](https://filamentphp.com/docs/forms/defining-a-form)
->>>>>>> 0666f472 (.)
 - [PHP Array Types](https://www.php.net/manual/en/language.types.array.php)

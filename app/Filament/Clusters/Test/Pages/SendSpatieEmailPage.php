@@ -4,26 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
-<<<<<<< HEAD
-use Filament\Actions\Action;
-use Filament\Facades\Filament;
-use Filament\Forms;
-use Filament\Forms\ComponentContainer;
-use Filament\Forms\Form;
-use Filament\Notifications\Notification as FilamentNotification;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Notification;
-use Modules\Notify\Datas\EmailData;
-use Modules\Notify\Emails\EmailDataEmail;
-use Modules\Notify\Emails\SpatieEmail;
-use Modules\Notify\Filament\Clusters\Test;
-use Modules\Notify\Models\MailTemplate;
-use Modules\Notify\Notifications\RecordNotification;
-use Modules\Xot\Filament\Pages\XotBasePage;
-use Webmozart\Assert\Assert;
-=======
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Actions\Action;
@@ -45,7 +25,6 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Notify\Notifications\RecordNotification;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Filament\Notifications\Notification as FilamentNotification;
->>>>>>> 0666f472 (.)
 
 /**
  * @property ComponentContainer $emailForm
@@ -53,16 +32,8 @@ use Filament\Notifications\Notification as FilamentNotification;
 class SendSpatieEmailPage extends XotBasePage
 {
     public ?array $emailData = [];
-<<<<<<< HEAD
-
-    protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
-
-    protected static string $view = 'notify::filament.pages.send-email';
-
-=======
     protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
     protected static string $view = 'notify::filament.pages.send-email';
->>>>>>> 0666f472 (.)
     protected static ?string $cluster = Test::class;
 
     public function mount(): void
@@ -85,11 +56,8 @@ class SendSpatieEmailPage extends XotBasePage
         $this->emailForm->fill();
     }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0666f472 (.)
     public function emailForm(Form $form): Form
     {
         return $form
@@ -118,10 +86,7 @@ class SendSpatieEmailPage extends XotBasePage
 
     public function sendEmail(): void
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> 0666f472 (.)
         $data = $this->emailForm->getState();
         /*
         $email_data = EmailData::from($data);
@@ -145,11 +110,7 @@ class SendSpatieEmailPage extends XotBasePage
                 'mime' => 'image/png',
             ],
         ];
-<<<<<<< HEAD
-        // Mail::to($data['to'])->locale('it')->send((new SpatieEmail($user,'due'))->addAttachments($attachments));
-=======
         //Mail::to($data['to'])->locale('it')->send((new SpatieEmail($user,'due'))->addAttachments($attachments));
->>>>>>> 0666f472 (.)
         /*
          // Create and send the email
          $email = new SpatieEmail($user, 'uno');
@@ -159,22 +120,6 @@ class SendSpatieEmailPage extends XotBasePage
              ->locale('it')
              ->send($email);
         */
-<<<<<<< HEAD
-        Assert::string($mail_template_slug = $data['mail_template_slug']);
-        $notify = (new RecordNotification($user, $mail_template_slug))->mergeData($data);
-
-        Notification::route('mail', $data['to'])
-            // ->locale('it')
-            ->notify($notify);
-
-        FilamentNotification::make()
-            ->success()
-        // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
-            ->title(__('check your email client'))
-            ->send();
-    }
-
-=======
         Assert::string($mail_template_slug=$data['mail_template_slug']);
         $notify=(new RecordNotification($user,$mail_template_slug))->mergeData($data);
 
@@ -192,7 +137,6 @@ class SendSpatieEmailPage extends XotBasePage
 
 
 
->>>>>>> 0666f472 (.)
     protected function getEmailFormActions(): array
     {
         return [
@@ -211,9 +155,6 @@ class SendSpatieEmailPage extends XotBasePage
 
         return $user;
     }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0666f472 (.)
 }

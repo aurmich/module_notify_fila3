@@ -161,21 +161,13 @@ Log::debug('SMS Debug', [
 - [Plivo](https://www.plivo.com/docs)
 
 ### 2. Risorse Utili
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Laravel Notifications](https://laravel.com/project_docs/notifications)
-- [Laravel Queue](https://laravel.com/project_docs/queues)
-- [Laravel Logging](https://laravel.com/project_docs/logging)
-=======
 - [Laravel Notifications](https://laravel.com/docs/notifications)
 - [Laravel Queue](https://laravel.com/docs/queues)
 - [Laravel Logging](https://laravel.com/docs/logging)
->>>>>>> 0666f472 (.)
 =======
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
 - [Laravel Queue](https://laravel.com/project_docs/queues)
 - [Laravel Logging](https://laravel.com/project_docs/logging)
->>>>>>> 92cdd4f5 (.)
 
 ## Supporto
 

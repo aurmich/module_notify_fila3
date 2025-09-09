@@ -10,24 +10,12 @@ declare(strict_types=1);
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
 use Filament\Actions\Action;
-<<<<<<< HEAD
-=======
 use Filament\Facades\Filament;
->>>>>>> 0666f472 (.)
 use Filament\Forms;
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
-<<<<<<< HEAD
-use Filament\Notifications\Notification as FilamentNotification;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Notification;
-use Modules\Notify\Filament\Clusters\Test;
-use Modules\Notify\Notifications\TelegramNotification;
-use Modules\Xot\Filament\Pages\XotBasePage;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-=======
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
@@ -43,7 +31,6 @@ use Illuminate\Support\Facades\Log;
 use Filament\Notifications\Notification as FilamentNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Notify\Datas\TelegramData;
->>>>>>> 0666f472 (.)
 
 /**
  * @property ComponentContainer $telegramForm
@@ -146,14 +133,9 @@ class SendTelegramPage extends XotBasePage implements HasForms
                 ->success()
                 ->title('Messaggio Telegram inviato con successo')
                 ->send();
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-            Log::error('Errore nell\'invio Telegram: '.$e->getMessage());
-=======
 
         } catch (\Exception $e) {
             Log::error('Errore nell\'invio Telegram: ' . $e->getMessage());
->>>>>>> 0666f472 (.)
 
             FilamentNotification::make()
                 ->danger()

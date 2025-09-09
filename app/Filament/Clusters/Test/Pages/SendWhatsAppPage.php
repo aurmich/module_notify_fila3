@@ -4,22 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
-<<<<<<< HEAD
-use Filament\Actions\Action;
-use Filament\Facades\Filament;
-use Filament\Forms;
-use Filament\Forms\ComponentContainer;
-use Filament\Forms\Form;
-use Filament\Notifications\Notification as FilamentNotification;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Notification;
-use Modules\Notify\Enums\WhatsAppDriverEnum;
-use Modules\Notify\Filament\Clusters\Test;
-use Modules\Notify\Notifications\WhatsAppNotification;
-use Modules\Xot\Filament\Pages\XotBasePage;
-=======
 use Modules\Notify\Enums\WhatsAppDriverEnum;
 
 use Filament\Forms;
@@ -39,7 +23,6 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Notify\Notifications\WhatsAppNotification;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Filament\Notifications\Notification as FilamentNotification;
->>>>>>> 0666f472 (.)
 
 /**
  * @property ComponentContainer $whatsappForm
@@ -47,18 +30,6 @@ use Filament\Notifications\Notification as FilamentNotification;
 class SendWhatsAppPage extends XotBasePage
 {
     public ?array $whatsappData = [];
-<<<<<<< HEAD
-
-    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
-
-    protected static string $view = 'notify::filament.pages.send-whatsapp';
-
-    protected static ?string $cluster = Test::class;
-
-    /**
-     * Get the slug of the page
-     *
-=======
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
     protected static string $view = 'notify::filament.pages.send-whatsapp';
     protected static ?string $cluster = Test::class;
@@ -66,7 +37,6 @@ class SendWhatsAppPage extends XotBasePage
     /**
      * Get the slug of the page
      * 
->>>>>>> 0666f472 (.)
      * This explicit definition ensures consistent URL generation for acronyms
      */
     public static function getSlug(): string
@@ -154,14 +124,9 @@ class SendWhatsAppPage extends XotBasePage
                 ->success()
                 ->title('Messaggio WhatsApp inviato con successo')
                 ->send();
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-            Log::error('Errore nell\'invio WhatsApp: '.$e->getMessage());
-=======
 
         } catch (\Exception $e) {
             Log::error('Errore nell\'invio WhatsApp: ' . $e->getMessage());
->>>>>>> 0666f472 (.)
 
             FilamentNotification::make()
                 ->danger()

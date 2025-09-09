@@ -2,15 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-namespace Modules\Notify\Tests;
-=======
 use Modules\Notify\Tests\TestCase;
->>>>>>> 0666f472 (.)
-=======
-namespace Modules\Notify\Tests;
->>>>>>> 92cdd4f5 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -23,17 +15,7 @@ namespace Modules\Notify\Tests;
 |
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-uses(TestCase::class)
-    ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
-=======
 pest()->extend(TestCase::class)
->>>>>>> 0666f472 (.)
-=======
-uses(TestCase::class)
-    ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
->>>>>>> 92cdd4f5 (.)
     ->in('Feature', 'Unit');
 
 /*

@@ -249,13 +249,9 @@ class TelegramNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-<<<<<<< HEAD
-    /** @var string  */
-=======
     /**
      * @var string
      */
->>>>>>> 0666f472 (.)
     protected string $message;
 
     /**
@@ -431,22 +427,14 @@ class TelegramTest extends TestCase
 
 - [Telegram Bot API](https://core.telegram.org/bots/api)
 - [Telegram Webhook API](https://core.telegram.org/bots/api#setwebhook)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 92cdd4f5 (.)
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
 - [Laravel Queues](https://laravel.com/project_docs/queues)
 - [Laravel Testing](https://laravel.com/project_docs/testing)
 - [Laravel Logging](https://laravel.com/project_docs/logging)
 - [Laravel Cache](https://laravel.com/project_docs/cache) 
-<<<<<<< HEAD
-=======
 - [Laravel Notifications](https://laravel.com/docs/notifications)
 - [Laravel Queues](https://laravel.com/docs/queues)
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [Laravel Logging](https://laravel.com/docs/logging)
 - [Laravel Cache](https://laravel.com/docs/cache) 
->>>>>>> 0666f472 (.)
 =======
->>>>>>> 92cdd4f5 (.)

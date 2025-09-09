@@ -6,10 +6,6 @@
 Test Laravel SMTP Mail via Tinker
 https://medium.com/@azishapidin/test-laravel-smtp-mail-via-tinker-cec59999214
 //----------------------------------------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 92cdd4f5 (.)
 
 # Come far funzionare la pagina SendEmail
 
@@ -50,8 +46,4 @@ Mail::raw('Test SMTP', function($m){ $m->to('tuo@email.com')->subject('Test SMTP
 - [TestSmtpPage vs SendEmail: differenze architetturali](./test_smtp.md)
 - [Best practice per la configurazione SMTP](./EMAIL_BEST_PRACTICES.md)
 - [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
-<<<<<<< HEAD
 =======
->>>>>>> 0666f472 (.)
-=======
->>>>>>> 92cdd4f5 (.)
