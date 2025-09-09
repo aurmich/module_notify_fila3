@@ -51,7 +51,10 @@ Homestead.json
 .DS_Store
 *.old
 *.old1
+*.old2
+*.old3
 *.backup
+*.backup.*
 *.bak
 
 # Documentation and cache

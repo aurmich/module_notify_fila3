@@ -166,19 +166,13 @@ class SendNetfunSmsAction
 {
     use QueueableAction;
 
-    /**
-     * @var string
-     */
+    /** @var string  */
     protected string $to;
 
-    /**
-     * @var string
-     */
+    /** @var string  */
     protected string $message;
 
-    /**
-     * @var string
-     */
+    /** @var string  */
     protected string $sender;
 
     public function __construct(
