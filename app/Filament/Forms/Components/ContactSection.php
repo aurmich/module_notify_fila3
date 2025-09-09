@@ -13,11 +13,7 @@ use Modules\Notify\Enums\ContactTypeEnum;
 
 // use Squire\Models\Country;
 
-<<<<<<< HEAD
 class ContactSection extends Forms\Components\Section
-=======
-class ContactSection extends Section
->>>>>>> 2b275b1a (.)
 {
     
     //protected string $view = 'filament-forms::components.group';

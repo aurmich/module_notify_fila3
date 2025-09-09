@@ -10,19 +10,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Generic appointment model - use project-specific implementation
-=======
-use Modules\SaluteOra\Models\Appointment;
->>>>>>> 9fd314be (.)
-=======
-// Generic appointment model - use project-specific implementation
->>>>>>> 72669496 (.)
-=======
-// Generic appointment model - use project-specific implementation
->>>>>>> 2b275b1a (.)
+// use Modules\SaluteOra\Models\Appointment;
 
 class AppointmentNotificationMail extends Mailable implements ShouldQueue
 {
@@ -61,19 +49,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             default => 'Notifica Appuntamento',
         };
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (is_object($appointment) && isset($appointment->id) && $appointment->id) {
-=======
-        if ($appointment instanceof Appointment && $appointment->id) {
->>>>>>> 9fd314be (.)
-=======
-        if (is_object($appointment) && isset($appointment->id) && $appointment->id) {
->>>>>>> 72669496 (.)
-=======
-        if (is_object($appointment) && isset($appointment->id) && $appointment->id) {
->>>>>>> 2b275b1a (.)
+        if (is_object($appointment) && property_exists($appointment, 'id') && $appointment->id) {
             $subject .= ' #' . $appointment->id;
         }
         
@@ -81,19 +57,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
             subject: $subject,
             tags: ['appointment', $type],
             metadata: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                'appointment_id' => is_object($appointment) && isset($appointment->id) ? $appointment->id : null,
-=======
-                'appointment_id' => $appointment instanceof Appointment ? $appointment->id : null,
->>>>>>> 9fd314be (.)
-=======
-                'appointment_id' => is_object($appointment) && isset($appointment->id) ? $appointment->id : null,
->>>>>>> 72669496 (.)
-=======
-                'appointment_id' => is_object($appointment) && isset($appointment->id) ? $appointment->id : null,
->>>>>>> 2b275b1a (.)
+                'appointment_id' => is_object($appointment) && property_exists($appointment, 'id') ? $appointment->id : null,
                 'type' => $type,
             ],
         );

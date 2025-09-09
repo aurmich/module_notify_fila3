@@ -377,18 +377,6 @@ class ProcessDoctorModerationAction
 
 ```html
 <x-mail::message>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 9fd314be (.)
-=======
-
->>>>>>> 6d763b05 (.)
-=======
-
->>>>>>> 2b275b1a (.)
 # Registrazione Approvata
 
 Gentile {{ $doctor->name }},
@@ -443,19 +431,7 @@ Cordiali saluti,<br>
 
 ## Vedi Anche
 
-<<<<<<< HEAD
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [TinyMCE](https://www.tiny.cloud)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-- [Filament Forms](https://filamentphp.com/docs/forms) 
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 6d763b05 (.)
-=======
-- [Laravel Mail](https://laravel.com/project_docs/mail)
-- [Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-- [TinyMCE](https://www.tiny.cloud)
->>>>>>> 2b275b1a (.)
+- [Filament Forms](https://filamentphp.com/docs/forms)

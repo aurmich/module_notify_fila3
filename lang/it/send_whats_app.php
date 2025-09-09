@@ -1,12 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
 declare(strict_types=1);
 
 return [
@@ -42,18 +35,3 @@ return [
         ],
     ],
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-return array (
-  'navigation' => 
-  array (
-    'label' => 'send whats app.navigation',
-    'group' => 'send whats app.navigation',
-  ),
-);
->>>>>>> 9fd314be (.)
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)

@@ -59,19 +59,7 @@ return [
         ],
         'subject' => [
             'label' => 'Subject',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             'placeholder' => 'SMTP Configuration Test - {{app_name}}',
-=======
-            'placeholder' => 'SMTP Configuration Test - SaluteOra',
->>>>>>> 9fd314be (.)
-=======
-            'placeholder' => 'SMTP Configuration Test - {{app_name}}',
->>>>>>> c0f200e (.)
-=======
-            'placeholder' => 'SMTP Configuration Test - {{app_name}}',
->>>>>>> 2b275b1a (.)
             'help' => 'Subject of the test email to verify the configuration',
         ],
         'body_html' => [

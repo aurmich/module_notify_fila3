@@ -1,22 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
-=======
-<<<<<<< HEAD
-declare(strict_types=1);
-=======
-namespace Modules\Notify\Tests\Feature;
->>>>>>> a6a762f (.)
->>>>>>> 9fd314be (.)
-=======
-declare(strict_types=1);
->>>>>>> c0f200e (.)
-=======
-declare(strict_types=1);
->>>>>>> 2b275b1a (.)
 
 use Illuminate\Support\Facades\File;
 

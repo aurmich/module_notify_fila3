@@ -188,22 +188,7 @@ $users->each(function ($user) {
 ### 2. Gestione Worker
 
 ```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 9fd314be (.)
-=======
-
->>>>>>> 6d763b05 (.)
-=======
-
->>>>>>> c0f200e (.)
-=======
-
->>>>>>> 2b275b1a (.)
 # Avvia worker dedicato
 php artisan queue:work --queue=emails
 
@@ -306,22 +291,7 @@ $this->call('queue:prune-batches', [
 ### 1. Orizzontale
 
 ```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 9fd314be (.)
-=======
-
->>>>>>> 6d763b05 (.)
-=======
-
->>>>>>> c0f200e (.)
-=======
-
->>>>>>> 2b275b1a (.)
 # Supervisor config
 [program:<nome progetto>-worker]
 process_name=%(program_name)s_%(process_num)02d
@@ -407,22 +377,7 @@ if ($failedJobs > $threshold) {
 ### 1. Pulizia
 
 ```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 9fd314be (.)
-=======
-
->>>>>>> 6d763b05 (.)
-=======
-
->>>>>>> c0f200e (.)
-=======
-
->>>>>>> 2b275b1a (.)
 # Pulizia job vecchi
 php artisan queue:prune-failed --hours=168
 php artisan queue:prune-batches --hours=24
@@ -457,16 +412,3 @@ php artisan queue:restart
 ## Vedi Anche
 - [Laravel Queues](https://laravel.com/docs/queues)
 - [Horizon Documentation](https://laravel.com/docs/horizon)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-- [Redis Documentation](https://redis.io/documentation) 
->>>>>>> 9fd314be (.)
-=======
->>>>>>> 6d763b05 (.)
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)

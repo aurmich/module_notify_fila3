@@ -21,21 +21,8 @@ class NotificationTemplateResource extends XotBaseResource
 {
     protected static ?string $model = NotificationTemplate::class;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> a6a762f (.)
->>>>>>> 9fd314be (.)
-=======
-
-
->>>>>>> c0f200e (.)
     public static function getFormSchema(): array
     {
         return [

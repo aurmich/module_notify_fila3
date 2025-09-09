@@ -18,19 +18,7 @@ class SendAgiletelecomSMSAction implements SmsActionContract
     public function execute(SmsData $data): array{
         
         $res= app(SendAgiletelecomSMSv2Action::class)->execute($data);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         
-=======
-        dddx($res);
->>>>>>> 9fd314be (.)
-=======
-        
->>>>>>> c0f200e (.)
-=======
-        
->>>>>>> 2b275b1a (.)
         return $res;
     }
    

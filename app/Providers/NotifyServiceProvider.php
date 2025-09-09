@@ -5,25 +5,10 @@ declare(strict_types=1);
 namespace Modules\Notify\Providers;
 
 // use Illuminate\Support\Facades\Notification;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
 use Illuminate\Support\Arr;
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Facades\Mail;
 use Modules\Tenant\Services\TenantService;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9fd314be (.)
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 class NotifyServiceProvider extends XotBaseServiceProvider
@@ -37,13 +22,6 @@ class NotifyServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
         //if (! app()->environment('production')) {
             $mail=TenantService::config('mail');
             Assert::isArray($mail);
@@ -52,13 +30,5 @@ class NotifyServiceProvider extends XotBaseServiceProvider
                 Mail::alwaysTo($fallback_to);
             }
        // }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9fd314be (.)
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
     }
 }

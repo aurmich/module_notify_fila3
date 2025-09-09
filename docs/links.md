@@ -101,22 +101,7 @@ $user->notify(new InvoicePaid($invoice));
 
 ### Comandi Artisan
 ```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 9fd314be (.)
-=======
-
->>>>>>> 6d763b05 (.)
-=======
-
->>>>>>> c0f200e (.)
-=======
-
->>>>>>> 2b275b1a (.)
 # Creare una nuova notifica
 php artisan make:notification InvoicePaid
 

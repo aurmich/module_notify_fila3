@@ -44,26 +44,11 @@ return array (
       'label' => 'Avanzate',
       'description' => 'Opzioni avanzate per l\'invio',
     ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
     'empty' => 
     array (
       'heading' => '',
       'label' => 'empty',
     ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9fd314be (.)
-=======
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
   ),
   'fields' => 
   array (

@@ -382,16 +382,7 @@ class NotifyThemeableTest extends TestCase
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2b275b1a (.)
 
 
 
 
-<<<<<<< HEAD
->>>>>>> c0f200e (.)
-=======
->>>>>>> 2b275b1a (.)
