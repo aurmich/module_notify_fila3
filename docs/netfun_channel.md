@@ -166,6 +166,7 @@ class SendNetfunSmsAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     /** @var string  */
     protected string $to;
 
@@ -173,6 +174,21 @@ class SendNetfunSmsAction
     protected string $message;
 
     /** @var string  */
+=======
+    /**
+     * @var string
+     */
+    protected string $to;
+
+    /**
+     * @var string
+     */
+    protected string $message;
+
+    /**
+     * @var string
+     */
+>>>>>>> 0666f472 (.)
     protected string $sender;
 
     public function __construct(
@@ -667,8 +683,16 @@ Log::info('SMS inviato', [
 - [API Netfun](https://v2.smsviainternet.it/api/rest/v1/)
 - [Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
 - [Spatie Laravel Data](https://github.com/spatie/laravel-data)
+<<<<<<< HEAD
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
 - [Laravel Queues](https://laravel.com/project_docs/queues)
 - [Laravel Testing](https://laravel.com/project_docs/testing)
 - [Laravel Logging](https://laravel.com/project_docs/logging)
 - [Laravel Cache](https://laravel.com/project_docs/cache) 
+=======
+- [Laravel Notifications](https://laravel.com/docs/notifications)
+- [Laravel Queues](https://laravel.com/docs/queues)
+- [Laravel Testing](https://laravel.com/docs/testing)
+- [Laravel Logging](https://laravel.com/docs/logging)
+- [Laravel Cache](https://laravel.com/docs/cache) 
+>>>>>>> 0666f472 (.)

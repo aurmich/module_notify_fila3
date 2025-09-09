@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\NotifyThemeable;
 use Tests\TestCase;
+=======
+use Tests\TestCase;
+use Modules\Notify\Models\NotifyThemeable;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+>>>>>>> 0666f472 (.)
 
 class NotifyThemeableTest extends TestCase
 {
@@ -379,3 +385,13 @@ class NotifyThemeableTest extends TestCase
         $this->assertEquals(2, $todayThemeables[0]->model_id);
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 0666f472 (.)

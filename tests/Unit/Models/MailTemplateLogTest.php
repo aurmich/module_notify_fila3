@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\MailTemplateLog;
 use Tests\TestCase;
+=======
+use Tests\TestCase;
+use Modules\Notify\Models\MailTemplateLog;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+>>>>>>> 0666f472 (.)
 
 class MailTemplateLogTest extends TestCase
 {
@@ -56,7 +62,11 @@ class MailTemplateLogTest extends TestCase
     /** @test */
     public function it_has_correct_fillable_fields(): void
     {
+<<<<<<< HEAD
         $log = new MailTemplateLog;
+=======
+        $log = new MailTemplateLog();
+>>>>>>> 0666f472 (.)
 
         $expectedFillable = [
             'template_id',
@@ -79,7 +89,11 @@ class MailTemplateLogTest extends TestCase
     /** @test */
     public function it_has_correct_casts(): void
     {
+<<<<<<< HEAD
         $log = new MailTemplateLog;
+=======
+        $log = new MailTemplateLog();
+>>>>>>> 0666f472 (.)
 
         $expectedCasts = [
             'id' => 'string',
@@ -622,3 +636,13 @@ class MailTemplateLogTest extends TestCase
         $this->assertEmpty($log->metadata);
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 0666f472 (.)

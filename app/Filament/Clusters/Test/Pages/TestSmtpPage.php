@@ -13,6 +13,10 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Filament\Pages\XotBasePage;
+>>>>>>> 0666f472 (.)
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -20,7 +24,10 @@ use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Datas\SmtpData;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Datas\XotData;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Pages\XotBasePage;
+=======
+>>>>>>> 0666f472 (.)
 use Webmozart\Assert\Assert;
 
 /**
@@ -151,7 +158,11 @@ class TestSmtpPage extends XotBasePage implements HasForms
     {
         Assert::isArray($mail_config = config('mail'));
         Assert::isArray($smtpConfig = Arr::get($mail_config, 'mailers.smtp'));
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 0666f472 (.)
         // Convertiamo l'array generico in un array<string, mixed>
         $typedConfig = [];
         foreach ($smtpConfig as $key => $value) {
@@ -159,7 +170,11 @@ class TestSmtpPage extends XotBasePage implements HasForms
                 $typedConfig[$key] = $value;
             }
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 0666f472 (.)
         $this->emailForm->fill($typedConfig);
     }
 }

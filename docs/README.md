@@ -289,6 +289,7 @@ Il modulo **Notify** gestisce il sistema completo di notifiche per progetti Lara
 **Versione**: 1.0  
 **Stato**: Test business logic completati (95% copertura)  
 **Prossimi passi**: Completamento test modelli base (BaseModel, BaseMorphPivot, BasePivot)
+<<<<<<< HEAD
 # Modulo Notify - Sistema di Notifiche Push
 
 ## Panoramica
@@ -634,3 +635,5 @@ Per supporto tecnico o domande:
 ---
 
 *Ultimo aggiornamento: {{ date('Y-m-d') }}*
+=======
+>>>>>>> 0666f472 (.)

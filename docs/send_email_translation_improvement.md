@@ -276,13 +276,22 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
+<<<<<<< HEAD
 - [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
 - [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
+=======
+- [Regole Traduzioni Laraxot](../../../docs/translation-standards.md)
+- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+>>>>>>> 0666f472 (.)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
+<<<<<<< HEAD
 - `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+=======
+- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
+>>>>>>> 0666f472 (.)
 
 ## 📝 Note di Implementazione
 

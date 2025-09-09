@@ -36,4 +36,15 @@ return new class () extends XotBaseMigration {
         );
     }
 };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9fd314be (.)
+=======
+
+>>>>>>> 2b275b1a (.)
+>>>>>>> 0666f472 (.)

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms;
@@ -20,6 +21,27 @@ use Modules\Notify\Notifications\RecordNotification;
 use Modules\Notify\Notifications\SmsNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Webmozart\Assert\Assert;
+=======
+use Filament\Forms;
+use Filament\Forms\Form;
+use Filament\Actions\Action;
+use Webmozart\Assert\Assert;
+use Filament\Facades\Filament;
+use Modules\Notify\Datas\SmsData;
+use Illuminate\Support\Facades\Log;
+use Filament\Forms\ComponentContainer;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Notify\Enums\SmsDriverEnum;
+use Modules\Notify\Models\MailTemplate;
+use Modules\Notify\Filament\Clusters\Test;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Modules\Notify\Notifications\SmsNotification;
+use Modules\Notify\Notifications\RecordNotification;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Filament\Notifications\Notification as FilamentNotification;
+>>>>>>> 0666f472 (.)
 
 /**
  * @property ComponentContainer $smsForm
@@ -27,11 +49,16 @@ use Webmozart\Assert\Assert;
 class SendSmsPage extends XotBasePage
 {
     public ?array $smsData = [];
+<<<<<<< HEAD
 
     protected static ?string $navigationIcon = 'heroicon-o-device-phone-mobile';
 
     protected static string $view = 'notify::filament.pages.send-sms';
 
+=======
+    protected static ?string $navigationIcon = 'heroicon-o-device-phone-mobile';
+    protected static string $view = 'notify::filament.pages.send-sms';
+>>>>>>> 0666f472 (.)
     protected static ?string $cluster = Test::class;
 
     /**
@@ -85,7 +112,11 @@ class SendSmsPage extends XotBasePage
                 ->default(config('sms.default'))
                 ->required()
                 ->helperText(__('notify::sms.fields.driver.helper_text')),
+<<<<<<< HEAD
             'template_slug' => Forms\Components\Select::make('template_slug')
+=======
+            'template_slug'=> Forms\Components\Select::make('template_slug')
+>>>>>>> 0666f472 (.)
                 ->options(MailTemplate::all()->pluck('slug', 'slug'))
                 ->required(),
         ];
@@ -102,6 +133,7 @@ class SendSmsPage extends XotBasePage
                     'driver' => $data['driver']
                 ]));
             */
+<<<<<<< HEAD
             Assert::string($template_slug = $data['template_slug']);
             $notify = (new RecordNotification($user, $template_slug))->mergeData($data);
 
@@ -109,13 +141,32 @@ class SendSmsPage extends XotBasePage
                 // ->locale('it')
                 // ->notify(new RecordNotification($user,'due'))
                 ->notify($notify);
+=======
+            Assert::string($template_slug=$data['template_slug']);
+            $notify=(new RecordNotification($user,$template_slug))->mergeData($data);
+
+            
+            Notification::route('sms', $data['to'])
+                //->locale('it')
+                //->notify(new RecordNotification($user,'due'))
+                ->notify($notify);;
+
+
+            
+>>>>>>> 0666f472 (.)
 
             FilamentNotification::make()
                 ->success()
                 ->title('SMS inviato con successo')
                 ->send();
+<<<<<<< HEAD
         } catch (\Exception $e) {
             // Log::error('Errore nell\'invio SMS: ' . $e->getMessage());
+=======
+
+        } catch (\Exception $e) {
+            //Log::error('Errore nell\'invio SMS: ' . $e->getMessage());
+>>>>>>> 0666f472 (.)
 
             FilamentNotification::make()
                 ->danger()

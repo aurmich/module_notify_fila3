@@ -51,10 +51,14 @@ Homestead.json
 .DS_Store
 *.old
 *.old1
+<<<<<<< HEAD
 *.old2
 *.old3
 *.backup
 *.backup.*
+=======
+*.backup
+>>>>>>> 0666f472 (.)
 *.bak
 
 # Documentation and cache

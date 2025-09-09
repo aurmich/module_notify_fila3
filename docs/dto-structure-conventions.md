@@ -156,7 +156,11 @@ Prima di creare un nuovo DTO, verificare che:
 ## Riferimenti
 
 - [PHP 8.2 Readonly Properties](https://www.php.net/manual/en/language.oop5.properties.php#language.oop5.properties.readonly-properties)
+<<<<<<< HEAD
 - [Laravel Data Transfer Objects Best Practices](https://laravel.com/project_docs/10.x/eloquent-serialization#data-transfer-objects)
+=======
+- [Laravel Data Transfer Objects Best Practices](https://laravel.com/docs/10.x/eloquent-serialization#data-transfer-objects)
+>>>>>>> 0666f472 (.)
 
 ---
 

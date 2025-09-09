@@ -42,7 +42,19 @@ return new class () extends XotBaseMigration {
                 $table->string('slug')->unique();
             }
 
+<<<<<<< HEAD
             $this->updateTimestamps(table: $table, softDeletes: true);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            $this->updateTimestamps(table: $table, softDeletes: true);
+=======
+            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
+>>>>>>> 9fd314be (.)
+=======
+            $this->updateTimestamps(table: $table, softDeletes: true);
+>>>>>>> 2b275b1a (.)
+>>>>>>> 0666f472 (.)
         });
     }
 
