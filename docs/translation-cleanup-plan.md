@@ -4,7 +4,7 @@ Questo documento descrive il piano di pulizia e standardizzazione delle traduzio
 
 ## Analisi della Situazione Attuale
 
-Dall'analisi dei file di traduzione nella cartella `/var/www/html/saluteora/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
+Dall'analisi dei file di traduzione nella cartella `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
 
 ### 1. File con Nomi Errati
 - `send_s_m_s.php` invece di `send_sms.php`

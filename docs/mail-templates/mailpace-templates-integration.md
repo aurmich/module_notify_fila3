@@ -28,7 +28,7 @@ MailPace offre i seguenti template transazionali:
 ### Struttura della Directory
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/resources/mail-layouts/
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/
 ├── default.html       # Layout base per la maggior parte delle email
 ├── main.html          # Alternativa semplificata
 ├── marketing.html     # Layout ottimizzato per email marketing
