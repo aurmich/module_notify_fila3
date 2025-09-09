@@ -30,6 +30,7 @@ Questo documento descrive il sistema di template email utilizzato nel modulo Not
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -39,6 +40,9 @@ Questo documento descrive il sistema di template email utilizzato nel modulo Not
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Benvenuto in {{ config('app.name') }}
 
 Grazie per esserti registrato.

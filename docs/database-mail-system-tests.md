@@ -347,6 +347,7 @@ class MailTemplateSecurityTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -356,6 +357,9 @@ class MailTemplateSecurityTest extends TestCase
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Esegui tutti i test
 php artisan test --filter=MailTemplate
 
@@ -395,6 +399,7 @@ php artisan test --coverage --filter=MailTemplate
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Pest PHP](https://pestphp.com/docs) 
 >>>>>>> 9fd314be (.)
@@ -402,3 +407,5 @@ php artisan test --coverage --filter=MailTemplate
 >>>>>>> 6d763b05 (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)

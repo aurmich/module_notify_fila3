@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 =======
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ namespace Modules\Notify\Tests\Feature;
 =======
 declare(strict_types=1);
 >>>>>>> c0f200e (.)
+=======
+declare(strict_types=1);
+>>>>>>> 2b275b1a (.)
 
 use Illuminate\Support\Facades\File;
 

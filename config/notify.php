@@ -2,8 +2,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
 declare(strict_types=1);
 
 return [
@@ -22,6 +25,7 @@ return [
         'webhook_base' => env('WEBHOOK_BASE_URL', 'https://api.example.com'),
         'clinic_name' => env('CLINIC_NAME', 'Default Clinic'),
         'repository_url' => env('REPOSITORY_URL', 'https://github.com/example/repo'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 return [
@@ -69,14 +73,19 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     | Default Test Data
     |--------------------------------------------------------------------------
     |
@@ -94,6 +103,7 @@ return [
         'default_theme_description' => 'Tema professionale per {{company_name}}',
         'default_author' => '{{team_name}}',
         'default_repository' => '{{repository_url}}',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     | Canale di Default
@@ -123,14 +133,19 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     | Webhook Configuration
     |--------------------------------------------------------------------------
     |
@@ -141,6 +156,7 @@ return [
         'notification_delivered' => '{{webhook_base}}/webhooks/notification-delivered',
         'notification_bounced' => '{{webhook_base}}/webhooks/notification-bounced',
         'notification_clicked' => '{{webhook_base}}/webhooks/notification-clicked',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     | Template
@@ -166,14 +182,19 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     | Email Configuration
     |--------------------------------------------------------------------------
     |
@@ -185,6 +206,7 @@ return [
         'default_from_name' => env('MAIL_FROM_NAME', '{{company_name}}'),
         'default_admin_email' => env('ADMIN_EMAIL', 'admin@{{company_name}}.com'),
         'default_developer_email' => env('DEVELOPER_EMAIL', 'developer@{{company_name}}.com'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     | Rate Limiting
@@ -201,14 +223,19 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     | Path Configuration
     |--------------------------------------------------------------------------
     |
@@ -218,6 +245,7 @@ return [
     'paths' => [
         'default_avatar_path' => env('DEFAULT_AVATAR_PATH', '/images/avatars/default.svg'),
         'default_image_path' => env('DEFAULT_IMAGE_PATH', '/images/default.jpg'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     | Tracking
@@ -240,14 +268,19 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     ],
 
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     | Template Variables
     |--------------------------------------------------------------------------
     |
@@ -263,6 +296,7 @@ return [
         'user_name' => '{{user_name}}',
         'appointment_date' => '{{appointment_date}}',
         'appointment_time' => '{{appointment_time}}',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     | Pulizia Automatica
@@ -314,5 +348,7 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     ],
 ]; 

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -62,6 +65,7 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /vendor/
@@ -143,3 +147,5 @@ docs/phpstan/
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)

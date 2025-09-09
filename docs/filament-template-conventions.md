@@ -73,6 +73,11 @@ grep -L "name=\"footer\"" /var/www/html/saluteora/laravel/Modules/*/resources/vi
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [Filament UI Components](https://filamentphp.com/docs/panels/components)
 - [Laravel Blade Templates](https://laravel.com/docs/blade)
+=======
+- [Filament UI Components](https://filamentphp.com/project_docs/panels/components)
+- [Laravel Blade Templates](https://laravel.com/project_docs/blade)
+>>>>>>> 2b275b1a (.)
 - [Accessibilità Web](https://www.w3.org/WAI/fundamentals/accessibility-intro/)

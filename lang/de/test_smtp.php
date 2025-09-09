@@ -59,6 +59,7 @@ return [
             'label' => 'Oggetto',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'placeholder' => 'Test configurazione SMTP - {{app_name}}',
 =======
             'placeholder' => 'Test configurazione SMTP - SaluteOra',
@@ -66,6 +67,9 @@ return [
 =======
             'placeholder' => 'Test configurazione SMTP - {{app_name}}',
 >>>>>>> c0f200e (.)
+=======
+            'placeholder' => 'Test configurazione SMTP - {{app_name}}',
+>>>>>>> 2b275b1a (.)
             'help' => 'Oggetto della email di test per verificare la configurazione',
         ],
         'body_html' => [
@@ -101,12 +105,16 @@ return [
     'validation' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
         'host_required' => 'Der SMTP-Host ist erforderlich',
         'port_required' => 'La porta SMTP è obbligatoria',
         'port_numeric' => 'La porta deve essere un numero',
         'username_required' => 'Der SMTP-Benutzername ist erforderlich',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         'host_required' => 'L\'host SMTP è obbligatorio',
@@ -116,11 +124,14 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
         'password_required' => 'La password SMTP è obbligatoria',
         'from_email_required' => 'L\'email mittente è obbligatoria',
         'from_email_valid' => 'L\'email mittente deve essere un indirizzo valido',
         'to_required' => 'L\'email destinatario è obbligatoria',
         'to_valid' => 'L\'email destinatario deve essere un indirizzo valido',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         'subject_required' => 'Der Betreff ist erforderlich',
@@ -130,5 +141,8 @@ return [
 =======
         'subject_required' => 'Der Betreff ist erforderlich',
 >>>>>>> c0f200e (.)
+=======
+        'subject_required' => 'Der Betreff ist erforderlich',
+>>>>>>> 2b275b1a (.)
     ],
 ];

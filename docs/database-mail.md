@@ -380,6 +380,7 @@ class ProcessDoctorModerationAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -389,6 +390,9 @@ class ProcessDoctorModerationAction
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Registrazione Approvata
 
 Gentile {{ $doctor->name }},
@@ -449,6 +453,7 @@ Cordiali saluti,<br>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Filament Forms](https://filamentphp.com/docs/forms) 
 >>>>>>> 9fd314be (.)
@@ -456,3 +461,5 @@ Cordiali saluti,<br>
 >>>>>>> 6d763b05 (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)

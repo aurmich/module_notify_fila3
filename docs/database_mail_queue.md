@@ -190,12 +190,16 @@ $users->each(function ($user) {
 ```bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
 =======
 
 >>>>>>> 6d763b05 (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Avvia worker dedicato
 php artisan queue:work --queue=emails
 
@@ -300,12 +304,16 @@ $this->call('queue:prune-batches', [
 ```bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
 =======
 
 >>>>>>> 6d763b05 (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Supervisor config
 [program:<nome progetto>-worker]
 process_name=%(program_name)s_%(process_num)02d
@@ -393,12 +401,16 @@ if ($failedJobs > $threshold) {
 ```bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
 =======
 
 >>>>>>> 6d763b05 (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Pulizia job vecchi
 php artisan queue:prune-failed --hours=168
 php artisan queue:prune-batches --hours=24
@@ -428,6 +440,7 @@ php artisan queue:restart
 ## Collegamenti
 - [Database Mail System](database-mail-system.md)
 - [Mail Templates](database-mail-templates.md)
+<<<<<<< HEAD
 - [Queue Configuration](../../../docs/queue-configuration.md)
 
 ## Vedi Anche
@@ -440,3 +453,10 @@ php artisan queue:restart
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> 6d763b05 (.)
+=======
+- [Queue Configuration](../../../project_docs/queue-configuration.md)
+
+## Vedi Anche
+- [Laravel Queues](https://laravel.com/project_docs/queues)
+- [Horizon Documentation](https://laravel.com/project_docs/horizon)
+>>>>>>> 2b275b1a (.)

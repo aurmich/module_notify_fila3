@@ -2,8 +2,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
 return array (
   'navigation' => 
   array (
@@ -96,6 +99,7 @@ return array (
       'error' => 'Errore nella connessione SMTP',
     ),
     'emailFormActions' => 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -281,14 +285,19 @@ return array (
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     array (
       'label' => 'emailFormActions',
     ),
   ),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
   'messages' => 
   array (
     'success' => 'Test SMTP inviato con successo',
@@ -313,9 +322,12 @@ return array (
   ),
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 );
 >>>>>>> a6a762f (.)
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)

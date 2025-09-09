@@ -102,6 +102,7 @@ class SendSpatieEmailPage extends XotBasePage
             [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'path' => public_path('images/avatars/default-3.svg'),
 =======
                 'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
@@ -109,12 +110,16 @@ class SendSpatieEmailPage extends XotBasePage
 =======
                 'path' => public_path('images/avatars/default-3.svg'),
 >>>>>>> c0f200e (.)
+=======
+                'path' => public_path('images/avatars/default-3.svg'),
+>>>>>>> 2b275b1a (.)
                 'as' => 'logo.png',
                 'mime' => 'image/png',
             ],
             [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'path' => public_path('images/avatars/default-3.svg'),
 =======
                 'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
@@ -122,6 +127,9 @@ class SendSpatieEmailPage extends XotBasePage
 =======
                 'path' => public_path('images/avatars/default-3.svg'),
 >>>>>>> c0f200e (.)
+=======
+                'path' => public_path('images/avatars/default-3.svg'),
+>>>>>>> 2b275b1a (.)
                 'as' => 'logo.png',
                 'mime' => 'image/png',
             ],

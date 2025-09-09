@@ -17,6 +17,7 @@ Il sistema di template permette di:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -26,6 +27,9 @@ Il sistema di template permette di:
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # {{ $title }}
 
 {{ $content }}
@@ -245,6 +249,7 @@ p {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -254,6 +259,9 @@ p {
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Benvenuto {{ $user->name }}!
 
 Grazie per esserti registrato su {{ config('app.name') }}.
@@ -275,6 +283,7 @@ Cordiali saluti,<br>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -284,6 +293,9 @@ Cordiali saluti,<br>
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Ordine Confermato
 
 Grazie per il tuo ordine #{{ $order->number }}.
@@ -319,6 +331,7 @@ Grazie per aver scelto {{ config('app.name') }}!
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -328,6 +341,9 @@ Grazie per aver scelto {{ config('app.name') }}!
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Reset Password
 
 Hai richiesto il reset della password per il tuo account.
@@ -380,6 +396,7 @@ Se hai problemi con il bottone, copia e incolla questo link nel tuo browser: {{ 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Database Mail](database-mail.md) 
 >>>>>>> 9fd314be (.)
@@ -387,3 +404,5 @@ Se hai problemi con il bottone, copia e incolla questo link nel tuo browser: {{ 
 >>>>>>> 6d763b05 (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📧 **Notify Module** - Sistema Avanzato di Notifiche
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -712,6 +713,8 @@ Segui SEMPRE le regole sui namespace:
 >>>>>>> a6a762f (.)
 >>>>>>> 9fd314be (.)
 =======
+=======
+>>>>>>> 2b275b1a (.)
 # Modulo Notify - Analisi Completa
 
 ## Panoramica del Modulo
@@ -1003,4 +1006,7 @@ Il modulo **Notify** gestisce il sistema completo di notifiche per progetti Lara
 **Versione**: 1.0  
 **Stato**: Test business logic completati (95% copertura)  
 **Prossimi passi**: Completamento test modelli base (BaseModel, BaseMorphPivot, BasePivot)
+<<<<<<< HEAD
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)

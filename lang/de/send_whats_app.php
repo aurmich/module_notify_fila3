@@ -2,14 +2,18 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
 declare(strict_types=1);
 
 return [
     'navigation' => [
         'label' => 'Navigation Label',
         'group' => 'Notify',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 return [
@@ -19,5 +23,7 @@ return [
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
     ],
 ];

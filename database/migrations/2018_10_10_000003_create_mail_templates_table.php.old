@@ -43,10 +43,14 @@ return new class () extends XotBaseMigration {
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->updateTimestamps(table: $table, softDeletes: true);
 =======
             $this->updateTimestamps(table: $table, hasSoftDeletes: true);
 >>>>>>> 9fd314be (.)
+=======
+            $this->updateTimestamps(table: $table, softDeletes: true);
+>>>>>>> 2b275b1a (.)
         });
     }
 

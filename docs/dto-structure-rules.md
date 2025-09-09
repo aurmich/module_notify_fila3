@@ -113,4 +113,8 @@
 
 - [PSR-4 Autoloading](https://www.php-fig.org/psr/psr-4/)
 - [spatie/laravel-data](https://github.com/spatie/laravel-data)
+<<<<<<< HEAD
 - [Laravel Best Practices](https://laravel.com/docs/best-practices) 
+=======
+- [Laravel Best Practices](https://laravel.com/project_docs/best-practices) 
+>>>>>>> 2b275b1a (.)

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
 # 🔔 Notify - Il SISTEMA di NOTIFICHE più AVANZATO! 📱
 
 <!-- Dynamic validation badges -->
@@ -544,6 +547,7 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
   <em>Costruito con ❤️ per la comunità Laravel</em>
 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # 📢 Notify Module - Sistema di Notifiche Avanzato
 
@@ -854,3 +858,5 @@ Il modulo può essere configurato tramite il file `config/notify.php`:
 >>>>>>> 9fd314be (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)

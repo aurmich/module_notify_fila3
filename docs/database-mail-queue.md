@@ -191,6 +191,7 @@ $users->each(function ($user) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -200,6 +201,9 @@ $users->each(function ($user) {
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Avvia worker dedicato
 php artisan queue:work --queue=emails
 
@@ -305,6 +309,7 @@ $this->call('queue:prune-batches', [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -314,6 +319,9 @@ $this->call('queue:prune-batches', [
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Supervisor config
 [program:<nome progetto>-worker]
 process_name=%(program_name)s_%(process_num)02d
@@ -402,6 +410,7 @@ if ($failedJobs > $threshold) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 9fd314be (.)
@@ -411,6 +420,9 @@ if ($failedJobs > $threshold) {
 =======
 
 >>>>>>> c0f200e (.)
+=======
+
+>>>>>>> 2b275b1a (.)
 # Pulizia job vecchi
 php artisan queue:prune-failed --hours=168
 php artisan queue:prune-batches --hours=24
@@ -448,6 +460,7 @@ php artisan queue:restart
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Redis Documentation](https://redis.io/documentation) 
 >>>>>>> 9fd314be (.)
@@ -455,3 +468,5 @@ php artisan queue:restart
 >>>>>>> 6d763b05 (.)
 =======
 >>>>>>> c0f200e (.)
+=======
+>>>>>>> 2b275b1a (.)
