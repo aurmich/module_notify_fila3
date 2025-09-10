@@ -15,12 +15,21 @@ Durante l'audit del modulo `Notify`, è stato identificato un **errore critico d
 ### Esempi di Violazioni Trovate
 ```php
 // ❌ ERRORE CRITICO - Stringhe hardcoded
+<<<<<<< HEAD
 'subject' => 'Benvenuto su SaluteOra',
 'content' => 'Grazie per esserti registrato su SaluteOra',
 'clinic_name' => 'Studio Dentistico SaluteOra',
 'webhook' => 'https://api.saluteora.com/webhooks',
 'author' => 'Team SaluteOra',
 'path' => '/var/www/html/saluteora/public_html/images/',
+=======
+'subject' => 'Benvenuto su ',
+'content' => 'Grazie per esserti registrato su ',
+'clinic_name' => 'Studio Dentistico ',
+'webhook' => 'https://api.saluteora.com/webhooks',
+'author' => 'Team PTVX',
+'path' => '/var/www/html/_bases/base_ptvx_fila3_mono/public_html/images/',
+>>>>>>> f05735b (.)
 ```
 
 ## Soluzioni Implementate
@@ -75,7 +84,11 @@ $notificationData = [
 - **Media**: Gestione media per qualsiasi progetto
 
 ### Moduli Specifici del Progetto
+<<<<<<< HEAD
 - **SaluteOra**: Solo per progetto SaluteOra
+=======
+- ****: Solo per progetto 
+>>>>>>> f05735b (.)
 - **SaluteMo**: Solo per progetto SaluteMo
 - **Patient**: Solo per progetti sanitari specifici
 
@@ -105,10 +118,17 @@ grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
 
 ### Variabili d'Ambiente
 ```env
+<<<<<<< HEAD
 COMPANY_NAME=SaluteOra
 COMPANY_TEAM=Team SaluteOra
 WEBHOOK_BASE_URL=https://api.saluteora.com
 CLINIC_NAME=Studio Dentistico SaluteOra
+=======
+COMPANY_NAME=
+COMPANY_TEAM=Team 
+WEBHOOK_BASE_URL=https://api.saluteora.com
+CLINIC_NAME=Studio Dentistico 
+>>>>>>> f05735b (.)
 REPOSITORY_URL=https://github.com/saluteora/notify
 ```
 

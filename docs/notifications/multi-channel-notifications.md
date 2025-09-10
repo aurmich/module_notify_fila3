@@ -1,6 +1,10 @@
 # Implementazione di Notifiche Multi-Canale 
 
+<<<<<<< HEAD
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di SaluteOra.
+=======
+Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di .
+>>>>>>> f05735b (.)
 
 ## Indice
 
@@ -15,7 +19,11 @@ Questa documentazione descrive come implementare correttamente notifiche multi-c
 
 ## Introduzione
 
+<<<<<<< HEAD
 SaluteOra utilizza il sistema di notifiche di Laravel per inviare comunicazioni attraverso diversi canali. Ogni canale richiede un'implementazione specifica per garantire la corretta consegna dei messaggi.
+=======
+ utilizza il sistema di notifiche di Laravel per inviare comunicazioni attraverso diversi canali. Ogni canale richiede un'implementazione specifica per garantire la corretta consegna dei messaggi.
+>>>>>>> f05735b (.)
 
 ## Architettura delle Notifiche
 
@@ -84,7 +92,11 @@ public function toMail($notifiable): SpatieEmail
 
 ### Configurazione Provider SMS
 
+<<<<<<< HEAD
 SaluteOra supporta diversi provider SMS. La configurazione di base prevede:
+=======
+ supporta diversi provider SMS. La configurazione di base prevede:
+>>>>>>> f05735b (.)
 
 1. Installazione del provider scelto:
    ```bash
@@ -240,7 +252,11 @@ class AppointmentNotification extends Notification
 
 ## Implementazione Netfun SMS
 
+<<<<<<< HEAD
 Netfun è un provider di SMS italiano che offre API per l'invio di messaggi SMS. Seguendo l'architettura di SaluteOra, implementeremo l'integrazione con Netfun utilizzando Spatie Queueable Actions.
+=======
+Netfun è un provider di SMS italiano che offre API per l'invio di messaggi SMS. Seguendo l'architettura di , implementeremo l'integrazione con Netfun utilizzando Spatie Queueable Actions.
+>>>>>>> f05735b (.)
 
 ### 1. Configurazione
 
@@ -254,7 +270,11 @@ return [
     'netfun' => [
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
+<<<<<<< HEAD
         'sender' => env('NETFUN_SENDER', 'SaluteOra'),
+=======
+        'sender' => env('NETFUN_SENDER', ''),
+>>>>>>> f05735b (.)
         'api_url' => env('NETFUN_API_URL', 'https://api.netfun.it/sms/v1/'),
     ],
 ];
@@ -265,7 +285,11 @@ Assicurati di aggiungere le corrispondenti variabili al tuo file `.env`:
 ```
 NETFUN_USERNAME=your_username
 NETFUN_PASSWORD=your_password
+<<<<<<< HEAD
 NETFUN_SENDER=SaluteOra
+=======
+NETFUN_SENDER=
+>>>>>>> f05735b (.)
 ```
 
 ### 2. Creazione della Queueable Action
@@ -596,7 +620,11 @@ class AppointmentReminder extends Notification
         $date = $this->appointment->date->format('d/m/Y H:i');
         
         return (new NetfunSMSMessage())
+<<<<<<< HEAD
             ->content("Gentile {$notifiable->first_name}, le ricordiamo il suo appuntamento del {$date}. SaluteOra.")
+=======
+            ->content("Gentile {$notifiable->first_name}, le ricordiamo il suo appuntamento del {$date}. .")
+>>>>>>> f05735b (.)
             ->reference('app_' . $this->appointment->id);
     }
     
@@ -641,7 +669,11 @@ class NetfunSMSTest extends TestCase
         $action = app(SendNetfunSMSAction::class);
         
         $message = (new NetfunSMSMessage())
+<<<<<<< HEAD
             ->content('Test SMS da SaluteOra')
+=======
+            ->content('Test SMS da ')
+>>>>>>> f05735b (.)
             ->reference('test_123');
         
         $result = $action->execute(
@@ -677,7 +709,11 @@ class AppointmentReminderController extends Controller
         $sendSMSAction = app(SendNetfunSMSAction::class);
         
         $message = (new NetfunSMSMessage())
+<<<<<<< HEAD
             ->content("Gentile {$appointment->patient->first_name}, le ricordiamo il suo appuntamento del {$appointment->date->format('d/m/Y H:i')}. SaluteOra.")
+=======
+            ->content("Gentile {$appointment->patient->first_name}, le ricordiamo il suo appuntamento del {$appointment->date->format('d/m/Y H:i')}. .")
+>>>>>>> f05735b (.)
             ->reference('app_' . $appointment->id);
         
         // Esecuzione asincrona

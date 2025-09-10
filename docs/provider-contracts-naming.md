@@ -2,7 +2,11 @@
 
 ## Regola Fondamentale
 
+<<<<<<< HEAD
 Nel sistema SaluteOra, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
+=======
+Nel sistema , tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
+>>>>>>> f05735b (.)
 
 1. **Suffisso `Contract` e non `Interface`**:
    - ✅ CORRETTO: `SmsProviderContract`

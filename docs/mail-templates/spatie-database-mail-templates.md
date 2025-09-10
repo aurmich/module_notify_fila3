@@ -23,7 +23,11 @@ Il pacchetto funziona con i seguenti componenti principali:
 In questo progetto, i layout HTML delle email sono memorizzati in:
 
 ```
+<<<<<<< HEAD
 /var/www/html/base_saluteora/laravel/Modules/Notify/resources/mail-layouts/
+=======
+/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/
+>>>>>>> f05735b (.)
 ```
 
 Questi layout forniscono la struttura base per tutte le email, con un placeholder `{{{ body }}}` dove verrà inserito il contenuto specifico del template.
