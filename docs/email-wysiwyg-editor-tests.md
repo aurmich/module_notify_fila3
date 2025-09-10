@@ -339,11 +339,8 @@ class FileUploadSecurityTest extends TestCase
 - [Email Plugins Analysis](email-plugins-analysis.md)
 
 ## Vedi Anche
-<<<<<<< HEAD
 - [Laravel Testing Documentation](https://laravel.com/project_docs/testing)
 - [Dusk Documentation](https://laravel.com/project_docs/dusk)
-=======
 - [Laravel Testing Documentation](https://laravel.com/docs/testing)
 - [Dusk Documentation](https://laravel.com/docs/dusk)
->>>>>>> d2ea6157 (.)
 - [PHPUnit Documentation](https://phpunit.de/documentation.html) 

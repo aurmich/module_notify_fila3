@@ -16,23 +16,14 @@
 Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2d0e994e (.)
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/SmsData.php
-<<<<<<< HEAD
-=======
 /var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SmsData.php
->>>>>>> d2ea6157 (.)
-=======
->>>>>>> 2d0e994e (.)
 ```
 
 ### ❌ ERRATO: ALTERNATIVE COMUNI MA ERRATE
@@ -56,31 +47,19 @@ Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 ### Verificare Sempre le Directory Esistenti
 
 ```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app -type d -name "Data*"
-=======
 find /var/www/html/saluteora/laravel/Modules/Notify/app -type d -name "Data*"
->>>>>>> d2ea6157 (.)
-=======
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app -type d -name "Data*"
->>>>>>> 2d0e994e (.)
 ```
 
 Questo restituirà:
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/SMS
-=======
 /var/www/html/saluteora/laravel/Modules/Notify/app/Datas
 /var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SMS
->>>>>>> d2ea6157 (.)
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/SMS
->>>>>>> 2d0e994e (.)
 ```
 
 ## Esempi di Importazioni Corrette

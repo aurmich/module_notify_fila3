@@ -1,24 +1,15 @@
-<<<<<<< HEAD
 # Errori Comuni da Evitare nelle Implementazioni di Moduli 
-=======
 # Errori Comuni da Evitare nelle Implementazioni di Moduli SaluteOra
->>>>>>> d2ea6157 (.)
 
 ## Errori di Struttura Directory e Namespace
 
 1. **Errore di Case nelle Directory**
-<<<<<<< HEAD
-<<<<<<< HEAD
    - ❌ ERRATO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/`
-=======
    - ❌ ERRATO: `/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/`
->>>>>>> d2ea6157 (.)
-=======
    - ❌ ERRATO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/`
->>>>>>> 2d0e994e (.)
    
    > Le directory standard di Laravel sono sempre in lowercase (`app`, `config`, `resources`, ecc.)
 

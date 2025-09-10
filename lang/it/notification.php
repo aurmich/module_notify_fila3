@@ -1,44 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-return [
-  'resource' => 
-  [
-    'name' => 'Notifica',
-    'plural' => 'Notifiche',
-  ],
-  'navigation' => 
-  [
-    'name' => 'Gestione Notifiche',
-    'plural' => 'Gestione Notifiche',
-    'group' => 
-    [
-      'name' => 'Sistema',
-      'description' => 'Gestione centralizzata delle notifiche di sistema',
-    ],
-    'label' => 'Gestione Notifiche',
-    'icon' => 'notify-notification-animated',
-    'sort' => 46,
-  ],
-  'fields' => 
-  [
-    'title' => 
-    [
-      'label' => 'Titolo',
-      'helper_text' => 'Titolo della notifica',
-      'placeholder' => 'Inserisci il titolo',
-    ],
-    'message' => 
-    [
-      'label' => 'Messaggio',
-      'helper_text' => 'Contenuto della notifica',
-      'placeholder' => 'Inserisci il messaggio',
-    ],
-    'type' => 
-    [
-=======
 return array (
   'resource' => 
   array (
@@ -74,68 +35,25 @@ return array (
     ),
     'type' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Tipo',
       'helper_text' => 'Tipologia di notifica',
       'placeholder' => 'Seleziona il tipo',
       'options' => 
-<<<<<<< HEAD
-      [
-=======
       array (
->>>>>>> d2ea6157 (.)
         'system' => 'Sistema',
         'alert' => 'Avviso',
         'info' => 'Informazione',
         'success' => 'Successo',
         'warning' => 'Attenzione',
         'error' => 'Errore',
-<<<<<<< HEAD
-      ],
-    ],
-    'status' => 
-    [
-=======
       ),
     ),
     'status' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Stato',
       'helper_text' => 'Stato corrente della notifica',
       'placeholder' => 'Seleziona lo stato',
       'options' => 
-<<<<<<< HEAD
-      [
-        'unread' => 'Non letta',
-        'read' => 'Letta',
-        'archived' => 'Archiviata',
-      ],
-    ],
-    'recipient' => 
-    [
-      'label' => 'Destinatario',
-      'helper_text' => 'Utente destinatario della notifica',
-      'placeholder' => 'Seleziona il destinatario',
-    ],
-    'sent_at' => 
-    [
-      'label' => 'Inviata il',
-      'helper_text' => 'Data e ora di invio della notifica',
-    ],
-    'read_at' => 
-    [
-      'label' => 'Letta il',
-      'helper_text' => 'Data e ora di lettura della notifica',
-    ],
-    'archived_at' => 
-    [
-      'label' => 'Archiviata il',
-      'helper_text' => 'Data e ora di archiviazione della notifica',
-    ],
-    'channel' => 
-    [
-=======
       array (
         'unread' => 'Non letta',
         'read' => 'Letta',
@@ -165,39 +83,11 @@ return array (
     ),
     'channel' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Canale',
       'tooltip' => 'Canale di invio della notifica',
       'helper_text' => 'Seleziona il canale attraverso cui inviare la notifica',
       'placeholder' => 'Seleziona un canale',
       'options' => 
-<<<<<<< HEAD
-      [
-        'email' => 
-        [
-          'label' => 'Email',
-          'tooltip' => 'Invia tramite email',
-        ],
-        'sms' => 
-        [
-          'label' => 'SMS',
-          'tooltip' => 'Invia tramite SMS',
-        ],
-        'push' => 
-        [
-          'label' => 'Push',
-          'tooltip' => 'Invia come notifica push',
-        ],
-        'telegram' => 
-        [
-          'label' => 'Telegram',
-          'tooltip' => 'Invia tramite Telegram',
-        ],
-      ],
-    ],
-    'template' => 
-    [
-=======
       array (
         'email' => 
         array (
@@ -223,37 +113,11 @@ return array (
     ),
     'template' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Template',
       'tooltip' => 'Template da utilizzare per la notifica',
       'helper_text' => 'Scegli il modello predefinito per questa notifica',
       'placeholder' => 'Seleziona un template',
       'options' => 
-<<<<<<< HEAD
-      [
-        'subject' => 
-        [
-          'label' => 'Oggetto',
-          'tooltip' => 'Oggetto della notifica',
-          'placeholder' => 'es: Notifica importante',
-        ],
-        'body' => 
-        [
-          'label' => 'Corpo',
-          'tooltip' => 'Contenuto principale della notifica',
-          'placeholder' => 'Inserisci il testo della notifica...',
-        ],
-        'variables' => 
-        [
-          'label' => 'Variabili disponibili',
-          'tooltip' => 'Variabili che possono essere utilizzate nel template',
-          'helper_text' => 'Usa {variable} per inserire valori dinamici',
-        ],
-      ],
-    ],
-    'schedule' => 
-    [
-=======
       array (
         'subject' => 
         array (
@@ -277,48 +141,11 @@ return array (
     ),
     'schedule' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Programmazione',
       'tooltip' => 'Quando inviare la notifica',
       'helper_text' => 'Imposta quando la notifica deve essere inviata',
       'placeholder' => 'Seleziona l\'opzione di programmazione',
       'options' => 
-<<<<<<< HEAD
-      [
-        'immediate' => 
-        [
-          'label' => 'Immediata',
-          'tooltip' => 'Invia subito la notifica',
-        ],
-        'scheduled' => 
-        [
-          'label' => 'Programmata',
-          'tooltip' => 'Programma l\'invio per una data specifica',
-        ],
-        'date' => 
-        [
-          'label' => 'Data',
-          'tooltip' => 'Data di invio programmato',
-          'placeholder' => 'es: 01/01/2024',
-        ],
-        'time' => 
-        [
-          'label' => 'Ora',
-          'tooltip' => 'Ora di invio programmato',
-          'placeholder' => 'es: 14:30',
-        ],
-      ],
-    ],
-    'applyFilters' => 
-    [
-      'label' => 'applyFilters',
-    ],
-  ],
-  'actions' => 
-  [
-    'mark_as_read' => 
-    [
-=======
       array (
         'immediate' => 
         array (
@@ -353,101 +180,57 @@ return array (
   array (
     'mark_as_read' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Segna come letta',
       'tooltip' => 'Marca la notifica come letta',
       'success_message' => 'Notifica segnata come letta',
       'error_message' => 'Errore nel segnare la notifica come letta',
-<<<<<<< HEAD
-    ],
-    'mark_as_unread' => 
-    [
-=======
     ),
     'mark_as_unread' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Segna come non letta',
       'tooltip' => 'Marca la notifica come non letta',
       'success_message' => 'Notifica segnata come non letta',
       'error_message' => 'Errore nel segnare la notifica come non letta',
-<<<<<<< HEAD
-    ],
-    'archive' => 
-    [
-=======
     ),
     'archive' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Archivia',
       'tooltip' => 'Archivia la notifica',
       'success_message' => 'Notifica archiviata con successo',
       'error_message' => 'Errore nell\'archiviazione della notifica',
-<<<<<<< HEAD
-    ],
-    'unarchive' => 
-    [
-=======
     ),
     'unarchive' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Ripristina',
       'tooltip' => 'Ripristina la notifica archiviata',
       'success_message' => 'Notifica ripristinata con successo',
       'error_message' => 'Errore nel ripristino della notifica',
-<<<<<<< HEAD
-    ],
-    'send' => 
-    [
-=======
     ),
     'send' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Invia',
       'tooltip' => 'Invia la notifica',
       'success_message' => 'Notifica inviata con successo',
       'error_message' => 'Errore nell\'invio della notifica',
-<<<<<<< HEAD
-    ],
-    'resend' => 
-    [
-=======
     ),
     'resend' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Invia nuovamente',
       'tooltip' => 'Invia nuovamente la notifica',
       'success_message' => 'Notifica inviata nuovamente con successo',
       'error_message' => 'Errore nell\'invio della notifica',
-<<<<<<< HEAD
-    ],
-    'delete' => 
-    [
-=======
     ),
     'delete' => 
     array (
->>>>>>> d2ea6157 (.)
       'label' => 'Elimina',
       'tooltip' => 'Elimina definitivamente la notifica',
       'success_message' => 'Notifica eliminata con successo',
       'error_message' => 'Errore nell\'eliminazione della notifica',
       'confirmation' => 'Sei sicuro di voler eliminare questa notifica? Questa azione non può essere annullata.',
-<<<<<<< HEAD
-    ],
-  ],
-  'messages' => 
-  [
-=======
     ),
   ),
   'messages' => 
   array (
->>>>>>> d2ea6157 (.)
     'no_notifications' => 'Non hai notifiche',
     'all_read' => 'Tutte le notifiche sono state lette',
     'mark_all_read' => 'Segna tutte come lette',
@@ -457,10 +240,5 @@ return array (
     'batch_action_confirmation' => 'Sei sicuro di voler eseguire questa azione su tutte le notifiche selezionate?',
     'success' => 'Operazione completata con successo',
     'error' => 'Si è verificato un errore durante l\'operazione',
-<<<<<<< HEAD
-  ],
-];
-=======
   ),
 );
->>>>>>> d2ea6157 (.)

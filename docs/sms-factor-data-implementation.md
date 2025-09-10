@@ -72,13 +72,10 @@ public function __construct()
 ### 3. Updated Documentation
 
 **Files Created/Updated**:
-<<<<<<< HEAD
 - `/Modules/Notify/project_docs/sms/drivers/smsfactor/data-class.md`: Comprehensive documentation for `SmsFactorData`
 - `/Modules/Notify/project_docs/sms_implementation.md`: Updated to include data class information
-=======
 - `/Modules/Notify/docs/sms/drivers/smsfactor/data-class.md`: Comprehensive documentation for `SmsFactorData`
 - `/Modules/Notify/docs/sms_implementation.md`: Updated to include data class information
->>>>>>> d2ea6157 (.)
 
 **Documentation Includes**:
 - Complete class structure and properties
@@ -181,11 +178,8 @@ $this->assertEquals('Bearer test_token', $headers['Authorization']);
 - `/Modules/Notify/app/Datas/SMS/AgiletelecomData.php`: Similar implementation for Agiletelecom
 - `/Modules/Notify/app/Actions/SMS/SendSmsFactorSMSAction.php`: Refactored action class
 - `/Modules/Notify/config/sms.php`: SMS configuration file
-<<<<<<< HEAD
 - `/Modules/Notify/project_docs/sms_implementation.md`: General SMS implementation documentation
-=======
 - `/Modules/Notify/docs/sms_implementation.md`: General SMS implementation documentation
->>>>>>> d2ea6157 (.)
 
 ## Conclusion
 

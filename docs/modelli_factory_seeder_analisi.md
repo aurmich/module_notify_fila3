@@ -210,11 +210,8 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 
 ### Integrazione Business Logic
 
-<<<<<<< HEAD
 #### <nome progetto> Integration
-=======
 #### SaluteOra Integration
->>>>>>> d2ea6157 (.)
 - **Appointment Reminders**: Promemoria appuntamenti
 - **Report Notifications**: Notifiche nuovi referti
 - **Emergency Alerts**: Allerte mediche urgenti
@@ -263,11 +260,8 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Template Versioning](./template_versioning.md)
 
 ### Moduli Collegati
-<<<<<<< HEAD
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
-=======
 - [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
->>>>>>> d2ea6157 (.)
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Notifiche utente
 - [Media Module](../../Media/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
 - [Lang Module](../../Lang/docs/modelli_factory_seeder_analisi.md) - Localizzazione

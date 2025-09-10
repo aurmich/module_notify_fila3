@@ -107,23 +107,14 @@ Le classi base XotBase già implementano la maggior parte delle funzionalità ne
 Per verificare che tutte le pagine di risorse seguano questo pattern:
 
 ```bash
-<<<<<<< HEAD
-<<<<<<< HEAD
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules -type f -name "*.php" -path "*/Filament/Resources/*/Pages/*" -exec grep -l "extends.*\\\\Filament\\\\Resources\\\\Pages" {} \;
-=======
 find /var/www/html/saluteora/laravel/Modules -type f -name "*.php" -path "*/Filament/Resources/*/Pages/*" -exec grep -l "extends.*\\\\Filament\\\\Resources\\\\Pages" {} \;
->>>>>>> d2ea6157 (.)
-=======
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules -type f -name "*.php" -path "*/Filament/Resources/*/Pages/*" -exec grep -l "extends.*\\\\Filament\\\\Resources\\\\Pages" {} \;
->>>>>>> 2d0e994e (.)
 ```
 
 ## Riferimenti
 
 - [Filament Resources Documentation](https://filamentphp.com/docs/3.x/panels/resources/getting-started)
-<<<<<<< HEAD
 - [ XotBase Architecture](./FILAMENT_XOT_ARCHITECTURE.md)
-=======
 - [SaluteOra XotBase Architecture](./FILAMENT_XOT_ARCHITECTURE.md)
->>>>>>> d2ea6157 (.)
 - [Pattern Architetturali in Laravel](https://laravel.com/docs/architecture)

@@ -2,11 +2,8 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
 Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto , mantenendo la coerenza visiva e migliorando l'usabilità.
-=======
 Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto SaluteOra, mantenendo la coerenza visiva e migliorando l'usabilità.
->>>>>>> d2ea6157 (.)
 
 ## Componenti per il Campo `name`
 
@@ -217,11 +214,8 @@ return [
 ];
 ```
 
-<<<<<<< HEAD
 ## Conformità con gli Standard 
-=======
 ## Conformità con gli Standard SaluteOra
->>>>>>> d2ea6157 (.)
 
 Tutti i componenti proposti:
 1. Non utilizzano il metodo `->label()` sui componenti Filament
@@ -237,11 +231,8 @@ I miglioramenti UI/UX proposti per i campi `name` e `slug` si concentrano su:
 3. **Azioni contestuali** che facilitano operazioni comuni
 4. **Relazioni intuitive** tra campi correlati
 
-<<<<<<< HEAD
 L'implementazione di questi miglioramenti rispetta le convenzioni del progetto  mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
-=======
 L'implementazione di questi miglioramenti rispetta le convenzioni del progetto SaluteOra mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
->>>>>>> d2ea6157 (.)
 
 ## Riferimenti
 

@@ -2,11 +2,8 @@
 
 ## Regola Fondamentale
 
-<<<<<<< HEAD
 Nel sistema , tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
-=======
 Nel sistema SaluteOra, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
->>>>>>> d2ea6157 (.)
 
 1. **Suffisso `Contract` e non `Interface`**:
    - ✅ CORRETTO: `SmsProviderContract`
