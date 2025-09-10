@@ -341,8 +341,12 @@ class WhatsAppTest extends TestCase
 - [Laravel Queues](https://laravel.com/docs/queues)
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [Laravel Logging](https://laravel.com/docs/logging)
+<<<<<<< HEAD
 - [Laravel Cache](https://laravel.com/docs/cache) 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> d2ea6157 (.)
+=======
+- [Laravel Cache](https://laravel.com/docs/cache) 
+>>>>>>> 2d0e994e (.)

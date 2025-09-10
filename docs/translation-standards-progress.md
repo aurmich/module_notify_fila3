@@ -15,11 +15,15 @@
 
 3. **File Problematici Identificati**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2d0e994e (.)
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_aws_email.php`
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/setting.php`
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/edit_mail_template.php`
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_netfun_sms.php`
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/notification_template.php`
+<<<<<<< HEAD
 =======
    - `/var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_aws_email.php`
    - `/var/www/html/saluteora/laravel/Modules/Notify/lang/it/setting.php`
@@ -27,11 +31,14 @@
    - `/var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_netfun_sms.php`
    - `/var/www/html/saluteora/laravel/Modules/Notify/lang/it/notification_template.php`
 >>>>>>> d2ea6157 (.)
+=======
+>>>>>>> 2d0e994e (.)
    - E altri 15 file (elenco completo in appendice)
 
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
+<<<<<<< HEAD
 <<<<<<< HEAD
    - Creato `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
    - Creato `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
@@ -47,11 +54,20 @@
    - Creato `/var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `/var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
 >>>>>>> d2ea6157 (.)
+=======
+   - Creato `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
+   - Creato `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+
+2. **File Corretti**
+   - Creato `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
+   - Aggiornato `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
+>>>>>>> 2d0e994e (.)
    - Rimosso il file con naming errato `send_whats_app.php`
 
 ### Prossime Correzioni da Implementare
 
 1. **File da Correggere Prioritariamente**
+<<<<<<< HEAD
 <<<<<<< HEAD
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_email.php`
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_sms.php`
@@ -67,6 +83,14 @@
 2. **Verifiche da Eseguire**
    - Analisi della cartella `/var/www/html/saluteora/laravel/Modules/Notify/lang/en/` per identificare problemi simili
 >>>>>>> d2ea6157 (.)
+=======
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_email.php`
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_sms.php`
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_telegram.php`
+
+2. **Verifiche da Eseguire**
+   - Analisi della cartella `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/en/` per identificare problemi simili
+>>>>>>> 2d0e994e (.)
    - Controllo dei riferimenti nel codice che potrebbero puntare ai vecchi file
 
 ## Documentazione di Riferimento
@@ -84,6 +108,9 @@
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2d0e994e (.)
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_aws_email.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/setting.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/edit_mail_template.php
@@ -104,6 +131,7 @@
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_email.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_spatie_email.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/create_mail_template.php
+<<<<<<< HEAD
 =======
 /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_aws_email.php
 /var/www/html/saluteora/laravel/Modules/Notify/lang/it/setting.php
@@ -126,4 +154,6 @@
 /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_spatie_email.php
 /var/www/html/saluteora/laravel/Modules/Notify/lang/it/create_mail_template.php
 >>>>>>> d2ea6157 (.)
+=======
+>>>>>>> 2d0e994e (.)
 ```

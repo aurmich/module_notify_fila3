@@ -9,6 +9,7 @@ Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **
 ```
 ✅ CORRETTO:
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:
@@ -21,6 +22,13 @@ Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **
 /var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
 >>>>>>> d2ea6157 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+
+❌ ERRATO:
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+>>>>>>> 2d0e994e (.)
 ```
 
 ### 2. Namespace Unificati per le Interfacce
@@ -62,10 +70,14 @@ SendSmsInterface
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/
 =======
 /var/www/html/saluteora/laravel/Modules/Notify/
 >>>>>>> d2ea6157 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/
+>>>>>>> 2d0e994e (.)
 ├── app/
 │   ├── Actions/
 │   │   ├── Email/

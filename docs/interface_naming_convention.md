@@ -45,6 +45,7 @@ Per verificare la corretta implementazione:
 
 # Cerca interfacce con naming errato
 <<<<<<< HEAD
+<<<<<<< HEAD
 grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
 
 # Cerca interfacce con naming corretto
@@ -55,11 +56,18 @@ grep -r "interface.*Interface" --include="*.php" /var/www/html/saluteora/laravel
 # Cerca interfacce con naming corretto
 grep -r "interface.*Contract" --include="*.php" /var/www/html/saluteora/laravel/Modules
 >>>>>>> d2ea6157 (.)
+=======
+grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
+
+# Cerca interfacce con naming corretto
+grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules
+>>>>>>> 2d0e994e (.)
 ```
 
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
+<<<<<<< HEAD
 <<<<<<< HEAD
 - [PTVX Code Quality Guidelines](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/app/Contracts/)
@@ -70,3 +78,8 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/saluteora/laravel/
 - [SaluteOra Code Quality Guidelines](/var/www/html/saluteora/laravel/project_docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/saluteora/laravel/Modules/Xot/app/Contracts/)
 >>>>>>> d2ea6157 (.)
+=======
+- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/project_docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Contracts/)
+>>>>>>> 2d0e994e (.)

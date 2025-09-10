@@ -144,10 +144,14 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
      /** Create a new version of the template.
 =======
      * Create a new version of the template.
 >>>>>>> d2ea6157 (.)
+=======
+     /** Create a new version of the template.
+>>>>>>> 2d0e994e (.)
      *
      * @param string $createdBy The user who created the version
      * @param string|null $notes Optional notes about the changes

@@ -253,10 +253,14 @@ return [
 ### 1. Controllo Sintassi PHP
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_<nome progetto>/laravel
 =======
 cd /var/www/html/_bases/base_saluteora/laravel
 >>>>>>> d2ea6157 (.)
+=======
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+>>>>>>> 2d0e994e (.)
 php -l Modules/Notify/lang/it/send_email.php
 
 # Output: No syntax errors detected
@@ -281,23 +285,31 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ### Documentazione Correlata
 - [Regole Traduzioni Laraxot](../../../docs/translation-standards.md)
+<<<<<<< HEAD
 - [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
 <<<<<<< HEAD
 =======
 =======
 - [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+=======
+- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+>>>>>>> 2d0e994e (.)
 - [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
 >>>>>>> d2ea6157 (.)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
+<<<<<<< HEAD
 - `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
 <<<<<<< HEAD
 =======
 =======
 - `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
 >>>>>>> d2ea6157 (.)
+=======
+- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+>>>>>>> 2d0e994e (.)
 
 ## 📝 Note di Implementazione
 

@@ -66,10 +66,14 @@ I template di [mailpace/templates](https://github.com/mailpace/templates) integr
 ### Directory `mail-layouts`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 La directory `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/` contiene:
 =======
 La directory `/var/www/html/saluteora/laravel/Modules/Notify/resources/mail-layouts/` contiene:
 >>>>>>> d2ea6157 (.)
+=======
+La directory `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/` contiene:
+>>>>>>> 2d0e994e (.)
 
 - **default.html**: Template base per la maggior parte delle comunicazioni
 - **main.html**: Alternativa minimalista

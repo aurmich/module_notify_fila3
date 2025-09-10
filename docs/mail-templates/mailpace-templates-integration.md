@@ -33,10 +33,14 @@ MailPace offre i seguenti template transazionali:
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/
 =======
 /var/www/html/saluteora/laravel/Modules/Notify/resources/mail-layouts/
 >>>>>>> d2ea6157 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/
+>>>>>>> 2d0e994e (.)
 ├── default.html       # Layout base per la maggior parte delle email
 ├── main.html          # Alternativa semplificata
 ├── marketing.html     # Layout ottimizzato per email marketing

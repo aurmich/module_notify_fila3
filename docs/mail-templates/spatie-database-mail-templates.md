@@ -24,10 +24,14 @@ In questo progetto, i layout HTML delle email sono memorizzati in:
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/
 =======
 /var/www/html/base_saluteora/laravel/Modules/Notify/resources/mail-layouts/
 >>>>>>> d2ea6157 (.)
+=======
+/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/
+>>>>>>> 2d0e994e (.)
 ```
 
 Questi layout forniscono la struttura base per tutte le email, con un placeholder `{{{ body }}}` dove verrà inserito il contenuto specifico del template.

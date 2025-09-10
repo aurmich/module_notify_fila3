@@ -8,6 +8,7 @@
 
 2. **Struttura Directory Principale**
 <<<<<<< HEAD
+<<<<<<< HEAD
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/` (CORRETTO)
    - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/` (ERRATO)
 
@@ -21,15 +22,24 @@
 =======
    - `/var/www/html/saluteora/laravel/Modules/Notify/app/` (CORRETTO)
    - `/var/www/html/saluteora/laravel/Modules/Notify/App/` (ERRATO)
+=======
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/` (CORRETTO)
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/` (ERRATO)
+>>>>>>> 2d0e994e (.)
 
 3. **Struttura Directory Actions**
-   - `/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/` (CORRETTO)
-   - `/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/` (ERRATO)
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/` (CORRETTO)
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/` (ERRATO)
 
 4. **Struttura Directory Datas**
+<<<<<<< HEAD
    - `/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/` (CORRETTO)
    - `/var/www/html/saluteora/laravel/Modules/Notify/App/Datas/` (ERRATO)
 >>>>>>> d2ea6157 (.)
+=======
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/` (CORRETTO)
+   - `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Datas/` (ERRATO)
+>>>>>>> 2d0e994e (.)
 
 ## Namespace vs Directory
 
@@ -44,12 +54,17 @@
 
 1. **Mai utilizzare la "A" maiuscola nel percorso fisico della directory app**
 <<<<<<< HEAD
+<<<<<<< HEAD
    - ✅ CORRETTO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/`
    - ❌ ERRATO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/`
 =======
    - ✅ CORRETTO: `/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/`
    - ❌ ERRATO: `/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/`
 >>>>>>> d2ea6157 (.)
+=======
+   - ✅ CORRETTO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/`
+   - ❌ ERRATO: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/`
+>>>>>>> 2d0e994e (.)
 
 2. **Mai aggiungere "App" nel namespace se non definito nel composer.json del modulo**
    - ✅ CORRETTO: `namespace Modules\Notify\Actions;`

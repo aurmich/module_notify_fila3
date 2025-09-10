@@ -253,10 +253,14 @@ return [
 ### 1. Controllo Sintassi PHP
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 =======
 cd /var/www/html/_bases/base_saluteora/laravel
 >>>>>>> d2ea6157 (.)
+=======
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+>>>>>>> 2d0e994e (.)
 php -l Modules/Notify/lang/it/send_email.php
 
 # Output: No syntax errors detected

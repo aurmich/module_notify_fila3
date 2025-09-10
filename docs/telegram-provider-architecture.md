@@ -21,10 +21,14 @@ L'architettura dei provider Telegram segue gli stessi principi dei provider SMS,
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/
 =======
 /var/www/html/saluteora/laravel/Modules/Notify/
 >>>>>>> d2ea6157 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/
+>>>>>>> 2d0e994e (.)
 ├── app/
 │   ├── Actions/
 │   │   └── Telegram/

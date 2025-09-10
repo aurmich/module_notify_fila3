@@ -11,19 +11,27 @@ Le interfacce sono organizzate in due livelli:
 1. **Interfacce Generiche**: Posizionate direttamente nella directory `app/Contracts/`
    ```
 <<<<<<< HEAD
+<<<<<<< HEAD
    /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
 =======
    /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
 >>>>>>> d2ea6157 (.)
+=======
+   /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
+>>>>>>> 2d0e994e (.)
    ```
 
 2. **Interfacce Specifiche per Canale**: Posizionate in sottodirectory dedicate
    ```
 <<<<<<< HEAD
+<<<<<<< HEAD
    /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 =======
    /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 >>>>>>> d2ea6157 (.)
+=======
+   /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+>>>>>>> 2d0e994e (.)
    ```
 
 ### Convenzioni di Naming
