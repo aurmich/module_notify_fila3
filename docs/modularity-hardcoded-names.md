@@ -19,13 +19,8 @@ Durante l'audit del modulo `Notify`, è stato identificato un **errore critico d
 'content' => 'Grazie per esserti registrato su ',
 'clinic_name' => 'Studio Dentistico ',
 'webhook' => 'https://api.saluteora.com/webhooks',
-<<<<<<< HEAD
-'author' => 'Team SaluteOra',
-'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/',
-=======
-'author' => 'Team ',
-'path' => '/var/www/html/saluteora/public_html/images/',
->>>>>>> e31bed0 (.)
+'author' => 'Team PTVX',
+'path' => '/var/www/html/_bases/base_ptvx_fila3_mono/public_html/images/',
 ```
 
 ## Soluzioni Implementate
