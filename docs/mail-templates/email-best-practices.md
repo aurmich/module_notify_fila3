@@ -15,7 +15,7 @@ Questo documento descrive le best practices per la creazione e gestione di email
 
 ### 2. Branding Coerente
 
-- **Elementi visuali**: Utilizzare logo, colori e font SaluteOra
+- **Elementi visuali**: Utilizzare logo, colori e font 
 - **Voce e tono**: Mantenere un tono professionale ma amichevole
 - **Firma coerente**: Includere sempre lo stesso formato di firma e disclaimer
 
@@ -70,7 +70,7 @@ La directory `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/N
 
 ### Integrazione con Spatie Mail Templates
 
-Seguendo le regole di progetto SaluteOra, ricordare di:
+Seguendo le regole di progetto , ricordare di:
 
 - NON creare controller personalizzati per gestire l'invio di email
 - Utilizzare il package `spatie/laravel-mail-templates`

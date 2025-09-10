@@ -1,6 +1,6 @@
-# Architettura Telegram Provider per SaluteOra
+# Architettura Telegram Provider per 
 
-Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di SaluteOra, mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di , mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
 
 ## Principi Architetturali Fondamentali
 

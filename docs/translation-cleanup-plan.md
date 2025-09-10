@@ -1,6 +1,6 @@
 # Piano di Pulizia e Standardizzazione delle Traduzioni
 
-Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di SaluteOra.
+Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di .
 
 ## Analisi della Situazione Attuale
 

@@ -1,8 +1,8 @@
-# Convenzioni dei Path in Laravel e SaluteOra
+# Convenzioni dei Path in Laravel e 
 
 ## Regole Fondamentali per i Path di Cartelle
 
-In Laravel e SaluteOra, i nomi delle cartelle principali (come definite nella struttura standard di Laravel) **DEVONO** rispettare il caso specifico definito dalle convenzioni di Laravel.
+In Laravel e , i nomi delle cartelle principali (come definite nella struttura standard di Laravel) **DEVONO** rispettare il caso specifico definito dalle convenzioni di Laravel.
 
 ## Cartelle Standard di Laravel e loro Casing Corretto
 

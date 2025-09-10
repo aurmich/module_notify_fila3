@@ -2,7 +2,7 @@
 
 ## Procedura Sistematica per la Standardizzazione
 
-Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di SaluteOra.
+Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di .
 
 ## Passo 1: Analisi del File Esistente
 

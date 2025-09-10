@@ -1,4 +1,4 @@
-# Errori Comuni da Evitare nelle Implementazioni di Moduli SaluteOra
+# Errori Comuni da Evitare nelle Implementazioni di Moduli 
 
 ## Errori di Struttura Directory e Namespace
 

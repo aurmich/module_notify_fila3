@@ -22,7 +22,7 @@ interface TelegramProviderActionInterface
 
 1. **Coerenza con Laravel**: Il framework Laravel utilizza il suffisso `Contract` per le sue interfacce (es. `Illuminate\Contracts\Auth\Authenticatable`).
 2. **Chiarezza semantica**: Il termine "Contract" esprime meglio il concetto di un "contratto" che le classi implementatrici devono rispettare.
-3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli SaluteOra.
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli .
 4. **Integrazione con tooling**: Gli strumenti di analisi statica e generazione di codice sono configurati per questa convenzione.
 
 ## Implementazione
@@ -49,5 +49,10 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techpl
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
+<<<<<<< HEAD
 - [SaluteOra Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/app/Contracts/)
+=======
+- [ Code Quality Guidelines](/var/www/html/saluteora/laravel/docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/saluteora/laravel/Modules/Xot/app/Contracts/)
+>>>>>>> e31bed0 (.)

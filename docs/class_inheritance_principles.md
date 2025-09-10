@@ -1,4 +1,4 @@
-# Principi di Ereditarietà nelle Classi SaluteOra
+# Principi di Ereditarietà nelle Classi 
 
 ## Regola Fondamentale: No Duplicate Declarations
 

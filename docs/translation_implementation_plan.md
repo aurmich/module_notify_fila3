@@ -1,6 +1,6 @@
 # Piano di Implementazione per la Standardizzazione delle Traduzioni
 
-Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di SaluteOra.
+Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di .
 
 ## Analisi della Situazione Attuale
 

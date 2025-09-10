@@ -19,12 +19,12 @@
 #### 3. Testing Non Riutilizzabile
 - Test che utilizzano `User::factory()` invece di `XotData::make()->getUserClass()`
 - Configurazioni database hardcoded
-- Riferimenti diretti a modelli SaluteOra
+- Riferimenti diretti a modelli 
 
 ## ✅ OTTIMIZZAZIONI IMPLEMENTATE
 
 ### Riusabilità
-1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "SaluteOra"
+1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding ""
 2. **NotifyThemeableFactory.php**: Implementato `getProjectNamespace()` dinamico
 3. **File di traduzione**: Aggiornati placeholder con `{{app_name}}`
 4. **Documentazione base**: Creata guida riusabilità

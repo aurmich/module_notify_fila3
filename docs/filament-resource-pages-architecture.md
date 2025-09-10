@@ -113,5 +113,5 @@ find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules -type f -n
 ## Riferimenti
 
 - [Filament Resources Documentation](https://filamentphp.com/docs/3.x/panels/resources/getting-started)
-- [SaluteOra XotBase Architecture](./FILAMENT_XOT_ARCHITECTURE.md)
+- [ XotBase Architecture](./FILAMENT_XOT_ARCHITECTURE.md)
 - [Pattern Architetturali in Laravel](https://laravel.com/docs/architecture)

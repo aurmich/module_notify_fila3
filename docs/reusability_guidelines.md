@@ -9,7 +9,7 @@ Il modulo Notify è progettato per essere **completamente riutilizzabile** tra d
 ❌ **MAI usare stringhe hardcoded di progetti specifici:**
 ```php
 // ERRORE: Hardcoding del nome progetto
-$user = \Modules\SaluteOra\Models\User::factory()->create();
+$user = \Modules\<nome modulo>\Models\User::factory()->create();
 'database' => 'saluteora_test',
 $this->app['config']->set('database.connections.saluteora_test', [
 ```
@@ -28,7 +28,7 @@ Il modulo Notify deve utilizzare `XotData::make()->getUserClass()` per ottenere 
 ```php
 use Modules\Xot\Datas\XotData;
 
-// Invece di: \Modules\SaluteOra\Models\User::class
+// Invece di: \Modules\<nome modulo>\Models\User::class
 $userClass = XotData::make()->getUserClass();
 $user = $userClass::factory()->create();
 ```
@@ -58,8 +58,8 @@ $userModel = "{$projectNamespace}\\Models\\User";
 ### ❌ Riferimenti Diretti a Progetti
 ```php
 // VIETATO: Riferimenti hardcoded
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
+use Modules\<nome modulo>\Models\User;
+use Modules\<nome modulo>\Models\Patient;
 'database' => 'saluteora_test'
 $this->artisan('migrate', ['--database' => 'saluteora_test']);
 ```
@@ -67,8 +67,8 @@ $this->artisan('migrate', ['--database' => 'saluteora_test']);
 ### ❌ Configurazioni Project-Specific
 ```php
 // VIETATO: Configurazioni specifiche del progetto
-'app_name' => 'SaluteOra',
-'tenant_model' => \Modules\SaluteOra\Models\Studio::class,
+'app_name' => '',
+'tenant_model' => \Modules\<nome modulo>\Models\Studio::class,
 ```
 
 ## Pattern Corretti per Riusabilità
