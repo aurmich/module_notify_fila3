@@ -15,6 +15,7 @@ return [
                 'placeholder' => 'Inserisci il nome del template',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 'tooltip' => 'Nome identificativo del template'
 =======
@@ -23,10 +24,14 @@ return [
 =======
                 'tooltip' => 'Nome identificativo del template'                'tooltip' => 'Nome identificativo del template',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Nome identificativo del template',
+>>>>>>> 1c886e9d (.)
             ],
             'code' => [
                 'label' => 'Codice',
                 'placeholder' => 'Inserisci il codice del template',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,10 +42,14 @@ return [
 =======
                 'tooltip' => 'Codice univoco del template'                'tooltip' => 'Codice univoco del template',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Codice univoco del template',
+>>>>>>> 1c886e9d (.)
             ],
             'description' => [
                 'label' => 'Descrizione',
                 'placeholder' => 'Inserisci una descrizione',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,10 +60,14 @@ return [
 =======
                 'tooltip' => 'Descrizione dettagliata del template'                'tooltip' => 'Descrizione dettagliata del template',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Descrizione dettagliata del template',
+>>>>>>> 1c886e9d (.)
             ],
             'subject' => [
                 'label' => 'Oggetto',
                 'placeholder' => 'Inserisci l\'oggetto dell\'email',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -65,10 +78,14 @@ return [
 =======
                 'tooltip' => 'Oggetto dell\'email'                'tooltip' => 'Oggetto dell\'email',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Oggetto dell\'email',
+>>>>>>> 1c886e9d (.)
             ],
             'body_html' => [
                 'label' => 'Corpo HTML',
                 'placeholder' => 'Inserisci il contenuto HTML',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -79,10 +96,14 @@ return [
 =======
                 'tooltip' => 'Contenuto HTML dell\'email'                'tooltip' => 'Contenuto HTML dell\'email',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Contenuto HTML dell\'email',
+>>>>>>> 1c886e9d (.)
             ],
             'body_text' => [
                 'label' => 'Corpo Testo',
                 'placeholder' => 'Inserisci il contenuto testuale',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -93,6 +114,9 @@ return [
 =======
                 'tooltip' => 'Contenuto testuale dell\'email'                'tooltip' => 'Contenuto testuale dell\'email',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Contenuto testuale dell\'email',
+>>>>>>> 1c886e9d (.)
             ],
             'channels' => [
                 'label' => 'Canali',
@@ -107,6 +131,7 @@ return [
 =======
                     'telegram' => ['label' => 'Telegram']
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ]
 =======
 >>>>>>> d2ea6157 (.)
@@ -114,11 +139,14 @@ return [
 =======
                 ]                    'telegram' => ['label' => 'Telegram'],
 >>>>>>> 2d0e994e (.)
+=======
+>>>>>>> 1c886e9d (.)
                 ],
             ],
             'variables' => [
                 'label' => 'Variabili',
                 'placeholder' => 'Aggiungi variabili',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,10 +157,14 @@ return [
 =======
                 'tooltip' => 'Variabili disponibili nel template'                'tooltip' => 'Variabili disponibili nel template',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Variabili disponibili nel template',
+>>>>>>> 1c886e9d (.)
             ],
             'conditions' => [
                 'label' => 'Condizioni',
                 'placeholder' => 'Aggiungi condizioni',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -143,10 +175,14 @@ return [
 =======
                 'tooltip' => 'Condizioni di invio'                'tooltip' => 'Condizioni di invio',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Condizioni di invio',
+>>>>>>> 1c886e9d (.)
             ],
             'preview_data' => [
                 'label' => 'Dati Anteprima',
                 'placeholder' => 'Aggiungi dati per l\'anteprima',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -157,6 +193,9 @@ return [
 =======
                 'tooltip' => 'Dati per testare il template'                'tooltip' => 'Dati per testare il template',
 >>>>>>> 2d0e994e (.)
+=======
+                'tooltip' => 'Dati per testare il template',
+>>>>>>> 1c886e9d (.)
             ],
             'category' => [
                 'label' => 'Categoria',
@@ -167,6 +206,7 @@ return [
             ],
             'is_active' => [
                 'label' => 'Attivo',
+<<<<<<< HEAD
                 'tooltip' => 'Stato di attivazione del template'
 <<<<<<< HEAD
             ]
@@ -179,6 +219,8 @@ return [
             ],
             'is_active' => [
                 'label' => 'Attivo',
+=======
+>>>>>>> 1c886e9d (.)
                 'tooltip' => 'Stato di attivazione del template',
             ],
         ],
@@ -192,6 +234,7 @@ return [
 =======
                     'notification' => ['label' => 'Notifica']
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ]
 =======
 >>>>>>> d2ea6157 (.)
@@ -199,6 +242,8 @@ return [
 =======
                 ]                    'notification' => ['label' => 'Notifica'],
 >>>>>>> 2d0e994e (.)
+=======
+>>>>>>> 1c886e9d (.)
                 ],
             ],
             'is_active' => [
@@ -208,6 +253,7 @@ return [
 <<<<<<< HEAD
 =======
                     'inactive' => ['label' => 'Inattivo']
+<<<<<<< HEAD
                 ]
 <<<<<<< HEAD
             ]
@@ -217,6 +263,8 @@ return [
 =======
             ]                    'inactive' => ['label' => 'Inattivo'],
 >>>>>>> 2d0e994e (.)
+=======
+>>>>>>> 1c886e9d (.)
                 ],
             ],
         ],
@@ -224,6 +272,7 @@ return [
             'edit' => [
                 'label' => 'Modifica',
                 'icon' => 'heroicon-o-pencil',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -234,10 +283,14 @@ return [
 =======
                 'color' => 'primary'                'color' => 'primary',
 >>>>>>> 2d0e994e (.)
+=======
+                'color' => 'primary',
+>>>>>>> 1c886e9d (.)
             ],
             'delete' => [
                 'label' => 'Elimina',
                 'icon' => 'heroicon-o-trash',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,10 +301,14 @@ return [
 =======
                 'color' => 'danger'                'color' => 'danger',
 >>>>>>> 2d0e994e (.)
+=======
+                'color' => 'danger',
+>>>>>>> 1c886e9d (.)
             ],
             'preview' => [
                 'label' => 'Anteprima',
                 'icon' => 'heroicon-o-eye',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 'color' => 'success'
@@ -263,6 +320,9 @@ return [
 =======
             ]                'color' => 'success',
 >>>>>>> 2d0e994e (.)
+=======
+                'color' => 'success',
+>>>>>>> 1c886e9d (.)
             ],
         ],
         'preview' => [
@@ -284,6 +344,7 @@ return [
 ];
 =======
 ];
+<<<<<<< HEAD
                     'color' => 'secondary'
                 ]
             ]
@@ -296,3 +357,5 @@ return [
 =======
 ]; 
 >>>>>>> 2d0e994e (.)
+=======
+>>>>>>> 1c886e9d (.)
