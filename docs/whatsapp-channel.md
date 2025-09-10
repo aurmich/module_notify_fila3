@@ -327,15 +327,22 @@ class WhatsAppTest extends TestCase
 
 - [Twilio WhatsApp API](https://www.twilio.com/whatsapp)
 - [Vonage WhatsApp API](https://developer.vonage.com/messaging/whatsapp/overview)
+<<<<<<< HEAD
 - [Meta WhatsApp Business API](https://developers.facebook.com/project_docs/whatsapp/cloud-api)
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
 - [Laravel Queues](https://laravel.com/project_docs/queues)
 - [Laravel Testing](https://laravel.com/project_docs/testing)
 - [Laravel Logging](https://laravel.com/project_docs/logging)
 - [Laravel Cache](https://laravel.com/project_docs/cache) 
+=======
+>>>>>>> d2ea6157 (.)
 - [Meta WhatsApp Business API](https://developers.facebook.com/docs/whatsapp/cloud-api)
 - [Laravel Notifications](https://laravel.com/docs/notifications)
 - [Laravel Queues](https://laravel.com/docs/queues)
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [Laravel Logging](https://laravel.com/docs/logging)
+<<<<<<< HEAD
 - [Laravel Cache](https://laravel.com/docs/cache) 
+=======
+- [Laravel Cache](https://laravel.com/docs/cache) 
+>>>>>>> d2ea6157 (.)

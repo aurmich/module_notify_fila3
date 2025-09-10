@@ -3,6 +3,10 @@
 return [
     'welcome' => [
         'title' => 'Welcome to '.(is_string(config('app.name')) ? config('app.name') : ''),
+<<<<<<< HEAD
+=======
+        'title' => 'Welcome to '.(is_string(config('app.name')) ? config('app.name') : ''),
+>>>>>>> d2ea6157 (.)
         'greeting' => 'Hello :name,',
         'description' => 'Thank you for joining us. We\'re excited to have you on board!',
         'action' => 'Get Started',

@@ -188,6 +188,10 @@ $users->each(function ($user) {
 ### 2. Gestione Worker
 
 ```bash
+<<<<<<< HEAD
+=======
+
+>>>>>>> d2ea6157 (.)
 # Avvia worker dedicato
 php artisan queue:work --queue=emails
 
@@ -290,10 +294,18 @@ $this->call('queue:prune-batches', [
 ### 1. Orizzontale
 
 ```bash
+<<<<<<< HEAD
 # Supervisor config
 [program:<nome progetto>-worker]
 process_name=%(program_name)s_%(process_num)02d
 command=php /var/www/html/_bases/base_techplanner_fila3_mono/laravel/artisan queue:work redis --queue=emails
+=======
+
+# Supervisor config
+[program:<nome progetto>-worker]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/html/base_<nome progetto>/artisan queue:work redis --queue=emails
+>>>>>>> d2ea6157 (.)
 autostart=true
 autorestart=true
 numprocs=4
@@ -375,6 +387,10 @@ if ($failedJobs > $threshold) {
 ### 1. Pulizia
 
 ```bash
+<<<<<<< HEAD
+=======
+
+>>>>>>> d2ea6157 (.)
 # Pulizia job vecchi
 php artisan queue:prune-failed --hours=168
 php artisan queue:prune-batches --hours=24
@@ -409,4 +425,7 @@ php artisan queue:restart
 ## Vedi Anche
 - [Laravel Queues](https://laravel.com/docs/queues)
 - [Horizon Documentation](https://laravel.com/docs/horizon)
+<<<<<<< HEAD
 - [Redis Documentation](https://redis.io/documentation)
+=======
+>>>>>>> d2ea6157 (.)

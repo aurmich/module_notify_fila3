@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Struttura di Configurazione nei Moduli 
+=======
+# Struttura di Configurazione nei Moduli SaluteOra
+>>>>>>> d2ea6157 (.)
 
 ## Principi di Configurazione
 

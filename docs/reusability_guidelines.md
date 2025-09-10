@@ -9,9 +9,15 @@ Il modulo Notify è progettato per essere **completamente riutilizzabile** tra d
 ❌ **MAI usare stringhe hardcoded di progetti specifici:**
 ```php
 // ERRORE: Hardcoding del nome progetto
+<<<<<<< HEAD
 $user = \Modules\<nome progetto>\Models\User::factory()->create();
 'database' => '<nome progetto>_test',
 $this->app['config']->set('database.connections.<nome progetto>_test', [
+=======
+$user = \Modules\SaluteOra\Models\User::factory()->create();
+'database' => 'saluteora_test',
+$this->app['config']->set('database.connections.saluteora_test', [
+>>>>>>> d2ea6157 (.)
 ```
 
 ✅ **SEMPRE utilizzare pattern riutilizzabili:**
@@ -28,7 +34,11 @@ Il modulo Notify deve utilizzare `XotData::make()->getUserClass()` per ottenere 
 ```php
 use Modules\Xot\Datas\XotData;
 
+<<<<<<< HEAD
 // Invece di: \Modules\<nome progetto>\Models\User::class
+=======
+// Invece di: \Modules\SaluteOra\Models\User::class
+>>>>>>> d2ea6157 (.)
 $userClass = XotData::make()->getUserClass();
 $user = $userClass::factory()->create();
 ```
@@ -37,7 +47,11 @@ $user = $userClass::factory()->create();
 Per i test che richiedono configurazioni database specifiche:
 
 ```php
+<<<<<<< HEAD
 // Invece di: '<nome progetto>_test'
+=======
+// Invece di: 'saluteora_test'
+>>>>>>> d2ea6157 (.)
 $testDatabase = config('database.default') . '_test';
 $this->app['config']->set("database.connections.{$testDatabase}", [
     // configurazione
@@ -58,17 +72,29 @@ $userModel = "{$projectNamespace}\\Models\\User";
 ### ❌ Riferimenti Diretti a Progetti
 ```php
 // VIETATO: Riferimenti hardcoded
+<<<<<<< HEAD
 use Modules\<nome progetto>\Models\User;
 use Modules\<nome progetto>\Models\Patient;
 'database' => '<nome progetto>_test'
 $this->artisan('migrate', ['--database' => '<nome progetto>_test']);
+=======
+use Modules\SaluteOra\Models\User;
+use Modules\SaluteOra\Models\Patient;
+'database' => 'saluteora_test'
+$this->artisan('migrate', ['--database' => 'saluteora_test']);
+>>>>>>> d2ea6157 (.)
 ```
 
 ### ❌ Configurazioni Project-Specific
 ```php
 // VIETATO: Configurazioni specifiche del progetto
+<<<<<<< HEAD
 'app_name' => '<nome progetto>',
 'tenant_model' => \Modules\<nome progetto>\Models\Studio::class,
+=======
+'app_name' => 'SaluteOra',
+'tenant_model' => \Modules\SaluteOra\Models\Studio::class,
+>>>>>>> d2ea6157 (.)
 ```
 
 ## Pattern Corretti per Riusabilità
@@ -116,7 +142,11 @@ protected function createTestUser(): mixed
 
 Prima di committare modifiche al modulo Notify:
 
+<<<<<<< HEAD
 - [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
+=======
+- [ ] Nessun riferimento hardcoded a "saluteora" o altri nomi di progetti
+>>>>>>> d2ea6157 (.)
 - [ ] Utilizzo di `XotData::make()->getUserClass()` per la classe User
 - [ ] Configurazioni database dinamiche nei test
 - [ ] Nessun import diretto di modelli da altri progetti
@@ -130,13 +160,21 @@ Per verificare che il modulo sia veramente riutilizzabile:
 
 ```bash
 # Cerca hardcoding di nomi progetti
+<<<<<<< HEAD
 grep -r -i "<nome progetto>\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
+=======
+grep -r -i "saluteora\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
+>>>>>>> d2ea6157 (.)
 
 # Cerca import diretti da altri moduli
 grep -r "use Modules\\\\[^N][^o][^t][^i][^f][^y]" Modules/Notify/
 
 # Cerca configurazioni hardcoded
+<<<<<<< HEAD
 grep -r "database.*<nome progetto>\|app.*<nome progetto>" Modules/Notify/
+=======
+grep -r "database.*saluteora\|app.*saluteora" Modules/Notify/
+>>>>>>> d2ea6157 (.)
 ```
 
 ## Benefici della Riusabilità

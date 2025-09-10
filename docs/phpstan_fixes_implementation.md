@@ -111,7 +111,11 @@ protected function getProjectNamespace(): string
 ### Validazione
 ```bash
 # Test PHPStan
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_<nome progetto>/laravel
+=======
+cd /var/www/html/_bases/base_saluteora/laravel
+>>>>>>> d2ea6157 (.)
 ./vendor/bin/phpstan analyze Modules/Notify --level=9
 
 # Test funzionalità

@@ -19,7 +19,11 @@ Questo documento tiene traccia dello stato di implementazione delle email utiliz
 
 ### SendSpatieEmail.php
 
+<<<<<<< HEAD
 Nel file `/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendSpatieEmail.php` è stato identificato un errore di sintassi:
+=======
+Nel file `/var/www/html/base_saluteora/laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendSpatieEmail.php` è stato identificato un errore di sintassi:
+>>>>>>> d2ea6157 (.)
 
 ```php
 // Errore di sintassi (manca ->)
@@ -55,10 +59,17 @@ Potrebbero esserci altri modelli nel modulo Notify che utilizzano ancora la sint
 
 ## Risorse di Riferimento
 
+<<<<<<< HEAD
 1. [Documentazione Laravel Translatable](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/index.md)
 2. [Gestione Traduzioni Mancanti](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/gestione-traduzioni-mancanti.md)
 3. [Implementazione nel Progetto](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/implementazione-nel-progetto.md)
 4. [Best Practices](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/best-practices.md)
+=======
+1. [Documentazione Laravel Translatable](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/index.md)
+2. [Gestione Traduzioni Mancanti](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/gestione-traduzioni-mancanti.md)
+3. [Implementazione nel Progetto](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/implementazione-nel-progetto.md)
+4. [Best Practices](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/best-practices.md)
+>>>>>>> d2ea6157 (.)
 
 ## Timeline
 

@@ -183,6 +183,11 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [TransTrait](../../Xot/app/Traits/TransTrait.php)
 - [Configurazione SMS](../config/sms.php)
 - [Documentazione Traduzioni](../../Lang/docs/)
+<<<<<<< HEAD
+=======
+=======
+- [Documentazione Traduzioni](../../Lang/project_docs/)
+>>>>>>> d2ea6157 (.)
 
 ---
 
