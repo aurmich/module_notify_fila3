@@ -422,12 +422,6 @@ class TestData
 - [Email Plugins Analysis](email-plugins-analysis.md)
 
 ## Vedi Anche
-<<<<<<< HEAD
-- [Laravel Testing](https://laravel.com/docs/testing)
-- [PHPUnit](https://phpunit.de/)
-- [Laravel Dusk](https://laravel.com/docs/dusk) 
-=======
 - [Laravel Testing](https://laravel.com/project_docs/testing)
 - [PHPUnit](https://phpunit.de/)
 - [Laravel Dusk](https://laravel.com/project_docs/dusk) 
->>>>>>> f05735b (.)

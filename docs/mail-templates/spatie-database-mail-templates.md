@@ -23,11 +23,7 @@ Il pacchetto funziona con i seguenti componenti principali:
 In questo progetto, i layout HTML delle email sono memorizzati in:
 
 ```
-<<<<<<< HEAD
-/var/www/html/base_saluteora/laravel/Modules/Notify/resources/mail-layouts/
-=======
 /var/www/html/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/
->>>>>>> f05735b (.)
 ```
 
 Questi layout forniscono la struttura base per tutte le email, con un placeholder `{{{ body }}}` dove verrà inserito il contenuto specifico del template.
@@ -91,9 +87,9 @@ use Modules\Notify\Mail\WelcomeMail;
 
 MailTemplate::create([
     'mailable' => WelcomeMail::class,
-    'subject' => 'Benvenuto su SaluteOra, {{ name }}',
-    'html_template' => '<h1>Ciao, {{ name }}!</h1><p>Benvenuto su SaluteOra. Clicca <a href="{{ activationUrl }}">qui</a> per attivare il tuo account.</p>',
-    'text_template' => 'Ciao, {{ name }}! Benvenuto su SaluteOra. Visita {{ activationUrl }} per attivare il tuo account.'
+    'subject' => 'Benvenuto su <nome progetto>, {{ name }}',
+    'html_template' => '<h1>Ciao, {{ name }}!</h1><p>Benvenuto su <nome progetto>. Clicca <a href="{{ activationUrl }}">qui</a> per attivare il tuo account.</p>',
+    'text_template' => 'Ciao, {{ name }}! Benvenuto su <nome progetto>. Visita {{ activationUrl }} per attivare il tuo account.'
 ]);
 ```
 
@@ -126,7 +122,7 @@ Un layout HTML contiene l'intera struttura della mail, con un segnaposto `{{{ bo
 <html>
 <head>
     <meta charset="utf-8">
-    <title>SaluteOra</title>
+    <title><nome progetto></title>
     <style>
         /* Stili CSS inline */
         body { 
@@ -156,7 +152,7 @@ Un layout HTML contiene l'intera struttura della mail, con un segnaposto `{{{ bo
 </head>
 <body>
     <div class="header">
-        <h1>SaluteOra</h1>
+        <h1><nome progetto></h1>
     </div>
     
     <div class="content">
@@ -164,7 +160,7 @@ Un layout HTML contiene l'intera struttura della mail, con un segnaposto `{{{ bo
     </div>
     
     <div class="footer">
-        <p>© 2025 SaluteOra - Tutti i diritti riservati</p>
+        <p>© 2025 <nome progetto> - Tutti i diritti riservati</p>
         <p>Se hai ricevuto questa email per errore, per favore ignorala o contattaci.</p>
     </div>
 </body>
@@ -176,7 +172,7 @@ Un layout HTML contiene l'intera struttura della mail, con un segnaposto `{{{ bo
 Il template specifico dell'email (memorizzato nel campo `html_template` del modello `MailTemplate`):
 
 ```html
-<h2>Benvenuto su SaluteOra, {{ name }}!</h2>
+<h2>Benvenuto su <nome progetto>, {{ name }}!</h2>
 
 <p>Siamo felici di darti il benvenuto sulla nostra piattaforma.</p>
 
@@ -191,7 +187,7 @@ Il template specifico dell'email (memorizzato nel campo `html_template` del mode
 <p>Se il pulsante non funziona, copia e incolla questo link nel tuo browser:</p>
 <p>{{ activationUrl }}</p>
 
-<p>Grazie,<br>Il team di SaluteOra</p>
+<p>Grazie,<br>Il team di <nome progetto></p>
 ```
 
 ## Best Practices

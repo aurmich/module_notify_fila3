@@ -7,33 +7,19 @@
 ### ✅ Path Corretti
 
 ```
-<<<<<<< HEAD
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS
-/var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers
-/var/www/html/saluteora/laravel/Modules/Notify/app/Providers
-/var/www/html/saluteora/laravel/Modules/Notify/app/Models
-/var/www/html/saluteora/laravel/Modules/Notify/app/Filament
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Models
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Filament
->>>>>>> f05735b (.)
 ```
 
 ### ❌ Path Errati
 
 ```
-<<<<<<< HEAD
-/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/SMS
-/var/www/html/saluteora/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/saluteora/laravel/Modules/Notify/App/Providers
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/SMS
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Http/Controllers
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Providers
->>>>>>> f05735b (.)
 ```
 
 ## Struttura Corretta dei Namespace
@@ -68,11 +54,7 @@ namespace Modules\Notify\App\Datas;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
->>>>>>> f05735b (.)
 ```
 
 **Namespace corretto:**
@@ -84,11 +66,7 @@ namespace Modules\Notify\Actions\SMS;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-/var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
->>>>>>> f05735b (.)
 ```
 
 **Namespace corretto:**
@@ -100,11 +78,7 @@ namespace Modules\Notify\Http\Controllers;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-/var/www/html/saluteora/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
->>>>>>> f05735b (.)
 ```
 
 **Namespace corretto:**
@@ -116,11 +90,7 @@ namespace Modules\Notify\Providers;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
->>>>>>> f05735b (.)
 ```
 
 **Namespace corretto:**
@@ -137,11 +107,7 @@ namespace Modules\Notify\App\Datas;
 
 ## Motivo di questa Regola
 
-<<<<<<< HEAD
-Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto SaluteOra.
-=======
 Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto .
->>>>>>> f05735b (.)
 
 ## Esempio per Datas
 
@@ -173,11 +139,7 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-/var/www/html/saluteora/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
-=======
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
->>>>>>> f05735b (.)
 ```
 
 **Namespace corretto:**

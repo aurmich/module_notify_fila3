@@ -57,7 +57,7 @@ $this->whatsappData = new WhatsAppData(
 - **Motivazione**: Gestione sicura della configurazione dell'app
 
 ```php
-'title' => 'Welcome to ' . (is_string(config('app.name')) ? config('app.name') : 'SaluteOra'),
+'title' => 'Welcome to ' . (is_string(config('app.name')) ? config('app.name') : '<nome progetto>'),
 ```
 
 #### Pattern di Correzione Utilizzati

@@ -5,7 +5,7 @@
 ### ❌ PROBLEMI CRITICI IDENTIFICATI
 
 #### 1. Riusabilità Compromessa
-- **336+ occorrenze hardcoded** di "saluteora" in test e documentazione
+- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
 - **Import diretti** da moduli project-specific
 - **Configurazioni database** hardcoded nei test
 - **Email domains** hardcoded nei test
@@ -38,7 +38,7 @@
 // Pattern da applicare a TUTTI i test
 // ❌ PRIMA
 $user = User::factory()->create();
-'database' => 'saluteora_test'
+'database' => '<nome progetto>_test'
 
 // ✅ DOPO
 $userClass = XotData::make()->getUserClass();

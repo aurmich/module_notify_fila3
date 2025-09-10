@@ -1,4 +1,4 @@
-# Principi di Ereditarietà nelle Classi SaluteOra
+# Principi di Ereditarietà nelle Classi <nome progetto>
 
 ## Regola Fondamentale: No Duplicate Declarations
 
@@ -74,7 +74,7 @@ Per identificare dichiarazioni duplicate, usare:
 ```bash
 
 # Trova classi che estendono XotBasePage e implementano HasForms
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/saluteora/laravel/Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/<nome progetto>/laravel/Modules/
 ```
 
 ## Riferimenti
