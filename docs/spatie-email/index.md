@@ -10,9 +10,9 @@ Questa directory contiene la documentazione relativa all'implementazione delle e
 
 ## Riferimenti Esterni
 
-- [Documentazione Laravel Translatable](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/index.md)
-- [Best Practices per Laravel Translatable](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/best-practices.md)
+- [Documentazione Laravel Translatable](../Lang/docs/translatable/index.md)
+- [Best Practices per Laravel Translatable](../Lang/docs/translatable/best-practices.md)
 - [Documentazione Laravel Translatable](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/index.md)
 - [Best Practices per Laravel Translatable](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/best-practices.md)
-- [Documentazione Laravel Translatable](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/index.md)
-- [Best Practices per Laravel Translatable](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/best-practices.md)
+- [Documentazione Laravel Translatable](../Lang/docs/translatable/index.md)
+- [Best Practices per Laravel Translatable](../Lang/docs/translatable/best-practices.md)

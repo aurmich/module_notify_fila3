@@ -57,10 +57,10 @@ Potrebbero esserci altri modelli nel modulo Notify che utilizzano ancora la sint
 
 ## Risorse di Riferimento
 
-1. [Documentazione Laravel Translatable](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/index.md)
-2. [Gestione Traduzioni Mancanti](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/gestione-traduzioni-mancanti.md)
-3. [Implementazione nel Progetto](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/implementazione-nel-progetto.md)
-4. [Best Practices](/var/www/html/base_techplanner_fila3_mono/laravel/Modules/Lang/docs/translatable/best-practices.md)
+1. [Documentazione Laravel Translatable](../Lang/docs/translatable/index.md)
+2. [Gestione Traduzioni Mancanti](../Lang/docs/translatable/gestione-traduzioni-mancanti.md)
+3. [Implementazione nel Progetto](../Lang/docs/translatable/implementazione-nel-progetto.md)
+4. [Best Practices](../Lang/docs/translatable/best-practices.md)
 1. [Documentazione Laravel Translatable](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/index.md)
 2. [Gestione Traduzioni Mancanti](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/gestione-traduzioni-mancanti.md)
 3. [Implementazione nel Progetto](/var/www/html/base_saluteora/laravel/Modules/Lang/docs/translatable/implementazione-nel-progetto.md)
