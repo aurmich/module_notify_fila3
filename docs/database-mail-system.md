@@ -309,4 +309,7 @@ php artisan notify:mail-template:test
 ## Vedi Anche
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
+<<<<<<< HEAD
 - [Spatie Packages](https://spatie.be/open-source)
+=======
+>>>>>>> 9d963867 (.)
