@@ -17,6 +17,10 @@ use Modules\Notify\Contracts\SMS\SmsActionContract;
  */
 class SendAgiletelecomSMSv1Action implements SmsActionContract
 {
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 3c0d88c (.)
     public function execute(SmsData $data): array{
         
         $base_uri='https://secure.agiletelecom.com/';

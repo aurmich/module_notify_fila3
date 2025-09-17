@@ -15,6 +15,10 @@ use Modules\Notify\Contracts\SMS\SmsActionContract;
  */
 class SendAgiletelecomSMSAction implements SmsActionContract
 {
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 3c0d88c (.)
     public function execute(SmsData $data): array{
         
         $res= app(SendAgiletelecomSMSv2Action::class)->execute($data);

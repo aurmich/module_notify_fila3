@@ -147,6 +147,10 @@ class SendSmsPage extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 3c0d88c (.)
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();

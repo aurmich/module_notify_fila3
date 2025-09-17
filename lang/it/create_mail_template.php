@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return array (
   'fields' => 
   array (
@@ -36,3 +37,41 @@ return array (
     ),
   ),
 );
+=======
+return  [
+  'fields' => 
+   [
+    'mailable' => 
+     [
+      'label' => 'mailable',
+    ],
+    'subject' => 
+     [
+      'label' => 'subject',
+    ],
+    'html_template' => 
+     [
+      'label' => 'html_template',
+    ],
+    'text_template' => 
+     [
+      'label' => 'text_template',
+    ],
+  ],
+  'actions' => 
+   [
+    'create' => 
+     [
+      'label' => 'create',
+    ],
+    'createAnother' => 
+     [
+      'label' => 'createAnother',
+    ],
+    'cancel' => 
+     [
+      'label' => 'cancel',
+    ],
+  ],
+];
+>>>>>>> 3c0d88c (.)

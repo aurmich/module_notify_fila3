@@ -22,6 +22,10 @@ class ListNotifyThemes extends XotBaseListRecords
 {
     protected static string $resource = NotifyThemeResource::class;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 3c0d88c (.)
     public function getTableColumns(): array
     {
         return [
@@ -48,10 +52,15 @@ class ListNotifyThemes extends XotBaseListRecords
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 3c0d88c (.)
     public function getTableFilters(): array
     {
         return [
             'lang' => Filters\SelectFilter::make('lang')
+<<<<<<< HEAD
                 ->options(function (): array {
                     return NotifyThemeResource::fieldOptions('lang');
                 }),
@@ -63,6 +72,13 @@ class ListNotifyThemes extends XotBaseListRecords
                 ->options(function (): array {
                     return NotifyThemeResource::fieldOptions('type');
                 })
+=======
+                ->options(fn (): array => NotifyThemeResource::fieldOptions('lang')),
+            'post_type' => Filters\SelectFilter::make('post_type')
+                ->options(fn (): array => NotifyThemeResource::fieldOptions('post_type')),
+            'type' => Filters\SelectFilter::make('type')
+                ->options(fn (): array => NotifyThemeResource::fieldOptions('type'))
+>>>>>>> 3c0d88c (.)
         ];
     }
 

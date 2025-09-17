@@ -43,6 +43,10 @@ class MailTemplateLog extends BaseModel
      *
      * @return array<string, string>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 3c0d88c (.)
     protected function casts(): array
     {
         return [

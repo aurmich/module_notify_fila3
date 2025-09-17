@@ -60,7 +60,11 @@ final class SmsActionFactory
      */
     public function create(?string $driver = null): SmsActionContract
     {
+<<<<<<< HEAD
         $driver = $driver ?? Config::get('sms.default', 'netfun');
+=======
+        $driver ??= Config::get('sms.default', 'netfun');
+>>>>>>> 3c0d88c (.)
 
         // Normalizza il nome del driver e assicura formato camelCase
         $normalizedDriver = $this->normalizeDriverName(is_string($driver) ? $driver : '');

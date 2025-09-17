@@ -20,10 +20,15 @@ class NotifyThemeResource extends XotBaseResource
     protected static ?string $model = NotifyTheme::class;
 
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 3c0d88c (.)
     public static function getFormSchema(): array
     {
         return [
             'lang' => Select::make('lang')
+<<<<<<< HEAD
                 ->options(function (): array {
                     return self::fieldOptions('lang');
                 }),
@@ -35,6 +40,13 @@ class NotifyThemeResource extends XotBaseResource
                 ->options(function (): array {
                     return self::fieldOptions('post_type');
                 }),
+=======
+                ->options(fn (): array => self::fieldOptions('lang')),
+            'type' => Select::make('type')
+                ->options(fn (): array => self::fieldOptions('type')),
+            'post_type' => Select::make('post_type')
+                ->options(fn (): array => self::fieldOptions('post_type')),
+>>>>>>> 3c0d88c (.)
             'post_id' => TextInput::make('post_id'),
             'subject' => TextInput::make('subject'),
             'from' => TextInput::make('from'),

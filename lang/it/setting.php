@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return array (
   'navigation' =>
   array (
@@ -7,3 +8,12 @@ return array (
     'group' => 'Notifiche',
   ),
 );
+=======
+return  [
+  'navigation' =>
+   [
+    'label' => 'Impostazioni Notifiche',
+    'group' => 'Notifiche',
+  ],
+];
+>>>>>>> 3c0d88c (.)
