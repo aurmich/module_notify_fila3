@@ -8,6 +8,7 @@
 *.cache
 *.phar
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.jar
 package-lock.json
 yarn-error.log
@@ -18,15 +19,23 @@ package-lock.json
 yarn-error.log
 npm-debug.log
 >>>>>>> 69e2d63 (.)
+=======
+package-lock.json
+yarn-error.log
+npm-debug.log
+>>>>>>> b74606d (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
 # Log files
 *.log
 <<<<<<< HEAD
+<<<<<<< HEAD
 error_log
 =======
 >>>>>>> 69e2d63 (.)
+=======
+>>>>>>> b74606d (.)
 
 # Build directories
 /build/
@@ -44,6 +53,7 @@ storage/*.key
 .env
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Database directories
 database/Factories_
 database/Factories_old
@@ -51,11 +61,14 @@ database/Migrations_old
 
 =======
 >>>>>>> 69e2d63 (.)
+=======
+>>>>>>> b74606d (.)
 # Local configurations
 Homestead.yaml
 Homestead.json
 /.vagrant
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # IDE specific
 /.idea
@@ -63,6 +76,8 @@ Homestead.json
 
 =======
 >>>>>>> 69e2d63 (.)
+=======
+>>>>>>> b74606d (.)
 # Git specific
 .git-blame-ignore-revs
 .git-rewrite/
@@ -79,17 +94,22 @@ Homestead.json
 *.old
 *.old1
 *.backup
+<<<<<<< HEAD
 *.backup.*
 *.bak
 <<<<<<< HEAD
 *.new
 =======
 >>>>>>> 69e2d63 (.)
+=======
+*.bak
+>>>>>>> b74606d (.)
 
 # Documentation and cache
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 # Development tools
@@ -110,3 +130,5 @@ database/Seeders_old
 database/Factories_old
 database_old
 >>>>>>> 69e2d63 (.)
+=======
+>>>>>>> b74606d (.)
