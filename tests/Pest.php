@@ -29,19 +29,9 @@ pest()->extend(TestCase::class)
 |
 */
 
-<<<<<<< HEAD
-expect()->extend('toBeNotification', function () {
-    return $this->toBeInstanceOf(\Modules\Notify\Models\Notification::class);
-});
-
-expect()->extend('toBeMailTemplate', function () {
-    return $this->toBeInstanceOf(\Modules\Notify\Models\MailTemplate::class);
-});
-=======
 expect()->extend('toBeNotification', fn () => $this->toBeInstanceOf(\Modules\Notify\Models\Notification::class));
 
 expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(\Modules\Notify\Models\MailTemplate::class));
->>>>>>> 3c0d88c (.)
 
 /*
 |--------------------------------------------------------------------------

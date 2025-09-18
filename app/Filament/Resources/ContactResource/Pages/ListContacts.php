@@ -18,10 +18,7 @@ class ListContacts extends XotBaseListRecords
 {
     protected static string $resource = ContactResource::class;
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 3c0d88c (.)
     public function getTableColumns(): array
     {
         return [
@@ -51,27 +48,14 @@ class ListContacts extends XotBaseListRecords
         ];
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 3c0d88c (.)
     public function getTableFilters(): array
     {
         return [
             'active' => Filter::make('active')
-<<<<<<< HEAD
-                ->query(function (Builder $query): Builder {
-                    return $query->where('active', true);
-                }),
-            'inactive' => Filter::make('inactive')
-                ->query(function (Builder $query): Builder {
-                    return $query->where('active', false);
-                }),
-=======
                 ->query(fn (Builder $query): Builder => $query->where('active', true)),
             'inactive' => Filter::make('inactive')
                 ->query(fn (Builder $query): Builder => $query->where('active', false)),
->>>>>>> 3c0d88c (.)
         ];
     }
 }

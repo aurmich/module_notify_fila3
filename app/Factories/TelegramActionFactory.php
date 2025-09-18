@@ -36,11 +36,7 @@ final class TelegramActionFactory
      */
     public function create(?string $driver = null): TelegramProviderActionInterface
     {
-<<<<<<< HEAD
-        $driver = $driver ?? Config::get('telegram.default', 'official');
-=======
         $driver ??= Config::get('telegram.default', 'official');
->>>>>>> 3c0d88c (.)
         
         // Normalizza il nome del driver (prima lettera maiuscola, il resto minuscolo)
         $normalizedDriver = ucfirst(strtolower(is_string($driver) ? $driver : ''));

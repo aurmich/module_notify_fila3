@@ -115,11 +115,7 @@ class NotificationManager
      * @param NotificationTemplate $template Il template
      * @return array<string, mixed>
      */
-<<<<<<< HEAD
-    public function getTemplateStats(NotificationTemplate $template): array
-=======
     public function getTemplateStats(NotificationTemplate $_template): array
->>>>>>> 3c0d88c (.)
     {
         // $logs = $template->logs();
         //
@@ -148,11 +144,7 @@ class NotificationManager
      * @param Model $recipient Il destinatario
      * @return array<string, mixed>
      */
-<<<<<<< HEAD
-    public function getRecipientStats(Model $recipient): array
-=======
     public function getRecipientStats(Model $_recipient): array
->>>>>>> 3c0d88c (.)
     {
         // $logs = NotificationLog::forNotifiable($recipient)->get();
         //

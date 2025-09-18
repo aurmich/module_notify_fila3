@@ -20,10 +20,7 @@ class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'Notify';
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 3c0d88c (.)
     public function panel(Panel $panel): Panel
     { 
         $panel->plugins([

@@ -1,28 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return array (
-  'actions' => 
-  array (
-    'delete' => 
-    array (
-      'label' => 'delete',
-    ),
-    'cancel' => 
-    array (
-      'label' => 'cancel',
-    ),
-    'save' => 
-    array (
-      'label' => 'save',
-    ),
-    'activeLocale' => 
-    array (
-      'label' => 'activeLocale',
-    ),
-  ),
-);
-=======
 return  [
   'actions' => 
    [
@@ -44,4 +21,3 @@ return  [
     ],
   ],
 ];
->>>>>>> 3c0d88c (.)

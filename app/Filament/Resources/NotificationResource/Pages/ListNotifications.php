@@ -16,10 +16,7 @@ class ListNotifications extends XotBaseListRecords
 {
     protected static string $resource = NotificationResource::class;
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 3c0d88c (.)
     public function getTableColumns(): array
     {
         return [
@@ -46,29 +43,15 @@ class ListNotifications extends XotBaseListRecords
         ];
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 3c0d88c (.)
     public function getTableFilters(): array
     {
         return [
             'read' => Filter::make('is_read')
-<<<<<<< HEAD
-                ->query(function (Builder $query): Builder {
-                    return $query->where('read_at', '!=', null);
-                })
-                ->label('Read'),
-            'unread' => Filter::make('is_unread')
-                ->query(function (Builder $query): Builder {
-                    return $query->whereNull('read_at');
-                })
-=======
                 ->query(fn (Builder $query): Builder => $query->where('read_at', '!=', null))
                 ->label('Read'),
             'unread' => Filter::make('is_unread')
                 ->query(fn (Builder $query): Builder => $query->whereNull('read_at'))
->>>>>>> 3c0d88c (.)
                 ->label('Unread'),
             'type' => SelectFilter::make('type')
                 ->options([

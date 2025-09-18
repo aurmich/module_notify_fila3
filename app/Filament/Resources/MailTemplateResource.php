@@ -24,10 +24,7 @@ class MailTemplateResource extends LangBaseResource
      * - Le etichette, i placeholder e i testi di aiuto sono gestiti tramite LangServiceProvider
      * - File di traduzione: Modules/Notify/resources/lang/{locale}/mail_template.php
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 3c0d88c (.)
     public static function getFormSchema(): array
     {
         return [

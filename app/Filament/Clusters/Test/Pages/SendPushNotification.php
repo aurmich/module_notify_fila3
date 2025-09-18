@@ -115,13 +115,7 @@ class SendPushNotification extends Page implements HasForms
             ->schema(
                 [
                     Forms\Components\Select::make('deviceToken')
-<<<<<<< HEAD
-                        ->options(function () use ($to): array {
-                            return $to;
-                        }),
-=======
                         ->options(fn () => $to),
->>>>>>> 3c0d88c (.)
                     Forms\Components\TextInput::make('type')
                         ->required(),
                     Forms\Components\TextInput::make('title')
