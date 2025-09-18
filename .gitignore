@@ -67,6 +67,12 @@ package-lock.json
 yarn-error.log
 npm-debug.log
 composer.lock
+<<<<<<< HEAD
+=======
+package-lock.json
+yarn-error.log
+npm-debug.log
+>>>>>>> bea4b5f2 (.)
 .phpunit.result.cache
 .php-cs-fixer.cache
 
@@ -89,6 +95,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 <<<<<<< HEAD
 .env.*
 !.env.example
@@ -172,6 +179,8 @@ test_notifications.sql
 # END OF NOTIFY .GITIGNORE
 # ==============================================
 =======
+=======
+>>>>>>> bea4b5f2 (.)
 
 # Database directories
 database/Factories_
@@ -215,4 +224,20 @@ cache/
 # Development tools
 .windsurf/
 .cursor/
+<<<<<<< HEAD
 >>>>>>> 3c0d88c (.)
+=======
+# Old directories
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+
+# Old directories to ignore
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+database_old
+>>>>>>> bea4b5f2 (.)
