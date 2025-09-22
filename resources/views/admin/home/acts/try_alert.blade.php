@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -7,3 +8,9 @@ declare(strict_types=1);
 @section('content')
 <h1>Alert Inviato</h1>
 @endsection
+=======
+@extends('adm_theme::layouts.app')
+@section('content')
+<h1>Alert Inviato</h1>
+@endsection
+>>>>>>> 2b275b1 (.)

@@ -16,6 +16,7 @@ class ViewNotification extends XotBaseViewRecord
     /**
      * @return array<\Filament\Infolists\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
     protected function getInfolistSchema(): array
     {
@@ -30,6 +31,25 @@ class ViewNotification extends XotBaseViewRecord
                 TextEntry::make('created_at')->dateTime(),
                 TextEntry::make('updated_at')->dateTime(),
             ]),
+=======
+    protected function getInfolistSchema(): array
+    {
+        return [
+            Section::make()
+                ->schema([
+                    TextEntry::make('id'),
+                    TextEntry::make('type'),
+                    TextEntry::make('notifiable_type'),
+                    TextEntry::make('notifiable_id'),
+                    TextEntry::make('data'),
+                    TextEntry::make('read_at')
+                        ->dateTime(),
+                    TextEntry::make('created_at')
+                        ->dateTime(),
+                    TextEntry::make('updated_at')
+                        ->dateTime(),
+                ])
+>>>>>>> 2b275b1 (.)
         ];
     }
 }

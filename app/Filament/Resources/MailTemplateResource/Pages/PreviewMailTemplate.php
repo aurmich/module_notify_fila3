@@ -6,8 +6,13 @@ namespace Modules\Notify\Filament\Resources\MailTemplateResource\Pages;
 
 use Filament\Actions\Action;
 use Filament\Resources\Pages\Page;
+<<<<<<< HEAD
 use Modules\Notify\Filament\Resources\MailTemplateResource;
 use Modules\Notify\Models\MailTemplate;
+=======
+use Modules\Notify\Models\MailTemplate;
+use Modules\Notify\Filament\Resources\MailTemplateResource;
+>>>>>>> 2b275b1 (.)
 
 /**
  * @property MailTemplate $record
@@ -30,7 +35,14 @@ class PreviewMailTemplate extends Page
                 ->label(__('notify::mail.template.preview.actions.back.label'))
                 ->icon(__('notify::mail.template.preview.actions.back.icon'))
                 ->color(__('notify::mail.template.preview.actions.back.color'))
+<<<<<<< HEAD
                 ->url(fn() => MailTemplateResource::getUrl('edit', ['record' => $this->record])),
         ];
     }
 }
+=======
+                ->url(fn () => MailTemplateResource::getUrl('edit', ['record' => $this->record])),
+        ];
+    }
+} 
+>>>>>>> 2b275b1 (.)

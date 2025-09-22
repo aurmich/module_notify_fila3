@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ==============================================
 # LARAXOT MODULE NOTIFY - .GITIGNORE
 # ==============================================
@@ -58,6 +59,32 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+=======
+# Dependencies and packages
+/vendor/
+/node_modules/
+/docs/vendor/
+
+# Lock files and cache
+*.lock
+*.cache
+*.phar
+package-lock.json
+yarn-error.log
+npm-debug.log
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# Log files
+*.log
+
+# Build directories
+/build/
+/build
+build/
+
+# Laravel specific
+>>>>>>> 2b275b1 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -66,6 +93,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 .env.*
 !.env.example
 
@@ -159,3 +187,33 @@ test_notifications.sql
 *.fila2
 laravel
 public_html
+=======
+
+# Local configurations
+Homestead.yaml
+Homestead.json
+/.vagrant
+
+# Git specific
+.git-blame-ignore-revs
+.git-rewrite/
+.git-rewrite
+
+# Temporary and system files
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*.exe
+*:Zone.Identifier
+.DS_Store
+*.old
+*.old1
+*.backup
+*.bak
+
+# Documentation and cache
+docs/phpstan/
+docs/cache/
+cache/
+>>>>>>> 2b275b1 (.)

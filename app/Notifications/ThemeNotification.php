@@ -23,17 +23,29 @@ class ThemeNotification extends Notification implements ShouldQueue
      *
      * @return void
      */
+<<<<<<< HEAD
     public function __construct(
         public string $name,
         public array $view_params,
     ) {}
+=======
+    public function __construct(public string $name, public array $view_params)
+    {
+    }
+>>>>>>> 2b275b1 (.)
 
     /**
      * Get the notification's delivery channels.
      */
     public function via(CanThemeNotificationContract $notifiable): array
     {
+<<<<<<< HEAD
         return $notifiable->getNotificationData($this->name, $this->view_params)->channels;
+=======
+        return $notifiable
+            ->getNotificationData($this->name, $this->view_params)
+            ->channels;
+>>>>>>> 2b275b1 (.)
     }
 
     /**
@@ -41,7 +53,13 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toMail(CanThemeNotificationContract $notifiable): MailMessage
     {
+<<<<<<< HEAD
         $attachments = $notifiable->getNotificationData($this->name, $this->view_params)->attachments;
+=======
+        $attachments = $notifiable
+            ->getNotificationData($this->name, $this->view_params)
+            ->attachments;
+>>>>>>> 2b275b1 (.)
 
         $mail_message = app(BuildMailMessageAction::class)
             ->execute($this->name, $notifiable->getModel(), $this->view_params, $attachments);
@@ -60,6 +78,7 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toSms(CanThemeNotificationContract $notifiable): SmsData
     {
+<<<<<<< HEAD
         return $notifiable->getNotificationData($this->name, $this->view_params)->getSmsData();
 
         /*
@@ -69,6 +88,19 @@ class ThemeNotification extends Notification implements ShouldQueue
          * 'body' => $this->html,
          * ]);
          */
+=======
+        return $notifiable
+            ->getNotificationData($this->name, $this->view_params)
+            ->getSmsData();
+        /*
+        return SmsData::from([
+            'from' => $this->from,
+            'to' => $notifiable->routeNotificationFor('mobile'),
+            'body' => $this->html,
+        ]);
+        */
+
+>>>>>>> 2b275b1 (.)
         // $notifiable->sendSmsCallback()
     }
 

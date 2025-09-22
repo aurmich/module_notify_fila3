@@ -4,11 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\SMS;
 
+<<<<<<< HEAD
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SMS\AgiletelecomData;
 use Modules\Notify\Datas\SmsData;
+=======
+
+use GuzzleHttp\Client;
+use Modules\Notify\Datas\SmsData;
+use Illuminate\Support\Facades\Http;
+use Modules\Notify\Datas\SMS\AgiletelecomData;
+use Modules\Notify\Contracts\SMS\SmsActionContract;
+>>>>>>> 2b275b1 (.)
 
 /**
  * Azione per l'invio di SMS tramite Agile Telecom.
@@ -16,6 +25,7 @@ use Modules\Notify\Datas\SmsData;
  */
 class SendAgiletelecomSMSv1Action implements SmsActionContract
 {
+<<<<<<< HEAD
     #[\Override]
     public function execute(SmsData $data): array
     {
@@ -38,6 +48,30 @@ class SendAgiletelecomSMSv1Action implements SmsActionContract
             'Accept-Encoding' => 'gzip, deflate',
             'Cache-Control' => 'no-cache',
             'Connection' => 'keep-alive',
+=======
+    public function execute(SmsData $data): array{
+        
+        $base_uri='https://secure.agiletelecom.com/';
+        $relative_path='securesend_v1.aspx';
+
+        $agile=AgiletelecomData::make();
+        $phone=app(NormalizePhoneNumberAction::class)->execute($data->to);
+        
+        
+        $data = [
+            "smsTEXT" => $data->body,
+            "smsNUMBER" => $phone,
+            "smsSENDER" => $agile->sender,
+            "smsGATEWAY" => "H", // M = Qualità standard, H = Qualità Alta
+            "smsUSER" =>$agile->username,
+            "smsPASSWORD" => $agile->password
+        ];
+
+        $headers = [
+            "Accept-Encoding" => "gzip, deflate",
+            "Cache-Control" => "no-cache",
+            "Connection" => "keep-alive",
+>>>>>>> 2b275b1 (.)
         ];
 
         $client = new Client([
@@ -48,7 +82,15 @@ class SendAgiletelecomSMSv1Action implements SmsActionContract
         ]);
 
         $connection = $client->request('POST', $relative_path);
+<<<<<<< HEAD
 
         return [];
     }
+=======
+        
+        return [];
+
+    }
+    
+>>>>>>> 2b275b1 (.)
 }

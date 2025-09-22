@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 2b275b1 (.)
 @extends('beautymail::templates.sunny')
 
 @section('content')
@@ -23,4 +26,8 @@ declare(strict_types=1);
         	'link' => 'http://google.com'
     ])
 
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> 2b275b1 (.)

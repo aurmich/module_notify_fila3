@@ -14,16 +14,25 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class ContactResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = Contact::class;
 
     protected static null|string $navigationIcon = 'heroicon-o-rectangle-stack';
+=======
+    protected static ?string $model = Contact::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+>>>>>>> 2b275b1 (.)
 
     /**
      * Get the form schema for the resource.
      *
      * @return array<string, Component>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2b275b1 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -43,13 +52,19 @@ class ContactResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2b275b1 (.)
     public static function getRelations(): array
     {
         return [];
     }
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2b275b1 (.)
     public static function getPages(): array
     {
         return [

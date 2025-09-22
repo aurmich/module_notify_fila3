@@ -18,6 +18,7 @@ return [
         'Modules\\Notify\\Providers\\NotifyServiceProvider',
     ],
     /*
+<<<<<<< HEAD
      * |--------------------------------------------------------------------------
      * | Email Layout Configuration
      * |--------------------------------------------------------------------------
@@ -28,6 +29,19 @@ return [
 
     // Logo URL for email headers
     'logo_url' => env('MAIL_LOGO_URL', null),
+=======
+    |--------------------------------------------------------------------------
+    | Email Layout Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This file contains the configuration for email layouts and templates.
+    |
+    */
+
+    // Logo URL for email headers
+    'logo_url' => env('MAIL_LOGO_URL', null),
+
+>>>>>>> 2b275b1 (.)
     // Footer text for all emails
     //'footer_text' => env('MAIL_FOOTER_TEXT', '© ' . date('Y') . ' ' . config('app.name') . '. All rights reserved.'),
 
@@ -38,6 +52,7 @@ return [
         'instagram' => env('MAIL_SOCIAL_INSTAGRAM', null),
         'linkedin' => env('MAIL_SOCIAL_LINKEDIN', null),
     ],
+<<<<<<< HEAD
     // Unsubscribe URL
     'unsubscribe_url' => env('MAIL_UNSUBSCRIBE_URL', null),
     /*
@@ -51,11 +66,33 @@ return [
 
     // Default layout to use
     'default_layout' => 'notify::mail-layouts.base.default',
+=======
+
+    // Unsubscribe URL
+    'unsubscribe_url' => env('MAIL_UNSUBSCRIBE_URL', null),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Mail Templates
+    |--------------------------------------------------------------------------
+    |
+    | Configuration for mail templates
+    |
+    */
+
+    // Default layout to use
+    'default_layout' => 'notify::mail-layouts.base.default',
+
+>>>>>>> 2b275b1 (.)
     // Available layouts
     'layouts' => [
         'default' => 'notify::mail-layouts.base.default',
         // Add more layouts here
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b275b1 (.)
     // Available templates
     'templates' => [
         'welcome' => 'notify::mail-layouts.templates.welcome',

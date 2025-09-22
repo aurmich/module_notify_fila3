@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms;
@@ -21,12 +22,32 @@ use Modules\Notify\Filament\Clusters\Test;
 use Modules\Notify\Notifications\SmsNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+=======
+use Filament\Forms;
+use Filament\Forms\Form;
+use Filament\Actions\Action;
+use Filament\Facades\Filament;
+use Modules\Notify\Datas\SmsData;
+use Illuminate\Support\Facades\Log;
+use Filament\Forms\ComponentContainer;
+use Filament\Forms\Contracts\HasForms;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Notify\Filament\Clusters\Test;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Modules\Notify\Notifications\SmsNotification;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Filament\Notifications\Notification as FilamentNotification;
+>>>>>>> 2b275b1 (.)
 
 /**
  * @property ComponentContainer $smsForm
  */
 class SendNetfunSmsPage extends XotBasePage
 {
+<<<<<<< HEAD
     public null|array $smsData = [];
 
     protected static null|string $navigationIcon = 'heroicon-o-device-phone-mobile';
@@ -38,6 +59,20 @@ class SendNetfunSmsPage extends XotBasePage
     /**
      * Get the slug of the page
      *
+=======
+
+    public ?array $smsData = [];
+
+    protected static ?string $navigationIcon = 'heroicon-o-device-phone-mobile';
+
+    protected static string $view = 'notify::filament.pages.send-sms';
+
+    protected static ?string $cluster = Test::class;
+    
+    /**
+     * Get the slug of the page
+     * 
+>>>>>>> 2b275b1 (.)
      * This explicit definition ensures consistent URL generation for acronyms
      */
     public static function getSlug(): string
@@ -64,7 +99,14 @@ class SendNetfunSmsPage extends XotBasePage
 
     public function smsForm(Form $form): Form
     {
+<<<<<<< HEAD
         return $form->schema($this->getSmsFormSchema())->model($this->getUser())->statePath('smsData');
+=======
+        return $form
+            ->schema($this->getSmsFormSchema())
+            ->model($this->getUser())
+            ->statePath('smsData');
+>>>>>>> 2b275b1 (.)
     }
 
     public function getSmsFormSchema(): array
@@ -109,6 +151,7 @@ class SendNetfunSmsPage extends XotBasePage
 
         $smsData = SmsData::from($data);
         /*
+<<<<<<< HEAD
          * $smsData->to = $data['to'];
          * $smsData->from = $data['from'];
          * $smsData->body = $data['body'];
@@ -117,6 +160,17 @@ class SendNetfunSmsPage extends XotBasePage
 
         try {
             Notification::route('sms', $data['to'])->notify(new SmsNotification($smsData, ['provider' => $provider]));
+=======
+        $smsData->to = $data['to'];
+        $smsData->from = $data['from'];
+        $smsData->body = $data['body'];
+        */
+        $provider = $data['provider'] ?? 'netfun';
+
+        try {
+            Notification::route('sms', $data['to'])
+                ->notify(new SmsNotification($smsData, ['provider' => $provider]));
+>>>>>>> 2b275b1 (.)
 
             FilamentNotification::make()
                 ->success()
@@ -148,19 +202,33 @@ class SendNetfunSmsPage extends XotBasePage
     protected function getSmsFormActions(): array
     {
         return [
+<<<<<<< HEAD
             Action::make('sendSms')->label(__('notify::sms.actions.send'))->submit('sendSms'),
         ];
     }
 
     #[\Override]
+=======
+            Action::make('sendSms')
+                ->label(__('notify::sms.actions.send'))
+                ->submit('sendSms'),
+        ];
+    }
+
+>>>>>>> 2b275b1 (.)
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();
 
+<<<<<<< HEAD
         if (!($user instanceof Model)) {
             throw new \Exception(
                 'L\'utente autenticato deve essere un modello Eloquent per consentire l\'aggiornamento del profilo.',
             );
+=======
+        if (! $user instanceof Model) {
+            throw new \Exception('L\'utente autenticato deve essere un modello Eloquent per consentire l\'aggiornamento del profilo.');
+>>>>>>> 2b275b1 (.)
         }
 
         return $user;

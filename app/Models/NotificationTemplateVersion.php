@@ -43,7 +43,10 @@ class NotificationTemplateVersion extends BaseModel
      *
      * @return array<string, string>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2b275b1 (.)
     protected function casts(): array
     {
         return [
@@ -61,11 +64,19 @@ class NotificationTemplateVersion extends BaseModel
     public function restore(): NotificationTemplate
     {
         $template = $this->template;
+<<<<<<< HEAD
 
         if (!$template) {
             throw new \RuntimeException('Template not found for version ' . $this->id);
         }
 
+=======
+        
+        if (!$template) {
+            throw new \RuntimeException('Template not found for version ' . $this->id);
+        }
+        
+>>>>>>> 2b275b1 (.)
         $template->update([
             'subject' => $this->subject ?? null,
             'body_html' => $this->body_html ?? null,
@@ -77,4 +88,8 @@ class NotificationTemplateVersion extends BaseModel
 
         return $template;
     }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 2b275b1 (.)

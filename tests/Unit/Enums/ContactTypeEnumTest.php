@@ -81,7 +81,11 @@ class ContactTypeEnumTest extends TestCase
     /** @test */
     public function each_case_has_unique_value(): void
     {
+<<<<<<< HEAD
         $values = array_map(fn($case) => $case->value, ContactTypeEnum::cases());
+=======
+        $values = array_map(fn ($case) => $case->value, ContactTypeEnum::cases());
+>>>>>>> 2b275b1 (.)
         $uniqueValues = array_unique($values);
 
         $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');

@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 2b275b1 (.)
 namespace Modules\Notify\Models;
 
 use Modules\Xot\Models\BaseModel;
@@ -72,7 +75,10 @@ class Notification extends BaseModel
      *
      * @return array<string, string>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2b275b1 (.)
     protected function casts(): array
     {
         return [

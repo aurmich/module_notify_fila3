@@ -4,7 +4,11 @@
 
  sono state identificate convenzioni contrastanti per le traduzioni:
 
+<<<<<<< HEAD
 ### Convenzioni Generali (Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
+=======
+### Convenzioni Generali (Modules/Lang/project_docs/TRANSLATION_KEYS_RULES.md)
+>>>>>>> 2b275b1 (.)
 
 ```php
 // Struttura gerarchica espansa
@@ -20,7 +24,11 @@
 // Esempio: user::auth.login.button.label
 ```
 
+<<<<<<< HEAD
 ### Convenzioni Specifiche del Modulo Notify (Modules/Notify/docs/TRANSLATION_CONVENTIONS.md)
+=======
+### Convenzioni Specifiche del Modulo Notify (Modules/Notify/project_docs/TRANSLATION_CONVENTIONS.md)
+>>>>>>> 2b275b1 (.)
 
 ```php
 // Struttura con chiave 'navigation'
@@ -44,7 +52,10 @@ Dopo un'analisi approfondita, è stato determinato che:
    - L'uso della chiave `navigation` è intenzionale e necessario per il funzionamento del modulo Notify
 
 2. **Eccezioni alle convenzioni generali**
+<<<<<<< HEAD
    - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di 
+=======
+>>>>>>> 2b275b1 (.)
    - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di SaluteOra
    - Questa eccezione è documentata e intenzionale
 
@@ -82,11 +93,20 @@ return [
 
 ## Conclusione
 
+<<<<<<< HEAD
 Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono correttamente le convenzioni specifiche del modulo. Non è necessario modificare questi file per conformarsi alle convenzioni generali di , poiché rappresentano un'eccezione documentata.
+=======
+>>>>>>> 2b275b1 (.)
 Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono correttamente le convenzioni specifiche del modulo. Non è necessario modificare questi file per conformarsi alle convenzioni generali di SaluteOra, poiché rappresentano un'eccezione documentata.
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [Convenzioni Generali di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
 - [Convenzioni Specifiche del Modulo Notify](./TRANSLATION_CONVENTIONS.md)
 - [Regole per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+- [Convenzioni Generali di Traduzione](../../Lang/project_docs/TRANSLATION_KEYS_RULES.md)
+- [Convenzioni Specifiche del Modulo Notify](./TRANSLATION_CONVENTIONS.md)
+- [Regole per le Chiavi di Traduzione](../../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+>>>>>>> 2b275b1 (.)

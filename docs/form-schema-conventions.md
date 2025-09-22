@@ -95,12 +95,20 @@ La classe `XotBasePage` è progettata per lavorare con array associativi nei met
 Per verificare che tutti i metodi schema rispettino questa convenzione:
 
 ```bash
+<<<<<<< HEAD
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules -type f -name "*.php" -exec grep -l "get.*FormSchema" {} \; | xargs grep -l "return \["
 find /var/www/html/saluteora/laravel/Modules -type f -name "*.php" -exec grep -l "get.*FormSchema" {} \; | xargs grep -l "return \["
 find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules -type f -name "*.php" -exec grep -l "get.*FormSchema" {} \; | xargs grep -l "return \["
+=======
+find /var/www/html/saluteora/laravel/Modules -type f -name "*.php" -exec grep -l "get.*FormSchema" {} \; | xargs grep -l "return \["
+>>>>>>> 2b275b1 (.)
 ```
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [Filament Form Schemas](https://filamentphp.com/docs/forms/defining-a-form)
+=======
+- [Filament Form Schemas](https://filamentphp.com/project_docs/forms/defining-a-form)
+>>>>>>> 2b275b1 (.)
 - [PHP Array Types](https://www.php.net/manual/en/language.types.array.php)

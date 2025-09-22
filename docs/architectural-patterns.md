@@ -1,6 +1,9 @@
 # Pattern Architetturali per le Notifiche
 
+<<<<<<< HEAD
 Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di , con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.
+=======
+>>>>>>> 2b275b1 (.)
 Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di SaluteOra, con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.
 
 ## Confronto tra Pattern Architetturali

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 2b275b1 (.)
 @extends('beautymail::templates.minty')
 
 @section('content')
@@ -50,4 +53,8 @@ declare(strict_types=1);
 		</tr>
 	@include('beautymail::templates.minty.contentEnd')
 
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> 2b275b1 (.)

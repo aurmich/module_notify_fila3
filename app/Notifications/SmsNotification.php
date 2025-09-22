@@ -13,7 +13,11 @@ use Modules\Notify\Datas\SmsData;
  * Class SmsNotification
  *
  * Notification class for sending SMS messages through various providers.
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 2b275b1 (.)
  * @package Modules\Notify\Notifications
  */
 class SmsNotification extends Notification implements ShouldQueue
@@ -47,7 +51,11 @@ class SmsNotification extends Notification implements ShouldQueue
         } else {
             $to = $config['to'] ?? '';
             $from = $config['from'] ?? '';
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 2b275b1 (.)
             $this->smsData = new SmsData();
             $this->smsData->body = $content;
             /** @phpstan-ignore-next-line */
@@ -55,17 +63,28 @@ class SmsNotification extends Notification implements ShouldQueue
             /** @phpstan-ignore-next-line */
             $this->smsData->from = (string) $from;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 2b275b1 (.)
         $this->config = $config;
     }
 
     /**
      * Get the notification's delivery channels.
      *
+<<<<<<< HEAD
      * @param mixed $_notifiable The entity to be notified (l'entità da notificare)
      * @return array<int, string>
      */
     public function via(mixed $_notifiable): array
+=======
+     * @param mixed $notifiable
+     * @return array<int, string>
+     */
+    public function via(mixed $notifiable): array
+>>>>>>> 2b275b1 (.)
     {
         // TODO: Implementare SmsChannel quando disponibile
         return ['sms'];
@@ -104,7 +123,11 @@ class SmsNotification extends Notification implements ShouldQueue
      *
      * @return string|null
      */
+<<<<<<< HEAD
     public function getProvider(): null|string
+=======
+    public function getProvider(): ?string
+>>>>>>> 2b275b1 (.)
     {
         $provider = $this->config['provider'] ?? null;
         return is_string($provider) ? $provider : null;

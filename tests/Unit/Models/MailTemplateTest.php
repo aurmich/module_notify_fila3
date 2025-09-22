@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\MailTemplate;
 use Tests\TestCase;
+=======
+use Tests\TestCase;
+use Modules\Notify\Models\MailTemplate;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+>>>>>>> 2b275b1 (.)
 
 class MailTemplateTest extends TestCase
 {

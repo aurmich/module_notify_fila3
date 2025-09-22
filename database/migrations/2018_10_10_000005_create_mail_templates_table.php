@@ -3,15 +3,24 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+=======
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
+>>>>>>> 2b275b1 (.)
 // ----- bases ----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /*
  * Class CreateMailTemplatesTable.
  */
+<<<<<<< HEAD
 return new class() extends XotBaseMigration {
+=======
+return new class () extends XotBaseMigration {
+>>>>>>> 2b275b1 (.)
     /**
      * Run the migrations.
      */
@@ -27,10 +36,15 @@ return new class() extends XotBaseMigration {
             $table->json('html_template')->nullable();
             $table->json('text_template')->nullable();
             $table->string('version')->default('1.0.0');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b275b1 (.)
         });
 
         // -- UPDATE -- Aggiornamento della tabella esistente
         $this->tableUpdate(function (Blueprint $table): void {
+<<<<<<< HEAD
             if (!$this->hasColumn('name')) {
                 $table->string('name');
             }
@@ -50,4 +64,23 @@ return new class() extends XotBaseMigration {
             );
         });
     }
+=======
+            if (! $this->hasColumn('name')) {
+                $table->string('name');
+            }
+            if (! $this->hasColumn('slug')) {
+                $table->string('slug')->unique();
+            }
+            if (! $this->hasColumn('params')) {
+                $table->text('params')->nullable();
+            }
+            if (! $this->hasColumn('sms_template')) {
+                $table->json('sms_template')->nullable();
+            }
+
+            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
+        });
+    }
+
+>>>>>>> 2b275b1 (.)
 };

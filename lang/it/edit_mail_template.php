@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
@@ -19,3 +20,26 @@ return [
         ],
     ],
 ];
+=======
+return array (
+  'actions' => 
+  array (
+    'delete' => 
+    array (
+      'label' => 'delete',
+    ),
+    'cancel' => 
+    array (
+      'label' => 'cancel',
+    ),
+    'save' => 
+    array (
+      'label' => 'save',
+    ),
+    'activeLocale' => 
+    array (
+      'label' => 'activeLocale',
+    ),
+  ),
+);
+>>>>>>> 2b275b1 (.)

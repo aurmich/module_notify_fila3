@@ -2,7 +2,10 @@
 
 ## Panoramica
 
+<<<<<<< HEAD
 Questo documento descrive l'implementazione del campo `slug` nella risorsa Filament `MailTemplateResource`, rispettando le convenzioni e gli standard del progetto .
+=======
+>>>>>>> 2b275b1 (.)
 Questo documento descrive l'implementazione del campo `slug` nella risorsa Filament `MailTemplateResource`, rispettando le convenzioni e gli standard del progetto SaluteOra.
 
 ## Implementazione nel Form Schema
@@ -43,7 +46,10 @@ public static function getFormSchema(): array
 3. **Validazione Unicità**: L'opzione `unique(ignoreRecord: true)` garantisce unicità, escludendo il record corrente durante l'aggiornamento.
 4. **Generazione Automatica**: La callback `afterStateUpdated()` genera automaticamente lo slug dal nome quando si crea un nuovo record.
 
+<<<<<<< HEAD
 ## Conformità con gli Standard 
+=======
+>>>>>>> 2b275b1 (.)
 ## Conformità con gli Standard SaluteOra
 
 Questa implementazione aderisce a diversi standard chiave del progetto:

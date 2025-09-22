@@ -76,7 +76,10 @@ class MailTemplateVersion extends BaseModel
      *
      * @return array<string, string>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 2b275b1 (.)
     protected function casts(): array
     {
         return [

@@ -1,7 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2b275b1 (.)
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Model;

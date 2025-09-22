@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # Struttura di Configurazione nei Moduli 
+=======
+>>>>>>> 2b275b1 (.)
 # Struttura di Configurazione nei Moduli SaluteOra
 
 ## Principi di Configurazione

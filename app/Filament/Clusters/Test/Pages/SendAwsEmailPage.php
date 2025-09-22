@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms;
@@ -20,12 +21,31 @@ use Modules\Notify\Emails\EmailDataEmail;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+=======
+use Filament\Forms;
+use Filament\Forms\Form;
+use Filament\Actions\Action;
+use Filament\Facades\Filament;
+use Modules\Notify\Datas\EmailData;
+use Illuminate\Support\Facades\Mail;
+use Filament\Forms\ComponentContainer;
+use Filament\Forms\Contracts\HasForms;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Notify\Emails\EmailDataEmail;
+use Modules\Notify\Filament\Clusters\Test;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Filament\Notifications\Notification as FilamentNotification;
+>>>>>>> 2b275b1 (.)
 
 /**
  * @property ComponentContainer $emailForm
  */
 class SendAwsEmailPage extends XotBasePage
 {
+<<<<<<< HEAD
     public null|array $emailData = [];
 
     protected static null|string $navigationIcon = 'heroicon-o-envelope';
@@ -37,6 +57,20 @@ class SendAwsEmailPage extends XotBasePage
     /**
      * Get the slug of the page
      *
+=======
+
+    public ?array $emailData = [];
+
+    protected static ?string $navigationIcon = 'heroicon-o-envelope';
+
+    protected static string $view = 'notify::filament.pages.send-email';
+
+    protected static ?string $cluster = Test::class;
+    
+    /**
+     * Get the slug of the page
+     * 
+>>>>>>> 2b275b1 (.)
      * This explicit definition ensures consistent URL generation for acronyms
      */
     public static function getSlug(): string
@@ -63,7 +97,14 @@ class SendAwsEmailPage extends XotBasePage
 
     public function emailForm(Form $form): Form
     {
+<<<<<<< HEAD
         return $form->schema($this->getEmailFormSchema())->model($this->getUser())->statePath('emailData');
+=======
+        return $form
+            ->schema($this->getEmailFormSchema())
+            ->model($this->getUser())
+            ->statePath('emailData');
+>>>>>>> 2b275b1 (.)
     }
 
     public function getEmailFormSchema(): array
@@ -111,13 +152,26 @@ class SendAwsEmailPage extends XotBasePage
             $subject = is_string($data['subject']) ? $data['subject'] : '';
             $bodyHtml = is_string($data['body_html']) ? $data['body_html'] : '';
 
+<<<<<<< HEAD
             $emailData = new EmailData($to, $subject, $bodyHtml);
+=======
+            $emailData = new EmailData(
+                $to,
+                $subject,
+                $bodyHtml
+            );
+>>>>>>> 2b275b1 (.)
 
             // Configurare lo specifico driver AWS SES per questo test
             config(['mail.default' => 'ses']);
 
             // Invia l'email utilizzando il servizio SES
+<<<<<<< HEAD
             Mail::to($to)->send(new EmailDataEmail($emailData));
+=======
+            Mail::to($to)
+                ->send(new EmailDataEmail($emailData));
+>>>>>>> 2b275b1 (.)
 
             FilamentNotification::make()
                 ->success()
@@ -136,19 +190,33 @@ class SendAwsEmailPage extends XotBasePage
     protected function getEmailFormActions(): array
     {
         return [
+<<<<<<< HEAD
             Action::make('sendEmail')->label(__('notify::email.actions.send'))->submit('sendEmail'),
         ];
     }
 
     #[\Override]
+=======
+            Action::make('sendEmail')
+                ->label(__('notify::email.actions.send'))
+                ->submit('sendEmail'),
+        ];
+    }
+
+>>>>>>> 2b275b1 (.)
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();
 
+<<<<<<< HEAD
         if (!($user instanceof Model)) {
             throw new \Exception(
                 'L\'utente autenticato deve essere un modello Eloquent per consentire l\'aggiornamento del profilo.',
             );
+=======
+        if (! $user instanceof Model) {
+            throw new \Exception('L\'utente autenticato deve essere un modello Eloquent per consentire l\'aggiornamento del profilo.');
+>>>>>>> 2b275b1 (.)
         }
 
         return $user;

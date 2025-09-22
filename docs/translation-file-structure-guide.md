@@ -149,4 +149,8 @@ return [
 
 ## Riferimenti
 - [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
+<<<<<<< HEAD
 - [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+=======
+- [Regole Generali per le Traduzioni](../../Lang/project_docs/TRANSLATION_KEYS_RULES.md)
+>>>>>>> 2b275b1 (.)
