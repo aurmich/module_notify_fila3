@@ -1,9 +1,12 @@
 # Implementazione dei Canali di Notifica 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto , con particolare attenzione al pattern Factory utilizzato.
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto SaluteOra, con particolare attenzione al pattern Factory utilizzato.
 
 ## Architettura Generale

@@ -57,12 +57,6 @@ namespace Modules\Notify\Tests;
 |
 */
 
-<<<<<<< HEAD
-uses(TestCase::class)
-    ->uses(\Illuminate\Foundation\Testing\DatabaseTransactions::class)
-=======
-pest()->extend(TestCase::class)
->>>>>>> 2e1287d (.)
     ->in('Feature', 'Unit');
 
 /*

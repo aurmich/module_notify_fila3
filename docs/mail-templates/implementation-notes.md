@@ -30,16 +30,6 @@ L'implementazione corretta degli allegati richiede una struttura specifica. Ecco
    $attachments = [
        [
 <<<<<<< HEAD
-           'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default-3.svg',
-           'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
-           'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default-3.svg',
-=======
-           'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
->>>>>>> 2b275b1 (.)
-           'as' => 'logo.png',
-           'mime' => 'image/png'
-       ],
-       [
 <<<<<<< HEAD
            'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default-3.svg',
            'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
@@ -47,6 +37,24 @@ L'implementazione corretta degli allegati richiede una struttura specifica. Ecco
 =======
            'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
 >>>>>>> 2b275b1 (.)
+=======
+           'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
+>>>>>>> d1cd7a3 (.)
+           'as' => 'logo.png',
+           'mime' => 'image/png'
+       ],
+       [
+<<<<<<< HEAD
+<<<<<<< HEAD
+           'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default-3.svg',
+           'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
+           'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default-3.svg',
+=======
+           'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
+>>>>>>> 2b275b1 (.)
+=======
+           'path' => '/var/www/html/saluteora/public_html/images/avatars/default-3.svg',
+>>>>>>> d1cd7a3 (.)
            'as' => 'logo.png',
            'mime' => 'image/png'
        ]

@@ -13,11 +13,6 @@ class WhatsAppDriverEnumTest extends TestCase
     public function it_has_correct_cases(): void
     {
         $this->assertCount(4, WhatsAppDriverEnum::cases());
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 2e1287d (.)
         $this->assertEquals('twilio', WhatsAppDriverEnum::TWILIO->value);
         $this->assertEquals('messagebird', WhatsAppDriverEnum::MESSAGEBIRD->value);
         $this->assertEquals('vonage', WhatsAppDriverEnum::VONAGE->value);
@@ -28,11 +23,6 @@ class WhatsAppDriverEnumTest extends TestCase
     public function options_returns_correct_array(): void
     {
         $options = WhatsAppDriverEnum::options();
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 2e1287d (.)
         $this->assertIsArray($options);
         $this->assertCount(4, $options);
         $this->assertEquals('Twilio', $options['twilio']);
@@ -45,11 +35,6 @@ class WhatsAppDriverEnumTest extends TestCase
     public function labels_returns_localized_array(): void
     {
         $labels = WhatsAppDriverEnum::labels();
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 2e1287d (.)
         $this->assertIsArray($labels);
         $this->assertCount(4, $labels);
         $this->assertArrayHasKey('twilio', $labels);
@@ -80,11 +65,6 @@ class WhatsAppDriverEnumTest extends TestCase
     public function get_default_returns_default_driver(): void
     {
         $default = WhatsAppDriverEnum::getDefault();
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 2e1287d (.)
         $this->assertInstanceOf(WhatsAppDriverEnum::class, $default);
         $this->assertContains($default, WhatsAppDriverEnum::cases());
     }
@@ -92,6 +72,7 @@ class WhatsAppDriverEnumTest extends TestCase
     /** @test */
     public function each_case_has_unique_value(): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $values = array_map(fn($case) => $case->value, WhatsAppDriverEnum::cases());
@@ -107,6 +88,8 @@ class WhatsAppDriverEnumTest extends TestCase
         $uniqueValues = array_unique($values);
         
 >>>>>>> 2e1287d (.)
+=======
+>>>>>>> d1cd7a3 (.)
         $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
     }
 
@@ -114,17 +97,6 @@ class WhatsAppDriverEnumTest extends TestCase
     public function cases_returns_all_enum_instances(): void
     {
         $cases = WhatsAppDriverEnum::cases();
-<<<<<<< HEAD
-
-        $this->assertIsArray($cases);
-        $this->assertCount(4, $cases);
-
-=======
-        
-        $this->assertIsArray($cases);
-        $this->assertCount(4, $cases);
-        
->>>>>>> 2e1287d (.)
         foreach ($cases as $case) {
             $this->assertInstanceOf(WhatsAppDriverEnum::class, $case);
         }

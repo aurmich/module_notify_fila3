@@ -6,12 +6,15 @@ namespace Modules\Notify\Tests\Unit\Models;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\Contact;
 use Tests\TestCase;
 =======
 =======
 >>>>>>> facb5f9 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 use Tests\TestCase;
 use Modules\Notify\Models\Contact;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -106,38 +109,12 @@ class ContactTest extends TestCase
         ];
 
         $this->assertEquals($expectedFillable, $contact->getFillable());
-=======
-use Modules\Notify\Models\Contact;
-use PHPUnit\Framework\TestCase;
-
-class ContactTest extends TestCase
-{
-    /** @test */
-    public function it_extends_base_model(): void
-    {
-        $contact = new Contact();
-        
-        $this->assertInstanceOf(\Modules\Notify\Models\BaseModel::class, $contact);
-    }
-
-    /** @test */
-    public function it_has_correct_fillable_attributes(): void
-    {
-        $expectedFillable = [
-            'model_id', 'model_type', 'contact_type', 'value',
-            'verified_at', 'updated_at', 'created_at',
-            'updated_by', 'created_by', 'user_id', 'token',
-        ];
-
-        $this->assertEquals($expectedFillable, (new Contact())->getFillable());
->>>>>>> 2e1287d (.)
     }
 
     /** @test */
     public function it_has_correct_casts(): void
     {
         $contact = new Contact();
-<<<<<<< HEAD
 
         $expectedCasts = [
             'id' => 'string',
@@ -705,6 +682,7 @@ class ContactTest extends TestCase
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2b275b1 (.)
 =======
 =======
@@ -801,3 +779,5 @@ class ContactTest extends TestCase
 }
 >>>>>>> 2e1287d (.)
 >>>>>>> facb5f9 (.)
+=======
+>>>>>>> d1cd7a3 (.)

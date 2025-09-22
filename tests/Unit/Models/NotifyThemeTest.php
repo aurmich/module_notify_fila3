@@ -6,12 +6,15 @@ namespace Modules\Notify\Tests\Unit\Models;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\NotifyTheme;
 use Tests\TestCase;
 =======
 =======
 >>>>>>> facb5f9 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 use Tests\TestCase;
 use Modules\Notify\Models\NotifyTheme;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -100,47 +103,12 @@ class NotifyThemeTest extends TestCase
         ];
 
         $this->assertEquals($expectedFillable, $theme->getFillable());
-=======
-use Modules\Notify\Models\NotifyTheme;
-use PHPUnit\Framework\TestCase;
-
-class NotifyThemeTest extends TestCase
-{
-    /** @test */
-    public function it_extends_base_model(): void
-    {
-        $theme = new NotifyTheme();
-        
-        $this->assertInstanceOf(\Modules\Notify\Models\BaseModel::class, $theme);
-    }
-
-    /** @test */
-    public function it_has_correct_fillable_attributes(): void
-    {
-        $expectedFillable = [
-            'id', 'lang', 'type', 'subject', 'body', 'body_html', 'from',
-            'from_email', 'post_type', 'post_id', 'theme', 'logo_src',
-            'logo_width', 'logo_height', 'view_params',
-        ];
-
-        $this->assertEquals($expectedFillable, (new NotifyTheme())->getFillable());
-    }
-
-    /** @test */
-    public function it_has_correct_appends(): void
-    {
-        $theme = new NotifyTheme();
-        
-        $this->assertIsArray($theme->getAppends());
-        $this->assertContains('logo', $theme->getAppends());
->>>>>>> 2e1287d (.)
     }
 
     /** @test */
     public function it_has_correct_casts(): void
     {
         $theme = new NotifyTheme();
-<<<<<<< HEAD
 
         $expectedCasts = [
             'id' => 'string',
@@ -695,6 +663,7 @@ class NotifyThemeTest extends TestCase
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2b275b1 (.)
 =======
 =======
@@ -826,3 +795,5 @@ class NotifyThemeTest extends TestCase
 }
 >>>>>>> 2e1287d (.)
 >>>>>>> facb5f9 (.)
+=======
+>>>>>>> d1cd7a3 (.)

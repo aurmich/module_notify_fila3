@@ -1,9 +1,12 @@
 # Implementazione di Notifiche Multi-Canale 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di .
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di SaluteOra.
 
 ## Indice
@@ -20,9 +23,12 @@ Questa documentazione descrive come implementare correttamente notifiche multi-c
 ## Introduzione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  utilizza il sistema di notifiche di Laravel per inviare comunicazioni attraverso diversi canali. Ogni canale richiede un'implementazione specifica per garantire la corretta consegna dei messaggi.
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 SaluteOra utilizza il sistema di notifiche di Laravel per inviare comunicazioni attraverso diversi canali. Ogni canale richiede un'implementazione specifica per garantire la corretta consegna dei messaggi.
 
 ## Architettura delle Notifiche
@@ -93,9 +99,12 @@ public function toMail($notifiable): SpatieEmail
 ### Configurazione Provider SMS
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  supporta diversi provider SMS. La configurazione di base prevede:
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 SaluteOra supporta diversi provider SMS. La configurazione di base prevede:
 
 1. Installazione del provider scelto:
@@ -253,9 +262,12 @@ class AppointmentNotification extends Notification
 ## Implementazione Netfun SMS
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Netfun è un provider di SMS italiano che offre API per l'invio di messaggi SMS. Seguendo l'architettura di , implementeremo l'integrazione con Netfun utilizzando Spatie Queueable Actions.
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 Netfun è un provider di SMS italiano che offre API per l'invio di messaggi SMS. Seguendo l'architettura di SaluteOra, implementeremo l'integrazione con Netfun utilizzando Spatie Queueable Actions.
 
 ### 1. Configurazione
@@ -271,9 +283,12 @@ return [
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
 <<<<<<< HEAD
+<<<<<<< HEAD
         'sender' => env('NETFUN_SENDER', ''),
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
         'sender' => env('NETFUN_SENDER', 'SaluteOra'),
         'api_url' => env('NETFUN_API_URL', 'https://api.netfun.it/sms/v1/'),
     ],
@@ -286,9 +301,12 @@ Assicurati di aggiungere le corrispondenti variabili al tuo file `.env`:
 NETFUN_USERNAME=your_username
 NETFUN_PASSWORD=your_password
 <<<<<<< HEAD
+<<<<<<< HEAD
 NETFUN_SENDER=
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
 NETFUN_SENDER=SaluteOra
 ```
 
@@ -621,9 +639,12 @@ class AppointmentReminder extends Notification
         
         return (new NetfunSMSMessage())
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->content("Gentile {$notifiable->first_name}, le ricordiamo il suo appuntamento del {$date}. .")
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
             ->content("Gentile {$notifiable->first_name}, le ricordiamo il suo appuntamento del {$date}. SaluteOra.")
             ->reference('app_' . $this->appointment->id);
     }
@@ -670,9 +691,12 @@ class NetfunSMSTest extends TestCase
         
         $message = (new NetfunSMSMessage())
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->content('Test SMS da ')
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
             ->content('Test SMS da SaluteOra')
             ->reference('test_123');
         
@@ -710,9 +734,12 @@ class AppointmentReminderController extends Controller
         
         $message = (new NetfunSMSMessage())
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->content("Gentile {$appointment->patient->first_name}, le ricordiamo il suo appuntamento del {$appointment->date->format('d/m/Y H:i')}. .")
 =======
 >>>>>>> 2b275b1 (.)
+=======
+>>>>>>> d1cd7a3 (.)
             ->content("Gentile {$appointment->patient->first_name}, le ricordiamo il suo appuntamento del {$appointment->date->format('d/m/Y H:i')}. SaluteOra.")
             ->reference('app_' . $appointment->id);
         

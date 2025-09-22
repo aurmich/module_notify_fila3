@@ -6,6 +6,7 @@ namespace Modules\Notify\Models\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ContactPolicy extends NotifyBasePolicy
 {
 }
@@ -25,3 +26,5 @@ class ContactPolicy extends NotifyBasePolicy
 }
 >>>>>>> 2e1287d (.)
 >>>>>>> facb5f9 (.)
+=======
+>>>>>>> d1cd7a3 (.)

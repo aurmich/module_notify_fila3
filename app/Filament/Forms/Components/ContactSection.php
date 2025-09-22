@@ -24,7 +24,7 @@ use Modules\Notify\Enums\ContactTypeEnum;
 
 // use Squire\Models\Country;
 
-class ContactSection extends Section
+class ContactSection extends Forms\Components\Section
 {
     
 >>>>>>> 2b275b1 (.)
