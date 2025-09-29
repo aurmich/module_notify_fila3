@@ -10,13 +10,8 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
-<<<<<<< HEAD
-use Modules\Notify\Datas\SMS\SmsFactorData;
-use Modules\Notify\Datas\SmsData;
-=======
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Datas\SMS\SmsFactorData;
->>>>>>> 2b275b1 (.)
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendSmsFactorSMSAction implements SmsActionContract
@@ -33,11 +28,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
     protected bool $debug;
 
     /** @var string|null */
-<<<<<<< HEAD
-    protected null|string $defaultSender = null;
-=======
     protected ?string $defaultSender = null;
->>>>>>> 2b275b1 (.)
 
     /**
      * Create a new action instance.
@@ -45,11 +36,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
     public function __construct()
     {
         $this->smsFactorData = SmsFactorData::make();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         if (!$this->smsFactorData->token) {
             throw new Exception('Token SMSFactor non configurato in sms.php');
         }
@@ -67,10 +54,6 @@ final class SendSmsFactorSMSAction implements SmsActionContract
      * @return array Risultato dell'operazione
      * @throws Exception In caso di errore durante l'invio
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 2b275b1 (.)
     public function execute(SmsData $smsData): array
     {
         $headers = $this->smsFactorData->getAuthHeaders();
@@ -98,11 +81,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
 
         $client = new Client([
             'timeout' => $this->smsFactorData->getTimeout(),
-<<<<<<< HEAD
-            'headers' => $headers,
-=======
             'headers' => $headers
->>>>>>> 2b275b1 (.)
         ]);
 
         try {
@@ -115,11 +94,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
             throw new Exception(
                 $clientException->getMessage() . '[' . __LINE__ . '][' . class_basename($this) . ']',
                 $clientException->getCode(),
-<<<<<<< HEAD
-                $clientException,
-=======
                 $clientException
->>>>>>> 2b275b1 (.)
             );
         }
     }

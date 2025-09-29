@@ -100,15 +100,9 @@ Il sistema di template delle notifiche è progettato seguendo i principi di:
 
 ## Link Correlati
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Filament](../../../project_docs/filament.md)
 - [Documentazione Media Library](../../../project_docs/media-library.md)
 - [Documentazione Traduzioni](../../../project_docs/translations.md) 
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 - [Documentazione Filament](../../../docs/filament.md)
 - [Documentazione Media Library](../../../docs/media-library.md)
 - [Documentazione Traduzioni](../../../docs/translations.md) 

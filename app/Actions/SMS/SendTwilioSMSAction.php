@@ -10,13 +10,8 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
-<<<<<<< HEAD
-use Modules\Notify\Datas\SMS\TwilioData;
-use Modules\Notify\Datas\SmsData;
-=======
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Datas\SMS\TwilioData;
->>>>>>> 2b275b1 (.)
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendTwilioSMSAction implements SmsActionContract
@@ -33,11 +28,7 @@ final class SendTwilioSMSAction implements SmsActionContract
     protected bool $debug;
 
     /** @var string|null */
-<<<<<<< HEAD
-    protected null|string $defaultSender = null;
-=======
     protected ?string $defaultSender = null;
->>>>>>> 2b275b1 (.)
 
     /**
      * Create a new action instance.
@@ -45,11 +36,7 @@ final class SendTwilioSMSAction implements SmsActionContract
     public function __construct()
     {
         $this->twilioData = TwilioData::make();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         if (!$this->twilioData->account_sid) {
             throw new Exception('Account SID Twilio non configurato in sms.php');
         }
@@ -71,10 +58,6 @@ final class SendTwilioSMSAction implements SmsActionContract
      * @return array Risultato dell'operazione
      * @throws Exception In caso di errore durante l'invio
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 2b275b1 (.)
     public function execute(SmsData $smsData): array
     {
         // Normalizza il numero di telefono
@@ -92,21 +75,10 @@ final class SendTwilioSMSAction implements SmsActionContract
         // Twilio richiede l'autenticazione Basic
         $client = new Client([
             'timeout' => $this->twilioData->getTimeout(),
-<<<<<<< HEAD
-            'auth' => [$this->twilioData->account_sid, $this->twilioData->auth_token],
-        ]);
-
-        $endpoint =
-            $this->twilioData->getBaseUrl() .
-            '/2010-04-01/Accounts/' .
-            $this->twilioData->account_sid .
-            '/Messages.json';
-=======
             'auth' => [$this->twilioData->account_sid, $this->twilioData->auth_token]
         ]);
 
         $endpoint = $this->twilioData->getBaseUrl() . '/2010-04-01/Accounts/' . $this->twilioData->account_sid . '/Messages.json';
->>>>>>> 2b275b1 (.)
 
         try {
             $response = $client->post($endpoint, [
@@ -114,11 +86,7 @@ final class SendTwilioSMSAction implements SmsActionContract
                     'To' => $to,
                     'From' => $from,
                     'Body' => $smsData->body,
-<<<<<<< HEAD
-                ],
-=======
                 ]
->>>>>>> 2b275b1 (.)
             ]);
 
             $this->vars['status_code'] = $response->getStatusCode();
@@ -129,11 +97,7 @@ final class SendTwilioSMSAction implements SmsActionContract
             throw new Exception(
                 $clientException->getMessage() . '[' . __LINE__ . '][' . class_basename($this) . ']',
                 $clientException->getCode(),
-<<<<<<< HEAD
-                $clientException,
-=======
                 $clientException
->>>>>>> 2b275b1 (.)
             );
         }
     }

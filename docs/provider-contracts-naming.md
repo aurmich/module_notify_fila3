@@ -2,13 +2,7 @@
 
 ## Regola Fondamentale
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Nel sistema , tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 Nel sistema SaluteOra, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
 
 1. **Suffisso `Contract` e non `Interface`**:

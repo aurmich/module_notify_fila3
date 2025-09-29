@@ -1,21 +1,11 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 2b275b1 (.)
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-<<<<<<< HEAD
-return new class extends Migration {
-=======
 return new class extends Migration
 {
->>>>>>> 2b275b1 (.)
     /**
      * Run the migrations.
      */
@@ -37,11 +27,7 @@ return new class extends Migration
                 $table->text('error_message')->nullable();
                 $table->json('metadata')->nullable();
                 $table->timestamps();
-<<<<<<< HEAD
-
-=======
                 
->>>>>>> 2b275b1 (.)
                 $table->index(['notifiable_type', 'notifiable_id']);
                 $table->index('channel');
                 $table->index('status');

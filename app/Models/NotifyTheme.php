@@ -95,11 +95,7 @@ class NotifyTheme extends BaseModel
         'logo',
     ];
 
-<<<<<<< HEAD
-    public function getLogoAttribute(null|array $value): array
-=======
     public function getLogoAttribute(?array $value): array
->>>>>>> 2b275b1 (.)
     {
         return [
             // 'path' => asset(strval($this->logo_src)),
@@ -118,10 +114,6 @@ class NotifyTheme extends BaseModel
     }
 
     /** @return array<string, string> */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 2b275b1 (.)
     protected function casts(): array
     {
         return [
@@ -130,17 +122,11 @@ class NotifyTheme extends BaseModel
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-<<<<<<< HEAD
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
-=======
 
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
 
->>>>>>> 2b275b1 (.)
             // 'published_at' => 'datetime:Y-m-d', // da verificare
             'view_params' => 'array',
         ];

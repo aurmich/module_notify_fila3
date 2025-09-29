@@ -18,27 +18,19 @@ final class PushNotificationDebugData extends Data implements Arrayable
         private readonly CanReceivePushNotifications $notifiable,
         private readonly MobilePushNotification $notification,
         private readonly MulticastSendReport $sendReport,
-<<<<<<< HEAD
-    ) {}
-=======
     ) {
     }
->>>>>>> 2b275b1 (.)
 
     public static function make(
         CanReceivePushNotifications $notifiable,
         MobilePushNotification $notification,
         MulticastSendReport $sendReport,
     ): self {
-<<<<<<< HEAD
-        return new self($notifiable, $notification, $sendReport);
-=======
         return new self(
             $notifiable,
             $notification,
             $sendReport,
         );
->>>>>>> 2b275b1 (.)
     }
 
     public function toArray(): array
@@ -52,30 +44,6 @@ final class PushNotificationDebugData extends Data implements Arrayable
                 'total' => $this->sendReport->count(),
                 'successes' => $this->sendReport->successes()->count(),
                 'failures' => $this->sendReport->failures()->count(),
-<<<<<<< HEAD
-                'successes_tokens' => $this->sendReport
-                    ->successes()
-                    ->map(static fn(SendReport $report): array => [
-                        'type' => $report->target()->type(),
-                        'value' => $report->target()->value(),
-                    ]),
-                'failure_tokens' => $this->sendReport
-                    ->failures()
-                    ->map(static fn(SendReport $report): array => [
-                        'type' => $report->target()->type(),
-                        'value' => $report->target()->value(),
-                    ]),
-                'unknown_tokens' => $this->sendReport
-                    ->filter(static fn(SendReport $report): bool => $report->messageWasSentToUnknownToken())
-                    ->map(static fn(SendReport $report): array => [
-                        'type' => $report->target()->type(),
-                        'value' => $report->target()->value(),
-                    ]),
-                'results' => $this->sendReport->map(static fn(SendReport $report): array => [
-                    'target' => $report->target()->value(),
-                    'result' => $report->result(),
-                ]),
-=======
                 'successes_tokens' => $this->sendReport->successes()
                     ->map(
                         static fn (SendReport $report): array => [
@@ -105,7 +73,6 @@ final class PushNotificationDebugData extends Data implements Arrayable
                             'result' => $report->result(),
                         ]
                     ),
->>>>>>> 2b275b1 (.)
             ],
         ];
     }

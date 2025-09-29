@@ -1,26 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-return [
-    'actions' => [
-        'delete' => [
-            'label' => 'delete',
-        ],
-        'cancel' => [
-            'label' => 'cancel',
-        ],
-        'save' => [
-            'label' => 'save',
-        ],
-        'activeLocale' => [
-            'label' => 'activeLocale',
-        ],
-    ],
-];
-=======
 return array (
   'actions' => 
   array (
@@ -42,4 +21,3 @@ return array (
     ),
   ),
 );
->>>>>>> 2b275b1 (.)

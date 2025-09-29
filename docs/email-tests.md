@@ -422,21 +422,9 @@ class TestData
 - [Email Plugins Analysis](email-plugins-analysis.md)
 
 ## Vedi Anche
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Laravel Testing](https://laravel.com/project_docs/testing)
 - [PHPUnit](https://phpunit.de/)
 - [Laravel Dusk](https://laravel.com/project_docs/dusk) 
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [PHPUnit](https://phpunit.de/)
 - [Laravel Dusk](https://laravel.com/docs/dusk) 
-=======
-- [Laravel Testing](https://laravel.com/docs/testing)
-- [PHPUnit](https://phpunit.de/)
-- [Laravel Dusk](https://laravel.com/docs/dusk) 
->>>>>>> 2b275b1 (.)
-=======
-- [Laravel Testing](https://laravel.com/docs/testing)
-- [PHPUnit](https://phpunit.de/)
-- [Laravel Dusk](https://laravel.com/docs/dusk) 
->>>>>>> d1cd7a3 (.)

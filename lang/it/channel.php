@@ -176,8 +176,5 @@ return [
             'message' => 'Impossibile inviare il messaggio di test: :error',
         ],
     ],
-<<<<<<< HEAD
-=======
     
->>>>>>> 2b275b1 (.)
 ];

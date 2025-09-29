@@ -13,11 +13,7 @@ describe('Contact Business Logic', function () {
         $contact = new Contact();
         $contact->model_type = 'App\\Models\\User';
         $contact->model_id = '1';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->model_type)->toBe('App\\Models\\User');
         expect($contact->model_id)->toBe('1');
     });
@@ -26,11 +22,7 @@ describe('Contact Business Logic', function () {
         $contact = new Contact();
         $contact->contact_type = 'email';
         $contact->value = 'test@example.com';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->contact_type)->toBe('email');
         expect($contact->value)->toBe('test@example.com');
     });
@@ -40,11 +32,7 @@ describe('Contact Business Logic', function () {
         $contact->sms_count = 5;
         $contact->sms_status_code = '200';
         $contact->sms_status_txt = 'Success';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->sms_count)->toBe(5);
         expect($contact->sms_status_code)->toBe('200');
         expect($contact->sms_status_txt)->toBe('Success');
@@ -54,11 +42,7 @@ describe('Contact Business Logic', function () {
         $contact = new Contact();
         $contact->mail_count = 3;
         $contact->mail_sent_at = '2023-01-01 10:00:00';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->mail_count)->toBe(3);
         expect($contact->mail_sent_at)->toBe('2023-01-01 10:00:00');
     });
@@ -67,11 +51,7 @@ describe('Contact Business Logic', function () {
         $contact = new Contact();
         $contact->first_name = 'Mario';
         $contact->last_name = 'Rossi';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->first_name)->toBe('Mario');
         expect($contact->last_name)->toBe('Rossi');
     });
@@ -80,11 +60,7 @@ describe('Contact Business Logic', function () {
         $contact = new Contact();
         $contact->token = 'abc123';
         $contact->verified_at = '2023-01-01 12:00:00';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->token)->toBe('abc123');
         expect($contact->verified_at)->toBe('2023-01-01 12:00:00');
     });
@@ -93,11 +69,7 @@ describe('Contact Business Logic', function () {
         $contact = new Contact();
         $contact->attribute_1 = 'value1';
         $contact->attribute_2 = 'value2';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->attribute_1)->toBe('value1');
         expect($contact->attribute_2)->toBe('value2');
     });
@@ -105,25 +77,14 @@ describe('Contact Business Logic', function () {
     test('contact can track duplicate count', function () {
         $contact = new Contact();
         $contact->duplicate_count = 2;
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($contact->duplicate_count)->toBe(2);
     });
 
     test('contact has order column for sorting', function () {
         $contact = new Contact();
         $contact->order_column = 1;
-<<<<<<< HEAD
-
-        expect($contact->order_column)->toBe(1);
-    });
-});
-=======
         
         expect($contact->order_column)->toBe(1);
     });
 });
->>>>>>> 2b275b1 (.)

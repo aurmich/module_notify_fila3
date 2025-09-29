@@ -2,10 +2,7 @@
 
 ## Problema Identificato
 
-<<<<<<< HEAD
 Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "<nome progetto>", "salutemo") in un modulo che deve essere riutilizzabile in progetti diversi.
-=======
->>>>>>> 2b275b1 (.)
 Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "salutemo") in un modulo che deve essere riutilizzabile in progetti diversi.
 
 ## Impatto del Problema
@@ -19,25 +16,19 @@ Durante l'audit del modulo `Notify`, è stato identificato un **errore critico d
 ### Esempi di Violazioni Trovate
 ```php
 // ❌ ERRORE CRITICO - Stringhe hardcoded
-<<<<<<< HEAD
 'subject' => 'Benvenuto su ',
 'content' => 'Grazie per esserti registrato su ',
 'clinic_name' => 'Studio Dentistico ',
 'webhook' => 'https://api.<nome progetto>.com/webhooks',
 'author' => 'Team PTVX',
 'path' => '/var/www/html/_bases/base_ptvx_fila3_mono/public_html/images/',
-=======
->>>>>>> 2b275b1 (.)
 'subject' => 'Benvenuto su SaluteOra',
 'content' => 'Grazie per esserti registrato su SaluteOra',
 'clinic_name' => 'Studio Dentistico SaluteOra',
 'webhook' => 'https://api.saluteora.com/webhooks',
 'author' => 'Team SaluteOra',
 'path' => '/var/www/html/saluteora/public_html/images/',
-<<<<<<< HEAD
 'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/',
-=======
->>>>>>> 2b275b1 (.)
 ```
 
 ## Soluzioni Implementate
@@ -92,10 +83,7 @@ $notificationData = [
 - **Media**: Gestione media per qualsiasi progetto
 
 ### Moduli Specifici del Progetto
-<<<<<<< HEAD
 - ****: Solo per progetto 
-=======
->>>>>>> 2b275b1 (.)
 - **SaluteOra**: Solo per progetto SaluteOra
 - **SaluteMo**: Solo per progetto SaluteMo
 - **Patient**: Solo per progetti sanitari specifici
@@ -116,13 +104,10 @@ Prima di ogni commit, verificare:
 Eseguire regolarmente:
 ```bash
 # Cerca stringhe hardcoded nei moduli generici
-<<<<<<< HEAD
 grep -r "<nome progetto>\|salutemo" laravel/Modules/Notify/ --include="*.php"
 grep -r "<nome progetto>\|salutemo" laravel/Modules/User/ --include="*.php"
 grep -r "<nome progetto>\|salutemo" laravel/Modules/UI/ --include="*.php"
 grep -r "<nome progetto>\|salutemo" laravel/Modules/Xot/ --include="*.php"
-=======
->>>>>>> 2b275b1 (.)
 grep -r "saluteora\|salutemo" laravel/Modules/Notify/ --include="*.php"
 grep -r "saluteora\|salutemo" laravel/Modules/User/ --include="*.php"
 grep -r "saluteora\|salutemo" laravel/Modules/UI/ --include="*.php"
@@ -133,14 +118,11 @@ grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
 
 ### Variabili d'Ambiente
 ```env
-<<<<<<< HEAD
 COMPANY_NAME=
 COMPANY_TEAM=Team 
 WEBHOOK_BASE_URL=https://api.<nome progetto>.com
 CLINIC_NAME=Studio Dentistico 
 REPOSITORY_URL=https://github.com/<nome progetto>/notify
-=======
->>>>>>> 2b275b1 (.)
 COMPANY_NAME=SaluteOra
 COMPANY_TEAM=Team SaluteOra
 WEBHOOK_BASE_URL=https://api.saluteora.com

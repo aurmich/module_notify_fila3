@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
-=======
->>>>>>> 2b275b1 (.)
 </div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</td>
-	<td class="w40" width="40"></td>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class="w40" width="40"></td>
 </tr>
 <tr>
-	<td colspan="3" height="30"></td>
-<<<<<<< HEAD
+    <td colspan="3" height="30"></td>
 </tr>
-=======
-</tr>
->>>>>>> 2b275b1 (.)

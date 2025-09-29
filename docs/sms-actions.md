@@ -43,13 +43,7 @@ Le azioni SMS sono organizzate secondo questa struttura:
 $smsData = new SmsData(
     to: '+393331234567',
     body: 'Il tuo codice OTP è: 123456',
-<<<<<<< HEAD
-<<<<<<< HEAD
     from: ''
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
     from: 'SaluteOra'
 );
 

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 2b275b1 (.)
 @extends('notify::emails.templates.minty')
 
 @section('content')

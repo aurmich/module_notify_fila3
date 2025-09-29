@@ -158,12 +158,6 @@ document.querySelectorAll('.group').forEach(card => {
 ## Best Practice
 - Tutti i componenti sono accessibili, responsive e personalizzabili.
 - Usare sempre slot e attributi per espandibilità.
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Documentare ogni componente in `/docs` e `/Themes/One/project_docs/`.
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 - Documentare ogni componente in `/docs` e `/Themes/One/docs/`.
 - Integrare test di rendering e validazione accessibilità.

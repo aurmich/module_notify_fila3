@@ -815,8 +815,6 @@ class MailMonitoringDebugger
 - [Email Plugins Analysis](email-plugins-analysis.md)
 
 ## Vedi Anche
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Laravel Cache](https://laravel.com/project_docs/cache)
 - [Laravel Events](https://laravel.com/project_docs/events)
 - [Laravel Commands](https://laravel.com/project_docs/artisan) 
@@ -825,15 +823,3 @@ class MailMonitoringDebugger
 - [Laravel Events](https://laravel.com/docs/events)
 - [Laravel Commands](https://laravel.com/docs/artisan) 
 - [Laravel Events](https://laravel.com/docs/events) 
-=======
-- [Laravel Cache](https://laravel.com/docs/cache)
-- [Laravel Events](https://laravel.com/docs/events)
-- [Laravel Commands](https://laravel.com/docs/artisan) 
-- [Laravel Events](https://laravel.com/docs/events) 
->>>>>>> 2b275b1 (.)
-=======
-- [Laravel Cache](https://laravel.com/docs/cache)
-- [Laravel Events](https://laravel.com/docs/events)
-- [Laravel Commands](https://laravel.com/docs/artisan) 
-- [Laravel Events](https://laravel.com/docs/events) 
->>>>>>> d1cd7a3 (.)

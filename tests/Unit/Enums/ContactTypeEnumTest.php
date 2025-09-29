@@ -13,6 +13,7 @@ class ContactTypeEnumTest extends TestCase
     public function it_has_correct_cases(): void
     {
         $this->assertCount(6, ContactTypeEnum::cases());
+
         $this->assertEquals('phone', ContactTypeEnum::PHONE->value);
         $this->assertEquals('mobile', ContactTypeEnum::MOBILE->value);
         $this->assertEquals('email', ContactTypeEnum::EMAIL->value);
@@ -34,6 +35,7 @@ class ContactTypeEnumTest extends TestCase
     {
         $reflection = new \ReflectionClass(ContactTypeEnum::class);
         $traits = $reflection->getTraitNames();
+
         $this->assertContains('Modules\Xot\Filament\Traits\TransTrait', $traits);
     }
 
@@ -52,6 +54,7 @@ class ContactTypeEnumTest extends TestCase
     public function get_searchable_returns_all_values(): void
     {
         $searchable = ContactTypeEnum::getSearchable();
+
         $this->assertIsArray($searchable);
         $this->assertCount(6, $searchable);
         $this->assertContains('phone', $searchable);
@@ -66,6 +69,10 @@ class ContactTypeEnumTest extends TestCase
     public function get_form_schema_returns_text_inputs(): void
     {
         $schema = ContactTypeEnum::getFormSchema();
+
+        $this->assertIsArray($schema);
+        $this->assertCount(6, $schema);
+
         foreach ($schema as $component) {
             $this->assertInstanceOf(\Filament\Forms\Components\TextInput::class, $component);
         }
@@ -74,24 +81,9 @@ class ContactTypeEnumTest extends TestCase
     /** @test */
     public function each_case_has_unique_value(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $values = array_map(fn($case) => $case->value, ContactTypeEnum::cases());
-=======
-=======
->>>>>>> facb5f9 (.)
         $values = array_map(fn ($case) => $case->value, ContactTypeEnum::cases());
->>>>>>> 2b275b1 (.)
         $uniqueValues = array_unique($values);
 
-=======
-        $values = array_map(fn($case) => $case->value, ContactTypeEnum::cases());
-        $uniqueValues = array_unique($values);
-        
->>>>>>> 2e1287d (.)
-=======
->>>>>>> d1cd7a3 (.)
         $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
     }
 }

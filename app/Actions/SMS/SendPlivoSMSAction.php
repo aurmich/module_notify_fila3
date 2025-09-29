@@ -10,13 +10,8 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
-<<<<<<< HEAD
-use Modules\Notify\Datas\SMS\PlivoData;
-use Modules\Notify\Datas\SmsData;
-=======
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Datas\SMS\PlivoData;
->>>>>>> 2b275b1 (.)
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendPlivoSMSAction implements SmsActionContract
@@ -33,11 +28,7 @@ final class SendPlivoSMSAction implements SmsActionContract
     protected bool $debug;
 
     /** @var string|null */
-<<<<<<< HEAD
-    protected null|string $defaultSender = null;
-=======
     protected ?string $defaultSender = null;
->>>>>>> 2b275b1 (.)
 
     /**
      * Create a new action instance.
@@ -45,11 +36,7 @@ final class SendPlivoSMSAction implements SmsActionContract
     public function __construct()
     {
         $this->plivoData = PlivoData::make();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         if (!$this->plivoData->auth_id) {
             throw new Exception('Auth ID Plivo non configurato in sms.php');
         }
@@ -71,10 +58,6 @@ final class SendPlivoSMSAction implements SmsActionContract
      * @return array Risultato dell'operazione
      * @throws Exception In caso di errore durante l'invio
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 2b275b1 (.)
     public function execute(SmsData $smsData): array
     {
         // Normalizza il numero di telefono
@@ -95,11 +78,7 @@ final class SendPlivoSMSAction implements SmsActionContract
             'auth' => [$this->plivoData->auth_id, $this->plivoData->auth_token],
             'headers' => [
                 'Content-Type' => 'application/json',
-<<<<<<< HEAD
-            ],
-=======
             ]
->>>>>>> 2b275b1 (.)
         ]);
 
         $endpoint = $this->plivoData->getBaseUrl() . '/v1/Account/' . $this->plivoData->auth_id . '/Message/';
@@ -110,11 +89,7 @@ final class SendPlivoSMSAction implements SmsActionContract
                     'src' => $from,
                     'dst' => $to,
                     'text' => $smsData->body,
-<<<<<<< HEAD
-                ],
-=======
                 ]
->>>>>>> 2b275b1 (.)
             ]);
 
             $this->vars['status_code'] = $response->getStatusCode();
@@ -125,11 +100,7 @@ final class SendPlivoSMSAction implements SmsActionContract
             throw new Exception(
                 $clientException->getMessage() . '[' . __LINE__ . '][' . class_basename($this) . ']',
                 $clientException->getCode(),
-<<<<<<< HEAD
-                $clientException,
-=======
                 $clientException
->>>>>>> 2b275b1 (.)
             );
         }
     }

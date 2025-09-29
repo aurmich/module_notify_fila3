@@ -2,17 +2,9 @@
 
 ## Panoramica delle Modifiche
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Il modello `MailTemplate` (`../Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
 Il modello `MailTemplate` (`../Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
 Il modello `MailTemplate` (`../Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
-=======
-Il modello `MailTemplate` (`/var/www/html/saluteora/laravel/Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
->>>>>>> 2b275b1 (.)
-=======
-Il modello `MailTemplate` (`/var/www/html/saluteora/laravel/Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
->>>>>>> d1cd7a3 (.)
 
 ## Modifiche Effettuate
 

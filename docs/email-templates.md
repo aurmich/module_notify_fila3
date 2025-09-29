@@ -10,13 +10,7 @@ Il modulo Notify implementa un sistema avanzato di gestione delle email template
 **Errore**: `MissingMailTemplate` durante registrazione pazienti  
 **Status**: CRITICO - Sistema registrazione bloccato  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ➡️ **Documentazione completa**: [Modulo Generico: Missing Mail Template Error](../../<nome modulo>/docs/errori/missing-mail-template-spatiemail.md)  
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 ➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../SaluteOra/docs/errori/missing-mail-template-spatiemail.md)  
 ➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../docs/errori_gravi/missing-mail-template-patterns.md)
 
@@ -272,13 +266,7 @@ MailTemplate::create([
    - Eseguire `CriticalMailTemplatesSeeder`
    - Verificare esistenza template con `php artisan mail:check-templates`
    - Implementare validazione slug nelle Actions
-<<<<<<< HEAD
-<<<<<<< HEAD
    - ➡️ [Documentazione completa errore](../../<nome modulo>/docs/errori/missing-mail-template-spatiemail.md)
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
    - ➡️ [Documentazione completa errore](../../SaluteOra/docs/errori/missing-mail-template-spatiemail.md)
 
 2. **Template non trovato**
@@ -312,13 +300,7 @@ php artisan tinker
 ## Collegamenti Correlati
 
 ### **Errori Critici e Soluzioni**
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [: Missing Mail Template Error](../../<nome modulo>/docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 - [SaluteOra: Missing Mail Template Error](../../SaluteOra/docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Missing Mail Template Patterns](../../../docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
 - [Array to String Conversion](../../../docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
@@ -326,8 +308,6 @@ php artisan tinker
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Configurazione Email](../../../docs/email-configuration.md)- [<nome progetto>: Missing Mail Template Error](../../<nome progetto>/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Missing Mail Template Patterns](../../../project_docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
 - [Array to String Conversion](../../../project_docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
@@ -336,10 +316,6 @@ php artisan tinker
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [Gestione Traduzioni](../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Configurazione Email](../../../project_docs/email-configuration.md)
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 - [Configurazione Email](../../../docs/email-configuration.md)
 - [Documentazione Traduzioni](./translations.md)
 - [Proposta Slug Template](./EMAIL_TEMPLATE_SLUG_PROPOSAL.md)

@@ -1,65 +1,3 @@
-<<<<<<< HEAD
-# ==============================================
-# LARAXOT MODULE NOTIFY - .GITIGNORE
-# ==============================================
-# Modulo Notify Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-06
-# ==============================================
-
-# ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
-vendor/
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-composer.lock
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-/build
-/build/
-build/
-dist/
-docs/cache/
-cache/
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-npm-debug.log
-yarn-error.log*
-lerna-debug.log*
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
-=======
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -90,7 +28,6 @@ error_log
 build/
 
 # Laravel specific
->>>>>>> 2b275b1 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -99,101 +36,6 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
-<<<<<<< HEAD
-.env.*
-!.env.example
-
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
-Homestead.yaml
-Homestead.json
-/.vagrant
-/.idea
-.phpintel
-
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
-.git-rewrite
-.git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# ==============================================
-# BACKUP FILES
-# ==============================================
-*.old
-*.old1
-*.old2
-*.backup
-*.backup.*
-*.bak
-*.bakcup
-*.new
-
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
-.phpstorm.meta.php
-
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
-docs/phpstan/
-docs/cache/
-
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-database_old
-
-# ==============================================
-# MODULE SPECIFIC - NOTIFY
-# ==============================================
-# File di configurazione locale
-config/local.php
-config/development.php
-
-# Queue e notifiche
-storage/notifications/
-storage/queue/
-
-# File di test notifiche
-notification_test_data.json
-test_notifications.sql
-
-# ==============================================
-# END OF NOTIFY .GITIGNORE
-# ==============================================
-
-# 🚫 File specifici del progetto
-*.fila2
-laravel
-public_html
-=======
 
 # Database directories
 database/Factories_
@@ -225,6 +67,7 @@ Homestead.json
 *.old
 *.old1
 *.backup
+*.backup.*
 *.bak
 *.new
 
@@ -232,9 +75,6 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
-<<<<<<< HEAD
->>>>>>> 2b275b1 (.)
-=======
 
 # Development tools
 .windsurf/
@@ -252,4 +92,3 @@ database/Migrations_old
 database/Seeders_old
 database/Factories_old
 database_old
->>>>>>> 927a2b9d (.)

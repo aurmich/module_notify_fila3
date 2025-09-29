@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 2b275b1 (.)
 </div>
 					</td>
 				</tr>
@@ -16,8 +8,4 @@ declare(strict_types=1);
 </tr>
 <tr>
 	<td colspan="3" height="30"></td>
-<<<<<<< HEAD
 </tr>
-=======
-</tr>
->>>>>>> 2b275b1 (.)

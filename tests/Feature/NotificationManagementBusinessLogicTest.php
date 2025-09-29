@@ -2,28 +2,16 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-use Modules\Notify\Helpers\ConfigHelper;
-use Modules\Notify\Models\Contact;
-use Modules\Notify\Models\Notification;
-use Modules\Notify\Models\NotificationTemplate;
-use Modules\Notify\Models\NotificationType;
-=======
 use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Models\NotificationType;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Helpers\ConfigHelper;
->>>>>>> 2b275b1 (.)
 
 describe('Notification Management Business Logic', function () {
     it('can create notification with basic information', function () {
         $testData = ConfigHelper::getTestData();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         $notificationData = [
             'type' => 'email',
             'subject' => $testData['default_subject'],
@@ -34,21 +22,10 @@ describe('Notification Management Business Logic', function () {
 
         $notification = Notification::create($notificationData);
 
-<<<<<<< HEAD
-        expect($notification)
-            ->toBeInstanceOf(Notification::class)
-            ->and($notification->type)
-            ->toBe('email')
-            ->and($notification->subject)
-            ->toBe($testData['default_subject'])
-            ->and($notification->status)
-            ->toBe('pending');
-=======
         expect($notification)->toBeInstanceOf(Notification::class)
             ->and($notification->type)->toBe('email')
             ->and($notification->subject)->toBe($testData['default_subject'])
             ->and($notification->status)->toBe('pending');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notifications', [
             'id' => $notification->id,
@@ -62,11 +39,7 @@ describe('Notification Management Business Logic', function () {
 
     it('can create notification template', function () {
         $testData = ConfigHelper::getTestData();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         $templateData = [
             'name' => 'Welcome Email Template',
             'type' => 'email',
@@ -78,21 +51,10 @@ describe('Notification Management Business Logic', function () {
 
         $template = NotificationTemplate::create($templateData);
 
-<<<<<<< HEAD
-        expect($template)
-            ->toBeInstanceOf(NotificationTemplate::class)
-            ->and($template->name)
-            ->toBe('Welcome Email Template')
-            ->and($template->type)
-            ->toBe('email')
-            ->and($template->is_active)
-            ->toBeTrue();
-=======
         expect($template)->toBeInstanceOf(NotificationTemplate::class)
             ->and($template->name)->toBe('Welcome Email Template')
             ->and($template->type)->toBe('email')
             ->and($template->is_active)->toBeTrue();
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notification_templates', [
             'id' => $template->id,
@@ -113,21 +75,10 @@ describe('Notification Management Business Logic', function () {
 
         $type = NotificationType::create($typeData);
 
-<<<<<<< HEAD
-        expect($type)
-            ->toBeInstanceOf(NotificationType::class)
-            ->and($type->name)
-            ->toBe('welcome_email')
-            ->and($type->display_name)
-            ->toBe('Email di Benvenuto')
-            ->and($type->is_active)
-            ->toBeTrue();
-=======
         expect($type)->toBeInstanceOf(NotificationType::class)
             ->and($type->name)->toBe('welcome_email')
             ->and($type->display_name)->toBe('Email di Benvenuto')
             ->and($type->is_active)->toBeTrue();
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notification_types', [
             'id' => $type->id,
@@ -153,21 +104,10 @@ describe('Notification Management Business Logic', function () {
 
         $contact = Contact::create($contactData);
 
-<<<<<<< HEAD
-        expect($contact)
-            ->toBeInstanceOf(Contact::class)
-            ->and($contact->name)
-            ->toBe('Mario Rossi')
-            ->and($contact->email)
-            ->toBe('mario.rossi@example.com')
-            ->and($contact->is_active)
-            ->toBeTrue();
-=======
         expect($contact)->toBeInstanceOf(Contact::class)
             ->and($contact->name)->toBe('Mario Rossi')
             ->and($contact->email)->toBe('mario.rossi@example.com')
             ->and($contact->is_active)->toBeTrue();
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('contacts', [
             'id' => $contact->id,
@@ -222,21 +162,10 @@ describe('Notification Management Business Logic', function () {
 
         $notification = Notification::create($notificationData);
 
-<<<<<<< HEAD
-        expect($notification)
-            ->toBeInstanceOf(Notification::class)
-            ->and($notification->type)
-            ->toBe('sms')
-            ->and($notification->priority)
-            ->toBe('high')
-            ->and($notification->data)
-            ->toBe(json_encode($customData));
-=======
         expect($notification)->toBeInstanceOf(Notification::class)
             ->and($notification->type)->toBe('sms')
             ->and($notification->priority)->toBe('high')
             ->and($notification->data)->toBe(json_encode($customData));
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notifications', [
             'id' => $notification->id,
@@ -258,21 +187,10 @@ describe('Notification Management Business Logic', function () {
 
         $template = NotificationTemplate::create($templateData);
 
-<<<<<<< HEAD
-        expect($template)
-            ->toBeInstanceOf(NotificationTemplate::class)
-            ->and($template->variables)
-            ->toContain('appointment_date')
-            ->and($template->variables)
-            ->toContain('appointment_time')
-            ->and($template->variables)
-            ->toContain('clinic_name');
-=======
         expect($template)->toBeInstanceOf(NotificationTemplate::class)
             ->and($template->variables)->toContain('appointment_date')
             ->and($template->variables)->toContain('appointment_time')
             ->and($template->variables)->toContain('clinic_name');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notification_templates', [
             'id' => $template->id,
@@ -292,21 +210,10 @@ describe('Notification Management Business Logic', function () {
 
         $type = NotificationType::create($typeData);
 
-<<<<<<< HEAD
-        expect($type)
-            ->toBeInstanceOf(NotificationType::class)
-            ->and($type->channels)
-            ->toContain('email')
-            ->and($type->channels)
-            ->toContain('sms')
-            ->and($type->channels)
-            ->toContain('push');
-=======
         expect($type)->toBeInstanceOf(NotificationType::class)
             ->and($type->channels)->toContain('email')
             ->and($type->channels)->toContain('sms')
             ->and($type->channels)->toContain('push');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notification_types', [
             'id' => $type->id,
@@ -335,24 +242,11 @@ describe('Notification Management Business Logic', function () {
 
         $contact = Contact::create($contactData);
 
-<<<<<<< HEAD
-        expect($contact)
-            ->toBeInstanceOf(Contact::class)
-            ->and($contact->preferences['email'])
-            ->toBeTrue()
-            ->and($contact->preferences['sms'])
-            ->toBeTrue()
-            ->and($contact->preferences['push'])
-            ->toBeFalse()
-            ->and($contact->preferences['frequency'])
-            ->toBe('daily');
-=======
         expect($contact)->toBeInstanceOf(Contact::class)
             ->and($contact->preferences['email'])->toBeTrue()
             ->and($contact->preferences['sms'])->toBeTrue()
             ->and($contact->preferences['push'])->toBeFalse()
             ->and($contact->preferences['frequency'])->toBe('daily');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('contacts', [
             'id' => $contact->id,
@@ -434,21 +328,10 @@ describe('Notification Management Business Logic', function () {
 
         $template = NotificationTemplate::create($templateData);
 
-<<<<<<< HEAD
-        expect($template)
-            ->toBeInstanceOf(NotificationTemplate::class)
-            ->and($template->translations)
-            ->toHaveKey('it')
-            ->and($template->translations)
-            ->toHaveKey('en')
-            ->and($template->translations)
-            ->toHaveKey('de');
-=======
         expect($template)->toBeInstanceOf(NotificationTemplate::class)
             ->and($template->translations)->toHaveKey('it')
             ->and($template->translations)->toHaveKey('en')
             ->and($template->translations)->toHaveKey('de');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notification_templates', [
             'id' => $template->id,
@@ -479,21 +362,10 @@ describe('Notification Management Business Logic', function () {
 
         $type = NotificationType::create($typeData);
 
-<<<<<<< HEAD
-        expect($type)
-            ->toBeInstanceOf(NotificationType::class)
-            ->and($type->delivery_rules['max_per_day'])
-            ->toBe(3)
-            ->and($type->delivery_rules['max_per_week'])
-            ->toBe(10)
-            ->and($type->delivery_rules['retry_attempts'])
-            ->toBe(3);
-=======
         expect($type)->toBeInstanceOf(NotificationType::class)
             ->and($type->delivery_rules['max_per_day'])->toBe(3)
             ->and($type->delivery_rules['max_per_week'])->toBe(10)
             ->and($type->delivery_rules['retry_attempts'])->toBe(3);
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notification_types', [
             'id' => $type->id,
@@ -527,24 +399,11 @@ describe('Notification Management Business Logic', function () {
 
         $contact = Contact::create($contactData);
 
-<<<<<<< HEAD
-        expect($contact)
-            ->toBeInstanceOf(Contact::class)
-            ->and($contact->tags)
-            ->toContain('vip')
-            ->and($contact->tags)
-            ->toContain('premium')
-            ->and($contact->categories)
-            ->toContain('healthcare')
-            ->and($contact->metadata['source'])
-            ->toBe('website_form');
-=======
         expect($contact)->toBeInstanceOf(Contact::class)
             ->and($contact->tags)->toContain('vip')
             ->and($contact->tags)->toContain('premium')
             ->and($contact->categories)->toContain('healthcare')
             ->and($contact->metadata['source'])->toBe('website_form');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('contacts', [
             'id' => $contact->id,
@@ -573,24 +432,11 @@ describe('Notification Management Business Logic', function () {
 
         $notification = Notification::create($notificationData);
 
-<<<<<<< HEAD
-        expect($notification)
-            ->toBeInstanceOf(Notification::class)
-            ->and($notification->status)
-            ->toBe('scheduled')
-            ->and($notification->scheduled_at->toDateTimeString())
-            ->toBe($scheduledAt->toDateTimeString())
-            ->and($notification->expires_at->toDateTimeString())
-            ->toBe($expiresAt->toDateTimeString())
-            ->and($notification->timezone)
-            ->toBe('Europe/Rome');
-=======
         expect($notification)->toBeInstanceOf(Notification::class)
             ->and($notification->status)->toBe('scheduled')
             ->and($notification->scheduled_at->toDateTimeString())->toBe($scheduledAt->toDateTimeString())
             ->and($notification->expires_at->toDateTimeString())->toBe($expiresAt->toDateTimeString())
             ->and($notification->timezone)->toBe('Europe/Rome');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notifications', [
             'id' => $notification->id,
@@ -618,21 +464,10 @@ describe('Notification Management Business Logic', function () {
 
         $notification = Notification::create($notificationData);
 
-<<<<<<< HEAD
-        expect($notification)
-            ->toBeInstanceOf(Notification::class)
-            ->and($notification->tracking['opens'])
-            ->toBeTrue()
-            ->and($notification->tracking['clicks'])
-            ->toBeTrue()
-            ->and($notification->tracking_id)
-            ->toStartWith('track_');
-=======
         expect($notification)->toBeInstanceOf(Notification::class)
             ->and($notification->tracking['opens'])->toBeTrue()
             ->and($notification->tracking['clicks'])->toBeTrue()
             ->and($notification->tracking_id)->toStartWith('track_');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notifications', [
             'id' => $notification->id,
@@ -657,21 +492,10 @@ describe('Notification Management Business Logic', function () {
 
         $notification = Notification::create($notificationData);
 
-<<<<<<< HEAD
-        expect($notification)
-            ->toBeInstanceOf(Notification::class)
-            ->and($notification->custom_headers['X-Campaign-ID'])
-            ->toBe('summer_2024')
-            ->and($notification->custom_headers['X-User-Segment'])
-            ->toBe('premium')
-            ->and($notification->custom_headers['X-Template-Version'])
-            ->toBe('2.1');
-=======
         expect($notification)->toBeInstanceOf(Notification::class)
             ->and($notification->custom_headers['X-Campaign-ID'])->toBe('summer_2024')
             ->and($notification->custom_headers['X-User-Segment'])->toBe('premium')
             ->and($notification->custom_headers['X-Template-Version'])->toBe('2.1');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notifications', [
             'id' => $notification->id,
@@ -704,21 +528,10 @@ describe('Notification Management Business Logic', function () {
 
         $notification = Notification::create($notificationData);
 
-<<<<<<< HEAD
-        expect($notification)
-            ->toBeInstanceOf(Notification::class)
-            ->and($notification->attachments)
-            ->toHaveCount(2)
-            ->and($notification->attachments[0]['filename'])
-            ->toBe('welcome_guide.pdf')
-            ->and($notification->attachments[1]['filename'])
-            ->toBe('company_logo.png');
-=======
         expect($notification)->toBeInstanceOf(Notification::class)
             ->and($notification->attachments)->toHaveCount(2)
             ->and($notification->attachments[0]['filename'])->toBe('welcome_guide.pdf')
             ->and($notification->attachments[1]['filename'])->toBe('company_logo.png');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notifications', [
             'id' => $notification->id,
@@ -753,24 +566,11 @@ describe('Notification Management Business Logic', function () {
 
         $notification = Notification::create($notificationData);
 
-<<<<<<< HEAD
-        expect($notification)
-            ->toBeInstanceOf(Notification::class)
-            ->and($notification->recipient_groups['all_users'])
-            ->toBeTrue()
-            ->and($notification->recipient_groups['premium_users'])
-            ->toBeTrue()
-            ->and($notification->group_filters['user_type'])
-            ->toContain('patient')
-            ->and($notification->group_filters['user_type'])
-            ->toContain('doctor');
-=======
         expect($notification)->toBeInstanceOf(Notification::class)
             ->and($notification->recipient_groups['all_users'])->toBeTrue()
             ->and($notification->recipient_groups['premium_users'])->toBeTrue()
             ->and($notification->group_filters['user_type'])->toContain('patient')
             ->and($notification->group_filters['user_type'])->toContain('doctor');
->>>>>>> 2b275b1 (.)
 
         $this->assertDatabaseHas('notifications', [
             'id' => $notification->id,

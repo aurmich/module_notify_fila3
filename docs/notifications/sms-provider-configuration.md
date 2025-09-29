@@ -1,12 +1,6 @@
 # Configurazione Provider SMS per le Notifiche 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di , con focus sui diversi provider e sulla loro configurazione.
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di SaluteOra, con focus sui diversi provider e sulla loro configurazione.
 
 ## Indice
@@ -113,13 +107,7 @@ composer require laravel-notification-channels/vonage
 # .env
 VONAGE_KEY=abcd1234
 VONAGE_SECRET=xyz789...
-<<<<<<< HEAD
-<<<<<<< HEAD
 VONAGE_SMS_FROM=
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 VONAGE_SMS_FROM=SaluteOra
 ```
 

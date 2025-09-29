@@ -21,11 +21,7 @@ class NotificationManager
      * @param array $data I dati per compilare il template
      * @param array $channels I canali da utilizzare (opzionale)
      * @param array $options Opzioni aggiuntive per l'invio
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 2b275b1 (.)
      * @return array
      */
     public function send(
@@ -33,11 +29,7 @@ class NotificationManager
         string $templateCode,
         array $data = [],
         array $channels = [],
-<<<<<<< HEAD
-        array $options = [],
-=======
         array $options = []
->>>>>>> 2b275b1 (.)
     ): array {
         $template = $this->getTemplate($templateCode);
 
@@ -59,11 +51,7 @@ class NotificationManager
      * @param array $data I dati per compilare il template
      * @param array $channels I canali da utilizzare (opzionale)
      * @param array $options Opzioni aggiuntive per l'invio
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 2b275b1 (.)
      * @return array<array>
      */
     public function sendMultiple(
@@ -71,11 +59,7 @@ class NotificationManager
         string $templateCode,
         array $data = [],
         array $channels = [],
-<<<<<<< HEAD
-        array $options = [],
-=======
         array $options = []
->>>>>>> 2b275b1 (.)
     ): array {
         $logs = [];
 
@@ -92,17 +76,11 @@ class NotificationManager
      * @param string $code Il codice del template
      * @return NotificationTemplate|null
      */
-<<<<<<< HEAD
-    public function getTemplate(string $code): null|NotificationTemplate
-    {
-        return NotificationTemplate::where('code', $code)->where('is_active', true)->first();
-=======
     public function getTemplate(string $code): ?NotificationTemplate
     {
         return NotificationTemplate::where('code', $code)
             ->where('is_active', true)
             ->first();
->>>>>>> 2b275b1 (.)
     }
 
     /**
@@ -113,13 +91,9 @@ class NotificationManager
      */
     public function getTemplatesByCategory(string $category)
     {
-<<<<<<< HEAD
-        return NotificationTemplate::where('category', $category)->where('is_active', true)->get();
-=======
         return NotificationTemplate::where('category', $category)
             ->where('is_active', true)
             ->get();
->>>>>>> 2b275b1 (.)
     }
 
     /**
@@ -130,27 +104,14 @@ class NotificationManager
      */
     public function getTemplatesByChannel(string $channel)
     {
-<<<<<<< HEAD
-        return NotificationTemplate::forChannel($channel)->where('is_active', true)->get();
-=======
         return NotificationTemplate::forChannel($channel)
             ->where('is_active', true)
             ->get();
->>>>>>> 2b275b1 (.)
     }
 
     /**
      * Recupera le statistiche di invio per un template.
      *
-<<<<<<< HEAD
-     * @param NotificationTemplate $_template Template delle notifiche Il template
-     * @return array<string, mixed>
-     */
-    public function getTemplateStats(NotificationTemplate $_template): array
-    {
-        // $logs = $template->logs();
-        
-=======
      * @param NotificationTemplate $template Il template
      * @return array<string, mixed>
      */
@@ -158,7 +119,6 @@ class NotificationManager
     {
         // $logs = $template->logs();
         //
->>>>>>> 2b275b1 (.)
         // return [
         //     'total' => $logs->count(),
         //     'sent' => $logs->where('status', NotificationLog::STATUS_SENT)->count(),
@@ -181,15 +141,6 @@ class NotificationManager
     /**
      * Recupera le statistiche di invio per un destinatario.
      *
-<<<<<<< HEAD
-     * @param Model $_recipient Il destinatario
-     * @return array<string, mixed>
-     */
-    public function getRecipientStats(Model $_recipient): array
-    {
-        // $logs = NotificationLog::forNotifiable($recipient)->get();
-        
-=======
      * @param Model $recipient Il destinatario
      * @return array<string, mixed>
      */
@@ -197,7 +148,6 @@ class NotificationManager
     {
         // $logs = NotificationLog::forNotifiable($recipient)->get();
         //
->>>>>>> 2b275b1 (.)
         // return [
         //     'total' => $logs->count(),
         //     'sent' => $logs->where('status', NotificationLog::STATUS_SENT)->count(),
@@ -216,8 +166,4 @@ class NotificationManager
             'clicked' => 0,
         ];
     }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> 2b275b1 (.)

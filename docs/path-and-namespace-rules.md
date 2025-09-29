@@ -7,17 +7,11 @@
 ### ✅ Path Corretti
 
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Models
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Filament
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 /var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS
 /var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers
 /var/www/html/saluteora/laravel/Modules/Notify/app/Providers
@@ -28,8 +22,6 @@
 ### ❌ Path Errati
 
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/SMS
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Http/Controllers
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Providers
@@ -39,16 +31,6 @@
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/SMS
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Http/Controllers
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Providers
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/SMS
-/var/www/html/saluteora/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/saluteora/laravel/Modules/Notify/App/Providers
->>>>>>> 2b275b1 (.)
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/SMS
-/var/www/html/saluteora/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/saluteora/laravel/Modules/Notify/App/Providers
->>>>>>> d1cd7a3 (.)
 ```
 
 ## Struttura Corretta dei Namespace
@@ -83,17 +65,9 @@ namespace Modules\Notify\App\Datas;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
->>>>>>> 2b275b1 (.)
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
->>>>>>> d1cd7a3 (.)
 ```
 
 **Namespace corretto:**
@@ -105,17 +79,9 @@ namespace Modules\Notify\Actions\SMS;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
->>>>>>> 2b275b1 (.)
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
->>>>>>> d1cd7a3 (.)
 ```
 
 **Namespace corretto:**
@@ -127,17 +93,9 @@ namespace Modules\Notify\Http\Controllers;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
->>>>>>> 2b275b1 (.)
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
->>>>>>> d1cd7a3 (.)
 ```
 
 **Namespace corretto:**
@@ -149,17 +107,9 @@ namespace Modules\Notify\Providers;
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
->>>>>>> 2b275b1 (.)
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
->>>>>>> d1cd7a3 (.)
 ```
 
 **Namespace corretto:**
@@ -176,13 +126,7 @@ namespace Modules\Notify\App\Datas;
 
 ## Motivo di questa Regola
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto .
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto SaluteOra.
 
 ## Esempio per Datas
@@ -215,17 +159,9 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 
 **Path fisico corretto:**
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
 /var/www/html/saluteora/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
->>>>>>> 2b275b1 (.)
-=======
-/var/www/html/saluteora/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
->>>>>>> d1cd7a3 (.)
 ```
 
 **Namespace corretto:**

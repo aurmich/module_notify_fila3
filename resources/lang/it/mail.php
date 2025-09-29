@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 2b275b1 (.)
 return [
     'template' => [
         'navigation' => [
@@ -55,7 +49,7 @@ return [
                     'sms' => ['label' => 'SMS'],
                     'push' => ['label' => 'Push Notification'],
                     'whatsapp' => ['label' => 'WhatsApp'],
-                    'telegram' => ['label' => 'Telegram'],
+                    'telegram' => ['label' => 'Telegram']
                 ],
             ],
             'variables' => [
@@ -76,12 +70,12 @@ return [
             'category' => [
                 'label' => 'Categoria',
                 'placeholder' => 'Inserisci la categoria',
-                'tooltip' => 'Categoria del template',
+                'tooltip' => 'Categoria del template'
             ],
             'is_active' => [
                 'label' => 'Attivo',
-                'tooltip' => 'Stato di attivazione del template',
-            ],
+                'tooltip' => 'Stato di attivazione del template'
+            ]
         ],
         'filters' => [
             'category' => [
@@ -89,16 +83,16 @@ return [
                 'options' => [
                     'welcome' => ['label' => 'Benvenuto'],
                     'reminder' => ['label' => 'Promemoria'],
-                    'notification' => ['label' => 'Notifica'],
+                    'notification' => ['label' => 'Notifica']
                 ],
             ],
             'is_active' => [
                 'label' => 'Stato',
                 'options' => [
                     'active' => ['label' => 'Attivo'],
-                    'inactive' => ['label' => 'Inattivo'],
-                ],
-            ],
+                    'inactive' => ['label' => 'Inattivo']
+                ]
+            ]
         ],
         'actions' => [
             'edit' => [
@@ -114,8 +108,8 @@ return [
             'preview' => [
                 'label' => 'Anteprima',
                 'icon' => 'heroicon-o-eye',
-                'color' => 'success',
-            ],
+                'color' => 'success'
+            ]
         ],
         'preview' => [
             'title' => 'Anteprima Template',
@@ -132,4 +126,4 @@ return [
             ],
         ],
     ],
-];
+]; 

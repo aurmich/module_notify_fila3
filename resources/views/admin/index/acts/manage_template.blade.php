@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 2b275b1 (.)
 @extends('adm_theme::layouts.app')
 @section('content')
     <a class="btn btn-primary">+</a>
@@ -17,8 +9,4 @@ declare(strict_types=1);
         </tr>
     @endforeach
     </table>
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 2b275b1 (.)

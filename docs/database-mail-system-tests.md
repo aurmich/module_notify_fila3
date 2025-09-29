@@ -381,10 +381,4 @@ php artisan test --coverage --filter=MailTemplate
 ## Vedi Anche
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [PHPUnit Documentation](https://phpunit.de/documentation.html)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Pest PHP](https://pestphp.com/docs) 
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)

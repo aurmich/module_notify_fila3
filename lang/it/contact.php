@@ -185,11 +185,6 @@ return [
         'verification_failed' => [
             'title' => 'Errore Verifica',
             'message' => 'Impossibile verificare il contatto: :error',
-<<<<<<< HEAD
-        ],
-    ],
-=======
         ]
     ]
->>>>>>> 2b275b1 (.)
 ];

@@ -11,31 +11,19 @@ describe('MailTemplate Business Logic', function () {
 
     test('mail template has slug trait for url-friendly names', function () {
         $traits = class_uses(MailTemplate::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($traits)->toHaveKey(\Spatie\Sluggable\HasSlug::class);
     });
 
     test('mail template has translations trait', function () {
         $traits = class_uses(MailTemplate::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($traits)->toHaveKey(\Spatie\Translatable\HasTranslations::class);
     });
 
     test('mail template has soft deletes trait', function () {
         $traits = class_uses(MailTemplate::class);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($traits)->toHaveKey(\Illuminate\Database\Eloquent\SoftDeletes::class);
     });
 
@@ -44,11 +32,7 @@ describe('MailTemplate Business Logic', function () {
         $mailTemplate->name = 'Welcome Email';
         $mailTemplate->subject = 'Welcome to our platform';
         $mailTemplate->html_template = '<h1>Welcome!</h1>';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($mailTemplate->name)->toBe('Welcome Email');
         expect($mailTemplate->subject)->toBe('Welcome to our platform');
         expect($mailTemplate->html_template)->toBe('<h1>Welcome!</h1>');
@@ -57,44 +41,28 @@ describe('MailTemplate Business Logic', function () {
     test('mail template can link to mailable class', function () {
         $mailTemplate = new MailTemplate();
         $mailTemplate->mailable = 'App\\Mail\\WelcomeMail';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($mailTemplate->mailable)->toBe('App\\Mail\\WelcomeMail');
     });
 
     test('mail template has version tracking', function () {
         $mailTemplate = new MailTemplate();
         $mailTemplate->version = 2;
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($mailTemplate->version)->toBe(2);
     });
 
     test('mail template can store optional text template', function () {
         $mailTemplate = new MailTemplate();
         $mailTemplate->text_template = 'Welcome! This is plain text.';
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($mailTemplate->text_template)->toBe('Welcome! This is plain text.');
     });
 
     test('mail template can be queried by mailable', function () {
         $mailable = \Mockery::mock(\Illuminate\Contracts\Mail\Mailable::class);
         $query = MailTemplate::forMailable($mailable);
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         expect($query)->toBeInstanceOf(\Illuminate\Database\Eloquent\Builder::class);
     });
 
@@ -102,16 +70,8 @@ describe('MailTemplate Business Logic', function () {
         $mailTemplate = new MailTemplate();
         $mailTemplate->created_by = 'user-1';
         $mailTemplate->updated_by = 'user-2';
-<<<<<<< HEAD
-
-        expect($mailTemplate->created_by)->toBe('user-1');
-        expect($mailTemplate->updated_by)->toBe('user-2');
-    });
-});
-=======
         
         expect($mailTemplate->created_by)->toBe('user-1');
         expect($mailTemplate->updated_by)->toBe('user-2');
     });
 });
->>>>>>> 2b275b1 (.)

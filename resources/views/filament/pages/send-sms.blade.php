@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 2b275b1 (.)
 <x-filament-panels::page>
     <form wire:submit.prevent="sendSMS">
         <x-filament::section>

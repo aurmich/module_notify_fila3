@@ -13,6 +13,7 @@ class MediaTypeEnumTest extends TestCase
     public function it_has_correct_cases(): void
     {
         $this->assertCount(4, MediaTypeEnum::cases());
+
         $this->assertEquals('image', MediaTypeEnum::IMAGE->value);
         $this->assertEquals('video', MediaTypeEnum::VIDEO->value);
         $this->assertEquals('document', MediaTypeEnum::DOCUMENT->value);
@@ -23,6 +24,7 @@ class MediaTypeEnumTest extends TestCase
     public function options_returns_correct_array(): void
     {
         $options = MediaTypeEnum::options();
+
         $this->assertIsArray($options);
         $this->assertCount(4, $options);
         $this->assertEquals('Image', $options['image']);
@@ -35,6 +37,7 @@ class MediaTypeEnumTest extends TestCase
     public function labels_returns_localized_array(): void
     {
         $labels = MediaTypeEnum::labels();
+
         $this->assertIsArray($labels);
         $this->assertCount(4, $labels);
         $this->assertArrayHasKey('image', $labels);
@@ -65,6 +68,7 @@ class MediaTypeEnumTest extends TestCase
     public function get_default_returns_image(): void
     {
         $default = MediaTypeEnum::getDefault();
+
         $this->assertInstanceOf(MediaTypeEnum::class, $default);
         $this->assertEquals(MediaTypeEnum::IMAGE, $default);
         $this->assertEquals('image', $default->value);
@@ -73,24 +77,9 @@ class MediaTypeEnumTest extends TestCase
     /** @test */
     public function each_case_has_unique_value(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $values = array_map(fn($case) => $case->value, MediaTypeEnum::cases());
-=======
-=======
->>>>>>> facb5f9 (.)
         $values = array_map(fn ($case) => $case->value, MediaTypeEnum::cases());
->>>>>>> 2b275b1 (.)
         $uniqueValues = array_unique($values);
 
-=======
-        $values = array_map(fn($case) => $case->value, MediaTypeEnum::cases());
-        $uniqueValues = array_unique($values);
-        
->>>>>>> 2e1287d (.)
-=======
->>>>>>> d1cd7a3 (.)
         $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
     }
 
@@ -98,6 +87,10 @@ class MediaTypeEnumTest extends TestCase
     public function cases_returns_all_enum_instances(): void
     {
         $cases = MediaTypeEnum::cases();
+
+        $this->assertIsArray($cases);
+        $this->assertCount(4, $cases);
+
         foreach ($cases as $case) {
             $this->assertInstanceOf(MediaTypeEnum::class, $case);
         }

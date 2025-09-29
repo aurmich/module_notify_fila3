@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Services;
 
+use Mockery;
+use Modules\Notify\Actions\SendNotificationAction;
+use Modules\Notify\Models\NotificationTemplate;
+use Modules\Notify\Services\NotificationManager;
+use PHPUnit\Framework\TestCase;
 
 class NotificationManagerTest extends TestCase
 {
@@ -12,21 +17,7 @@ class NotificationManagerTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $this->notificationManager = new NotificationManager();
-=======
         $this->notificationManager = new NotificationManager;
->>>>>>> 2b275b1 (.)
-=======
-        $this->notificationManager = new NotificationManager;
-=======
-        $this->notificationManager = new NotificationManager();
->>>>>>> 2e1287d (.)
->>>>>>> facb5f9 (.)
-=======
->>>>>>> d1cd7a3 (.)
     }
 
     protected function tearDown(): void
@@ -48,13 +39,9 @@ class NotificationManagerTest extends TestCase
         $template->shouldReceive('getAttribute')->with('code')->andReturn($templateCode);
 
         $action = Mockery::mock(SendNotificationAction::class);
-<<<<<<< HEAD
-        $action->shouldReceive('execute')->with($recipient, $templateCode, $data, $channels, $options)->once();
-=======
         $action->shouldReceive('execute')
             ->with($recipient, $templateCode, $data, $channels, $options)
             ->once();
->>>>>>> 2b275b1 (.)
 
         app()->instance(SendNotificationAction::class, $action);
 
@@ -93,6 +80,7 @@ class NotificationManagerTest extends TestCase
     public function it_can_get_template_by_code(): void
     {
         $code = 'test_template';
+
         $template = Mockery::mock(NotificationTemplate::class);
         $template->shouldReceive('getAttribute')->with('code')->andReturn($code);
         $template->shouldReceive('getAttribute')->with('is_active')->andReturn(true);
@@ -106,6 +94,7 @@ class NotificationManagerTest extends TestCase
     public function it_can_get_templates_by_category(): void
     {
         $category = 'test_category';
+
         $result = $this->notificationManager->getTemplatesByCategory($category);
 
         $this->assertIsObject($result); // Collection

@@ -508,21 +508,9 @@ class MailLogDebugger
 - [Email Plugins Analysis](email-plugins-analysis.md)
 
 ## Vedi Anche
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Laravel Logging](https://laravel.com/project_docs/logging)
 - [Laravel Events](https://laravel.com/project_docs/events)
 - [Laravel Observers](https://laravel.com/project_docs/eloquent#observers) 
 - [Laravel Logging](https://laravel.com/docs/logging)
 - [Laravel Events](https://laravel.com/docs/events)
 - [Laravel Observers](https://laravel.com/docs/eloquent#observers) 
-=======
-- [Laravel Logging](https://laravel.com/docs/logging)
-- [Laravel Events](https://laravel.com/docs/events)
-- [Laravel Observers](https://laravel.com/docs/eloquent#observers) 
->>>>>>> 2b275b1 (.)
-=======
-- [Laravel Logging](https://laravel.com/docs/logging)
-- [Laravel Events](https://laravel.com/docs/events)
-- [Laravel Observers](https://laravel.com/docs/eloquent#observers) 
->>>>>>> d1cd7a3 (.)

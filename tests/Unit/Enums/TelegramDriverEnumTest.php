@@ -13,6 +13,7 @@ class TelegramDriverEnumTest extends TestCase
     public function it_has_correct_cases(): void
     {
         $this->assertCount(3, TelegramDriverEnum::cases());
+
         $this->assertEquals('telegram', TelegramDriverEnum::TELEGRAM->value);
         $this->assertEquals('botapi', TelegramDriverEnum::BOTAPI->value);
         $this->assertEquals('laravel-telegram', TelegramDriverEnum::LARAVEL_TELEGRAM->value);
@@ -22,6 +23,7 @@ class TelegramDriverEnumTest extends TestCase
     public function options_returns_correct_array(): void
     {
         $options = TelegramDriverEnum::options();
+
         $this->assertIsArray($options);
         $this->assertCount(3, $options);
         $this->assertEquals('Telegram', $options['telegram']);
@@ -33,6 +35,7 @@ class TelegramDriverEnumTest extends TestCase
     public function labels_returns_localized_array(): void
     {
         $labels = TelegramDriverEnum::labels();
+
         $this->assertIsArray($labels);
         $this->assertCount(3, $labels);
         $this->assertArrayHasKey('telegram', $labels);
@@ -61,6 +64,7 @@ class TelegramDriverEnumTest extends TestCase
     public function get_default_returns_default_driver(): void
     {
         $default = TelegramDriverEnum::getDefault();
+
         $this->assertInstanceOf(TelegramDriverEnum::class, $default);
         $this->assertContains($default, TelegramDriverEnum::cases());
     }
@@ -68,24 +72,9 @@ class TelegramDriverEnumTest extends TestCase
     /** @test */
     public function each_case_has_unique_value(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $values = array_map(fn($case) => $case->value, TelegramDriverEnum::cases());
-=======
-=======
->>>>>>> facb5f9 (.)
         $values = array_map(fn ($case) => $case->value, TelegramDriverEnum::cases());
->>>>>>> 2b275b1 (.)
         $uniqueValues = array_unique($values);
 
-=======
-        $values = array_map(fn($case) => $case->value, TelegramDriverEnum::cases());
-        $uniqueValues = array_unique($values);
-        
->>>>>>> 2e1287d (.)
-=======
->>>>>>> d1cd7a3 (.)
         $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
     }
 
@@ -93,6 +82,10 @@ class TelegramDriverEnumTest extends TestCase
     public function cases_returns_all_enum_instances(): void
     {
         $cases = TelegramDriverEnum::cases();
+
+        $this->assertIsArray($cases);
+        $this->assertCount(3, $cases);
+
         foreach ($cases as $case) {
             $this->assertInstanceOf(TelegramDriverEnum::class, $case);
         }

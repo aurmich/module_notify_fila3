@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 2b275b1 (.)
 namespace Modules\Notify\Notifications\Channels;
 
 use Illuminate\Notifications\Notification;
@@ -42,11 +36,7 @@ class TelegramChannel
         // Per ora, logghiamo solo l'intento di invio
         Log::info('Telegram notification would be sent', [
             'chat_id' => $chatId,
-<<<<<<< HEAD
-            'message' => $message,
-=======
             'message' => $message
->>>>>>> 2b275b1 (.)
         ]);
     }
 }

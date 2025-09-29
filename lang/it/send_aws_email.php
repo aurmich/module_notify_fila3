@@ -10,19 +10,13 @@ return [
         'color' => 'primary',
         'sort' => 10,
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 2b275b1 (.)
     'model' => [
         'label' => 'Email AWS',
         'plural' => 'Email AWS',
         'description' => 'Gestione invio email tramite servizio Amazon SES',
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 2b275b1 (.)
     'fields' => [
         'to' => [
             'label' => 'Destinatario Email',
@@ -50,10 +44,7 @@ return [
             'help' => 'File allegati che verranno inviati insieme all\'email',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 2b275b1 (.)
     'actions' => [
         'send_email' => [
             'label' => 'Invia Email',
@@ -66,10 +57,7 @@ return [
             'confirmation' => 'L\'email verrà inviata immediatamente',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 2b275b1 (.)
     'messages' => [
         'loading' => 'Preparazione email in corso...',
         'sent' => 'Email inviata correttamente',

@@ -130,11 +130,5 @@ class PublishPageTemplateAction {
 
 - Plugin ufficiale: https://filamentphp.com/plugins/dotswan-grapesjs
 - Repository: https://github.com/dotswan/filament-grapesjs
-<<<<<<< HEAD
-<<<<<<< HEAD
 - GrapesJS Docs: https://grapesjs.com/project_docs/
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 - GrapesJS Docs: https://grapesjs.com/docs/

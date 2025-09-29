@@ -110,30 +110,12 @@ class Contact extends BaseModel
 {
     /** @var list<string> */
     protected $fillable = [
-<<<<<<< HEAD
-        'model_id',
-        'model_type',
-        'contact_type',
-        'value',
-        'verified_at',
-        'updated_at',
-        'created_at',
-        'updated_by',
-        'created_by',
-        'user_id',
-        'token',
-    ];
-
-    /** @return array<string, string> */
-    #[\Override]
-=======
         'model_id', 'model_type', 'contact_type', 'value',
         'verified_at', 'updated_at', 'created_at',
         'updated_by', 'created_by', 'user_id', 'token',
     ];
 
     /** @return array<string, string> */
->>>>>>> 2b275b1 (.)
     protected function casts(): array
     {
         return [
@@ -142,17 +124,11 @@ class Contact extends BaseModel
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-<<<<<<< HEAD
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
-=======
 
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
 
->>>>>>> 2b275b1 (.)
             // 'date_start' => 'datetime:Y-m-d\TH:i',
             // 'date_end' => 'datetime:Y-m-d\TH:i',
             'model_id' => 'string',

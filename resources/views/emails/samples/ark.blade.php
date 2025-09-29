@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 2b275b1 (.)
 @extends('notify::emails.templates.ark')
 
 @section('content')
@@ -34,8 +26,4 @@ declare(strict_types=1);
 
     @include('notify::emails.templates.ark.contentEnd')
 
-<<<<<<< HEAD
 @stop
-=======
-@stop
->>>>>>> 2b275b1 (.)

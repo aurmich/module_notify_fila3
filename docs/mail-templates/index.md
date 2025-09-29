@@ -5,13 +5,7 @@
 - [README Modulo Notify](../README.md)
 - [Sistema Email](../database-mail-system.md)
 - [Template Email](../EMAIL_TEMPLATES.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Generale ](../../../../../docs/README.md)
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 - [Documentazione Generale SaluteOra](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 

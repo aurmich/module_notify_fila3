@@ -150,14 +150,8 @@ public function sendEmail(): void
 ## 🔗 Collegamenti
 
 - [Documentazione Filament](https://filamentphp.com/docs)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Best Practices Laravel](https://laravel.com/project_docs/best-practices)
 - [Convenzioni Laraxot](../Xot/project_docs/laraxot-conventions.md)
-=======
->>>>>>> 2b275b1 (.)
-=======
->>>>>>> d1cd7a3 (.)
 - [Best Practices Laravel](https://laravel.com/docs/best-practices)
 - [Convenzioni Laraxot](../Xot/docs/laraxot-conventions.md)
 

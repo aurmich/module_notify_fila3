@@ -9,7 +9,6 @@
 ### ❌ ERRATO: Percorsi Assoluti
 
 ```markdown
-<<<<<<< HEAD
 [Convenzioni di Naming per le Interfacce](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/INTERFACE_NAMING_CONVENTION.md)
 [Chiarimento sulla Struttura delle Interfacce](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/INTERFACE_STRUCTURE_CLARIFICATION.md)
 [Architettura dei Contratti](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/CONTRACTS_ARCHITECTURE.md)
@@ -19,11 +18,6 @@
 [Convenzioni di Naming per le Interfacce](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/INTERFACE_NAMING_CONVENTION.md)
 [Chiarimento sulla Struttura delle Interfacce](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/INTERFACE_STRUCTURE_CLARIFICATION.md)
 [Architettura dei Contratti](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/docs/CONTRACTS_ARCHITECTURE.md)
-=======
-[Convenzioni di Naming per le Interfacce](/var/www/html/saluteora/laravel/Modules/Notify/project_docs/INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce](/var/www/html/saluteora/laravel/Modules/Notify/project_docs/INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti](/var/www/html/saluteora/laravel/Modules/Notify/project_docs/CONTRACTS_ARCHITECTURE.md)
->>>>>>> 2b275b1 (.)
 ```
 
 ### ✅ CORRETTO: Percorsi Relativi
@@ -37,13 +31,8 @@
 Per collegamenti a documenti in altre directory:
 
 ```markdown
-<<<<<<< HEAD
 [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
 [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-=======
-[Regole Generali per le Chiavi di Traduzione](../../Lang/project_docs/TRANSLATION_KEYS_RULES.md)
-[Best Practices per le Chiavi di Traduzione](../../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
->>>>>>> 2b275b1 (.)
 ```
 
 ## Motivazione
@@ -51,10 +40,7 @@ Per collegamenti a documenti in altre directory:
 1. **Portabilità**: I percorsi relativi funzionano indipendentemente dalla posizione di installazione del progetto
 2. **Compatibilità tra ambienti**: I percorsi assoluti potrebbero non funzionare in ambienti diversi
 3. **Manutenibilità**: I percorsi relativi sono più facili da mantenere quando la struttura del progetto cambia
-<<<<<<< HEAD
 4. **Standard del progetto**:  segue lo standard di utilizzare percorsi relativi in tutti i documenti Markdown
-=======
->>>>>>> 2b275b1 (.)
 4. **Standard del progetto**: SaluteOra segue lo standard di utilizzare percorsi relativi in tutti i documenti Markdown
 
 ## Regole per i Collegamenti Relativi
@@ -74,10 +60,5 @@ grep -r "\[.*\](/var" --include="*.md" /percorso/al/progetto
 
 ## Collegamenti Correlati
 
-<<<<<<< HEAD
 - [Convenzioni di Documentazione](../../../docs/documentation-conventions.md)
 - [Markdown Best Practices](../../../docs/markdown-best-practices.md)
-=======
-- [Convenzioni di Documentazione](../../../project_docs/documentation-conventions.md)
-- [Markdown Best Practices](../../../project_docs/markdown-best-practices.md)
->>>>>>> 2b275b1 (.)

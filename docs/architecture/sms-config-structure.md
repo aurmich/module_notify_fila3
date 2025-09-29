@@ -56,10 +56,7 @@ Le configurazioni specifiche per provider sono definite all'interno della sezion
         // Credenziali e parametri di connessione
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
-<<<<<<< HEAD
         'sender' => env('NETFUN_SENDER', ''),
-=======
->>>>>>> 2b275b1 (.)
         'sender' => env('NETFUN_SENDER', 'SaluteOra'),
         'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),
         
@@ -117,10 +114,7 @@ Le configurazioni specifiche per provider sono definite all'interno della sezion
     'netfun' => [
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
-<<<<<<< HEAD
         'sender' => env('NETFUN_SENDER', ''),
-=======
->>>>>>> 2b275b1 (.)
         'sender' => env('NETFUN_SENDER', 'SaluteOra'),
         'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),
         

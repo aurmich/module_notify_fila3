@@ -13,6 +13,7 @@ class SmsDriverEnumTest extends TestCase
     public function it_has_correct_cases(): void
     {
         $this->assertCount(7, SmsDriverEnum::cases());
+
         $this->assertEquals('smsfactor', SmsDriverEnum::SMSFACTOR->value);
         $this->assertEquals('twilio', SmsDriverEnum::TWILIO->value);
         $this->assertEquals('nexmo', SmsDriverEnum::NEXMO->value);
@@ -35,6 +36,7 @@ class SmsDriverEnumTest extends TestCase
     {
         $reflection = new \ReflectionClass(SmsDriverEnum::class);
         $traits = $reflection->getTraitNames();
+
         $this->assertContains('Modules\Xot\Filament\Traits\TransTrait', $traits);
     }
 
@@ -52,6 +54,7 @@ class SmsDriverEnumTest extends TestCase
     public function get_default_returns_default_driver(): void
     {
         $default = SmsDriverEnum::getDefault();
+
         $this->assertInstanceOf(SmsDriverEnum::class, $default);
         $this->assertContains($default, SmsDriverEnum::cases());
     }
@@ -59,24 +62,9 @@ class SmsDriverEnumTest extends TestCase
     /** @test */
     public function each_case_has_unique_value(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $values = array_map(fn($case) => $case->value, SmsDriverEnum::cases());
-=======
-=======
->>>>>>> facb5f9 (.)
         $values = array_map(fn ($case) => $case->value, SmsDriverEnum::cases());
->>>>>>> 2b275b1 (.)
         $uniqueValues = array_unique($values);
 
-=======
-        $values = array_map(fn($case) => $case->value, SmsDriverEnum::cases());
-        $uniqueValues = array_unique($values);
-        
->>>>>>> 2e1287d (.)
-=======
->>>>>>> d1cd7a3 (.)
         $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
     }
 
@@ -84,6 +72,10 @@ class SmsDriverEnumTest extends TestCase
     public function cases_returns_all_enum_instances(): void
     {
         $cases = SmsDriverEnum::cases();
+
+        $this->assertIsArray($cases);
+        $this->assertCount(7, $cases);
+
         foreach ($cases as $case) {
             $this->assertInstanceOf(SmsDriverEnum::class, $case);
         }

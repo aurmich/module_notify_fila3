@@ -400,21 +400,9 @@ class MailQueueManager
 - [Email Plugins Analysis](email-plugins-analysis.md)
 
 ## Vedi Anche
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Laravel Queue](https://laravel.com/project_docs/queues)
 - [Laravel Horizon](https://laravel.com/project_docs/horizon)
 - [Laravel Supervisor](https://laravel.com/project_docs/queues#supervisor-configuration) 
 - [Laravel Queue](https://laravel.com/docs/queues)
 - [Laravel Horizon](https://laravel.com/docs/horizon)
 - [Laravel Supervisor](https://laravel.com/docs/queues#supervisor-configuration) 
-=======
-- [Laravel Queue](https://laravel.com/docs/queues)
-- [Laravel Horizon](https://laravel.com/docs/horizon)
-- [Laravel Supervisor](https://laravel.com/docs/queues#supervisor-configuration) 
->>>>>>> 2b275b1 (.)
-=======
-- [Laravel Queue](https://laravel.com/docs/queues)
-- [Laravel Horizon](https://laravel.com/docs/horizon)
-- [Laravel Supervisor](https://laravel.com/docs/queues#supervisor-configuration) 
->>>>>>> d1cd7a3 (.)

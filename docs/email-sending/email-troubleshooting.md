@@ -14,17 +14,9 @@ La classe `SpatieEmail` ora utilizza l'API moderna di Laravel per gli allegati t
 // Preparazione degli allegati
 $attachments = [
     [
-<<<<<<< HEAD
-<<<<<<< HEAD
         'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default.svg',
         'path' => '/var/www/html/saluteora/public_html/images/avatars/default.svg',
         'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default.svg',
-=======
-        'path' => '/var/www/html/saluteora/public_html/images/avatars/default.svg',
->>>>>>> 2b275b1 (.)
-=======
-        'path' => '/var/www/html/saluteora/public_html/images/avatars/default.svg',
->>>>>>> d1cd7a3 (.)
         'as' => 'logo.svg',
         'mime' => 'image/svg+xml',
     ],

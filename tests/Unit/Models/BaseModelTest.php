@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\BaseModel;
 use Tests\TestCase;
@@ -13,14 +12,8 @@ use Tests\TestCase;
 uses(TestCase::class, RefreshDatabase::class);
 
 beforeEach(function () {
-    $this->baseModel = new class extends BaseModel {
-=======
-use Modules\Notify\Models\BaseModel;
-
-beforeEach(function () {
     $this->baseModel = new class extends BaseModel
     {
->>>>>>> 2b275b1 (.)
         protected $table = 'test_notify_table';
     };
 });

@@ -27,11 +27,7 @@ class SendNotificationAction
      * @param array $data I dati per compilare il template
      * @param array $channels I canali da utilizzare (opzionale, usa quelli del template se non specificati)
      * @param array $options Opzioni aggiuntive per l'invio
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 2b275b1 (.)
      * @return bool
      * @throws \Exception Se il template non esiste o non è attivo
      */
@@ -40,19 +36,12 @@ class SendNotificationAction
         string $templateCode,
         array $data = [],
         array $channels = [],
-<<<<<<< HEAD
-        array $options = [],
-    ): bool {
-        // Recupera il template
-        $template = NotificationTemplate::where('code', $templateCode)->where('is_active', true)->first();
-=======
         array $options = []
     ): bool {
         // Recupera il template
         $template = NotificationTemplate::where('code', $templateCode)
             ->where('is_active', true)
             ->first();
->>>>>>> 2b275b1 (.)
 
         if (!$template) {
             throw new \Exception("Template {$templateCode} non trovato o non attivo");
@@ -92,17 +81,12 @@ class SendNotificationAction
      * @param array $options
      * @return void
      */
-<<<<<<< HEAD
-    protected function sendViaChannel(Model $recipient, string $channel, array $compiled, array $options): void
-    {
-=======
     protected function sendViaChannel(
         Model $recipient,
         string $channel,
         array $compiled,
         array $options
     ): void {
->>>>>>> 2b275b1 (.)
         switch ($channel) {
             case 'mail':
                 $this->sendMail($recipient, $compiled, $options);
@@ -140,11 +124,7 @@ class SendNotificationAction
                 ['mail'],
                 array_merge($options, [
                     'text_view' => $compiled['body_text'],
-<<<<<<< HEAD
-                ]),
-=======
                 ])
->>>>>>> 2b275b1 (.)
             ));
         } else {
             // Fallback per modelli che non implementano Notifiable
@@ -154,11 +134,7 @@ class SendNotificationAction
                 ['mail'],
                 array_merge($options, [
                     'text_view' => $compiled['body_text'],
-<<<<<<< HEAD
-                ]),
-=======
                 ])
->>>>>>> 2b275b1 (.)
             ));
         }
     }
@@ -172,11 +148,7 @@ class SendNotificationAction
             $compiled['subject'],
             $compiled['body_text'] ?? strip_tags($compiled['body_html']),
             ['database'],
-<<<<<<< HEAD
-            $options,
-=======
             $options
->>>>>>> 2b275b1 (.)
         ));
     }
 
@@ -202,15 +174,11 @@ class SendNotificationAction
             $message = mb_substr($message, 0, 317) . '...';
         }
 
-<<<<<<< HEAD
-        Notification::send($recipient, new GenericNotification($compiled['subject'], $message, ['sms'], $options));
-=======
         Notification::send($recipient, new GenericNotification(
             $compiled['subject'],
             $message,
             ['sms'],
             $options
         ));
->>>>>>> 2b275b1 (.)
     }
 }

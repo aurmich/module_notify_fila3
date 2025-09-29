@@ -23,11 +23,7 @@ abstract class TestCase extends BaseTestCase
 
         // Load Notify module specific configurations
         $this->loadLaravelMigrations();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2b275b1 (.)
         // Seed any required data for Notify tests
         $this->artisan('module:seed', ['module' => 'Notify']);
     }

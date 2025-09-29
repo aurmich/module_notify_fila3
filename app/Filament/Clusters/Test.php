@@ -8,12 +8,7 @@ use Filament\Clusters\Cluster;
 
 class Test extends Cluster
 {
-<<<<<<< HEAD
-    protected static null|string $navigationIcon = 'heroicon-o-squares-2x2';
-
-=======
     protected static ?string $navigationIcon = 'heroicon-o-squares-2x2';
->>>>>>> 2b275b1 (.)
     // protected static ?string $navigationParentItem = 'Notifications';
     // protected static ?string $navigationGroup = 'Settings';
 }

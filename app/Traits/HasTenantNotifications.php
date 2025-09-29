@@ -19,12 +19,8 @@ trait HasTenantNotifications
      */
     public function notifications(): MorphMany
     {
-<<<<<<< HEAD
-        return $this->morphMany(NotificationLog::class, 'notifiable')->where('tenant_id', $this->getTenantId());
-=======
         return $this->morphMany(NotificationLog::class, 'notifiable')
             ->where('tenant_id', $this->getTenantId());
->>>>>>> 2b275b1 (.)
     }
 
     /**
@@ -34,12 +30,8 @@ trait HasTenantNotifications
      */
     public function unreadNotifications(): MorphMany
     {
-<<<<<<< HEAD
-        return $this->notifications()->whereNull('read_at');
-=======
         return $this->notifications()
             ->whereNull('read_at');
->>>>>>> 2b275b1 (.)
     }
 
     /**
@@ -49,12 +41,8 @@ trait HasTenantNotifications
      */
     public function readNotifications(): MorphMany
     {
-<<<<<<< HEAD
-        return $this->notifications()->whereNotNull('read_at');
-=======
         return $this->notifications()
             ->whereNotNull('read_at');
->>>>>>> 2b275b1 (.)
     }
 
     /**
@@ -64,15 +52,9 @@ trait HasTenantNotifications
      * @param string|null $tenantId
      * @return Builder
      */
-<<<<<<< HEAD
-    public function scopeForTenant(Builder $query, null|string $tenantId = null): Builder
-    {
-        $tenantId ??= $this->getTenantId();
-=======
     public function scopeForTenant(Builder $query, ?string $tenantId = null): Builder
     {
         $tenantId = $tenantId ?? $this->getTenantId();
->>>>>>> 2b275b1 (.)
         return $query->where('tenant_id', $tenantId);
     }
 
@@ -81,11 +63,7 @@ trait HasTenantNotifications
      *
      * @return string|null
      */
-<<<<<<< HEAD
-    protected function getTenantId(): null|string
-=======
     protected function getTenantId(): ?string
->>>>>>> 2b275b1 (.)
     {
         /** @var TenantManager */
         $tenantManager = app(TenantManager::class);
@@ -132,8 +110,4 @@ trait HasTenantNotifications
             $builder->where($model->getTable() . '.tenant_id', $model->getTenantId());
         });
     }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> 2b275b1 (.)

@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 2b275b1 (.)
 namespace Modules\Notify\Database\Seeders;
 
 use Illuminate\Database\Seeder;
